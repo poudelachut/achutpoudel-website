@@ -1,1237 +1,790 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =====================================================
+   CONTACT PAGE
+   ADV. ACHUT POUDEL
+===================================================== */
 
-<head>
-    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* RESET */
 
-    <meta name="description"
-        content="Contact Adv. Achut Poudel for leadership, HR, legal and compliance, marketing, AI, digital transformation, project sales, business strategy, speaking and training.">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <meta name="author" content="Adv. Achut Poudel">
 
-    <title>Contact | Adv. Achut Poudel</title>
+html {
+    scroll-behavior: smooth;
+}
 
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #f4eee6;
+    background: #24160f;
+    line-height: 1.6;
+}
 
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
+/* =====================================================
+   HEADER
+===================================================== */
 
+.site-header {
+    width: 100%;
+    background: #24160f;
+    border-bottom: 1px solid rgba(184, 149, 90, 0.25);
+}
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+.navbar {
+    width: 100%;
+    min-height: 72px;
 
-    <!-- IMPORTANT: contact.css must be in the SAME folder -->
-    <link rel="stylesheet" href="./contact.css">
+    padding: 0 5%;
 
-</head>
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    gap: 30px;
+}
 
-<body>
 
+/* LEFT NAV */
 
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
 
-<header class="site-header">
 
-    <nav class="navbar">
+.nav-menu a {
+    color: #f4eee6;
+    text-decoration: none;
 
-        <!-- LEFT -->
-        <div class="nav-menu">
+    font-size: 13px;
+    font-weight: 600;
 
-            <a href="index.html#home">Home</a>
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 
-            <a href="index.html#about">About</a>
+    transition: 0.3s ease;
+}
 
-            <a href="index.html#experience">Experiences</a>
 
-            <a href="index.html#community">Community</a>
+.nav-menu a:hover {
+    color: #c9a45c;
+}
 
-            <a href="index.html#projects">Projects</a>
 
-            <a href="index.html#honors">Honors</a>
+/* RIGHT */
 
-        </div>
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
 
 
-        <!-- RIGHT -->
-        <div class="nav-right">
+/* SOCIAL */
 
-            <div class="social-links">
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
 
-                <a
-                    href="https://www.linkedin.com/in/achutpdl/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
 
-                <a
-                    href="https://www.facebook.com/acyuta.paaidela/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
+.social-links a {
+    color: #f4eee6;
 
-                <a
-                    href="https://www.youtube.com/@achutpoudel9020"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+    text-decoration: none;
 
-                <a
-                    href="https://www.tiktok.com/@achutpoudel_"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
+    font-size: 13px;
 
-                <!-- Instagram link can be added later -->
-                <a
-                    href="#"
-                    aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
+    transition: 0.3s ease;
+}
 
-            </div>
 
+.social-links a:hover {
+    color: #c9a45c;
+}
 
-            <!-- ONLY ONE CONTACT BUTTON -->
 
-            <a
-                href="contact.html"
-                class="contact-btn active">
-                Contact Me
-            </a>
+/* CONTACT BUTTON */
 
-        </div>
+.contact-btn {
+    display: inline-flex;
 
+    align-items: center;
+    justify-content: center;
 
-        <!-- MOBILE BUTTON -->
+    min-height: 42px;
 
-        <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
-            aria-label="Open Menu">
+    padding: 0 23px;
 
-            <i class="fa-solid fa-bars"></i>
+    border: 1px solid #b8955a;
 
-        </button>
+    color: #f4eee6;
 
-    </nav>
+    text-decoration: none;
 
+    font-size: 12px;
+    font-weight: 600;
 
-    <!-- MOBILE NAVIGATION -->
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 
-    <div
-        class="mobile-menu"
-        id="mobileMenu">
+    transition: 0.3s ease;
+}
 
-        <a href="index.html#home">Home</a>
 
-        <a href="index.html#about">About</a>
+.contact-btn:hover,
+.contact-btn.active {
+    background: #b8955a;
+    color: #24160f;
+}
 
-        <a href="index.html#experience">Experiences</a>
 
-        <a href="index.html#community">Community</a>
+/* MOBILE BUTTON */
 
-        <a href="index.html#projects">Projects</a>
+.mobile-menu-btn {
+    display: none;
 
-        <a href="index.html#honors">Honors</a>
+    background: none;
+    border: 0;
 
-        <a href="contact.html">Contact Me</a>
+    color: #f4eee6;
 
-    </div>
+    font-size: 22px;
 
-</header>
-
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<main>
-
-<section class="contact-section">
-
-    <div class="contact-container">
-
-
-        <!-- LEFT SIDE -->
-
-        <div class="contact-intro">
-
-            <div class="section-label">
-                CONTACT
-            </div>
-
-
-            <h1>
-                Let's
-                <span>Connect.</span>
-            </h1>
-
-
-            <h2>
-                Have an idea, challenge or opportunity?
-            </h2>
-
-
-            <p class="contact-description">
-
-                Whether it's leadership, HR, legal &amp;
-                compliance, marketing, digital transformation,
-                AI, project sales, business strategy or a
-                potential collaboration — let's start a
-                conversation.
-
-            </p>
-
-
-            <!-- EMAIL -->
-
-            <div class="contact-detail">
-
-                <div class="detail-icon">
-                    <i class="fa-regular fa-envelope"></i>
-                </div>
-
-                <div>
-
-                    <span>EMAIL</span>
-
-                    <a href="mailto:poudel.achut@gmail.com">
-                        poudel.achut@gmail.com
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- SOCIAL -->
-
-            <div class="contact-social">
-
-                <span>CONNECT</span>
-
-                <div class="contact-social-icons">
-
-                    <a
-                        href="https://www.linkedin.com/in/achutpdl/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-
-                    <a
-                        href="https://www.facebook.com/acyuta.paaidela/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-
-                    <a
-                        href="https://www.youtube.com/@achutpoudel9020"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-
-                    <a
-                        href="https://www.tiktok.com/@achutpoudel_"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- RIGHT SIDE FORM -->
-
-        <div class="contact-form-wrapper">
-
-            <form id="contactForm">
-
-
-                <!-- FULL NAME -->
-
-                <div class="form-group">
-
-                    <label for="fullName">
-                        Full Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="fullName"
-                        name="fullName"
-                        placeholder="Your full name"
-                        required>
-
-                </div>
-
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Your email address"
-                        required>
-
-                </div>
-
-
-                <!-- PHONE -->
-
-                <div class="form-group">
-
-                    <label for="phone">
-                        Phone Number
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Your phone number">
-
-                </div>
-
-
-                <!-- HELP -->
-
-                <div class="form-group">
-
-                    <label for="help">
-                        How Can I Help?
-                    </label>
-
-                    <select
-                        id="help"
-                        name="help"
-                        required>
-
-                        <option value="" disabled selected>
-                            Select an option
-                        </option>
-
-                        <option>
-                            Business / Executive / Leadership Consultation
-                        </option>
-
-                        <option>
-                            AI &amp; Digital Transformation
-                        </option>
-
-                        <option>
-                            HR &amp; People Strategy
-                        </option>
-
-                        <option>
-                            Legal &amp; Compliance
-                        </option>
-
-                        <option>
-                            Marketing / Know Your Product
-                        </option>
-
-                        <option>
-                            Grow Your Product / Sales
-                        </option>
-
-                        <option>
-                            Speaking / Training
-                        </option>
-
-                        <option>
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- MESSAGE -->
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        placeholder="Tell me a little about your idea, challenge or opportunity..."
-                        required></textarea>
-
-                </div>
-
-
-                <!-- BUTTON -->
-
-                <button
-                    type="submit"
-                    class="submit-btn">
-
-                    Send Message
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </button>
-
-
-                <p class="form-note">
-                    Your message will open in your email application for sending.
-                </p>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="site-footer">
-
-    <p>
-        © 2026 Adv. Achut Poudel. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-const menuButton =
-    document.getElementById("mobileMenuBtn");
-
-const mobileMenu =
-    document.getElementById("mobileMenu");
+    cursor: pointer;
+}
 
 
 /* MOBILE MENU */
 
-menuButton.addEventListener("click", function () {
+.mobile-menu {
+    display: none;
+}
 
-    mobileMenu.classList.toggle("active");
 
-    const icon =
-        menuButton.querySelector("i");
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
 
-    if (mobileMenu.classList.contains("active")) {
+.contact-section {
+    min-height: calc(100vh - 72px);
 
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
+    padding: 90px 7%;
 
-    } else {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(184, 149, 90, 0.13),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #24160f 0%,
+            #2d1b12 50%,
+            #1d120d 100%
+        );
+}
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
 
+.contact-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.contact-intro {
+    padding-top: 15px;
+}
+
+
+.section-label {
+    margin-bottom: 25px;
+
+    color: #c9a45c;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.contact-intro h1 {
+
+    margin-bottom: 28px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    color: #f5eee5;
+}
+
+
+.contact-intro h1 span {
+    display: block;
+
+    color: #c9a45c;
+}
+
+
+.contact-question {
+
+    margin-bottom: 18px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #f4eee6;
+}
+
+
+.contact-description {
+
+    max-width: 560px;
+
+    margin-bottom: 40px;
+
+    color: #c8beb4;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   EMAIL
+===================================================== */
+
+.contact-detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-bottom: 38px;
+}
+
+
+.detail-icon {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(201, 164, 92, 0.45);
+
+    color: #c9a45c;
+
+    font-size: 17px;
+}
+
+
+.contact-detail span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #a99582;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+.contact-detail a {
+
+    color: #f4eee6;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-detail a:hover {
+    color: #c9a45c;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.contact-social > span {
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #a99582;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+.contact-social-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.contact-social-icons a {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(201, 164, 92, 0.35);
+
+    color: #f4eee6;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-social-icons a:hover {
+
+    background: #c9a45c;
+
+    color: #24160f;
+
+    border-color: #c9a45c;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.contact-form-wrapper {
+
+    padding: 42px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(201, 164, 92, 0.22);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.contact-form {
+
+    width: 100%;
+}
+
+
+.form-group {
+
+    margin-bottom: 23px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ded4ca;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid rgba(201, 164, 92, 0.25);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: #f4eee6;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+
+    border-radius: 0;
+
+    transition: 0.3s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #8e8176;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #c9a45c;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+.form-group select option {
+
+    background: #24160f;
+
+    color: #f4eee6;
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 145px;
+}
+
+
+/* =====================================================
+   SEND BUTTON
+===================================================== */
+
+.submit-btn {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: 1px solid #c9a45c;
+
+    background: #c9a45c;
+
+    color: #24160f;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.submit-btn:hover {
+
+    background: transparent;
+
+    color: #c9a45c;
+}
+
+
+.form-note {
+
+    margin-top: 13px;
+
+    color: #81746a;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    padding: 25px 5%;
+
+    border-top: 1px solid rgba(201, 164, 92, 0.18);
+
+    background: #1b100b;
+
+    color: #81746a;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
     }
 
-});
 
+    .nav-menu {
+        gap: 18px;
+    }
 
-/* CONTACT FORM */
 
-document
-    .getElementById("contactForm")
-    .addEventListener("submit", function (event) {
+    .nav-menu a {
+        font-size: 11px;
+    }
 
-        event.preventDefault();
 
-        const fullName =
-            document.getElementById("fullName").value.trim();
+    .social-links {
+        gap: 11px;
+    }
 
-        const email =
-            document.getElementById("email").value.trim();
 
-        const phone =
-            document.getElementById("phone").value.trim();
+    .contact-btn {
+        padding: 0 15px;
+    }
 
-        const help =
-            document.getElementById("help").value;
 
-        const message =
-            document.getElementById("message").value.trim();
+    .contact-container {
 
+        grid-template-columns: 1fr;
 
-        const subject =
-            encodeURIComponent(
-                "Website Inquiry - " + help
-            );
+        gap: 60px;
 
-
-        const body =
-            encodeURIComponent(
-
-                "Full Name: " + fullName +
-
-                "\n\nEmail: " + email +
-
-                "\n\nPhone: " + phone +
-
-                "\n\nHow Can I Help?: " + help +
-
-                "\n\nMessage:\n" + message
-
-            );
-
-
-        window.location.href =
-            "mailto:poudel.achut@gmail.com" +
-            "?subject=" + subject +
-            "&body=" + body;
-
-    });
-
-</script>
-
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="Contact Adv. Achut Poudel for leadership, HR, legal and compliance, business strategy, marketing, AI, digital transformation, project sales, speaking and training."
-    >
-
-    <meta name="author" content="Adv. Achut Poudel">
-
-    <title>Contact | Adv. Achut Poudel</title>
-
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- Font Awesome -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    >
-
-
-    <!-- Contact CSS -->
-
-    <link rel="stylesheet" href="contact.css">
-
-</head>
-
-
-<body>
-
-
-<!-- =====================================================
-     HEADER — SINGLE LEVEL
-===================================================== -->
-
-<header class="site-header">
-
-    <nav class="navbar">
-
-
-        <!-- LEFT NAVIGATION -->
-
-        <div class="nav-menu">
-
-            <a href="index.html#home">Home</a>
-
-            <a href="index.html#about">About</a>
-
-            <a href="index.html#experience">Experiences</a>
-
-            <a href="index.html#community">Community</a>
-
-            <a href="index.html#projects">Projects</a>
-
-            <a href="index.html#honors">Honors</a>
-
-        </div>
-
-
-        <!-- RIGHT SIDE -->
-
-        <div class="nav-right">
-
-
-            <!-- SOCIAL ICONS -->
-
-            <div class="social-links">
-
-                <a
-                    href="https://www.linkedin.com/in/achutpdl/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                >
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-
-                <a
-                    href="https://www.facebook.com/acyuta.paaidela/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                >
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-
-
-                <a
-                    href="https://www.youtube.com/@achutpoudel9020"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube"
-                >
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-
-
-                <a
-                    href="https://www.tiktok.com/@achutpoudel_"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="TikTok"
-                >
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-
-
-                <!-- Instagram — add link later -->
-
-                <a
-                    href="#"
-                    aria-label="Instagram"
-                >
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-
-            </div>
-
-
-            <!-- CONTACT -->
-
-            <a
-                href="contact.html"
-                class="contact-btn active"
-            >
-                Contact Me
-            </a>
-
-        </div>
-
-
-        <!-- MOBILE MENU BUTTON -->
-
-        <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
-            type="button"
-            aria-label="Open menu"
-        >
-
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </nav>
-
-
-    <!-- MOBILE MENU — ONLY ONE LEVEL -->
-
-    <div
-        class="mobile-menu"
-        id="mobileMenu"
-    >
-
-        <a href="index.html#home">Home</a>
-
-        <a href="index.html#about">About</a>
-
-        <a href="index.html#experience">Experiences</a>
-
-        <a href="index.html#community">Community</a>
-
-        <a href="index.html#projects">Projects</a>
-
-        <a href="index.html#honors">Honors</a>
-
-        <a
-            href="contact.html"
-            class="mobile-contact"
-        >
-            Contact Me
-        </a>
-
-    </div>
-
-</header>
-
-
-
-<!-- =====================================================
-     CONTACT SECTION
-===================================================== -->
-
-<main>
-
-<section class="contact-section">
-
-    <div class="contact-container">
-
-
-        <!-- =================================================
-             LEFT CONTENT
-        ================================================== -->
-
-        <div class="contact-intro">
-
-
-            <div class="section-label">
-                CONTACT
-            </div>
-
-
-            <h1>
-
-                Let's
-                <span>Connect.</span>
-
-            </h1>
-
-
-            <p class="contact-question">
-
-                Have an idea, challenge or opportunity?
-
-            </p>
-
-
-            <p class="contact-description">
-
-                Whether it's leadership, HR, legal &amp;
-                compliance, marketing, digital transformation,
-                AI, project sales, business strategy or a
-                potential collaboration — let's start a
-                conversation.
-
-            </p>
-
-
-            <!-- EMAIL -->
-
-            <div class="contact-detail">
-
-                <div class="detail-icon">
-
-                    <i class="fa-regular fa-envelope"></i>
-
-                </div>
-
-
-                <div>
-
-                    <span>EMAIL</span>
-
-                    <a href="mailto:poudel.achut@gmail.com">
-
-                        poudel.achut@gmail.com
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- SOCIAL -->
-
-            <div class="contact-social">
-
-                <span>CONNECT</span>
-
-
-                <div class="contact-social-icons">
-
-
-                    <a
-                        href="https://www.linkedin.com/in/achutpdl/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn"
-                    >
-
-                        <i class="fa-brands fa-linkedin-in"></i>
-
-                    </a>
-
-
-                    <a
-                        href="https://www.facebook.com/acyuta.paaidela/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Facebook"
-                    >
-
-                        <i class="fa-brands fa-facebook-f"></i>
-
-                    </a>
-
-
-                    <a
-                        href="https://www.youtube.com/@achutpoudel9020"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="YouTube"
-                    >
-
-                        <i class="fa-brands fa-youtube"></i>
-
-                    </a>
-
-
-                    <a
-                        href="https://www.tiktok.com/@achutpoudel_"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="TikTok"
-                    >
-
-                        <i class="fa-brands fa-tiktok"></i>
-
-                    </a>
-
-
-                    <a
-                        href="#"
-                        aria-label="Instagram"
-                    >
-
-                        <i class="fa-brands fa-instagram"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================================
-             RIGHT CONTENT — FORM
-        ================================================== -->
-
-        <div class="contact-form-wrapper">
-
-
-            <form
-                id="contactForm"
-                class="contact-form"
-            >
-
-
-                <!-- FULL NAME -->
-
-                <div class="form-group">
-
-                    <label for="fullName">
-                        Full Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="fullName"
-                        name="fullName"
-                        placeholder="Your full name"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- EMAIL -->
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Your email address"
-                        required
-                    >
-
-                </div>
-
-
-                <!-- PHONE -->
-
-                <div class="form-group">
-
-                    <label for="phone">
-                        Phone Number
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Your phone number"
-                    >
-
-                </div>
-
-
-                <!-- HOW CAN I HELP -->
-
-                <div class="form-group">
-
-                    <label for="help">
-                        How Can I Help?
-                    </label>
-
-                    <select
-                        id="help"
-                        name="help"
-                        required
-                    >
-
-                        <option
-                            value=""
-                            disabled
-                            selected
-                        >
-                            Select an option
-                        </option>
-
-
-                        <option>
-                            Business / Executive / Leadership Consultation
-                        </option>
-
-
-                        <option>
-                            AI &amp; Digital Transformation
-                        </option>
-
-
-                        <option>
-                            HR &amp; People Strategy
-                        </option>
-
-
-                        <option>
-                            Legal &amp; Compliance
-                        </option>
-
-
-                        <option>
-                            Marketing / Know Your Product
-                        </option>
-
-
-                        <option>
-                            Grow Your Product / Sales
-                        </option>
-
-
-                        <option>
-                            Speaking / Training
-                        </option>
-
-
-                        <option>
-                            Other
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <!-- MESSAGE -->
-
-                <div class="form-group">
-
-                    <label for="message">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        placeholder="Tell me a little about your idea, challenge or opportunity..."
-                        required
-                    ></textarea>
-
-                </div>
-
-
-                <!-- SEND -->
-
-                <button
-                    type="submit"
-                    class="submit-btn"
-                >
-
-                    Send Message
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </button>
-
-
-                <p class="form-note">
-
-                    Your message will open in your email
-                    application for sending.
-
-                </p>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="site-footer">
-
-    <p>
-        © 2026 Adv. Achut Poudel. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-const menuButton =
-    document.getElementById("mobileMenuBtn");
-
-const mobileMenu =
-    document.getElementById("mobileMenu");
-
-
-/* MOBILE MENU */
-
-if (menuButton && mobileMenu) {
-
-    menuButton.addEventListener(
-        "click",
-        function () {
-
-            mobileMenu.classList.toggle("active");
-
-            const icon =
-                menuButton.querySelector("i");
-
-
-            if (
-                mobileMenu.classList.contains("active")
-            ) {
-
-                icon.classList.remove("fa-bars");
-
-                icon.classList.add("fa-xmark");
-
-            } else {
-
-                icon.classList.remove("fa-xmark");
-
-                icon.classList.add("fa-bars");
-
-            }
-
-        }
-    );
+        max-width: 750px;
+    }
 
 }
 
 
-/* CONTACT FORM */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-const contactForm =
-    document.getElementById("contactForm");
+@media (max-width: 768px) {
 
+    .navbar {
 
-if (contactForm) {
+        min-height: 65px;
 
-    contactForm.addEventListener(
-        "submit",
-        function (event) {
-
-            event.preventDefault();
-
-
-            const fullName =
-                document.getElementById("fullName")
-                .value
-                .trim();
+        padding: 0 5%;
+    }
 
 
-            const email =
-                document.getElementById("email")
-                .value
-                .trim();
+    /* Hide desktop navigation */
+
+    .nav-menu,
+    .nav-right {
+        display: none;
+    }
 
 
-            const phone =
-                document.getElementById("phone")
-                .value
-                .trim();
+    /* Show mobile button */
+
+    .mobile-menu-btn {
+        display: block;
+    }
 
 
-            const help =
-                document.getElementById("help")
-                .value;
+    /* Mobile menu */
+
+    .mobile-menu {
+
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px 5%;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #24160f;
+
+        border-top: 1px solid rgba(201, 164, 92, 0.2);
+
+        border-bottom: 1px solid rgba(201, 164, 92, 0.2);
+
+        z-index: 1000;
+    }
 
 
-            const message =
-                document.getElementById("message")
-                .value
-                .trim();
+    .mobile-menu.active {
+        display: flex;
+    }
 
 
-            const subject =
-                encodeURIComponent(
-                    "Website Inquiry - " + help
-                );
+    .mobile-menu a {
+
+        padding: 13px 0;
+
+        color: #f4eee6;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
 
 
-            const body =
-                encodeURIComponent(
-
-                    "Full Name: " +
-                    fullName +
-
-                    "\n\nEmail: " +
-                    email +
-
-                    "\n\nPhone: " +
-                    phone +
-
-                    "\n\nHow Can I Help?: " +
-                    help +
-
-                    "\n\nMessage:\n" +
-                    message
-
-                );
+    .mobile-menu a:hover {
+        color: #c9a45c;
+    }
 
 
-            window.location.href =
-                "mailto:poudel.achut@gmail.com" +
-                "?subject=" +
-                subject +
-                "&body=" +
-                body;
+    .contact-section {
 
-        }
-    );
+        padding: 65px 6%;
+    }
+
+
+    .contact-container {
+
+        display: block;
+    }
+
+
+    .contact-intro {
+
+        margin-bottom: 55px;
+    }
+
+
+    .contact-intro h1 {
+
+        font-size: 50px;
+    }
+
+
+    .contact-form-wrapper {
+
+        padding: 25px;
+    }
 
 }
 
-</script>
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .contact-section {
+        padding: 50px 5%;
+    }
 
 
-</body>
+    .contact-intro h1 {
+        font-size: 43px;
+    }
 
-</html>
+
+    .contact-question {
+        font-size: 18px;
+    }
+
+
+    .contact-description {
+        font-size: 14px;
+    }
+
+
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+}
