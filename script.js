@@ -1,74 +1,87 @@
-/* =========================================================
-   ACHUT POUDEL — WEBSITE JAVASCRIPT
-========================================================= */
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
+const mobileMenuBtn =
+    document.getElementById("mobileMenuBtn");
 
-    const menuButton = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if (!menuButton || !mobileMenu) {
-        return;
-    }
+const mobileMenu =
+    document.getElementById("mobileMenu");
 
 
-    menuButton.addEventListener("click", function () {
+if (mobileMenuBtn && mobileMenu) {
 
-        mobileMenu.classList.toggle("active");
+    mobileMenuBtn.addEventListener(
+        "click",
+        function () {
 
-        const icon = menuButton.querySelector("i");
+            mobileMenu.classList.toggle("active");
 
-        if (mobileMenu.classList.contains("active")) {
 
-            icon.classList.remove("fa-bars");
+            const icon =
+                mobileMenuBtn.querySelector("i");
 
-            icon.classList.add("fa-xmark");
 
-            menuButton.setAttribute(
-                "aria-label",
-                "Close menu"
-            );
+            if (
+                mobileMenu.classList.contains("active")
+            ) {
 
-        } else {
+                icon.classList.remove(
+                    "fa-bars"
+                );
 
-            icon.classList.remove("fa-xmark");
+                icon.classList.add(
+                    "fa-xmark"
+                );
 
-            icon.classList.add("fa-bars");
+            } else {
 
-            menuButton.setAttribute(
-                "aria-label",
-                "Open menu"
-            );
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+            }
+
         }
+    );
 
-    });
-
-
-    /* Close mobile menu after clicking a link */
 
     const mobileLinks =
         mobileMenu.querySelectorAll("a");
 
-    mobileLinks.forEach(function (link) {
 
-        link.addEventListener("click", function () {
+    mobileLinks.forEach(
+        function (link) {
 
-            mobileMenu.classList.remove("active");
+            link.addEventListener(
+                "click",
+                function () {
 
-            const icon =
-                menuButton.querySelector("i");
+                    mobileMenu.classList.remove(
+                        "active"
+                    );
 
-            icon.classList.remove("fa-xmark");
 
-            icon.classList.add("fa-bars");
+                    const icon =
+                        mobileMenuBtn.querySelector("i");
 
-            menuButton.setAttribute(
-                "aria-label",
-                "Open menu"
+
+                    icon.classList.remove(
+                        "fa-xmark"
+                    );
+
+                    icon.classList.add(
+                        "fa-bars"
+                    );
+
+                }
             );
 
-        });
+        }
+    );
 
-    });
-
-});
+}
