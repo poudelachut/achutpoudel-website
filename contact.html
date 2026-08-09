@@ -1,790 +1,609 @@
-/* =====================================================
-   CONTACT PAGE
-   ADV. ACHUT POUDEL
-===================================================== */
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
-/* RESET */
+    <meta charset="UTF-8">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
+    <meta
+        name="description"
+        content="Contact Adv. Achut Poudel for leadership, HR, legal and compliance, marketing, AI, digital transformation, project sales and business strategy.">
 
-html {
-    scroll-behavior: smooth;
-}
+    <title>Contact | Adv. Achut Poudel</title>
 
 
-body {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
-    color: #f4eee6;
-    background: #24160f;
-    line-height: 1.6;
-}
+    <!-- Google Fonts -->
 
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
-/* =====================================================
-   HEADER
-===================================================== */
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
 
-.site-header {
-    width: 100%;
-    background: #24160f;
-    border-bottom: 1px solid rgba(184, 149, 90, 0.25);
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
 
-.navbar {
-    width: 100%;
-    min-height: 72px;
+    <!-- Font Awesome -->
 
-    padding: 0 5%;
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    gap: 30px;
-}
+    <!-- CONTACT CSS -->
 
+    <link rel="stylesheet"
+        href="./contact.css">
 
-/* LEFT NAV */
+</head>
 
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
 
+<body>
 
-.nav-menu a {
-    color: #f4eee6;
-    text-decoration: none;
 
-    font-size: 13px;
-    font-weight: 600;
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
+<header class="site-header">
 
-    transition: 0.3s ease;
-}
+    <nav class="navbar">
 
 
-.nav-menu a:hover {
-    color: #c9a45c;
-}
+        <div class="nav-menu">
 
+            <a href="index.html#home">
+                Home
+            </a>
 
-/* RIGHT */
+            <a href="index.html#about">
+                About
+            </a>
 
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
+            <a href="index.html#experience">
+                Experiences
+            </a>
 
+            <a href="index.html#community">
+                Community
+            </a>
 
-/* SOCIAL */
+            <a href="index.html#projects">
+                Projects
+            </a>
 
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 17px;
-}
+            <a href="index.html#honors">
+                Honors
+            </a>
 
+        </div>
 
-.social-links a {
-    color: #f4eee6;
 
-    text-decoration: none;
+        <div class="nav-right">
 
-    font-size: 13px;
 
-    transition: 0.3s ease;
-}
+            <div class="social-links">
 
+                <a
+                    href="https://www.linkedin.com/in/achutpdl/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-.social-links a:hover {
-    color: #c9a45c;
-}
+                    <i class="fa-brands fa-linkedin-in"></i>
 
+                </a>
 
-/* CONTACT BUTTON */
 
-.contact-btn {
-    display: inline-flex;
+                <a
+                    href="https://www.facebook.com/acyuta.paaidela/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-    align-items: center;
-    justify-content: center;
+                    <i class="fa-brands fa-facebook-f"></i>
 
-    min-height: 42px;
+                </a>
 
-    padding: 0 23px;
 
-    border: 1px solid #b8955a;
+                <a
+                    href="https://www.youtube.com/@achutpoudel9020"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-    color: #f4eee6;
+                    <i class="fa-brands fa-youtube"></i>
 
-    text-decoration: none;
+                </a>
 
-    font-size: 12px;
-    font-weight: 600;
 
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
+                <a
+                    href="https://www.tiktok.com/@achutpoudel_"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-    transition: 0.3s ease;
-}
+                    <i class="fa-brands fa-tiktok"></i>
 
+                </a>
 
-.contact-btn:hover,
-.contact-btn.active {
-    background: #b8955a;
-    color: #24160f;
-}
 
+                <a href="#">
 
-/* MOBILE BUTTON */
+                    <i class="fa-brands fa-instagram"></i>
 
-.mobile-menu-btn {
-    display: none;
+                </a>
 
-    background: none;
-    border: 0;
+            </div>
 
-    color: #f4eee6;
 
-    font-size: 22px;
+            <a
+                href="contact.html"
+                class="contact-btn">
 
-    cursor: pointer;
-}
+                Contact Me
 
+            </a>
 
-/* MOBILE MENU */
+        </div>
 
-.mobile-menu {
-    display: none;
-}
 
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            type="button">
 
-/* =====================================================
-   CONTACT SECTION
-===================================================== */
+            <i class="fa-solid fa-bars"></i>
 
-.contact-section {
-    min-height: calc(100vh - 72px);
+        </button>
 
-    padding: 90px 7%;
+    </nav>
 
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(184, 149, 90, 0.13),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #24160f 0%,
-            #2d1b12 50%,
-            #1d120d 100%
-        );
-}
 
+    <div
+        class="mobile-menu"
+        id="mobileMenu">
 
-.contact-container {
+        <a href="index.html#home">Home</a>
 
-    max-width: 1200px;
+        <a href="index.html#about">About</a>
 
-    margin: 0 auto;
+        <a href="index.html#experience">Experiences</a>
 
-    display: grid;
+        <a href="index.html#community">Community</a>
 
-    grid-template-columns: 0.9fr 1.1fr;
+        <a href="index.html#projects">Projects</a>
 
-    gap: 100px;
+        <a href="index.html#honors">Honors</a>
 
-    align-items: start;
-}
+        <a href="contact.html">Contact Me</a>
 
+    </div>
 
-/* =====================================================
-   LEFT CONTENT
-===================================================== */
+</header>
 
-.contact-intro {
-    padding-top: 15px;
-}
 
 
-.section-label {
-    margin-bottom: 25px;
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
-    color: #c9a45c;
+<main>
 
-    font-size: 12px;
-    font-weight: 700;
+<section class="contact-section">
 
-    letter-spacing: 0.18em;
+    <div class="contact-container">
 
-    text-transform: uppercase;
-}
 
+        <!-- LEFT -->
 
-.contact-intro h1 {
+        <div class="contact-intro">
 
-    margin-bottom: 28px;
 
-    font-family: "Playfair Display", Georgia, serif;
+            <div class="section-label">
+                CONTACT
+            </div>
 
-    font-size: clamp(48px, 6vw, 78px);
 
-    line-height: 1.05;
+            <h1>
 
-    font-weight: 600;
+                Let's
+                <span>Connect.</span>
 
-    color: #f5eee5;
-}
+            </h1>
 
 
-.contact-intro h1 span {
-    display: block;
+            <h2>
 
-    color: #c9a45c;
-}
+                Have an idea, challenge
+                or opportunity?
 
+            </h2>
 
-.contact-question {
 
-    margin-bottom: 18px;
+            <p class="contact-description">
 
-    font-size: 20px;
+                Whether it's leadership, HR, legal &amp;
+                compliance, marketing, digital transformation,
+                AI, project sales, business strategy or a
+                potential collaboration — let's start a
+                conversation.
 
-    font-weight: 600;
+            </p>
 
-    color: #f4eee6;
-}
 
+            <!-- EMAIL -->
 
-.contact-description {
+            <div class="contact-detail">
 
-    max-width: 560px;
+                <div class="detail-icon">
 
-    margin-bottom: 40px;
+                    <i class="fa-regular fa-envelope"></i>
 
-    color: #c8beb4;
+                </div>
 
-    font-size: 15px;
 
-    line-height: 1.9;
-}
+                <div>
 
+                    <span>EMAIL</span>
 
-/* =====================================================
-   EMAIL
-===================================================== */
+                    <a href="mailto:poudel.achut@gmail.com">
 
-.contact-detail {
+                        poudel.achut@gmail.com
 
-    display: flex;
+                    </a>
 
-    align-items: center;
+                </div>
 
-    gap: 17px;
+            </div>
 
-    margin-bottom: 38px;
-}
 
+            <!-- SOCIAL -->
 
-.detail-icon {
+            <div class="contact-social">
 
-    width: 45px;
-    height: 45px;
+                <span>
+                    CONNECT
+                </span>
 
-    display: flex;
 
-    align-items: center;
-    justify-content: center;
+                <div class="contact-social-icons">
 
-    border: 1px solid rgba(201, 164, 92, 0.45);
+                    <a
+                        href="https://www.linkedin.com/in/achutpdl/"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
-    color: #c9a45c;
+                        <i class="fa-brands fa-linkedin-in"></i>
 
-    font-size: 17px;
-}
+                    </a>
 
 
-.contact-detail span {
+                    <a
+                        href="https://www.facebook.com/acyuta.paaidela/"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
-    display: block;
+                        <i class="fa-brands fa-facebook-f"></i>
 
-    margin-bottom: 4px;
+                    </a>
 
-    color: #a99582;
 
-    font-size: 10px;
+                    <a
+                        href="https://www.youtube.com/@achutpoudel9020"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
-    font-weight: 700;
+                        <i class="fa-brands fa-youtube"></i>
 
-    letter-spacing: 0.15em;
-}
+                    </a>
 
 
-.contact-detail a {
+                    <a
+                        href="https://www.tiktok.com/@achutpoudel_"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
-    color: #f4eee6;
+                        <i class="fa-brands fa-tiktok"></i>
 
-    text-decoration: none;
+                    </a>
 
-    font-size: 15px;
 
-    transition: 0.3s ease;
-}
+                    <a href="#">
 
+                        <i class="fa-brands fa-instagram"></i>
 
-.contact-detail a:hover {
-    color: #c9a45c;
-}
+                    </a>
 
+                </div>
 
-/* =====================================================
-   SOCIAL
-===================================================== */
+            </div>
 
-.contact-social > span {
+        </div>
 
-    display: block;
 
-    margin-bottom: 14px;
 
-    color: #a99582;
+        <!-- RIGHT FORM -->
 
-    font-size: 10px;
+        <div class="contact-form-wrapper">
 
-    font-weight: 700;
 
-    letter-spacing: 0.15em;
-}
+            <form id="contactForm">
 
 
-.contact-social-icons {
+                <div class="form-group">
 
-    display: flex;
+                    <label for="fullName">
+                        Full Name
+                    </label>
 
-    align-items: center;
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Your full name"
+                        required>
 
-    gap: 12px;
-}
+                </div>
 
 
-.contact-social-icons a {
+                <div class="form-group">
 
-    width: 38px;
-    height: 38px;
+                    <label for="email">
+                        Email Address
+                    </label>
 
-    display: flex;
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your email address"
+                        required>
 
-    align-items: center;
-    justify-content: center;
+                </div>
 
-    border: 1px solid rgba(201, 164, 92, 0.35);
 
-    color: #f4eee6;
+                <div class="form-group">
 
-    text-decoration: none;
+                    <label for="phone">
+                        Phone Number
+                    </label>
 
-    transition: 0.3s ease;
-}
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Your phone number">
 
+                </div>
 
-.contact-social-icons a:hover {
 
-    background: #c9a45c;
+                <div class="form-group">
 
-    color: #24160f;
+                    <label for="help">
+                        How Can I Help?
+                    </label>
 
-    border-color: #c9a45c;
-}
+                    <select id="help" required>
 
+                        <option
+                            value=""
+                            disabled
+                            selected>
 
-/* =====================================================
-   FORM
-===================================================== */
+                            Select an option
 
-.contact-form-wrapper {
+                        </option>
 
-    padding: 42px;
 
-    background: rgba(255, 255, 255, 0.045);
+                        <option>
+                            Business / Executive / Leadership Consultation
+                        </option>
 
-    border: 1px solid rgba(201, 164, 92, 0.22);
 
-    backdrop-filter: blur(8px);
-}
+                        <option>
+                            AI &amp; Digital Transformation
+                        </option>
 
 
-.contact-form {
+                        <option>
+                            HR &amp; People Strategy
+                        </option>
 
-    width: 100%;
-}
 
+                        <option>
+                            Legal &amp; Compliance
+                        </option>
 
-.form-group {
 
-    margin-bottom: 23px;
-}
+                        <option>
+                            Marketing / Know Your Product
+                        </option>
 
 
-.form-group label {
+                        <option>
+                            Grow Your Product / Sales
+                        </option>
 
-    display: block;
 
-    margin-bottom: 8px;
+                        <option>
+                            Speaking / Training
+                        </option>
 
-    color: #ded4ca;
 
-    font-size: 12px;
+                        <option>
+                            Other
+                        </option>
 
-    font-weight: 600;
+                    </select>
 
-    letter-spacing: 0.04em;
-}
+                </div>
 
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+                <div class="form-group">
 
-    width: 100%;
+                    <label for="message">
+                        Message
+                    </label>
 
-    padding: 14px 15px;
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Tell me a little about your idea, challenge or opportunity..."
+                        required></textarea>
 
-    border: 1px solid rgba(201, 164, 92, 0.25);
+                </div>
 
-    outline: none;
 
-    background: rgba(255, 255, 255, 0.055);
+                <button
+                    type="submit"
+                    class="submit-btn">
 
-    color: #f4eee6;
+                    Send Message
 
-    font-family: "Inter", Arial, sans-serif;
+                    <i class="fa-solid fa-arrow-right"></i>
 
-    font-size: 14px;
+                </button>
 
-    border-radius: 0;
 
-    transition: 0.3s ease;
-}
+                <p class="form-note">
 
+                    Your message will open in your email
+                    application for sending.
 
-.form-group input::placeholder,
-.form-group textarea::placeholder {
+                </p>
 
-    color: #8e8176;
-}
+            </form>
 
+        </div>
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+    </div>
 
-    border-color: #c9a45c;
+</section>
 
-    background: rgba(255, 255, 255, 0.08);
-}
+</main>
 
 
-.form-group select option {
 
-    background: #24160f;
+<!-- FOOTER -->
 
-    color: #f4eee6;
-}
+<footer class="site-footer">
 
+    © 2026 Adv. Achut Poudel. All Rights Reserved.
 
-.form-group textarea {
+</footer>
 
-    resize: vertical;
 
-    min-height: 145px;
-}
 
+<!-- JAVASCRIPT -->
 
-/* =====================================================
-   SEND BUTTON
-===================================================== */
+<script>
 
-.submit-btn {
+const menuButton =
+    document.getElementById("mobileMenuBtn");
 
-    width: 100%;
+const mobileMenu =
+    document.getElementById("mobileMenu");
 
-    min-height: 50px;
 
-    padding: 0 25px;
+menuButton.addEventListener(
+    "click",
+    function () {
 
-    display: flex;
+        mobileMenu.classList.toggle("active");
 
-    align-items: center;
+        const icon =
+            menuButton.querySelector("i");
 
-    justify-content: center;
 
-    gap: 12px;
+        if (
+            mobileMenu.classList.contains("active")
+        ) {
 
-    border: 1px solid #c9a45c;
+            icon.classList.remove("fa-bars");
 
-    background: #c9a45c;
+            icon.classList.add("fa-xmark");
 
-    color: #24160f;
+        } else {
 
-    font-family: "Inter", Arial, sans-serif;
+            icon.classList.remove("fa-xmark");
 
-    font-size: 12px;
+            icon.classList.add("fa-bars");
 
-    font-weight: 700;
+        }
 
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-}
-
-
-.submit-btn:hover {
-
-    background: transparent;
-
-    color: #c9a45c;
-}
-
-
-.form-note {
-
-    margin-top: 13px;
-
-    color: #81746a;
-
-    font-size: 11px;
-
-    text-align: center;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.site-footer {
-
-    padding: 25px 5%;
-
-    border-top: 1px solid rgba(201, 164, 92, 0.18);
-
-    background: #1b100b;
-
-    color: #81746a;
-
-    text-align: center;
-
-    font-size: 11px;
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .navbar {
-        padding: 0 4%;
     }
+);
 
 
-    .nav-menu {
-        gap: 18px;
-    }
+document
+    .getElementById("contactForm")
+    .addEventListener(
+        "submit",
+        function (event) {
 
+            event.preventDefault();
 
-    .nav-menu a {
-        font-size: 11px;
-    }
 
+            const name =
+                document.getElementById("fullName")
+                .value.trim();
 
-    .social-links {
-        gap: 11px;
-    }
 
+            const email =
+                document.getElementById("email")
+                .value.trim();
 
-    .contact-btn {
-        padding: 0 15px;
-    }
 
+            const phone =
+                document.getElementById("phone")
+                .value.trim();
 
-    .contact-container {
 
-        grid-template-columns: 1fr;
+            const help =
+                document.getElementById("help")
+                .value;
 
-        gap: 60px;
 
-        max-width: 750px;
-    }
+            const message =
+                document.getElementById("message")
+                .value.trim();
 
-}
 
+            const subject =
+                encodeURIComponent(
+                    "Website Inquiry - " + help
+                );
 
-/* =====================================================
-   MOBILE
-===================================================== */
 
-@media (max-width: 768px) {
+            const body =
+                encodeURIComponent(
 
-    .navbar {
+                    "Full Name: " + name +
 
-        min-height: 65px;
+                    "\n\nEmail: " + email +
 
-        padding: 0 5%;
-    }
+                    "\n\nPhone: " + phone +
 
+                    "\n\nHow Can I Help?: " + help +
 
-    /* Hide desktop navigation */
+                    "\n\nMessage:\n" + message
 
-    .nav-menu,
-    .nav-right {
-        display: none;
-    }
+                );
 
 
-    /* Show mobile button */
+            window.location.href =
+                "mailto:poudel.achut@gmail.com" +
+                "?subject=" +
+                subject +
+                "&body=" +
+                body;
 
-    .mobile-menu-btn {
-        display: block;
-    }
+        }
+    );
 
+</script>
 
-    /* Mobile menu */
 
-    .mobile-menu {
+</body>
 
-        position: absolute;
-
-        top: 65px;
-
-        left: 0;
-
-        width: 100%;
-
-        padding: 20px 5%;
-
-        display: none;
-
-        flex-direction: column;
-
-        gap: 0;
-
-        background: #24160f;
-
-        border-top: 1px solid rgba(201, 164, 92, 0.2);
-
-        border-bottom: 1px solid rgba(201, 164, 92, 0.2);
-
-        z-index: 1000;
-    }
-
-
-    .mobile-menu.active {
-        display: flex;
-    }
-
-
-    .mobile-menu a {
-
-        padding: 13px 0;
-
-        color: #f4eee6;
-
-        text-decoration: none;
-
-        font-size: 13px;
-
-        font-weight: 600;
-
-        text-transform: uppercase;
-
-        border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-
-
-    .mobile-menu a:hover {
-        color: #c9a45c;
-    }
-
-
-    .contact-section {
-
-        padding: 65px 6%;
-    }
-
-
-    .contact-container {
-
-        display: block;
-    }
-
-
-    .contact-intro {
-
-        margin-bottom: 55px;
-    }
-
-
-    .contact-intro h1 {
-
-        font-size: 50px;
-    }
-
-
-    .contact-form-wrapper {
-
-        padding: 25px;
-    }
-
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media (max-width: 480px) {
-
-    .contact-section {
-        padding: 50px 5%;
-    }
-
-
-    .contact-intro h1 {
-        font-size: 43px;
-    }
-
-
-    .contact-question {
-        font-size: 18px;
-    }
-
-
-    .contact-description {
-        font-size: 14px;
-    }
-
-
-    .contact-form-wrapper {
-        padding: 20px;
-    }
-
-}
+</html>
