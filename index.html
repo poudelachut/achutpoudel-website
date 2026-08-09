@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -11,98 +12,293 @@
 
     <meta
         name="description"
-        content="Adv. Achut Poudel - Advocate, HR Leader and Business Strategist."
+        content="Adv. Achut Poudel - Advocate, HR Leader and Business Strategist"
     >
 
-    <title>Adv. Achut Poudel | Advocate • HR Leader • Business Strategist</title>
+    <title>Adv. Achut Poudel | Advocate | HR Leader | Business Strategist</title>
 
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
+
 </head>
 
 
 <body>
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+
+<!-- =========================================
+     HEADER / NAVIGATION
+========================================= -->
 
 <header class="site-header">
 
-    <div class="nav-container">
+    <nav class="navbar">
 
-        <nav class="nav-menu">
 
-            <a href="#home" class="active">
+        <!-- LEFT NAVIGATION -->
+
+        <div
+            class="nav-menu"
+            id="navMenu"
+        >
+
+            <a
+                href="#home"
+                class="nav-link active"
+            >
                 Home
             </a>
 
-            <a href="#about">
+            <a
+                href="#about"
+                class="nav-link"
+            >
                 About
             </a>
 
-            <a href="#experience">
-                Experiences
+            <a
+                href="#experience"
+                class="nav-link"
+            >
+                Experience
             </a>
 
-            <a href="#community">
+            <a
+                href="#community"
+                class="nav-link"
+            >
                 Community
             </a>
 
-            <a href="#projects">
+            <a
+                href="#projects"
+                class="nav-link"
+            >
                 Projects
             </a>
 
-            <a href="#honors">
+            <a
+                href="#honors"
+                class="nav-link"
+            >
                 Honors
             </a>
 
-        </nav>
+        </div>
 
 
-        <a href="#contact" class="contact-btn">
-            <span>✉</span>
-            Contact Me
-        </a>
+        <!-- RIGHT SIDE -->
 
-    </div>
+        <div class="nav-right">
+
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="social-links">
+
+
+                <!-- LinkedIn -->
+
+                <a
+                    href="https://www.linkedin.com/in/achutpdl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    title="LinkedIn"
+                >
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <!-- Facebook -->
+
+                <a
+                    href="https://www.facebook.com/acyuta.paaidela/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                    title="Facebook"
+                >
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <!-- YouTube -->
+
+                <a
+                    href="https://www.youtube.com/@achutpoudel9020"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                    title="YouTube"
+                >
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+                <!-- TikTok -->
+
+                <a
+                    href="https://www.tiktok.com/@achutpoudel_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok"
+                    title="TikTok"
+                >
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </a>
+
+
+                <!-- Instagram -->
+                <!-- Add your Instagram link later -->
+
+                <a
+                    href="#"
+                    aria-label="Instagram"
+                    title="Instagram"
+                >
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+            </div>
+
+
+            <!-- CONTACT BUTTON -->
+
+            <a
+                href="#contact"
+                class="contact-btn"
+            >
+                Contact Me
+            </a>
+
+
+        </div>
+
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="mobile-menu-toggle"
+            id="mobileMenuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+    </nav>
 
 </header>
 
 
-<!-- ==============================
-     HERO SECTION
-============================== -->
 
-<section class="hero" id="home">
+<!-- =========================================
+     HERO SECTION
+========================================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
 
     <div class="hero-grid">
 
-        <!-- LEFT CONTENT -->
+
+        <!-- LEFT HERO CONTENT -->
+
         <div class="hero-content">
 
+
             <div class="eyebrow">
+
                 ADVOCATE • HR LEADER • BUSINESS STRATEGIST
+
             </div>
 
+
             <h1>
+
                 Empowering Organizations
                 <br>
+
                 Through
+
                 <br>
-                <span>People, Law & Leadership.</span>
+
+                <span>
+                    People, Law &amp; Leadership.
+                </span>
+
             </h1>
 
+
             <p class="hero-text">
-                Over 20 years of professional experience across Human Resources,
-                Legal & Compliance, Administration, Operations, Sales and
-                Business Strategy.
+
+                Over 20 years of professional experience across
+                Human Resources, Legal &amp; Compliance,
+                Administration, Operations, Sales and Business Strategy.
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#contact" class="btn btn-primary">
+
+                <a
+                    href="#contact"
+                    class="btn btn-primary"
+                >
                     Work With Me
                 </a>
+
 
                 <a
                     href="Adv-Achut-Poudel-CV.pdf"
@@ -112,19 +308,31 @@
                     Download CV
                 </a>
 
+
             </div>
 
-            <a href="#about" class="scroll-down">
+
+            <a
+                href="#about"
+                class="scroll-down"
+            >
+
                 ↓ &nbsp; Scroll Down
+
             </a>
+
 
         </div>
 
 
-        <!-- RIGHT PHOTO -->
+
+        <!-- RIGHT HERO PHOTO -->
+
         <div class="hero-visual">
 
+
             <div class="hero-glow"></div>
+
 
             <div class="hero-photo">
 
@@ -137,15 +345,22 @@
 
 
             <!-- AUTHORITY CARD -->
+
             <div class="hero-card">
 
+
                 <div class="hero-card-icon">
-                    ⚖
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
                 </div>
+
 
                 <div>
 
-                    <strong>Advocate • HR Leader</strong>
+                    <strong>
+                        Advocate • HR Leader
+                    </strong>
 
                     <span>
                         People • Law • Leadership
@@ -157,242 +372,44 @@
 
                 </div>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
-</section>
-<!-- =====================================================
-     STATS
-===================================================== -->
-
-<section class="stats-section">
-
-    <div class="container stats-grid">
-
-
-        <div class="stat-item">
-
-            <strong>
-                20+
-            </strong>
-
-            <span>
-                Years Experience
-            </span>
-
-        </div>
-
-
-        <div class="stat-item">
-
-            <strong>
-                MBA
-            </strong>
-
-            <span>
-                Human Resources
-            </span>
-
-        </div>
-
-
-        <div class="stat-item">
-
-            <strong>
-                MBS
-            </strong>
-
-            <span>
-                Finance
-            </span>
-
-        </div>
-
-
-        <div class="stat-item">
-
-            <strong>
-                LLB
-            </strong>
-
-            <span>
-                Law
-            </span>
-
-        </div>
-
-
-        <div class="stat-item">
-
-            <strong>
-                Advocate
-            </strong>
-
-            <span>
-                Professional License
-            </span>
-
-        </div>
-
-    </div>
 
 </section>
 
 
 
-<!-- =====================================================
+<!-- =========================================
      ABOUT
-===================================================== -->
+========================================= -->
 
-<section id="about" class="section about-section">
+<section
+    class="content-section"
+    id="about"
+>
 
-    <div class="container">
+    <div class="section-container">
 
-
-        <div class="section-heading">
-
-            <span>
-                ABOUT ME
-            </span>
-
-            <h2>
-                Experience that connects
-                <em>People, Law &amp; Business.</em>
-            </h2>
-
+        <div class="section-label">
+            ABOUT
         </div>
 
+        <h2>
+            Professional Experience With Purpose
+        </h2>
 
-        <div class="about-grid">
-
-
-            <div class="about-text">
-
-                <p class="lead">
-
-                    I am an Advocate and experienced professional
-                    with a multidisciplinary background in Human
-                    Resources, Law, Administration, Operations,
-                    Sales and Business Strategy.
-
-                </p>
-
-
-                <p>
-
-                    My professional journey has provided exposure
-                    to different industries and organizational
-                    environments, allowing me to understand both
-                    people and business from a practical perspective.
-
-                </p>
-
-
-                <p>
-
-                    I believe sustainable organizations are built
-                    through strong people practices, responsible
-                    leadership, sound governance and effective
-                    execution.
-
-                </p>
-
-
-                <div class="about-signature">
-
-                    <strong>
-                        Adv. Achut Poudel
-                    </strong>
-
-                    <span>
-                        Advocate • HR Professional • Business Strategist
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="about-highlights">
-
-
-                <div class="highlight-box">
-
-                    <span class="highlight-number">
-                        01
-                    </span>
-
-                    <h3>
-                        People
-                    </h3>
-
-                    <p>
-                        Human capital, organizational culture,
-                        leadership and HR strategy.
-                    </p>
-
-                </div>
-
-
-                <div class="highlight-box">
-
-                    <span class="highlight-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Law
-                    </h3>
-
-                    <p>
-                        Legal awareness, compliance, governance
-                        and corporate responsibility.
-                    </p>
-
-                </div>
-
-
-                <div class="highlight-box">
-
-                    <span class="highlight-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Business
-                    </h3>
-
-                    <p>
-                        Operations, administration, strategy
-                        and organizational development.
-                    </p>
-
-                </div>
-
-
-                <div class="highlight-box">
-
-                    <span class="highlight-number">
-                        04
-                    </span>
-
-                    <h3>
-                        Leadership
-                    </h3>
-
-                    <p>
-                        Building accountable teams and
-                        practical leadership systems.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
+        <p>
+            I bring extensive professional experience across
+            Human Resources, Administration, Operations,
+            Legal &amp; Compliance, Sales, Branding and Business Strategy.
+        </p>
 
     </div>
 
@@ -400,560 +417,75 @@
 
 
 
-<!-- =====================================================
-     SERVICES
-===================================================== -->
-
-<section class="section services-section">
-
-    <div class="container">
-
-
-        <div class="section-heading centered">
-
-            <span>
-                EXPERTISE
-            </span>
-
-            <h2>
-                What I
-                <em>Bring to the Table</em>
-            </h2>
-
-            <p>
-                A multidisciplinary approach to people,
-                organizations, law and business.
-            </p>
-
-        </div>
-
-
-        <div class="services-grid">
-
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    01
-                </div>
-
-                <div class="service-icon">
-                    👥
-                </div>
-
-                <h3>
-                    HR &amp; People Strategy
-                </h3>
-
-                <p>
-                    Human resource strategy, organizational
-                    development, employee relations, leadership
-                    and people management.
-                </p>
-
-                <a href="#contact">
-                    Explore →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    02
-                </div>
-
-                <div class="service-icon">
-                    ⚖
-                </div>
-
-                <h3>
-                    Legal &amp; Compliance
-                </h3>
-
-                <p>
-                    Legal awareness, corporate compliance,
-                    governance and practical organizational
-                    legal support.
-                </p>
-
-                <a href="#contact">
-                    Explore →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    03
-                </div>
-
-                <div class="service-icon">
-                    ◈
-                </div>
-
-                <h3>
-                    Administration &amp; Operations
-                </h3>
-
-                <p>
-                    Operational systems, administration,
-                    process improvement and organizational
-                    coordination.
-                </p>
-
-                <a href="#contact">
-                    Explore →
-                </a>
-
-            </article>
-
-
-            <article class="service-card">
-
-                <div class="service-number">
-                    04
-                </div>
-
-                <div class="service-icon">
-                    ↗
-                </div>
-
-                <h3>
-                    Business Strategy
-                </h3>
-
-                <p>
-                    Practical business thinking, organizational
-                    strategy, execution and sustainable growth.
-                </p>
-
-                <a href="#contact">
-                    Explore →
-                </a>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
+<!-- =========================================
      EXPERIENCE
-===================================================== -->
+========================================= -->
 
-<section id="experience" class="section experience-section">
+<section
+    class="content-section section-dark"
+    id="experience"
+>
 
-    <div class="container">
+    <div class="section-container">
 
-
-        <div class="section-heading">
-
-            <span>
-                EXPERIENCE
-            </span>
-
-            <h2>
-                A career built around
-                <em>responsibility &amp; growth.</em>
-            </h2>
-
+        <div class="section-label">
+            EXPERIENCE
         </div>
 
+        <h2>
+            Experience &amp; Expertise
+        </h2>
 
-        <div class="timeline">
+        <div class="cards-grid">
 
 
-            <div class="timeline-item">
+            <div class="info-card">
 
-                <div class="timeline-year">
-                    NOW
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Senior Corporate Professional
-                    </h3>
-
-                    <p>
-                        Leadership across HR, administration,
-                        operations, compliance and business
-                        functions.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    HR
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Human Resources Leadership
-                    </h3>
-
-                    <p>
-                        Experience in core HR, strategic HR,
-                        people management, employee relations
-                        and organizational development.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    LAW
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Legal &amp; Compliance
-                    </h3>
-
-                    <p>
-                        Professional development in law and
-                        advocacy, with a focus on practical
-                        legal and corporate matters.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    20+
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Multidisciplinary Professional Journey
-                    </h3>
-
-                    <p>
-                        More than two decades of professional
-                        experience across multiple functions
-                        and industries.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     COMMUNITY
-===================================================== -->
-
-<section id="community" class="section community-section">
-
-    <div class="container community-grid">
-
-
-        <div>
-
-            <div class="section-heading">
-
-                <span>
-                    COMMUNITY
-                </span>
-
-                <h2>
-                    Sharing knowledge.
-                    <em>Creating impact.</em>
-                </h2>
-
-            </div>
-
-            <p class="community-text">
-
-                Professional knowledge becomes more valuable
-                when it is shared. I believe in creating useful
-                conversations around HR, employment, law,
-                leadership, career development and business.
-
-            </p>
-
-
-            <a
-                href="#content"
-                class="text-link"
-            >
-                Explore My Content →
-            </a>
-
-        </div>
-
-
-        <div class="community-quote">
-
-            <span class="quote-mark">
-                “
-            </span>
-
-            <blockquote>
-
-                Strong organizations are built by
-                people who understand both
-                responsibility and opportunity.
-
-            </blockquote>
-
-            <small>
-                — Adv. Achut Poudel
-            </small>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PROJECTS
-===================================================== -->
-
-<section id="projects" class="section projects-section">
-
-    <div class="container">
-
-
-        <div class="section-heading centered">
-
-            <span>
-                PROJECTS
-            </span>
-
-            <h2>
-                Work that creates
-                <em>practical value.</em>
-            </h2>
-
-        </div>
-
-
-        <div class="projects-grid">
-
-
-            <article class="project-card">
-
-                <div class="project-top">
-                    <span>
-                        01
-                    </span>
-
-                    <span>
-                        HR
-                    </span>
-                </div>
-
-                <h3>
-                    Human Capital Development
-                </h3>
-
-                <p>
-                    People systems, HR practices and
-                    organizational capability development.
-                </p>
-
-                <a href="#contact">
-                    View Project →
-                </a>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <div class="project-top">
-                    <span>
-                        02
-                    </span>
-
-                    <span>
-                        CORPORATE
-                    </span>
-                </div>
-
-                <h3>
-                    Organizational Operations
-                </h3>
-
-                <p>
-                    Administrative and operational systems
-                    designed for practical execution.
-                </p>
-
-                <a href="#contact">
-                    View Project →
-                </a>
-
-            </article>
-
-
-            <article class="project-card">
-
-                <div class="project-top">
-                    <span>
-                        03
-                    </span>
-
-                    <span>
-                        LEGAL
-                    </span>
-                </div>
-
-                <h3>
-                    Legal &amp; Compliance Awareness
-                </h3>
-
-                <p>
-                    Connecting organizational decisions
-                    with legal and compliance considerations.
-                </p>
-
-                <a href="#contact">
-                    View Project →
-                </a>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     HONORS
-===================================================== -->
-
-<section id="honors" class="section honors-section">
-
-    <div class="container">
-
-
-        <div class="section-heading">
-
-            <span>
-                HONORS &amp; CREDENTIALS
-            </span>
-
-            <h2>
-                Built on
-                <em>learning &amp; professional growth.</em>
-            </h2>
-
-        </div>
-
-
-        <div class="honors-grid">
-
-
-            <div class="honor-card">
-
-                <span>
-                    MBA
-                </span>
+                <i class="fa-solid fa-users"></i>
 
                 <h3>
                     Human Resources
                 </h3>
 
                 <p>
-                    Master's level specialization
-                    in Human Resources.
+                    Strategic and functional HR,
+                    people management and organizational development.
                 </p>
 
             </div>
 
 
-            <div class="honor-card">
+            <div class="info-card">
 
-                <span>
-                    MBS
-                </span>
+                <i class="fa-solid fa-scale-balanced"></i>
 
                 <h3>
-                    Finance
+                    Legal &amp; Compliance
                 </h3>
 
                 <p>
-                    Master's level education
-                    in Finance.
+                    Legal practice, employment matters,
+                    compliance and corporate governance.
                 </p>
 
             </div>
 
 
-            <div class="honor-card">
+            <div class="info-card">
 
-                <span>
-                    LLB
-                </span>
+                <i class="fa-solid fa-chart-line"></i>
 
                 <h3>
-                    Law
+                    Business Strategy
                 </h3>
 
                 <p>
-                    Legal education supporting
-                    professional advocacy.
+                    Business operations, sales,
+                    branding and strategic development.
                 </p>
 
             </div>
 
-
-            <div class="honor-card">
-
-                <span>
-                    ADV.
-                </span>
-
-                <h3>
-                    Advocate
-                </h3>
-
-                <p>
-                    Licensed professional
-                    advocate.
-                </p>
-
-            </div>
 
         </div>
 
@@ -963,260 +495,213 @@
 
 
 
-<!-- =====================================================
-     CONTENT
-===================================================== -->
+<!-- =========================================
+     COMMUNITY
+========================================= -->
 
-<section id="content" class="section content-section">
+<section
+    class="content-section"
+    id="community"
+>
 
-    <div class="container">
+    <div class="section-container">
 
-
-        <div class="section-heading centered">
-
-            <span>
-                CONTENT
-            </span>
-
-            <h2>
-                Ideas on
-                <em>People, Law &amp; Business.</em>
-            </h2>
-
-            <p>
-                Practical insights for professionals,
-                leaders and organizations.
-            </p>
-
+        <div class="section-label">
+            COMMUNITY
         </div>
 
-
-        <div class="content-grid">
-
-
-            <article class="content-card">
-
-                <div class="content-category">
-                    HR
-                </div>
-
-                <h3>
-                    Human Resources &amp; Leadership
-                </h3>
-
-                <p>
-                    Thoughts on people management,
-                    workplace culture and leadership.
-                </p>
-
-                <a href="#contact">
-                    Read More →
-                </a>
-
-            </article>
-
-
-            <article class="content-card">
-
-                <div class="content-category">
-                    LAW
-                </div>
-
-                <h3>
-                    Employment &amp; Legal Awareness
-                </h3>
-
-                <p>
-                    Simplifying important legal and
-                    workplace topics.
-                </p>
-
-                <a href="#contact">
-                    Read More →
-                </a>
-
-            </article>
-
-
-            <article class="content-card">
-
-                <div class="content-category">
-                    BUSINESS
-                </div>
-
-                <h3>
-                    Business &amp; Career Insights
-                </h3>
-
-                <p>
-                    Practical perspectives on careers,
-                    organizations and business growth.
-                </p>
-
-                <a href="#contact">
-                    Read More →
-                </a>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section id="contact" class="section contact-section">
-
-    <div class="container contact-grid">
-
-
-        <div class="contact-intro">
-
-            <span class="section-label">
-                LET'S CONNECT
-            </span>
-
-            <h2>
-                Have an idea,
-                challenge or
-                <em>opportunity?</em>
-            </h2>
-
-            <p>
-                Let's start a conversation about how
-                I can contribute through professional
-                experience, legal knowledge and
-                organizational insight.
-            </p>
-
-        </div>
-
-
-        <div class="contact-box">
-
-
-            <a
-                href="mailto:poudel.achut@gmail.com"
-                class="contact-item"
-            >
-
-                <span>
-                    EMAIL
-                </span>
-
-                <strong>
-                    poudel.achut@gmail.com
-                </strong>
-
-            </a>
-
-
-            <div class="contact-divider"></div>
-
-
-            <a
-                href="tel:+977"
-                class="contact-item"
-            >
-
-                <span>
-                    PHONE
-                </span>
-
-                <strong>
-                    Contact for details
-                </strong>
-
-            </a>
-
-
-            <div class="contact-divider"></div>
-
-
-            <div class="contact-item">
-
-                <span>
-                    LOCATION
-                </span>
-
-                <strong>
-                    Kathmandu, Nepal
-                </strong>
-
-            </div>
-
-
-            <a
-                href="mailto:poudel.achut@gmail.com"
-                class="contact-submit"
-            >
-                Get In Touch →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-    <div class="container footer-inner">
-
-
-        <div>
-
-            <strong>
-                Adv. Achut Poudel
-            </strong>
-
-            <span>
-                Advocate • HR Leader • Business Strategist
-            </span>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
-
+        <h2>
+            Knowledge &amp; Community
+        </h2>
 
         <p>
-            © <span id="year"></span>
-            Achut Poudel. All Rights Reserved.
+            Sharing practical knowledge on HR,
+            employment, leadership, law and professional development.
         </p>
 
     </div>
 
+</section>
+
+
+
+<!-- =========================================
+     PROJECTS
+========================================= -->
+
+<section
+    class="content-section section-dark"
+    id="projects"
+>
+
+    <div class="section-container">
+
+        <div class="section-label">
+            PROJECTS
+        </div>
+
+        <h2>
+            Selected Projects
+        </h2>
+
+        <p>
+            Professional initiatives, organizational projects
+            and knowledge-sharing activities.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     HONORS
+========================================= -->
+
+<section
+    class="content-section"
+    id="honors"
+>
+
+    <div class="section-container">
+
+        <div class="section-label">
+            HONORS &amp; CREDENTIALS
+        </div>
+
+        <h2>
+            Education &amp; Professional Credentials
+        </h2>
+
+
+        <div class="credentials-grid">
+
+
+            <div class="credential-card">
+
+                <strong>
+                    MBA
+                </strong>
+
+                <span>
+                    Human Resources
+                </span>
+
+            </div>
+
+
+            <div class="credential-card">
+
+                <strong>
+                    MBS
+                </strong>
+
+                <span>
+                    Finance
+                </span>
+
+            </div>
+
+
+            <div class="credential-card">
+
+                <strong>
+                    LLB
+                </strong>
+
+                <span>
+                    Law
+                </span>
+
+            </div>
+
+
+            <div class="credential-card">
+
+                <strong>
+                    Advocate
+                </strong>
+
+                <span>
+                    Professional License
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section
+    class="contact-section"
+    id="contact"
+>
+
+    <div class="contact-container">
+
+
+        <div class="section-label">
+            CONTACT
+        </div>
+
+
+        <h2>
+            Let's Connect
+        </h2>
+
+
+        <p>
+            Interested in professional collaboration,
+            consulting, HR, legal or business discussions?
+        </p>
+
+
+        <a
+            href="mailto:poudel.achut@gmail.com"
+            class="contact-email"
+        >
+
+            <i class="fa-solid fa-envelope"></i>
+
+            poudel.achut@gmail.com
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="site-footer">
+
+    <p>
+        © 2026 Adv. Achut Poudel. All Rights Reserved.
+    </p>
+
 </footer>
 
 
-<script src="script.js"></script>
+
+<!-- JavaScript -->
+
+<script src="./script.js"></script>
+
 
 </body>
 
