@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Adv. Achut Poudel</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- Main CSS -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header class="site-header">
+
+    <nav class="navbar">
+
+
+        <!-- LEFT MENU -->
+
+        <div class="nav-menu">
+
+            <a href="index.html#home"
+               class="nav-link">
+
+                Home
+
+            </a>
+
+
+            <a href="index.html#about"
+               class="nav-link">
+
+                About
+
+            </a>
+
+
+            <a href="index.html#experience"
+               class="nav-link">
+
+                Experience
+
+            </a>
+
+
+            <a href="index.html#community"
+               class="nav-link">
+
+                Community
+
+            </a>
+
+
+            <a href="index.html#projects"
+               class="nav-link">
+
+                Projects
+
+            </a>
+
+
+            <a href="index.html#honors"
+               class="nav-link">
+
+                Honors
+
+            </a>
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <div class="nav-right">
+
+
+            <div class="social-links">
+
+
+                <a href="https://www.linkedin.com/in/achutpdl/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="https://www.facebook.com/acyuta.paaidela/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/@achutpoudel9020"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+                <a href="https://www.tiktok.com/@achutpoudel_"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <a href="contact.html"
+               class="contact-btn active">
+
+                Contact Me
+
+            </a>
+
+        </div>
+
+
+
+        <!-- MOBILE -->
+
+        <button class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </nav>
+
+
+    <!-- MOBILE MENU -->
+
+    <div class="mobile-menu"
+         id="mobileMenu">
+
+        <a href="index.html#home">
+            Home
+        </a>
+
+        <a href="index.html#about">
+            About
+        </a>
+
+        <a href="index.html#experience">
+            Experience
+        </a>
+
+        <a href="index.html#community">
+            Community
+        </a>
+
+        <a href="index.html#projects">
+            Projects
+        </a>
+
+        <a href="index.html#honors">
+            Honors
+        </a>
+
+        <a href="contact.html"
+           class="mobile-contact">
+
+            Contact Me
+
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<main class="contact-page">
+
+
+    <div class="contact-wrapper">
+
+
+        <!-- HEADING -->
+
+        <div class="contact-heading">
+
+
+            <div class="section-label">
+                CONTACT
+            </div>
+
+
+            <h1>
+                Let's Connect
+            </h1>
+
+
+            <p>
+                Have an idea, challenge or opportunity?
+            </p>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form class="contact-form"
+              action="#"
+              method="POST">
+
+
+            <!-- FULL NAME -->
+
+            <div class="form-group">
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+
+                <input type="text"
+                       id="fullName"
+                       name="fullName"
+                       placeholder="Your full name"
+                       autocomplete="name"
+                       required>
+
+            </div>
+
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="Your email address"
+                       autocomplete="email"
+                       required>
+
+            </div>
+
+
+
+            <!-- HOW CAN I HELP -->
+
+            <div class="form-group">
+
+                <label for="help">
+                    How Can I Help?
+                </label>
+
+
+                <select id="help"
+                        name="help"
+                        required>
+
+
+                    <option value=""
+                            disabled
+                            selected>
+
+                        Select an option
+
+                    </option>
+
+
+                    <option value="business-executive-leadership">
+
+                        Business / Executive / Leadership Consultation
+
+                    </option>
+
+
+                    <option value="ai-digital-transformation">
+
+                        AI &amp; Digital Transformation
+
+                    </option>
+
+
+                    <option value="hr-people-strategy">
+
+                        HR &amp; People Strategy
+
+                    </option>
+
+
+                    <option value="legal-compliance">
+
+                        Legal &amp; Compliance
+
+                    </option>
+
+
+                    <option value="marketing-product">
+
+                        Marketing / Know Your Product
+
+                    </option>
+
+
+                    <option value="product-sales">
+
+                        Grow Your Product / Sales
+
+                    </option>
+
+
+                    <option value="speaking-training">
+
+                        Speaking / Training
+
+                    </option>
+
+
+                    <option value="other">
+
+                        Other
+
+                    </option>
+
+
+                </select>
+
+            </div>
+
+
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+
+                <label for="message">
+                    Message
+                </label>
+
+
+                <textarea id="message"
+                          name="message"
+                          rows="6"
+                          placeholder="Your message"
+                          required></textarea>
+
+            </div>
+
+
+
+            <!-- SEND -->
+
+            <button type="submit"
+                    class="contact-submit">
+
+                SEND MESSAGE
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+
+        </form>
+
+
+
+        <!-- SOCIAL -->
+
+        <div class="contact-social">
+
+
+            <span>
+                Or connect with me
+            </span>
+
+
+            <div class="contact-social-links">
+
+
+                <a href="https://www.linkedin.com/in/achutpdl/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="https://www.facebook.com/acyuta.paaidela/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/@achutpoudel9020"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+                <a href="https://www.tiktok.com/@achutpoudel_"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+
+                    <i class="fa-brands fa-tiktok"></i>
+
+                </a>
+
+
+                <a href="#"
+                   aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <p>
+        © 2026 Adv. Achut Poudel. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<script>
+
+const mobileMenuBtn =
+    document.getElementById("mobileMenuBtn");
+
+const mobileMenu =
+    document.getElementById("mobileMenu");
+
+
+mobileMenuBtn.addEventListener("click", function () {
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".mobile-menu a")
+    .forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            mobileMenu.classList.remove("active");
+
+        });
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
