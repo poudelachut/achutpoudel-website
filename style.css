@@ -1,4 +1,793 @@
-/* =========================================================
+/* =====================================================
+   CONTACT PAGE
+   ADV. ACHUT POUDEL
+===================================================== */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #f4eee6;
+    background: #24160f;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+    width: 100%;
+    background: #24160f;
+    border-bottom: 1px solid rgba(184, 149, 90, 0.25);
+}
+
+
+.navbar {
+    width: 100%;
+    min-height: 72px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* LEFT NAV */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+
+.nav-menu a {
+    color: #f4eee6;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    transition: 0.3s ease;
+}
+
+
+.nav-menu a:hover {
+    color: #c9a45c;
+}
+
+
+/* RIGHT */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* SOCIAL */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+
+.social-links a {
+    color: #f4eee6;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+
+.social-links a:hover {
+    color: #c9a45c;
+}
+
+
+/* CONTACT BUTTON */
+
+.contact-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 23px;
+
+    border: 1px solid #b8955a;
+
+    color: #f4eee6;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-btn:hover,
+.contact-btn.active {
+    background: #b8955a;
+    color: #24160f;
+}
+
+
+/* MOBILE BUTTON */
+
+.mobile-menu-btn {
+    display: none;
+
+    background: none;
+    border: 0;
+
+    color: #f4eee6;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section {
+    min-height: calc(100vh - 72px);
+
+    padding: 90px 7%;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(184, 149, 90, 0.13),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #24160f 0%,
+            #2d1b12 50%,
+            #1d120d 100%
+        );
+}
+
+
+.contact-container {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.contact-intro {
+    padding-top: 15px;
+}
+
+
+.section-label {
+    margin-bottom: 25px;
+
+    color: #c9a45c;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.contact-intro h1 {
+
+    margin-bottom: 28px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    color: #f5eee5;
+}
+
+
+.contact-intro h1 span {
+    display: block;
+
+    color: #c9a45c;
+}
+
+
+.contact-question {
+
+    margin-bottom: 18px;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #f4eee6;
+}
+
+
+.contact-description {
+
+    max-width: 560px;
+
+    margin-bottom: 40px;
+
+    color: #c8beb4;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   EMAIL
+===================================================== */
+
+.contact-detail {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-bottom: 38px;
+}
+
+
+.detail-icon {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(201, 164, 92, 0.45);
+
+    color: #c9a45c;
+
+    font-size: 17px;
+}
+
+
+.contact-detail span {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #a99582;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+.contact-detail a {
+
+    color: #f4eee6;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-detail a:hover {
+    color: #c9a45c;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.contact-social > span {
+
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #a99582;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+.contact-social-icons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.contact-social-icons a {
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(201, 164, 92, 0.35);
+
+    color: #f4eee6;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-social-icons a:hover {
+
+    background: #c9a45c;
+
+    color: #24160f;
+
+    border-color: #c9a45c;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.contact-form-wrapper {
+
+    padding: 42px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border: 1px solid rgba(201, 164, 92, 0.22);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.contact-form {
+
+    width: 100%;
+}
+
+
+.form-group {
+
+    margin-bottom: 23px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ded4ca;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid rgba(201, 164, 92, 0.25);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    color: #f4eee6;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 14px;
+
+    border-radius: 0;
+
+    transition: 0.3s ease;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #8e8176;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #c9a45c;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+.form-group select option {
+
+    background: #24160f;
+
+    color: #f4eee6;
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+    min-height: 145px;
+}
+
+
+/* =====================================================
+   SEND BUTTON
+===================================================== */
+
+.submit-btn {
+
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    border: 1px solid #c9a45c;
+
+    background: #c9a45c;
+
+    color: #24160f;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.submit-btn:hover {
+
+    background: transparent;
+
+    color: #c9a45c;
+}
+
+
+.form-note {
+
+    margin-top: 13px;
+
+    color: #81746a;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+
+    padding: 25px 5%;
+
+    border-top: 1px solid rgba(201, 164, 92, 0.18);
+
+    background: #1b100b;
+
+    color: #81746a;
+
+    text-align: center;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+
+    .nav-menu {
+        gap: 18px;
+    }
+
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+
+    .social-links {
+        gap: 11px;
+    }
+
+
+    .contact-btn {
+        padding: 0 15px;
+    }
+
+
+    .contact-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        max-width: 750px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        min-height: 65px;
+
+        padding: 0 5%;
+    }
+
+
+    /* Hide desktop navigation */
+
+    .nav-menu,
+    .nav-right {
+        display: none;
+    }
+
+
+    /* Show mobile button */
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+
+    /* Mobile menu */
+
+    .mobile-menu {
+
+        position: absolute;
+
+        top: 65px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px 5%;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #24160f;
+
+        border-top: 1px solid rgba(201, 164, 92, 0.2);
+
+        border-bottom: 1px solid rgba(201, 164, 92, 0.2);
+
+        z-index: 1000;
+    }
+
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+
+    .mobile-menu a {
+
+        padding: 13px 0;
+
+        color: #f4eee6;
+
+        text-decoration: none;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+
+    .mobile-menu a:hover {
+        color: #c9a45c;
+    }
+
+
+    .contact-section {
+
+        padding: 65px 6%;
+    }
+
+
+    .contact-container {
+
+        display: block;
+    }
+
+
+    .contact-intro {
+
+        margin-bottom: 55px;
+    }
+
+
+    .contact-intro h1 {
+
+        font-size: 50px;
+    }
+
+
+    .contact-form-wrapper {
+
+        padding: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+
+    .contact-intro h1 {
+        font-size: 43px;
+    }
+
+
+    .contact-question {
+        font-size: 18px;
+    }
+
+
+    .contact-description {
+        font-size: 14px;
+    }
+
+
+    .contact-form-wrapper {
+        padding: 20px;
+    }
+
+}/* =========================================================
    ADV. ACHUT POUDEL
    PERSONAL BRAND WEBSITE
    FINAL MASTER CSS
