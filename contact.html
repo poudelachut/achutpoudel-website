@@ -30,7 +30,7 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
-    <!-- Main CSS -->
+    <!-- CSS -->
 
     <link rel="stylesheet"
           href="style.css">
@@ -56,62 +56,46 @@
 
             <a href="index.html#home"
                class="nav-link">
-
                 Home
-
             </a>
-
 
             <a href="index.html#about"
                class="nav-link">
-
                 About
-
             </a>
-
 
             <a href="index.html#experience"
                class="nav-link">
-
-                Experience
-
+                Experiences
             </a>
-
 
             <a href="index.html#community"
                class="nav-link">
-
                 Community
-
             </a>
-
 
             <a href="index.html#projects"
                class="nav-link">
-
                 Projects
-
             </a>
-
 
             <a href="index.html#honors"
                class="nav-link">
-
                 Honors
-
             </a>
 
         </div>
 
 
-
-        <!-- RIGHT -->
+        <!-- RIGHT MENU -->
 
         <div class="nav-right">
 
 
             <div class="social-links">
 
+
+                <!-- LinkedIn -->
 
                 <a href="https://www.linkedin.com/in/achutpdl/"
                    target="_blank"
@@ -123,6 +107,8 @@
                 </a>
 
 
+                <!-- Facebook -->
+
                 <a href="https://www.facebook.com/acyuta.paaidela/"
                    target="_blank"
                    rel="noopener noreferrer"
@@ -132,6 +118,8 @@
 
                 </a>
 
+
+                <!-- YouTube -->
 
                 <a href="https://www.youtube.com/@achutpoudel9020"
                    target="_blank"
@@ -143,6 +131,8 @@
                 </a>
 
 
+                <!-- TikTok -->
+
                 <a href="https://www.tiktok.com/@achutpoudel_"
                    target="_blank"
                    rel="noopener noreferrer"
@@ -152,6 +142,8 @@
 
                 </a>
 
+
+                <!-- Instagram -->
 
                 <a href="#"
                    aria-label="Instagram">
@@ -163,7 +155,7 @@
             </div>
 
 
-            <!-- CONTACT -->
+            <!-- CONTACT BUTTON -->
 
             <a href="contact.html"
                class="contact-btn active">
@@ -175,8 +167,7 @@
         </div>
 
 
-
-        <!-- MOBILE -->
+        <!-- MOBILE MENU BUTTON -->
 
         <button class="mobile-menu-btn"
                 id="mobileMenuBtn"
@@ -203,7 +194,7 @@
         </a>
 
         <a href="index.html#experience">
-            Experience
+            Experiences
         </a>
 
         <a href="index.html#community">
@@ -232,7 +223,7 @@
 
 
 <!-- =====================================================
-     CONTACT
+     CONTACT PAGE
 ===================================================== -->
 
 <main class="contact-page">
@@ -264,11 +255,38 @@
 
 
 
-        <!-- FORM -->
+        <!-- =================================================
+             CONTACT FORM
+        ================================================= -->
 
         <form class="contact-form"
-              action="#"
+              action="https://formsubmit.co/poudel.achut@gmail.com"
               method="POST">
+
+
+            <!-- FormSubmit settings -->
+
+            <input type="hidden"
+                   name="_subject"
+                   value="New Contact Message - Achut Poudel Website">
+
+
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
+
+
+            <input type="hidden"
+                   name="_template"
+                   value="table">
+
+
+            <!-- Return visitor to homepage -->
+
+            <input type="hidden"
+                   name="_next"
+                   value="https://achutpoudel.com.np/">
+
 
 
             <!-- FULL NAME -->
@@ -282,9 +300,8 @@
 
                 <input type="text"
                        id="fullName"
-                       name="fullName"
+                       name="Full Name"
                        placeholder="Your full name"
-                       autocomplete="name"
                        required>
 
             </div>
@@ -302,9 +319,8 @@
 
                 <input type="email"
                        id="email"
-                       name="email"
+                       name="Email"
                        placeholder="Your email address"
-                       autocomplete="email"
                        required>
 
             </div>
@@ -321,7 +337,7 @@
 
 
                 <select id="help"
-                        name="help"
+                        name="How Can I Help?"
                         required>
 
 
@@ -334,59 +350,43 @@
                     </option>
 
 
-                    <option value="business-executive-leadership">
-
+                    <option>
                         Business / Executive / Leadership Consultation
-
                     </option>
 
 
-                    <option value="ai-digital-transformation">
-
+                    <option>
                         AI &amp; Digital Transformation
-
                     </option>
 
 
-                    <option value="hr-people-strategy">
-
+                    <option>
                         HR &amp; People Strategy
-
                     </option>
 
 
-                    <option value="legal-compliance">
-
+                    <option>
                         Legal &amp; Compliance
-
                     </option>
 
 
-                    <option value="marketing-product">
-
+                    <option>
                         Marketing / Know Your Product
-
                     </option>
 
 
-                    <option value="product-sales">
-
+                    <option>
                         Grow Your Product / Sales
-
                     </option>
 
 
-                    <option value="speaking-training">
-
+                    <option>
                         Speaking / Training
-
                     </option>
 
 
-                    <option value="other">
-
+                    <option>
                         Other
-
                     </option>
 
 
@@ -406,7 +406,7 @@
 
 
                 <textarea id="message"
-                          name="message"
+                          name="Message"
                           rows="6"
                           placeholder="Your message"
                           required></textarea>
@@ -431,7 +431,7 @@
 
 
 
-        <!-- SOCIAL -->
+        <!-- SOCIAL LINKS -->
 
         <div class="contact-social">
 
@@ -491,6 +491,7 @@
 
                 </a>
 
+
             </div>
 
         </div>
@@ -515,35 +516,7 @@
 
 
 
-<script>
-
-const mobileMenuBtn =
-    document.getElementById("mobileMenuBtn");
-
-const mobileMenu =
-    document.getElementById("mobileMenu");
-
-
-mobileMenuBtn.addEventListener("click", function () {
-
-    mobileMenu.classList.toggle("active");
-
-});
-
-
-document.querySelectorAll(".mobile-menu a")
-    .forEach(function(link) {
-
-        link.addEventListener("click", function() {
-
-            mobileMenu.classList.remove("active");
-
-        });
-
-    });
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
 
