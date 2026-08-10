@@ -1,187 +1,152 @@
-/* =========================================================
-   ABOUT PAGE — CENTERED DESIGN
-========================================================= */
+<!DOCTYPE html>
+<html lang="en">
 
-.about-page {
-    min-height: calc(100vh - 90px);
-    background: #f4eee5;
-    color: #2b1a12;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    <title>About | Adv. Achut Poudel</title>
 
-.about-container {
-    width: 90%;
-    max-width: 1050px;
-    margin: 0 auto;
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    padding: 70px 0;
+<body>
 
-    text-align: center;
-}
+    <!-- ================= HEADER ================= -->
 
+    <header class="site-header">
 
-/* Main Heading */
+        <div class="header-container">
 
-.about-container h1 {
-    margin: 0 0 35px;
+            <a href="index.html" class="logo">
+                ADV. ACHUT POUDEL
+            </a>
 
-    color: #2b1a12;
+            <nav class="main-nav">
 
-    font-size: clamp(42px, 5vw, 64px);
+                <a href="index.html">HOME</a>
+                <a href="about.html" class="active">ABOUT</a>
+                <a href="experience.html">EXPERIENCE</a>
+                <a href="community.html">COMMUNITY</a>
+                <a href="projects.html">PROJECTS</a>
+                <a href="honors.html">HONORS</a>
 
-    line-height: 1.1;
+            </nav>
 
-    font-weight: 700;
+            <a href="contact.html" class="contact-button">
+                CONTACT ME
+            </a>
 
-    letter-spacing: -1.5px;
-}
+        </div>
 
+    </header>
 
-/* Intro Paragraphs */
 
-.about-intro {
-    max-width: 850px;
+    <!-- ================= ABOUT ================= -->
 
-    margin: 0 auto 45px;
-}
+    <main class="about-page">
 
-.about-intro p {
-    margin: 0 0 25px;
+        <section class="about-container">
 
-    color: #604d40;
+            <h1>About Me</h1>
 
-    font-size: 18px;
+            <div class="about-intro">
 
-    line-height: 1.8;
-}
+                <p>
+                    A multidisciplinary leader with
+                    <strong>20+ years of professional experience</strong>
+                    across Human Resources, leadership,
+                    business strategy, governance and
+                    organizational growth.
+                </p>
 
-.about-intro strong {
-    color: #2b1a12;
+                <p>
+                    Combining
+                    <strong>
+                        people, business, law, marketing,
+                        digital &amp; AI, and project sales
+                    </strong>
+                    to solve complex challenges, enable
+                    growth and create meaningful results.
+                </p>
 
-    font-weight: 700;
-}
+            </div>
 
 
-/* Expertise Heading */
+            <h2>Expertise &amp; Leadership</h2>
 
-.about-container h2 {
-    margin: 0 0 30px;
 
-    color: #2b1a12;
+            <div class="expertise-list">
 
-    font-size: 34px;
+                <span>HR &amp; People Strategy</span>
 
-    line-height: 1.2;
+                <span>Leadership &amp; Organizational Development</span>
 
-    font-weight: 700;
-}
+                <span>Legal &amp; Compliance</span>
 
+                <span>Business Strategy</span>
 
-/* Expertise */
+                <span>Marketing &amp; Brand Strategy</span>
 
-.expertise-list {
-    max-width: 1000px;
+                <span>Digital Transformation</span>
 
-    margin: 0 auto;
+                <span>AI &amp; Innovation</span>
 
-    display: flex;
+                <span>Project Sales &amp; Business Development</span>
 
-    justify-content: center;
+                <span>Governance</span>
 
-    align-items: center;
+                <span>Administration &amp; Operations</span>
 
-    flex-wrap: wrap;
+            </div>
 
-    gap: 14px;
-}
 
-.expertise-list span {
-    display: inline-flex;
+            <!-- ================= ACHIEVEMENTS ================= -->
 
-    align-items: center;
+            <div class="about-stats">
 
-    justify-content: center;
+                <div class="about-stat">
+                    <strong>20+</strong>
+                    <span>Years of Professional Experience</span>
+                </div>
 
-    padding: 11px 20px;
+                <div class="about-stat">
+                    <strong>30K+</strong>
+                    <span>LinkedIn Connections</span>
+                </div>
 
-    border: 1px solid rgba(184, 135, 60, 0.45);
+                <div class="about-stat">
+                    <strong>10K+</strong>
+                    <span>Team Members Led</span>
+                </div>
 
-    border-radius: 50px;
+                <div class="about-stat">
+                    <strong>100+</strong>
+                    <span>Major Projects &amp; Initiatives</span>
+                </div>
 
-    background: rgba(255, 255, 255, 0.35);
+            </div>
 
-    color: #604d40;
 
-    font-size: 14px;
+            <div class="about-closing">
+                PEOPLE. STRATEGY. TRANSFORMATION.
+            </div>
 
-    font-weight: 600;
+        </section>
 
-    transition: all 0.3s ease;
-}
+    </main>
 
-.expertise-list span:hover {
-    background: #2b1a12;
 
-    color: #ffffff;
+    <!-- ================= FOOTER ================= -->
 
-    border-color: #2b1a12;
+    <footer class="site-footer">
 
-    transform: translateY(-3px);
-}
+        <p>
+            © 2026 Adv. Achut Poudel. All Rights Reserved.
+        </p>
 
+    </footer>
 
-/* =========================================================
-   MOBILE
-========================================================= */
 
-@media (max-width: 700px) {
-
-    .about-page {
-        min-height: calc(100vh - 75px);
-
-        align-items: flex-start;
-    }
-
-    .about-container {
-        width: 88%;
-
-        padding: 60px 0;
-    }
-
-    .about-container h1 {
-        font-size: 42px;
-
-        margin-bottom: 30px;
-    }
-
-    .about-intro {
-        margin-bottom: 40px;
-    }
-
-    .about-intro p {
-        font-size: 16px;
-
-        line-height: 1.7;
-
-        margin-bottom: 20px;
-    }
-
-    .about-container h2 {
-        font-size: 30px;
-
-        margin-bottom: 25px;
-    }
-
-    .expertise-list {
-        gap: 10px;
-    }
-
-    .expertise-list span {
-        font-size: 12px;
-
-        padding: 9px 15px;
-    }
-}
+</body>
+</html>
