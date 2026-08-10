@@ -6,13 +6,11 @@
 
     <title>Contact | Adv. Achut Poudel</title>
 
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link
@@ -20,37 +18,761 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            background: #f4eee6;
+            color: #2c1a12;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
+
+        .site-header {
+            width: 100%;
+            height: 88px;
+
+            background: #2c1a12;
+
+            border-bottom: 1px solid rgba(184, 149, 90, 0.25);
+
+            position: relative;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1400px;
+
+            height: 100%;
+
+            margin: 0 auto;
+
+            padding: 0 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* LEFT MENU */
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+        }
+
+        .main-nav a {
+            position: relative;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            letter-spacing: 0.8px;
+
+            text-transform: uppercase;
+
+            color: #f5eee6;
+
+            transition: color 0.3s ease;
+        }
+
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #c9a45d;
+        }
+
+        .main-nav a.active::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -10px;
+
+            width: 100%;
+            height: 1px;
+
+            background: #c9a45d;
+        }
+
+
+        /* RIGHT SIDE */
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+        }
+
+
+        /* SOCIAL ICONS */
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .social-links a {
+            width: 22px;
+            height: 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #eee5db;
+
+            font-size: 14px;
+
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #c9a45d;
+            transform: translateY(-2px);
+        }
+
+
+        /* CONTACT BUTTON */
+
+        .nav-contact {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 42px;
+
+            padding: 0 22px;
+
+            border: 1px solid #b8955a;
+
+            color: #f8f2ea;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 0.8px;
+
+            text-transform: uppercase;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+        }
+
+        .nav-contact:hover,
+        .nav-contact.active {
+            background: #b8955a;
+            color: #2c1a12;
+        }
+
+
+        /* MOBILE MENU BUTTON */
+
+        .menu-toggle {
+            display: none;
+
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid #b8955a;
+
+            background: transparent;
+
+            color: #f8f2ea;
+
+            font-size: 18px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           CONTACT SECTION
+        ===================================================== */
+
+        .contact-section {
+            min-height: calc(100vh - 88px);
+
+            padding: 90px 7% 100px;
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(184, 149, 90, 0.14),
+                    transparent 30%
+                ),
+                #f4eee6;
+        }
+
+        .contact-container {
+            width: 100%;
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: 0.9fr 1.1fr;
+
+            gap: 90px;
+
+            align-items: start;
+        }
+
+
+        /* =====================================================
+           LEFT CONTENT
+        ===================================================== */
+
+        .contact-intro {
+            padding-top: 5px;
+        }
+
+        .section-label {
+            display: block;
+
+            margin-bottom: 22px;
+
+            color: #a67c3b;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+        .contact-intro h1 {
+            margin-bottom: 28px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: clamp(48px, 5vw, 68px);
+
+            font-weight: 600;
+
+            line-height: 1.05;
+
+            color: #2c1a12;
+        }
+
+        .contact-intro h2 {
+            margin-bottom: 18px;
+
+            font-size: 22px;
+
+            line-height: 1.4;
+
+            font-weight: 600;
+
+            color: #34241c;
+        }
+
+        .contact-description {
+            max-width: 580px;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+
+            color: #665a51;
+        }
+
+
+        /* =====================================================
+           CONTACT INFORMATION
+        ===================================================== */
+
+        .contact-info {
+            margin-top: 45px;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 28px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 16px;
+        }
+
+        .contact-icon {
+            flex: 0 0 42px;
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(166, 124, 59, 0.55);
+
+            color: #a67c3b;
+
+            font-size: 15px;
+        }
+
+        .contact-item-content span {
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-size: 10px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #927b68;
+        }
+
+        .email-link {
+            color: #2c1a12;
+
+            font-size: 15px;
+            font-weight: 500;
+
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #a67c3b;
+        }
+
+
+        /* CONTACT SOCIALS */
+
+        .contact-socials {
+            display: flex;
+            align-items: center;
+
+            gap: 9px;
+        }
+
+        .contact-socials a {
+            width: 31px;
+            height: 31px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(166, 124, 59, 0.45);
+
+            color: #39281f;
+
+            font-size: 13px;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .contact-socials a:hover {
+            background: #a67c3b;
+
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .contact-form-wrapper {
+            width: 100%;
+        }
+
+        .contact-form {
+            width: 100%;
+
+            padding: 42px;
+
+            background: rgba(255, 255, 255, 0.72);
+
+            border: 1px solid rgba(44, 26, 18, 0.12);
+
+            box-shadow:
+                0 20px 60px rgba(44, 26, 18, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            color: #3b2a22;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+
+            border: 1px solid #d5c9bc;
+
+            background: #fff;
+
+            color: #2c1a12;
+
+            border-radius: 0;
+
+            outline: none;
+
+            font-family: "Inter", Arial, sans-serif;
+
+            font-size: 14px;
+
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .form-group input,
+        .form-group select {
+            height: 50px;
+
+            padding: 0 14px;
+        }
+
+        .form-group textarea {
+            min-height: 145px;
+
+            padding: 14px;
+
+            resize: vertical;
+
+            line-height: 1.6;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #9a9087;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #a67c3b;
+
+            box-shadow:
+                0 0 0 3px rgba(166, 124, 59, 0.10);
+        }
+
+
+        /* =====================================================
+           SUBMIT BUTTON
+        ===================================================== */
+
+        .submit-button {
+            margin-top: 5px;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 12px;
+
+            padding: 15px 25px;
+
+            border: 1px solid #a67c3b;
+
+            background: #2c1a12;
+
+            color: #fff;
+
+            font-family: "Inter", Arial, sans-serif;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            letter-spacing: 0.8px;
+
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #a67c3b;
+
+            transform: translateY(-2px);
+        }
+
+        .form-note {
+            margin-top: 16px;
+
+            font-size: 11px;
+
+            color: #8a7d73;
+
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+            padding: 25px 7%;
+
+            background: #21140f;
+
+            text-align: center;
+        }
+
+        .site-footer p {
+            color: rgba(255,255,255,0.6);
+
+            font-size: 11px;
+
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           TABLET
+        ===================================================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-container {
+                padding: 0 25px;
+            }
+
+            .main-nav {
+                gap: 20px;
+            }
+
+            .main-nav a {
+                font-size: 11px;
+            }
+
+            .nav-right {
+                gap: 15px;
+            }
+
+            .social-links {
+                gap: 10px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+
+                max-width: 750px;
+            }
+
+            .contact-intro h1 {
+                font-size: 54px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 760px) {
+
+            .site-header {
+                height: 70px;
+            }
+
+            .nav-container {
+                padding: 0 20px;
+            }
+
+            .menu-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .main-nav {
+                display: none;
+
+                position: absolute;
+
+                top: 70px;
+                left: 0;
+                right: 0;
+
+                padding: 20px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 18px;
+
+                background: #2c1a12;
+
+                border-top: 1px solid rgba(184,149,90,0.2);
+            }
+
+            .main-nav.open {
+                display: flex;
+            }
+
+            .main-nav a {
+                font-size: 13px;
+            }
+
+            .nav-right {
+                margin-left: auto;
+                margin-right: 12px;
+            }
+
+            .social-links {
+                display: none;
+            }
+
+            .nav-contact {
+                height: 38px;
+
+                padding: 0 15px;
+
+                font-size: 10px;
+            }
+
+            .contact-section {
+                padding: 60px 20px 70px;
+            }
+
+            .contact-intro h1 {
+                font-size: 44px;
+            }
+
+            .contact-intro h2 {
+                font-size: 19px;
+            }
+
+            .contact-description {
+                font-size: 14px;
+            }
+
+            .contact-form {
+                padding: 28px 22px;
+            }
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+        ===================================================== */
+
+        @media (max-width: 480px) {
+
+            .nav-contact {
+                display: none;
+            }
+
+            .contact-intro h1 {
+                font-size: 38px;
+            }
+
+            .contact-form {
+                padding: 24px 18px;
+            }
+
+            .submit-button {
+                width: 100%;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
+
 <!-- =====================================================
-     NAVIGATION
+     HEADER
 ===================================================== -->
 
 <header class="site-header">
 
     <div class="nav-container">
 
-        <!-- Left Navigation -->
+
+        <!-- NAVIGATION -->
+
         <nav class="main-nav" id="mainNav">
 
             <a href="index.html">Home</a>
+
             <a href="index.html#about">About</a>
+
             <a href="index.html#experiences">Experiences</a>
+
             <a href="index.html#community">Community</a>
+
             <a href="index.html#projects">Projects</a>
+
             <a href="index.html#honors">Honors</a>
 
         </nav>
 
 
-        <!-- Right Side -->
+        <!-- RIGHT SIDE -->
+
         <div class="nav-right">
 
-            <!-- Social Links -->
             <div class="social-links">
 
                 <a
@@ -85,7 +807,6 @@
                     <i class="fa-brands fa-tiktok"></i>
                 </a>
 
-                <!-- Instagram - link can be added later -->
                 <a
                     href="#"
                     aria-label="Instagram"
@@ -96,20 +817,22 @@
             </div>
 
 
-            <!-- Contact Button -->
-            <a href="contact.html" class="nav-contact active">
+            <a
+                href="contact.html"
+                class="nav-contact active"
+            >
                 Contact Me
             </a>
 
         </div>
 
 
-        <!-- Mobile Menu Button -->
+        <!-- MOBILE BUTTON -->
+
         <button
             class="menu-toggle"
             id="menuToggle"
-            aria-label="Open Menu"
-            aria-expanded="false"
+            aria-label="Open menu"
         >
             <i class="fa-solid fa-bars"></i>
         </button>
@@ -119,8 +842,9 @@
 </header>
 
 
+
 <!-- =====================================================
-     CONTACT SECTION
+     CONTACT
 ===================================================== -->
 
 <main>
@@ -130,22 +854,26 @@
     <div class="contact-container">
 
 
-        <!-- Left Content -->
+        <!-- LEFT -->
+
         <div class="contact-intro">
 
             <span class="section-label">
                 CONTACT
             </span>
 
+
             <h1>
                 Let's Connect.
             </h1>
+
 
             <h2>
                 Have an idea, challenge or opportunity?
             </h2>
 
-            <p>
+
+            <p class="contact-description">
                 Whether it's leadership, HR, legal &amp; compliance,
                 marketing, digital transformation, AI, project sales,
                 business strategy or a potential collaboration —
@@ -153,8 +881,12 @@
             </p>
 
 
-            <!-- Email -->
+            <!-- CONTACT INFORMATION -->
+
             <div class="contact-info">
+
+
+                <!-- EMAIL -->
 
                 <div class="contact-item">
 
@@ -162,25 +894,32 @@
                         <i class="fa-regular fa-envelope"></i>
                     </div>
 
-                    <div>
+                    <div class="contact-item-content">
+
                         <span>Email</span>
 
-                        <a href="mailto:poudel.achut@gmail.com">
+                        <a
+                            class="email-link"
+                            href="mailto:poudel.achut@gmail.com"
+                        >
                             poudel.achut@gmail.com
                         </a>
+
                     </div>
 
                 </div>
 
 
-                <!-- Social -->
+                <!-- SOCIAL -->
+
                 <div class="contact-item">
 
                     <div class="contact-icon">
                         <i class="fa-solid fa-share-nodes"></i>
                     </div>
 
-                    <div>
+                    <div class="contact-item-content">
+
                         <span>Connect</span>
 
                         <div class="contact-socials">
@@ -235,7 +974,9 @@
         </div>
 
 
-        <!-- Right Form -->
+
+        <!-- RIGHT FORM -->
+
         <div class="contact-form-wrapper">
 
             <form
@@ -243,7 +984,9 @@
                 id="contactForm"
             >
 
-                <!-- Full Name -->
+
+                <!-- FULL NAME -->
+
                 <div class="form-group">
 
                     <label for="name">
@@ -261,7 +1004,8 @@
                 </div>
 
 
-                <!-- Email -->
+                <!-- EMAIL -->
+
                 <div class="form-group">
 
                     <label for="email">
@@ -279,7 +1023,8 @@
                 </div>
 
 
-                <!-- Phone -->
+                <!-- PHONE -->
+
                 <div class="form-group">
 
                     <label for="phone">
@@ -296,7 +1041,8 @@
                 </div>
 
 
-                <!-- How Can I Help -->
+                <!-- HELP -->
+
                 <div class="form-group">
 
                     <label for="help">
@@ -313,35 +1059,35 @@
                             Select an option
                         </option>
 
-                        <option value="Business / Executive / Leadership Consultation">
+                        <option>
                             Business / Executive / Leadership Consultation
                         </option>
 
-                        <option value="AI & Digital Transformation">
+                        <option>
                             AI &amp; Digital Transformation
                         </option>
 
-                        <option value="HR & People Strategy">
+                        <option>
                             HR &amp; People Strategy
                         </option>
 
-                        <option value="Legal & Compliance">
+                        <option>
                             Legal &amp; Compliance
                         </option>
 
-                        <option value="Marketing / Know Your Product">
+                        <option>
                             Marketing / Know Your Product
                         </option>
 
-                        <option value="Grow Your Product / Sales">
+                        <option>
                             Grow Your Product / Sales
                         </option>
 
-                        <option value="Speaking / Training">
+                        <option>
                             Speaking / Training
                         </option>
 
-                        <option value="Other">
+                        <option>
                             Other
                         </option>
 
@@ -350,7 +1096,8 @@
                 </div>
 
 
-                <!-- Message -->
+                <!-- MESSAGE -->
+
                 <div class="form-group">
 
                     <label for="message">
@@ -360,7 +1107,6 @@
                     <textarea
                         id="message"
                         name="message"
-                        rows="6"
                         placeholder="Tell me a little about your idea, challenge or opportunity..."
                         required
                     ></textarea>
@@ -368,7 +1114,8 @@
                 </div>
 
 
-                <!-- Submit -->
+                <!-- BUTTON -->
+
                 <button
                     type="submit"
                     class="submit-button"
@@ -396,6 +1143,7 @@
 </main>
 
 
+
 <!-- =====================================================
      FOOTER
 ===================================================== -->
@@ -409,78 +1157,94 @@
 </footer>
 
 
+
 <!-- =====================================================
-     MOBILE MENU + EMAIL FORM
+     JAVASCRIPT
 ===================================================== -->
 
 <script>
 
-const menuToggle = document.getElementById("menuToggle");
-const mainNav = document.getElementById("mainNav");
+    /* MOBILE MENU */
 
-menuToggle.addEventListener("click", function () {
+    const menuToggle =
+        document.getElementById("menuToggle");
 
-    mainNav.classList.toggle("open");
-
-    const isOpen = mainNav.classList.contains("open");
-
-    menuToggle.setAttribute("aria-expanded", isOpen);
-
-    menuToggle.innerHTML = isOpen
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
-
-});
+    const mainNav =
+        document.getElementById("mainNav");
 
 
-/* Close mobile menu after clicking a link */
+    menuToggle.addEventListener("click", function () {
 
-document.querySelectorAll(".main-nav a").forEach(function(link) {
+        mainNav.classList.toggle("open");
 
-    link.addEventListener("click", function() {
+        if (mainNav.classList.contains("open")) {
 
-        mainNav.classList.remove("open");
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-xmark"></i>';
 
-        menuToggle.setAttribute("aria-expanded", "false");
+        } else {
 
-        menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+
+        }
 
     });
 
-});
 
 
-/* Contact Form */
+    /* CLOSE MENU AFTER CLICK */
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
+    document
+        .querySelectorAll(".main-nav a")
+        .forEach(function(link) {
 
-    event.preventDefault();
+            link.addEventListener("click", function() {
 
-    const name =
-        document.getElementById("name").value.trim();
+                mainNav.classList.remove("open");
 
-    const email =
-        document.getElementById("email").value.trim();
+                menuToggle.innerHTML =
+                    '<i class="fa-solid fa-bars"></i>';
 
-    const phone =
-        document.getElementById("phone").value.trim();
+            });
 
-    const help =
-        document.getElementById("help").value;
-
-    const message =
-        document.getElementById("message").value.trim();
+        });
 
 
-    const subject =
-        encodeURIComponent(
-            "Website Contact - " + help
-        );
+
+    /* CONTACT FORM */
+
+    document
+        .getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+
+            event.preventDefault();
 
 
-    const body =
-        encodeURIComponent(
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const phone =
+                document.getElementById("phone").value.trim();
+
+            const help =
+                document.getElementById("help").value;
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            const subject =
+                encodeURIComponent(
+                    "Website Contact - " + help
+                );
+
+
+            const body =
+                encodeURIComponent(
 `Full Name: ${name}
 
 Email Address: ${email}
@@ -492,15 +1256,18 @@ ${help}
 
 Message:
 ${message}`
-        );
+                );
 
 
-    window.location.href =
-        `mailto:poudel.achut@gmail.com?subject=${subject}&body=${body}`;
+            window.location.href =
+                "mailto:poudel.achut@gmail.com" +
+                "?subject=" + subject +
+                "&body=" + body;
 
-});
+        });
 
 </script>
+
 
 </body>
 </html>
