@@ -2,791 +2,395 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Adv. Achut Poudel — Advocate, HR Leader, Business Strategist and Transformation Professional. Leadership beyond one discipline.">
-
-    <meta name="author" content="Adv. Achut Poudel">
-
-    <title>Adv. Achut Poudel | Leadership Beyond One Discipline</title>
-
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
+    <title>Adv. Achut Poudel | HR Leader • Business Strategist</title>
 
     <!-- Font Awesome -->
-
     <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <!-- Main CSS -->
-
-    <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- =========================================================
+         HEADER / NAVIGATION
+    ========================================================== -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+    <header class="site-header">
 
-<header class="site-header">
+        <div class="nav-container">
 
-    <nav class="navbar">
+            <!-- Main Navigation -->
+            <nav class="main-nav" id="mainNav">
 
-
-        <!-- LEFT NAVIGATION -->
-
-        <div class="nav-menu">
-
-            <a href="#home">Home</a>
-
-            <a href="#about">About</a>
-
-            <a href="#experience">Experiences</a>
-
-            <a href="#community">Community</a>
-
-            <a href="#projects">Projects</a>
-
-            <a href="#honors">Honors</a>
-
-        </div>
-
-
-        <!-- RIGHT SIDE -->
-
-        <div class="nav-right">
-
-
-            <!-- SOCIAL ICONS -->
-
-            <div class="social-links">
-
-                <a
-                    href="https://www.linkedin.com/in/achutpdl/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn">
-
-                    <i class="fa-brands fa-linkedin-in"></i>
-
+                <a href="index.html" class="active">
+                    Home
                 </a>
 
-
-                <a
-                    href="https://www.facebook.com/acyuta.paaidela/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook">
-
-                    <i class="fa-brands fa-facebook-f"></i>
-
+                <a href="about.html">
+                    About
                 </a>
 
-
-                <a
-                    href="https://www.youtube.com/@achutpoudel9020"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube">
-
-                    <i class="fa-brands fa-youtube"></i>
-
+                <a href="experiences.html">
+                    Experiences
                 </a>
 
-
-                <a
-                    href="https://www.tiktok.com/@achutpoudel_"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="TikTok">
-
-                    <i class="fa-brands fa-tiktok"></i>
-
+                <a href="community.html">
+                    Community
                 </a>
 
-
-                <!-- Instagram — add link later -->
-
-                <a
-                    href="#"
-                    aria-label="Instagram">
-
-                    <i class="fa-brands fa-instagram"></i>
-
+                <a href="projects.html">
+                    Projects
                 </a>
 
-            </div>
+                <a href="honors.html">
+                    Honors
+                </a>
+
+            </nav>
 
 
-            <!-- ONE CONTACT BUTTON -->
+            <!-- Right Side -->
+            <div class="nav-right">
 
-            <a
-                href="contact.html"
-                class="contact-btn">
+                <!-- Social Links -->
 
-                Contact Me
+                <div class="social-links">
 
-            </a>
+                    <a
+                        href="https://www.linkedin.com/in/achutpdl/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
 
-        </div>
+                    <a
+                        href="https://www.facebook.com/acyuta.paaidela/"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
 
+                    <a
+                        href="https://www.youtube.com/@achutpoudel9020"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="YouTube"
+                    >
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
 
-        <!-- MOBILE BUTTON -->
+                    <a
+                        href="https://www.tiktok.com/@achutpoudel_"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="TikTok"
+                    >
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
 
-        <button
-            class="mobile-menu-btn"
-            id="mobileMenuBtn"
-            type="button"
-            aria-label="Open menu">
+                    <!-- Instagram link can be added later -->
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-            <i class="fa-solid fa-bars"></i>
-
-        </button>
-
-    </nav>
-
-
-    <!-- MOBILE MENU -->
-
-    <div
-        class="mobile-menu"
-        id="mobileMenu">
-
-        <a href="#home">Home</a>
-
-        <a href="#about">About</a>
-
-        <a href="#experience">Experiences</a>
-
-        <a href="#community">Community</a>
-
-        <a href="#projects">Projects</a>
-
-        <a href="#honors">Honors</a>
-
-        <a href="contact.html">Contact Me</a>
-
-    </div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<main>
+                </div>
 
 
-<section
-    class="hero"
-    id="home">
-
-
-    <div class="hero-container">
-
-
-        <!-- HERO TEXT -->
-
-        <div class="hero-content">
-
-
-            <div class="hero-label">
-
-                ADVOCATE
-                <span>•</span>
-                HR LEADER
-                <span>•</span>
-                BUSINESS STRATEGIST
-
-            </div>
-
-
-            <h1>
-
-                Empowering Organizations
-
-                <span>Through People, Law</span>
-
-                <span>&amp; Leadership.</span>
-
-            </h1>
-
-
-            <p>
-
-                More than two decades of professional experience
-                spanning human capital, organizational leadership,
-                business strategy, governance, marketing,
-                digital transformation, project sales and
-                organizational growth.
-
-            </p>
-
-
-            <div class="hero-buttons">
+                <!-- Contact Button -->
 
                 <a
                     href="contact.html"
-                    class="primary-btn">
-
-                    Work With Me
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-
-                <a
-                    href="Adv-Achut-Poudel-CV.pdf"
-                    class="secondary-btn"
-                    target="_blank">
-
-                    Download CV
-
-                    <i class="fa-solid fa-download"></i>
-
+                    class="nav-contact"
+                >
+                    Contact Me
                 </a>
 
             </div>
 
 
-            <a
-                href="#about"
-                class="scroll-down">
+            <!-- Mobile Menu Button -->
 
-                <span>Scroll Down</span>
-
-                <i class="fa-solid fa-arrow-down"></i>
-
-            </a>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                type="button"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
         </div>
 
+    </header>
 
 
-        <!-- HERO IMAGE -->
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
 
-        <div class="hero-image-wrapper">
+    <main>
 
-            <div class="hero-image-frame">
+
+        <!-- =====================================================
+             HERO SECTION
+        ====================================================== -->
+
+        <section class="hero">
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-content">
+
+                <div class="hero-kicker">
+                    Advocate • HR Leader • Business Strategist
+                </div>
+
+
+                <h1>
+
+                    <span>
+                        Empowering Organizations
+                    </span>
+
+                    <span>
+                        Through People, Law
+                    </span>
+
+                    <span>
+                        &amp; Leadership.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-copy">
+
+                    More than two decades of professional experience
+                    across human capital, organizational leadership,
+                    legal &amp; compliance, marketing, digital-AI
+                    transformation, project sales, business strategy
+                    and organizational growth.
+
+                </p>
+
+
+                <!-- Hero Buttons -->
+
+                <div class="hero-actions">
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary"
+                    >
+                        Work With Me
+                    </a>
+
+
+                    <a
+                        href="Adv-Achut-Poudel-CV.pdf"
+                        class="btn btn-outline"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Download CV
+                    </a>
+
+                </div>
+
+
+                <div class="scroll-note">
+                    ↓ Explore the journey
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE / PHOTO -->
+
+            <div class="hero-photo">
 
                 <img
                     src="achut-poudel.jpg"
-                    alt="Adv. Achut Poudel">
+                    alt="Adv. Achut Poudel"
+                >
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
+        <!-- =====================================================
+             PROFESSIONAL RECORD / STATISTICS
+        ====================================================== -->
 
-<!-- =====================================================
-     STATS
-===================================================== -->
+        <section class="stats">
 
-<section class="stats-section">
+            <!-- 20+ -->
 
-    <div class="stats-container">
+            <div class="stat">
 
+                <strong>
+                    20+
+                </strong>
 
-        <div class="stat-item">
-
-            <strong>20+</strong>
-
-            <span>
-                Years of Professional
-                Experience
-            </span>
-
-        </div>
-
-
-        <div class="stat-item">
-
-            <strong>30K+</strong>
-
-            <span>
-                LinkedIn
-                Connections
-            </span>
-
-        </div>
-
-
-        <div class="stat-item">
-
-            <strong>10K+</strong>
-
-            <span>
-                Team Members
-                Led
-            </span>
-
-        </div>
-
-
-        <div class="stat-item">
-
-            <strong>100+</strong>
-
-            <span>
-                Major Projects
-                &amp; Initiatives
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     ABOUT
-===================================================== -->
-
-<section
-    class="about-section"
-    id="about">
-
-    <div class="section-container">
-
-
-        <div class="section-heading">
-
-            <div class="section-label">
-                ABOUT
-            </div>
-
-            <h2>
-
-                Leadership Beyond
-                <span>One Discipline.</span>
-
-            </h2>
-
-        </div>
-
-
-        <div class="about-content">
-
-
-            <div class="about-highlight">
-
-                <span>PEOPLE.</span>
-
-                <span>STRATEGY.</span>
-
-                <span>TRANSFORMATION.</span>
+                <span>
+                    Years of Professional Experience
+                </span>
 
             </div>
 
 
-            <div class="about-text">
+            <!-- 30K+ -->
 
-                <p class="about-lead">
+            <div class="stat">
 
-                    A career built at the intersection of
-                    leadership, business, governance,
-                    and transformation.
+                <strong>
+                    30K+
+                </strong>
 
-                </p>
+                <span>
+                    LinkedIn Connections
+                </span>
 
-
-                <p>
-
-                    More than two decades of professional
-                    experience spanning <strong>human capital,
-                    organizational leadership, business
-                    strategy, governance, marketing, digital
-                    transformation, project sales, and
-                    organizational growth.</strong>
-
-                </p>
+            </div>
 
 
-                <div class="about-tagline">
+            <!-- 10K+ -->
 
-                    Creating Impact.
+            <div class="stat">
 
-                    <span>•</span>
+                <strong>
+                    10K+
+                </strong>
 
-                    Building Excellence.
+                <span>
+                    Team Members Led
+                </span>
 
-                    <span>•</span>
+            </div>
 
-                    Leaving a Legacy.
+
+            <!-- 100+ -->
+
+            <div class="stat">
+
+                <strong>
+                    100+
+                </strong>
+
+                <span>
+                    Major Projects &amp; Initiatives
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SHORT ABOUT / INTRODUCTION
+        ====================================================== -->
+
+        <section class="section" id="about">
+
+            <div class="container section-grid">
+
+
+                <!-- LEFT -->
+
+                <div>
+
+                    <span class="eyebrow">
+                        Leadership Beyond One Discipline
+                    </span>
+
+
+                    <h2>
+                        People.
+                        Strategy.
+                        Transformation.
+                    </h2>
+
+                </div>
+
+
+                <!-- RIGHT -->
+
+                <div>
+
+                    <p>
+
+                        A career built at the intersection of
+                        leadership, business, governance,
+                        and transformation.
+
+                    </p>
+
+
+                    <p style="margin-top:18px;">
+
+                        More than two decades of professional
+                        experience spanning human capital,
+                        organizational leadership, business strategy,
+                        governance, marketing, digital transformation,
+                        project sales and organizational growth.
+
+                    </p>
+
+
+                    <div class="quote">
+
+                        Creating Impact.
+                        •
+                        Building Excellence.
+                        •
+                        Leaving a Legacy.
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-
-<!-- =====================================================
-     EXPERIENCE
-===================================================== -->
-
-<section
-    class="dark-section"
-    id="experience">
-
-    <div class="section-container">
-
-        <div class="section-label">
-            EXPERIENCE
-        </div>
-
-        <h2>
-            Leadership Across
-            <span>Multiple Disciplines.</span>
-        </h2>
+    </main>
 
 
-        <div class="discipline-grid">
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
 
+    <footer class="site-footer">
 
-            <div class="discipline-card">
-
-                <i class="fa-solid fa-users"></i>
-
-                <h3>
-                    Human Capital
-                </h3>
-
-                <p>
-                    HR leadership, people strategy,
-                    organizational development and
-                    workforce transformation.
-                </p>
-
-            </div>
-
-
-            <div class="discipline-card">
-
-                <i class="fa-solid fa-scale-balanced"></i>
-
-                <h3>
-                    Legal &amp; Governance
-                </h3>
-
-                <p>
-                    Legal, compliance, governance,
-                    risk management and organizational
-                    discipline.
-                </p>
-
-            </div>
-
-
-            <div class="discipline-card">
-
-                <i class="fa-solid fa-chart-line"></i>
-
-                <h3>
-                    Business Strategy
-                </h3>
-
-                <p>
-                    Business planning, strategic execution,
-                    organizational growth and leadership.
-                </p>
-
-            </div>
-
-
-            <div class="discipline-card">
-
-                <i class="fa-solid fa-bullhorn"></i>
-
-                <h3>
-                    Marketing &amp; Sales
-                </h3>
-
-                <p>
-                    Marketing, product positioning,
-                    project sales and commercial growth.
-                </p>
-
-            </div>
-
-
-            <div class="discipline-card">
-
-                <i class="fa-solid fa-microchip"></i>
-
-                <h3>
-                    Digital &amp; AI
-                </h3>
-
-                <p>
-                    Digital transformation, technology
-                    adoption and AI-enabled business
-                    opportunities.
-                </p>
-
-            </div>
-
-
-            <div class="discipline-card">
-
-                <i class="fa-solid fa-diagram-project"></i>
-
-                <h3>
-                    Projects &amp; Initiatives
-                </h3>
-
-                <p>
-                    Cross-functional initiatives,
-                    project leadership and execution.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     COMMUNITY
-===================================================== -->
-
-<section
-    class="light-section"
-    id="community">
-
-    <div class="section-container">
-
-        <div class="section-label">
-            COMMUNITY
-        </div>
-
-        <h2>
-            Connecting People,
-            <span>Ideas &amp; Opportunities.</span>
-        </h2>
-
-        <p class="section-description">
-
-            Building meaningful professional relationships,
-            sharing knowledge and contributing to a stronger
-            leadership and business community.
-
+        <p>
+            © 2026 Adv. Achut Poudel. All Rights Reserved.
         </p>
 
-    </div>
+    </footer>
 
-</section>
 
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
 
-
-<!-- =====================================================
-     PROJECTS
-===================================================== -->
-
-<section
-    class="dark-section"
-    id="projects">
-
-    <div class="section-container">
-
-        <div class="section-label">
-            PROJECTS
-        </div>
-
-        <h2>
-            From Strategy
-            <span>to Execution.</span>
-        </h2>
-
-        <p class="section-description">
-
-            Major projects, organizational initiatives,
-            transformation programs and business
-            opportunities shaped through strategic
-            leadership and execution.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     HONORS
-===================================================== -->
-
-<section
-    class="light-section"
-    id="honors">
-
-    <div class="section-container">
-
-        <div class="section-label">
-            HONORS
-        </div>
-
-        <h2>
-            Recognition Built
-            <span>Through Impact.</span>
-        </h2>
-
-        <p class="section-description">
-
-            Professional achievements, recognition,
-            milestones and contributions accumulated
-            throughout a leadership journey.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="site-footer">
-
-    <div>
-
-        <strong>
-            Adv. Achut Poudel
-        </strong>
-
-        <span>
-            Advocate • HR Leader • Business Strategist
-        </span>
-
-    </div>
-
-
-    <p>
-        © 2026 Adv. Achut Poudel. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-<script>
-
-const menuButton =
-    document.getElementById("mobileMenuBtn");
-
-const mobileMenu =
-    document.getElementById("mobileMenu");
-
-
-menuButton.addEventListener(
-    "click",
-    function () {
-
-        mobileMenu.classList.toggle("active");
-
-        const icon =
-            menuButton.querySelector("i");
-
-
-        if (
-            mobileMenu.classList.contains("active")
-        ) {
-
-            icon.classList.remove("fa-bars");
-
-            icon.classList.add("fa-xmark");
-
-        } else {
-
-            icon.classList.remove("fa-xmark");
-
-            icon.classList.add("fa-bars");
-
-        }
-
-    }
-);
-
-
-const mobileLinks =
-    mobileMenu.querySelectorAll("a");
-
-
-mobileLinks.forEach(
-    function (link) {
-
-        link.addEventListener(
-            "click",
-            function () {
-
-                mobileMenu.classList.remove("active");
-
-                const icon =
-                    menuButton.querySelector("i");
-
-                icon.classList.remove("fa-xmark");
-
-                icon.classList.add("fa-bars");
-
-            }
-        );
-
-    }
-);
-
-</script>
-
+    <script src="script.js"></script>
 
 </body>
 
