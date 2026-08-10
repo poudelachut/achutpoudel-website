@@ -1,319 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
+/* =========================================================
+   ABOUT PAGE — CENTERED DESIGN
+========================================================= */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+.about-page {
+    min-height: calc(100vh - 90px);
+    background: #f4eee5;
+    color: #2b1a12;
 
-    <title>About | Adv. Achut Poudel</title>
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
+.about-container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+    padding: 70px 0;
 
-<body>
+    text-align: center;
+}
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
-<header class="site-header">
+/* Main Heading */
 
-    <div class="nav-container">
+.about-container h1 {
+    margin: 0 0 35px;
 
-        <nav class="main-nav" id="mainNav">
+    color: #2b1a12;
 
-            <a href="index.html">HOME</a>
+    font-size: clamp(42px, 5vw, 64px);
 
-            <a href="about.html" class="active">ABOUT</a>
+    line-height: 1.1;
 
-            <a href="experiences.html">EXPERIENCE</a>
+    font-weight: 700;
 
-            <a href="community.html">COMMUNITY</a>
+    letter-spacing: -1.5px;
+}
 
-            <a href="projects.html">PROJECTS</a>
 
-            <a href="honors.html">HONORS</a>
+/* Intro Paragraphs */
 
-        </nav>
+.about-intro {
+    max-width: 850px;
 
+    margin: 0 auto 45px;
+}
 
-        <div class="nav-right">
+.about-intro p {
+    margin: 0 0 25px;
 
-            <div class="social-links">
+    color: #604d40;
 
-                <a href="https://www.linkedin.com/in/achutpdl/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
+    font-size: 18px;
 
-                <a href="#"
-                   aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
+    line-height: 1.8;
+}
 
-                <a href="#"
-                   aria-label="YouTube">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
+.about-intro strong {
+    color: #2b1a12;
 
-                <a href="#"
-                   aria-label="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
+    font-weight: 700;
+}
 
-                <a href="#"
-                   aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
 
-            </div>
+/* Expertise Heading */
 
+.about-container h2 {
+    margin: 0 0 30px;
 
-            <a href="contact.html" class="nav-contact">
-                CONTACT ME
-            </a>
+    color: #2b1a12;
 
-        </div>
+    font-size: 34px;
 
+    line-height: 1.2;
 
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Open navigation">
+    font-weight: 700;
+}
 
-            <i class="fa-solid fa-bars"></i>
 
-        </button>
+/* Expertise */
 
-    </div>
+.expertise-list {
+    max-width: 1000px;
 
-</header>
+    margin: 0 auto;
 
+    display: flex;
 
-<!-- =====================================================
-     ABOUT PAGE
-===================================================== -->
+    justify-content: center;
 
-<main class="about-reference-style">
+    align-items: center;
 
+    flex-wrap: wrap;
 
-    <!-- ================= ABOUT ================= -->
+    gap: 14px;
+}
 
-    <section class="about-main-section">
+.expertise-list span {
+    display: inline-flex;
 
-        <div class="about-inner">
+    align-items: center;
 
-            <h1>
-                About Me
-            </h1>
+    justify-content: center;
 
+    padding: 11px 20px;
 
-            <div class="about-columns">
+    border: 1px solid rgba(184, 135, 60, 0.45);
 
-                <div class="about-column">
+    border-radius: 50px;
 
-                    <p>
-                        A multidisciplinary leader with
-                        <strong>20+ years of professional experience</strong>
-                        across Human Resources, leadership,
-                        business strategy, governance and
-                        organizational growth.
-                    </p>
+    background: rgba(255, 255, 255, 0.35);
 
-                </div>
+    color: #604d40;
 
+    font-size: 14px;
 
-                <div class="about-column">
+    font-weight: 600;
 
-                    <p>
-                        Combining
-                        <strong>people, business, law,
-                        marketing, digital & AI, and project sales</strong>
-                        to solve complex challenges, enable
-                        growth and create meaningful results.
-                    </p>
+    transition: all 0.3s ease;
+}
 
-                </div>
+.expertise-list span:hover {
+    background: #2b1a12;
 
-            </div>
+    color: #ffffff;
 
-        </div>
+    border-color: #2b1a12;
 
-    </section>
+    transform: translateY(-3px);
+}
 
 
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    <!-- ================= EXPERTISE ================= -->
+@media (max-width: 700px) {
 
-    <section class="expertise-section">
+    .about-page {
+        min-height: calc(100vh - 75px);
 
-        <div class="about-inner">
+        align-items: flex-start;
+    }
 
-            <h2>
-                Expertise & Leadership
-            </h2>
+    .about-container {
+        width: 88%;
 
+        padding: 60px 0;
+    }
 
-            <div class="expertise-list">
+    .about-container h1 {
+        font-size: 42px;
 
-                <span>
-                    HR & People Strategy
-                </span>
+        margin-bottom: 30px;
+    }
 
-                <span>
-                    Leadership & Organizational Development
-                </span>
+    .about-intro {
+        margin-bottom: 40px;
+    }
 
-                <span>
-                    Legal & Compliance
-                </span>
+    .about-intro p {
+        font-size: 16px;
 
-                <span>
-                    Business Strategy
-                </span>
+        line-height: 1.7;
 
-                <span>
-                    Marketing & Brand Strategy
-                </span>
+        margin-bottom: 20px;
+    }
 
-                <span>
-                    Digital Transformation
-                </span>
+    .about-container h2 {
+        font-size: 30px;
 
-                <span>
-                    AI & Innovation
-                </span>
+        margin-bottom: 25px;
+    }
 
-                <span>
-                    Project Sales & Business Development
-                </span>
+    .expertise-list {
+        gap: 10px;
+    }
 
-                <span>
-                    Governance
-                </span>
+    .expertise-list span {
+        font-size: 12px;
 
-                <span>
-                    Administration & Operations
-                </span>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= PROFESSIONAL RECORD ================= -->
-
-    <section class="about-record">
-
-        <div class="about-inner">
-
-            <div class="record-row">
-
-                <div class="record-item">
-
-                    <strong>20+</strong>
-
-                    <span>
-                        Years of Professional
-                        Experience
-                    </span>
-
-                </div>
-
-
-                <div class="record-item">
-
-                    <strong>30K+</strong>
-
-                    <span>
-                        LinkedIn
-                        Connections
-                    </span>
-
-                </div>
-
-
-                <div class="record-item">
-
-                    <strong>10K+</strong>
-
-                    <span>
-                        Team Members
-                        Led
-                    </span>
-
-                </div>
-
-
-                <div class="record-item">
-
-                    <strong>100+</strong>
-
-                    <span>
-                        Major Projects
-                        & Initiatives
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= CLOSING ================= -->
-
-    <section class="about-closing-simple">
-
-        <div class="about-inner">
-
-            <p>
-                PEOPLE.
-                <span>STRATEGY.</span>
-                <span>TRANSFORMATION.</span>
-            </p>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="site-footer">
-
-    <div class="about-inner">
-
-        <p>
-            © <span data-current-year></span>
-            Adv. Achut Poudel. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+        padding: 9px 15px;
+    }
+}
