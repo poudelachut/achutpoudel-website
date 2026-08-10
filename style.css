@@ -1,113 +1,759 @@
 /* =========================================================
-   ABOUT PAGE — PREMIUM EXECUTIVE DESIGN
+   ADV. ACHUT POUDEL — PERSONAL WEBSITE
+   COMPLETE FINAL STYLE.CSS
+   Theme: Dark Brown + Cream + Gold
 ========================================================= */
 
-.about-page {
+
+/* =========================================================
+   01. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
     background: #f4eee5;
     color: #2b1a12;
-    min-height: calc(100vh - 92px);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
 }
 
 
 /* =========================================================
-   ABOUT INTRO
+   02. GLOBAL COLORS
+========================================================= */
+
+:root {
+
+    --brown-dark: #2b1a12;
+    --brown-deep: #21120c;
+    --brown-light: #604d40;
+
+    --cream: #f4eee5;
+    --cream-light: #faf7f2;
+
+    --gold: #b8873c;
+    --gold-light: #c99a52;
+
+    --white: #ffffff;
+
+    --border-gold:
+        rgba(184, 135, 60, 0.35);
+
+    --border-light:
+        rgba(43, 26, 18, 0.12);
+
+    --shadow:
+        0 10px 30px rgba(43, 26, 18, 0.08);
+}
+
+
+/* =========================================================
+   03. HEADER
+========================================================= */
+
+.site-header {
+    width: 100%;
+
+    background: var(--brown-dark);
+
+    border-bottom:
+        1px solid rgba(201, 154, 82, 0.25);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+.navbar {
+    width: 92%;
+    max-width: 1400px;
+
+    min-height: 90px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+}
+
+.logo:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================================================
+   MAIN NAVIGATION
+========================================================= */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 32px;
+}
+
+.main-nav a {
+    position: relative;
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    padding: 10px 0;
+
+    transition:
+        color 0.3s ease;
+}
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--gold-light);
+
+    transition:
+        width 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--gold-light);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   HEADER RIGHT
+========================================================= */
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
+.social-icons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+.social-icons a {
+    color: var(--white);
+
+    font-size: 14px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--gold-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTACT BUTTON
+========================================================= */
+
+.contact-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    border:
+        1px solid var(--gold);
+
+    color: var(--white);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: var(--brown-dark);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+
+    border:
+        1px solid rgba(255,255,255,0.4);
+
+    color: var(--white);
+
+    padding: 8px 11px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   04. GENERAL PAGE CONTAINER
+========================================================= */
+
+.page-container {
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   05. HOME PAGE
+========================================================= */
+
+.hero {
+    min-height:
+        calc(100vh - 90px);
+
+    background: var(--cream);
+
+    display: flex;
+
+    align-items: center;
+}
+
+.hero-container {
+    width: 92%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+.hero-content {
+    max-width: 1050px;
+}
+
+.hero-eyebrow {
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    color: var(--brown-dark);
+
+    font-size:
+        clamp(48px, 7vw, 88px);
+
+    line-height: 1.03;
+
+    letter-spacing: -2.5px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero-subtitle {
+    color: var(--brown-light);
+
+    font-size:
+        clamp(19px, 2vw, 25px);
+
+    line-height: 1.6;
+
+    max-width: 900px;
+
+    margin-bottom: 35px;
+}
+
+.hero-description {
+    color: var(--brown-light);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    max-width: 850px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.btn-primary {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    background: var(--brown-dark);
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    border:
+        1px solid var(--brown-dark);
+
+    transition:
+        all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: var(--brown-dark);
+}
+
+.btn-secondary {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    background: transparent;
+
+    color: var(--brown-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    border:
+        1px solid var(--gold);
+
+    transition:
+        all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--gold);
+
+    color: var(--brown-dark);
+}
+
+
+/* =========================================================
+   06. HOME STATS
+========================================================= */
+
+.stats-section {
+    width: 92%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top:
+        1px solid var(--border-gold);
+
+    border-bottom:
+        1px solid var(--border-gold);
+}
+
+.stat-item {
+    text-align: center;
+
+    padding: 30px 15px;
+
+    border-right:
+        1px solid var(--border-gold);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-number {
+    display: block;
+
+    color: var(--brown-dark);
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    margin-bottom: 7px;
+}
+
+.stat-label {
+    display: block;
+
+    color: var(--brown-light);
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   07. GENERAL SECTION
+========================================================= */
+
+.section {
+    width: 92%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+.section-label {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.section-title {
+    color: var(--brown-dark);
+
+    font-size:
+        clamp(36px, 4vw, 55px);
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 25px;
+}
+
+.section-description {
+    max-width: 850px;
+
+    color: var(--brown-light);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   08. ABOUT PAGE
+========================================================= */
+
+.about-page {
+    background: var(--cream);
+
+    color: var(--brown-dark);
+
+    min-height:
+        calc(100vh - 90px);
+}
+
+
+/* =========================================================
+   ABOUT HERO
 ========================================================= */
 
 .about-hero {
     width: 92%;
+
     max-width: 1400px;
+
     margin: 0 auto;
-    padding: 70px 0 85px;
+
+    padding: 75px 0 70px;
 }
 
-.about-hero-title {
+
+/* =========================================================
+   ABOUT TITLE
+========================================================= */
+
+.about-title {
     text-align: center;
+
     margin-bottom: 55px;
 }
 
-.about-hero-title h1 {
+.about-title h1 {
     margin: 0;
 
-    font-size: clamp(42px, 5vw, 64px);
+    color: var(--brown-dark);
+
+    font-size:
+        clamp(45px, 5vw, 68px);
+
     line-height: 1.1;
 
     font-weight: 700;
-    letter-spacing: -1.5px;
 
-    color: #2b1a12;
+    letter-spacing: -1.8px;
 }
 
-.about-hero-title h1 span {
-    color: #b8873c;
+.about-title h1 span {
+    color: var(--gold);
 }
 
 
 /* =========================================================
-   TWO COLUMN INTRODUCTION
+   ABOUT TWO COLUMN INTRO
 ========================================================= */
 
-.about-intro-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    gap: 70px;
+.about-intro {
+    width: 100%;
 
     max-width: 1250px;
+
     margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 75px;
 }
 
-.about-intro-column {
+.about-column {
+    color: var(--brown-light);
+
     font-size: 18px;
-    line-height: 1.85;
 
-    color: #604d40;
+    line-height: 1.85;
 }
 
-.about-intro-column p {
+.about-column p {
     margin: 0;
 }
 
-.about-intro-column strong {
-    color: #2b1a12;
+.about-column strong {
+    color: var(--brown-dark);
+
     font-weight: 700;
 }
 
 
 /* =========================================================
-   DIVIDER
+   ABOUT DIVIDER
 ========================================================= */
 
-.about-divider {
-    width: 100%;
+.content-divider {
+    width: 92%;
+
+    max-width: 1400px;
+
     height: 1px;
 
-    background: rgba(184, 135, 60, 0.35);
+    margin: 0 auto;
 
-    margin: 75px 0 65px;
+    background:
+        var(--border-gold);
 }
 
 
 /* =========================================================
-   SKILLS & EXPERTISE
+   EXPERTISE SECTION
 ========================================================= */
 
-.about-expertise {
-    text-align: center;
+.expertise-section {
+    width: 92%;
 
-    max-width: 1300px;
+    max-width: 1400px;
+
     margin: 0 auto;
+
+    padding: 70px 0 75px;
 }
 
-.about-expertise h2 {
-    margin: 0 0 35px;
+.section-heading {
+    text-align: center;
 
-    font-size: clamp(34px, 4vw, 48px);
+    margin-bottom: 38px;
+}
+
+.section-heading h2 {
+    margin: 0 0 12px;
+
+    color: var(--brown-dark);
+
+    font-size:
+        clamp(34px, 4vw, 50px);
+
     line-height: 1.2;
 
-    color: #2b1a12;
-
     font-weight: 700;
-    letter-spacing: -0.8px;
+
+    letter-spacing: -1px;
+}
+
+.section-heading p {
+    margin: 0;
+
+    color: var(--brown-light);
+
+    font-size: 16px;
 }
 
 
@@ -115,124 +761,107 @@
    EXPERTISE TAGS
 ========================================================= */
 
-.about-skills {
+.expertise-tags {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
     display: flex;
 
-    justify-content: center;
     align-items: center;
+
+    justify-content: center;
 
     flex-wrap: wrap;
 
-    gap: 16px;
-
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 15px;
 }
 
-.about-skill {
+.expertise-tags span {
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     min-height: 46px;
 
-    padding: 10px 22px;
+    padding: 10px 21px;
 
-    border: 1px solid rgba(184, 135, 60, 0.45);
+    border:
+        1px solid rgba(184,135,60,0.45);
 
     border-radius: 50px;
 
-    background: rgba(255, 255, 255, 0.38);
+    background:
+        rgba(255,255,255,0.42);
 
-    color: #604d40;
+    color: var(--brown-light);
 
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 14px;
 
-    letter-spacing: 0.1px;
+    font-weight: 600;
 
     transition:
         all 0.3s ease;
 }
 
-.about-skill:hover {
-    background: #2b1a12;
+.expertise-tags span:hover {
+    background: var(--brown-dark);
 
-    color: #ffffff;
+    color: var(--white);
 
-    border-color: #2b1a12;
+    border-color: var(--brown-dark);
 
-    transform: translateY(-3px);
+    transform:
+        translateY(-3px);
 
-    box-shadow: 0 8px 20px rgba(43, 26, 18, 0.12);
+    box-shadow:
+        0 8px 20px
+        rgba(43,26,18,0.12);
 }
 
 
 /* =========================================================
-   LEADERSHIP STATEMENT
+   ABOUT IMPACT
 ========================================================= */
 
-.about-statement {
-    max-width: 950px;
-
-    margin: 75px auto 0;
-
-    text-align: center;
-
-    padding-top: 55px;
-
-    border-top: 1px solid rgba(184, 135, 60, 0.25);
-}
-
-.about-statement p {
-    margin: 0;
-
-    color: #604d40;
-
-    font-size: 18px;
-
-    line-height: 1.8;
-}
-
-.about-statement strong {
-    color: #2b1a12;
-}
-
-
-/* =========================================================
-   IMPACT NUMBERS
-========================================================= */
-
-.about-impact {
+.impact-section {
     width: 92%;
+
     max-width: 1250px;
 
-    margin: 70px auto 0;
+    margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns:
+        repeat(4, 1fr);
 
-    border-top: 1px solid rgba(184, 135, 60, 0.35);
-    border-bottom: 1px solid rgba(184, 135, 60, 0.35);
+    border-top:
+        1px solid var(--border-gold);
+
+    border-bottom:
+        1px solid var(--border-gold);
 }
 
-.about-impact-item {
+.impact-item {
     text-align: center;
 
-    padding: 35px 15px;
+    padding: 32px 15px;
 
-    border-right: 1px solid rgba(184, 135, 60, 0.25);
+    border-right:
+        1px solid var(--border-gold);
 }
 
-.about-impact-item:last-child {
+.impact-item:last-child {
     border-right: none;
 }
 
-.about-impact-number {
+.impact-item strong {
     display: block;
 
-    color: #2b1a12;
+    color: var(--brown-dark);
 
     font-size: 32px;
 
@@ -243,150 +872,782 @@
     margin-bottom: 8px;
 }
 
-.about-impact-label {
+.impact-item span {
     display: block;
 
-    color: #604d40;
+    color: var(--brown-light);
 
-    font-size: 12px;
+    font-size: 11px;
 
-    line-height: 1.4;
+    line-height: 1.45;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
 
     text-transform: uppercase;
-
-    letter-spacing: 1.2px;
 }
 
 
 /* =========================================================
-   MOBILE
+   ABOUT CLOSING
+========================================================= */
+
+.about-closing {
+    width: 92%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 75px 0 85px;
+
+    text-align: center;
+}
+
+.about-closing h2 {
+    margin: 0 0 15px;
+
+    color: var(--brown-dark);
+
+    font-size:
+        clamp(25px, 3vw, 38px);
+
+    line-height: 1.3;
+
+    letter-spacing: 2px;
+}
+
+.about-closing p {
+    margin: 0;
+
+    color: var(--brown-light);
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   09. CONTACT PAGE
+========================================================= */
+
+.contact-page {
+    background: var(--cream);
+
+    min-height:
+        calc(100vh - 90px);
+
+    color: var(--brown-dark);
+}
+
+.contact-container {
+    width: 92%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 75px 0 90px;
+}
+
+.contact-title {
+    margin-bottom: 45px;
+}
+
+.contact-title h1 {
+    margin: 0 0 15px;
+
+    color: var(--brown-dark);
+
+    font-size:
+        clamp(45px, 6vw, 72px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+.contact-title h1 span {
+    color: var(--gold);
+}
+
+.contact-intro {
+    max-width: 900px;
+
+    color: var(--brown-light);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.contact-intro strong {
+    color: var(--brown-dark);
+}
+
+
+/* =========================================================
+   CONTACT GRID
+========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr 1.2fr;
+
+    gap: 75px;
+
+    margin-top: 55px;
+}
+
+
+/* =========================================================
+   CONTACT INFO
+========================================================= */
+
+.contact-info {
+    padding-top: 5px;
+}
+
+.contact-info-title {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    color: var(--brown-dark);
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    display: inline-block;
+
+    margin-bottom: 35px;
+
+    border-bottom:
+        1px solid var(--gold);
+
+    padding-bottom: 4px;
+}
+
+.contact-email:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   CONTACT SOCIAL
+========================================================= */
+
+.contact-social {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+}
+
+.contact-social a {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid var(--border-gold);
+
+    color: var(--brown-dark);
+
+    transition:
+        all 0.3s ease;
+}
+
+.contact-social a:hover {
+    background: var(--brown-dark);
+
+    color: var(--white);
+
+    border-color: var(--brown-dark);
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--brown-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    border:
+        1px solid rgba(43,26,18,0.2);
+
+    background:
+        rgba(255,255,255,0.55);
+
+    color: var(--brown-dark);
+
+    padding: 14px 15px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    border-radius: 0;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+
+    background: var(--white);
+}
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.form-submit {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 14px 25px;
+
+    background: var(--brown-dark);
+
+    color: var(--white);
+
+    border:
+        1px solid var(--brown-dark);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+.form-submit:hover {
+    background: var(--gold);
+
+    color: var(--brown-dark);
+
+    border-color: var(--gold);
+}
+
+.form-note {
+    margin-top: 15px;
+
+    color: var(--brown-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   10. EXPERIENCE / PROJECT / COMMUNITY / HONORS
+========================================================= */
+
+.content-page {
+    background: var(--cream);
+
+    min-height:
+        calc(100vh - 90px);
+}
+
+.content-page-container {
+    width: 92%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 75px 0 90px;
+}
+
+.content-page-title {
+    margin-bottom: 50px;
+}
+
+.content-page-title h1 {
+    color: var(--brown-dark);
+
+    font-size:
+        clamp(42px, 5vw, 65px);
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+}
+
+.content-page-title p {
+    max-width: 850px;
+
+    color: var(--brown-light);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   CONTENT CARDS
+========================================================= */
+
+.content-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.content-card {
+    background:
+        rgba(255,255,255,0.35);
+
+    border:
+        1px solid rgba(184,135,60,0.25);
+
+    padding: 30px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.content-card:hover {
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(184,135,60,0.6);
+
+    box-shadow:
+        var(--shadow);
+}
+
+.content-card h2 {
+    color: var(--brown-dark);
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+.content-card p {
+    color: var(--brown-light);
+
+    font-size: 15px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   11. FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--brown-deep);
+
+    color:
+        rgba(255,255,255,0.7);
+
+    text-align: center;
+
+    padding: 28px 20px;
+}
+
+.site-footer p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   12. MOBILE NAVIGATION
 ========================================================= */
 
 @media (max-width: 900px) {
 
-    .about-hero {
-        padding: 60px 0 70px;
+    .navbar {
+        min-height: 75px;
     }
 
-    .about-intro-grid {
-        gap: 40px;
+    .main-nav {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--brown-dark);
+
+        padding: 15px 6% 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        border-top:
+            1px solid rgba(201,154,82,0.2);
     }
 
-    .about-intro-column {
-        font-size: 16px;
+    .main-nav.open {
+        display: flex;
     }
 
-    .about-impact {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .main-nav a {
+        width: 100%;
 
-    .about-impact-item:nth-child(2) {
-        border-right: none;
-    }
+        padding: 13px 0;
 
-    .about-impact-item:nth-child(-n + 2) {
-        border-bottom: 1px solid rgba(184, 135, 60, 0.25);
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 650px) {
-
-    .about-hero {
-        width: 88%;
-        padding: 50px 0 60px;
-    }
-
-    .about-hero-title {
-        margin-bottom: 40px;
-    }
-
-    .about-hero-title h1 {
-        font-size: 40px;
-        letter-spacing: -1px;
-    }
-
-    .about-intro-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .about-intro-column {
-        font-size: 16px;
-        line-height: 1.75;
-    }
-
-    .about-divider {
-        margin: 55px 0 50px;
-    }
-
-    .about-expertise h2 {
-        font-size: 34px;
-        margin-bottom: 28px;
-    }
-
-    .about-skills {
-        gap: 10px;
-    }
-
-    .about-skill {
-        min-height: 42px;
-        padding: 8px 16px;
         font-size: 13px;
     }
 
-    .about-statement {
-        margin-top: 55px;
-        padding-top: 40px;
+    .header-right {
+        display: none;
     }
 
-    .about-statement p {
-        font-size: 16px;
+    .menu-toggle {
+        display: block;
     }
 
-    .about-impact {
-        width: 88%;
-        margin-top: 55px;
-    }
-
-    .about-impact-item {
-        padding: 25px 10px;
-    }
-
-    .about-impact-number {
-        font-size: 27px;
-    }
-
-    .about-impact-label {
-        font-size: 10px;
-    }
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   13. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-intro {
+        gap: 40px;
+    }
+
+    .contact-grid {
+        gap: 45px;
+    }
+
+    .stats-section,
+    .impact-section {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stat-item:nth-child(2),
+    .impact-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-item:nth-child(-n+2),
+    .impact-item:nth-child(-n+2) {
+        border-bottom:
+            1px solid var(--border-gold);
+    }
+
+}
+
+
+/* =========================================================
+   14. MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        width: 88%;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+
+    /* HOME */
+
+    .hero-container {
+        width: 88%;
+
+        padding: 65px 0;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    /* ABOUT */
+
+    .about-hero {
+        width: 88%;
+
+        padding: 55px 0 60px;
+    }
+
+    .about-title {
+        margin-bottom: 40px;
+    }
+
+    .about-title h1 {
+        font-size: 42px;
+
+        letter-spacing: -1px;
+    }
+
+    .about-intro {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .about-column {
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+    .content-divider {
+        width: 88%;
+    }
+
+
+    /* EXPERTISE */
+
+    .expertise-section {
+        width: 88%;
+
+        padding: 55px 0 60px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+    .expertise-tags {
+        gap: 10px;
+    }
+
+    .expertise-tags span {
+        min-height: 40px;
+
+        padding: 8px 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* IMPACT */
+
+    .impact-section {
+        width: 88%;
+    }
+
+    .impact-item {
+        padding: 25px 10px;
+    }
+
+    .impact-item strong {
+        font-size: 27px;
+    }
+
+    .impact-item span {
+        font-size: 9px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container {
+        width: 88%;
+
+        padding: 55px 0 70px;
+    }
+
+    .contact-title h1 {
+        font-size: 45px;
+    }
+
+    .contact-intro {
+        font-size: 16px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-top: 40px;
+    }
+
+
+    /* CONTENT */
+
+    .content-page-container {
+        width: 88%;
+
+        padding: 55px 0 70px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CLOSING */
+
+    .about-closing {
+        width: 88%;
+
+        padding: 60px 0 70px;
+    }
+
+    .about-closing h2 {
+        font-size: 23px;
+
+        letter-spacing: 1px;
+    }
+
+    .about-closing p {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   15. SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 420px) {
 
-    .about-hero-title h1 {
-        font-size: 34px;
+    .hero h1 {
+        font-size: 38px;
     }
 
-    .about-expertise h2 {
+    .about-title h1 {
+        font-size: 36px;
+    }
+
+    .section-heading h2 {
         font-size: 30px;
     }
 
-    .about-skill {
-        font-size: 12px;
-        padding: 8px 13px;
+    .expertise-tags span {
+        font-size: 11px;
+
+        padding: 7px 12px;
     }
 
-    .about-impact-number {
+    .impact-item strong {
         font-size: 24px;
     }
+
+    .contact-title h1 {
+        font-size: 38px;
+    }
+
 }
+
+
+/* =========================================================
+   16. ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline:
+        2px solid var(--gold);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   END
+========================================================= */
