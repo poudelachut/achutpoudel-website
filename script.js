@@ -1,4 +1,102 @@
 /* =========================================================
+   ACHUT POUDEL WEBSITE SCRIPT
+========================================================= */
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector(".main-nav");
+
+    if (menuToggle && mainNav) {
+
+        menuToggle.addEventListener("click", function () {
+
+            mainNav.classList.toggle("open");
+
+            const icon = menuToggle.querySelector("i");
+
+            if (mainNav.classList.contains("open")) {
+
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
+
+            } else {
+
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
+
+            }
+
+        });
+
+
+        /* Close menu after selecting a page */
+
+        const navLinks = mainNav.querySelectorAll("a");
+
+        navLinks.forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                mainNav.classList.remove("open");
+
+                const icon = menuToggle.querySelector("i");
+
+                if (icon) {
+
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
+
+                }
+
+            });
+
+        });
+
+    }
+
+
+    /* =====================================================
+       CURRENT YEAR
+    ===================================================== */
+
+    const yearElements =
+        document.querySelectorAll("#currentYear");
+
+    yearElements.forEach(function (element) {
+
+        element.textContent =
+            new Date().getFullYear();
+
+    });
+
+
+    /* =====================================================
+       PHOTO ERROR HANDLING
+    ===================================================== */
+
+    const profilePhoto =
+        document.querySelector(".hero-photo img");
+
+    if (profilePhoto) {
+
+        profilePhoto.addEventListener("error", function () {
+
+            console.warn(
+                "Profile photo could not be loaded. " +
+                "Please check: images/achut-poudel.jpg"
+            );
+
+        });
+
+    }
+
+});/* =========================================================
    ADV. ACHUT POUDEL — PERSONAL WEBSITE
    COMPLETE SCRIPT.JS
 ========================================================= */
