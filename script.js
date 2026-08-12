@@ -1,4 +1,186 @@
 /* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+const mobileMenuBtn =
+    document.getElementById("mobileMenuBtn");
+
+const mainNav =
+    document.getElementById("mainNav");
+
+const navLinks =
+    document.querySelectorAll(".nav-link");
+
+
+if (mobileMenuBtn) {
+
+    mobileMenuBtn.addEventListener("click", () => {
+
+        mainNav.classList.toggle("open");
+
+    });
+
+}
+
+
+/* =========================================================
+   CLOSE MOBILE MENU
+========================================================= */
+
+navLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mainNav.classList.remove("open");
+
+    });
+
+});
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+
+    sections.forEach(section => {
+
+        const sectionTop =
+            section.offsetTop - 130;
+
+        const sectionHeight =
+            section.offsetHeight;
+
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY <
+            sectionTop + sectionHeight
+        ) {
+
+            current =
+                section.getAttribute("id");
+
+        }
+
+    });
+
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+
+        if (
+            link.getAttribute("href")
+            === "#" + current
+        ) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+const revealObserver =
+    new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backToTop =
+    document.getElementById("backToTop");
+
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        backToTop.classList.add("show");
+
+    } else {
+
+        backToTop.classList.remove("show");
+
+    }
+
+});
+
+
+backToTop.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+/* =========================================================
+   FOOTER YEAR
+========================================================= */
+
+const year =
+    document.getElementById("year");
+
+
+if (year) {
+
+    year.textContent =
+        new Date().getFullYear();
+
+}/* =========================================================
    ACHUT POUDEL WEBSITE SCRIPT
 ========================================================= */
 
