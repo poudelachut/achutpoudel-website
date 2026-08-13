@@ -1,242 +1,67 @@
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
-const mobileMenuBtn =
-    document.getElementById("mobileMenuBtn");
-
-const mainNav =
-    document.getElementById("mainNav");
-
-const navLinks =
-    document.querySelectorAll(".nav-link");
-
-
-if (mobileMenuBtn) {
-
-    mobileMenuBtn.addEventListener("click", () => {
-
-        mainNav.classList.toggle("open");
-
-    });
-
-}
-
-
-/* =========================================================
-   CLOSE MOBILE MENU
-========================================================= */
-
-navLinks.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        mainNav.classList.remove("open");
-
-    });
-
-});
-
-
-/* =========================================================
-   ACTIVE NAVIGATION
-========================================================= */
-
-const sections =
-    document.querySelectorAll("section[id]");
-
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-
-    sections.forEach(section => {
-
-        const sectionTop =
-            section.offsetTop - 130;
-
-        const sectionHeight =
-            section.offsetHeight;
-
-
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY <
-            sectionTop + sectionHeight
-        ) {
-
-            current =
-                section.getAttribute("id");
-
-        }
-
-    });
-
-
-    navLinks.forEach(link => {
-
-        link.classList.remove("active");
-
-
-        if (
-            link.getAttribute("href")
-            === "#" + current
-        ) {
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-const revealObserver =
-    new IntersectionObserver(
-        (entries, observer) => {
-
-            entries.forEach(entry => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("visible");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
-        }
-    );
-
-
-revealElements.forEach(element => {
-
-    revealObserver.observe(element);
-
-});
-
-
-/* =========================================================
-   BACK TO TOP
-========================================================= */
-
-const backToTop =
-    document.getElementById("backToTop");
-
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 500) {
-
-        backToTop.classList.add("show");
-
-    } else {
-
-        backToTop.classList.remove("show");
-
-    }
-
-});
-
-
-backToTop.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-});
-
-
-/* =========================================================
-   FOOTER YEAR
-========================================================= */
-
-const year =
-    document.getElementById("year");
-
-
-if (year) {
-
-    year.textContent =
-        new Date().getFullYear();
-
-}/* =========================================================
-   ACHUT POUDEL WEBSITE SCRIPT
-========================================================= */
-
-
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
-
 document.addEventListener("DOMContentLoaded", function () {
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const mainNav = document.querySelector(".main-nav");
 
-    if (menuToggle && mainNav) {
+    /* =====================================================
+       MOBILE MENU
+    ===================================================== */
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const mainNavigation =
+        document.getElementById("mainNavigation");
+
+
+    if (menuToggle && mainNavigation) {
 
         menuToggle.addEventListener("click", function () {
 
-            mainNav.classList.toggle("open");
+            const isOpen =
+                mainNavigation.classList.toggle("open");
 
-            const icon = menuToggle.querySelector("i");
-
-            if (mainNav.classList.contains("open")) {
-
-                icon.classList.remove("fa-bars");
-                icon.classList.add("fa-xmark");
-
-            } else {
-
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-
-            }
+            menuToggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
 
         });
 
 
-        /* Close menu after selecting a page */
+        const navigationLinks =
+            mainNavigation.querySelectorAll("a");
 
-        const navLinks = mainNav.querySelectorAll("a");
 
-        navLinks.forEach(function (link) {
+        navigationLinks.forEach(function (link) {
 
             link.addEventListener("click", function () {
 
-                mainNav.classList.remove("open");
+                mainNavigation.classList.remove("open");
 
-                const icon = menuToggle.querySelector("i");
-
-                if (icon) {
-
-                    icon.classList.remove("fa-xmark");
-                    icon.classList.add("fa-bars");
-
-                }
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
             });
+
+        });
+
+
+        document.addEventListener("click", function (event) {
+
+            if (
+                !mainNavigation.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+
+                mainNavigation.classList.remove("open");
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
 
         });
 
@@ -247,201 +72,51 @@ document.addEventListener("DOMContentLoaded", function () {
        CURRENT YEAR
     ===================================================== */
 
-    const yearElements =
-        document.querySelectorAll("#currentYear");
+    const currentYear =
+        document.getElementById("currentYear");
 
-    yearElements.forEach(function (element) {
 
-        element.textContent =
+    if (currentYear) {
+
+        currentYear.textContent =
             new Date().getFullYear();
 
-    });
+    }
 
 
     /* =====================================================
-       PHOTO ERROR HANDLING
+       ACTIVE NAVIGATION
     ===================================================== */
-
-    const profilePhoto =
-        document.querySelector(".hero-photo img");
-
-    if (profilePhoto) {
-
-        profilePhoto.addEventListener("error", function () {
-
-            console.warn(
-                "Profile photo could not be loaded. " +
-                "Please check: images/achut-poudel.jpg"
-            );
-
-        });
-
-    }
-
-});/* =========================================================
-   ADV. ACHUT POUDEL — PERSONAL WEBSITE
-   COMPLETE SCRIPT.JS
-========================================================= */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    /* =====================================================
-       1. MOBILE MENU
-    ====================================================== */
-
-    const menuToggle = document.getElementById("menuToggle");
-    const mainNav = document.getElementById("mainNav");
-
-    if (menuToggle && mainNav) {
-
-        menuToggle.addEventListener("click", function () {
-
-            mainNav.classList.toggle("open");
-
-            const icon = menuToggle.querySelector("i");
-
-            if (mainNav.classList.contains("open")) {
-
-                if (icon) {
-                    icon.classList.remove("fa-bars");
-                    icon.classList.add("fa-xmark");
-                }
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Close navigation menu"
-                );
-
-            } else {
-
-                if (icon) {
-                    icon.classList.remove("fa-xmark");
-                    icon.classList.add("fa-bars");
-                }
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-            }
-
-        });
-
-
-        /* =================================================
-           2. CLOSE MOBILE MENU AFTER CLICKING A LINK
-        ================================================== */
-
-        const navLinks = mainNav.querySelectorAll("a");
-
-        navLinks.forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                mainNav.classList.remove("open");
-
-                const icon = menuToggle.querySelector("i");
-
-                if (icon) {
-
-                    icon.classList.remove("fa-xmark");
-
-                    icon.classList.add("fa-bars");
-
-                }
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-            });
-
-        });
-
-    }
-
-
-    /* =====================================================
-       3. CLOSE MENU WHEN CLICKING OUTSIDE
-    ====================================================== */
-
-    document.addEventListener("click", function (event) {
-
-        if (!mainNav || !menuToggle) {
-            return;
-        }
-
-        const clickedInsideMenu =
-            mainNav.contains(event.target);
-
-        const clickedMenuButton =
-            menuToggle.contains(event.target);
-
-        if (
-            !clickedInsideMenu &&
-            !clickedMenuButton &&
-            mainNav.classList.contains("open")
-        ) {
-
-            mainNav.classList.remove("open");
-
-            const icon =
-                menuToggle.querySelector("i");
-
-            if (icon) {
-
-                icon.classList.remove("fa-xmark");
-
-                icon.classList.add("fa-bars");
-
-            }
-
-            menuToggle.setAttribute(
-                "aria-label",
-                "Open navigation menu"
-            );
-        }
-
-    });
-
-
-    /* =====================================================
-       4. ACTIVE NAVIGATION
-    ====================================================== */
 
     const currentPage =
         window.location.pathname
+        .split("/")
+        .pop()
+        .toLowerCase();
+
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+
+    navLinks.forEach(function (link) {
+
+        const linkPage =
+            link.getAttribute("href")
             .split("/")
             .pop()
             .toLowerCase();
 
-    const allNavLinks =
-        document.querySelectorAll(".main-nav a");
-
-    allNavLinks.forEach(function (link) {
-
-        const linkPage =
-            link.getAttribute("href");
-
-        if (!linkPage) {
-            return;
-        }
-
-        const cleanLinkPage =
-            linkPage
-                .split("/")
-                .pop()
-                .split("#")[0]
-                .toLowerCase();
 
         link.classList.remove("active");
 
-        if (
-            (currentPage === "" &&
-                cleanLinkPage === "index.html") ||
 
-            currentPage === cleanLinkPage
+        if (
+            linkPage === currentPage ||
+            (
+                currentPage === "" &&
+                linkPage === "index.html"
+            )
         ) {
 
             link.classList.add("active");
@@ -452,53 +127,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       5. SMOOTH INTERNAL LINKS
-    ====================================================== */
-
-    const internalLinks =
-        document.querySelectorAll(
-            'a[href^="#"]'
-        );
-
-    internalLinks.forEach(function (link) {
-
-        link.addEventListener("click", function (event) {
-
-            const targetId =
-                link.getAttribute("href");
-
-            if (
-                !targetId ||
-                targetId === "#"
-            ) {
-                return;
-            }
-
-            const target =
-                document.querySelector(targetId);
-
-            if (target) {
-
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-
-            }
-
-        });
-
-    });
-
-
-    /* =====================================================
-       6. CONTACT FORM
-    ====================================================== */
+       CONTACT FORM
+    ===================================================== */
 
     const contactForm =
         document.getElementById("contactForm");
+
+
+    const formMessage =
+        document.getElementById("formMessage");
+
 
     if (contactForm) {
 
@@ -506,82 +144,27 @@ document.addEventListener("DOMContentLoaded", function () {
             "submit",
             function (event) {
 
-                /*
-                 * Prevent the browser from showing
-                 * a blank/error page if the form
-                 * does not yet have a backend.
-                 */
-
                 event.preventDefault();
 
 
-                const fullName =
-                    document.getElementById("fullName");
+                const name =
+                    document.getElementById("name").value.trim();
 
                 const email =
-                    document.getElementById("email");
-
-                const help =
-                    document.getElementById("help");
+                    document.getElementById("email").value.trim();
 
                 const message =
-                    document.getElementById("message");
+                    document.getElementById("message").value.trim();
 
 
-                /* -----------------------------------------
-                   BASIC VALIDATION
-                ------------------------------------------ */
+                if (!name || !email || !message) {
 
-                if (
-                    !fullName ||
-                    !email ||
-                    !help ||
-                    !message
-                ) {
+                    if (formMessage) {
 
-                    console.error(
-                        "Contact form fields are missing."
-                    );
+                        formMessage.textContent =
+                            "Please complete all required fields.";
 
-                    return;
-
-                }
-
-
-                if (
-                    fullName.value.trim() === "" ||
-                    email.value.trim() === "" ||
-                    help.value.trim() === "" ||
-                    message.value.trim() === ""
-                ) {
-
-                    alert(
-                        "Please complete all required fields."
-                    );
-
-                    return;
-
-                }
-
-
-                /* -----------------------------------------
-                   EMAIL FORMAT CHECK
-                ------------------------------------------ */
-
-                const emailPattern =
-                    /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-                if (
-                    !emailPattern.test(
-                        email.value.trim()
-                    )
-                ) {
-
-                    alert(
-                        "Please enter a valid email address."
-                    );
-
-                    email.focus();
+                    }
 
                     return;
 
@@ -589,50 +172,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
                 /*
-                 * At this stage the form is validated.
+                 * This creates an email message using the visitor's
+                 * default email application.
                  *
-                 * The website currently opens the user's
-                 * email application using mailto.
+                 * Replace the email address below with your
+                 * preferred professional email address if required.
                  */
 
+                const subjectInput =
+                    document.getElementById("subject");
+
+
                 const subject =
-                    encodeURIComponent(
-                        "Website Inquiry — " +
-                        help.value
-                    );
+                    subjectInput
+                        ? subjectInput.value.trim()
+                        : "";
 
 
-                const body =
-                    encodeURIComponent(
-
-                        "Full Name: " +
-                        fullName.value.trim() +
-                        "\n\n" +
-
-                        "Email: " +
-                        email.value.trim() +
-                        "\n\n" +
-
-                        "How Can I Help?: " +
-                        help.value.trim() +
-                        "\n\n" +
-
-                        "Message:\n" +
-                        message.value.trim()
-
-                    );
+                const mailSubject =
+                    subject ||
+                    "Website Contact - Adv. Achut Poudel";
 
 
-                const mailtoLink =
+                const mailBody =
+                    "Name: " + name +
+                    "\nEmail: " + email +
+                    "\n\nMessage:\n" + message;
+
+
+                const mailto =
                     "mailto:poudel.achut@gmail.com" +
                     "?subject=" +
-                    subject +
+                    encodeURIComponent(mailSubject) +
                     "&body=" +
-                    body;
+                    encodeURIComponent(mailBody);
 
 
-                window.location.href =
-                    mailtoLink;
+                window.location.href = mailto;
+
+
+                if (formMessage) {
+
+                    formMessage.textContent =
+                        "Your email application is opening...";
+
+                }
 
             }
         );
@@ -641,147 +225,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       7. CURRENT YEAR
-    ====================================================== */
+       SMOOTH INTERNAL LINKS
+    ===================================================== */
 
-    const yearElements =
+    const internalLinks =
         document.querySelectorAll(
-            "[data-current-year]"
+            'a[href$=".html"]'
         );
 
-    yearElements.forEach(function (element) {
 
-        element.textContent =
-            new Date().getFullYear();
+    internalLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            /*
+             * No target="_blank" is used for internal pages.
+             * Therefore they open in the same browser tab.
+             */
+
+        });
 
     });
 
-
-    /* =====================================================
-       8. ESC KEY — CLOSE MOBILE MENU
-    ====================================================== */
-
-    document.addEventListener(
-        "keydown",
-        function (event) {
-
-            if (
-                event.key === "Escape" &&
-                mainNav &&
-                mainNav.classList.contains("open")
-            ) {
-
-                mainNav.classList.remove("open");
-
-                const icon =
-                    menuToggle.querySelector("i");
-
-                if (icon) {
-
-                    icon.classList.remove(
-                        "fa-xmark"
-                    );
-
-                    icon.classList.add(
-                        "fa-bars"
-                    );
-
-                }
-
-                menuToggle.setAttribute(
-                    "aria-label",
-                    "Open navigation menu"
-                );
-
-            }
-
-        }
-    );
-
-});/* =====================================================
-   MOBILE MENU
-===================================================== */
-
-const mobileMenuBtn =
-    document.getElementById("mobileMenuBtn");
-
-const mobileMenu =
-    document.getElementById("mobileMenu");
-
-
-if (mobileMenuBtn && mobileMenu) {
-
-    mobileMenuBtn.addEventListener(
-        "click",
-        function () {
-
-            mobileMenu.classList.toggle("active");
-
-
-            const icon =
-                mobileMenuBtn.querySelector("i");
-
-
-            if (
-                mobileMenu.classList.contains("active")
-            ) {
-
-                icon.classList.remove(
-                    "fa-bars"
-                );
-
-                icon.classList.add(
-                    "fa-xmark"
-                );
-
-            } else {
-
-                icon.classList.remove(
-                    "fa-xmark"
-                );
-
-                icon.classList.add(
-                    "fa-bars"
-                );
-
-            }
-
-        }
-    );
-
-
-    const mobileLinks =
-        mobileMenu.querySelectorAll("a");
-
-
-    mobileLinks.forEach(
-        function (link) {
-
-            link.addEventListener(
-                "click",
-                function () {
-
-                    mobileMenu.classList.remove(
-                        "active"
-                    );
-
-
-                    const icon =
-                        mobileMenuBtn.querySelector("i");
-
-
-                    icon.classList.remove(
-                        "fa-xmark"
-                    );
-
-                    icon.classList.add(
-                        "fa-bars"
-                    );
-
-                }
-            );
-
-        }
-    );
-
-}
+});
