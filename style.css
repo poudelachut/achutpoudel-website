@@ -1,10 +1,12 @@
 /* =========================================================
    ACHUT POUDEL PERSONAL WEBSITE
-   COMPLETE RESPONSIVE STYLE
+   FINAL STYLE.CSS
+   Desktop + Laptop + Tablet + Mobile
 ========================================================= */
 
+
 /* =========================================================
-   RESET
+   GLOBAL RESET
 ========================================================= */
 
 * {
@@ -25,14 +27,14 @@ body {
     overflow-x: hidden;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
-
 a {
     text-decoration: none;
     color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 button,
@@ -66,15 +68,18 @@ textarea {
 
 
 /* =========================================================
-   GLOBAL CONTAINERS
+   COMMON CONTAINERS
 ========================================================= */
 
 .section-container,
-.content-container,
-.footer-container {
-    width: min(1180px, calc(100% - 80px));
+.content-container {
+    width: min(1080px, 84%);
     margin-left: auto;
     margin-right: auto;
+}
+
+.content-container {
+    max-width: 1050px;
 }
 
 
@@ -87,7 +92,6 @@ textarea {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 78px;
     z-index: 1000;
 
     background: rgba(255, 255, 255, 0.97);
@@ -95,11 +99,10 @@ textarea {
     border-bottom: 1px solid var(--border);
 
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 }
 
 .header-container {
-    width: min(1450px, calc(100% - 70px));
+    width: min(1600px, 94%);
     min-height: 78px;
     margin: auto;
 
@@ -107,10 +110,15 @@ textarea {
     align-items: center;
     justify-content: space-between;
 
-    gap: 25px;
+    gap: 20px;
 }
 
-.site-logo {
+
+/* =========================================================
+   HEADER BRAND
+========================================================= */
+
+.header-brand {
     color: var(--blue-dark);
     font-size: 20px;
     font-weight: 500;
@@ -125,14 +133,13 @@ textarea {
 .main-navigation {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4px;
+    gap: 3px;
 }
 
 .nav-link {
     position: relative;
 
-    padding: 10px 12px;
+    padding: 10px 11px;
 
     color: var(--blue-dark);
 
@@ -147,9 +154,9 @@ textarea {
 
     position: absolute;
 
-    left: 12px;
-    right: 12px;
-    bottom: 3px;
+    bottom: 2px;
+    left: 11px;
+    right: 11px;
 
     height: 2px;
 
@@ -183,13 +190,12 @@ textarea {
 
 .social-links {
     display: flex;
-    align-items: center;
     gap: 7px;
 }
 
 .social-links a {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
 
     display: flex;
     align-items: center;
@@ -211,7 +217,7 @@ textarea {
 }
 
 .contact-button {
-    padding: 11px 21px;
+    padding: 11px 20px;
 
     color: white;
     background: var(--blue-dark);
@@ -229,10 +235,6 @@ textarea {
     transform: translateY(-2px);
 }
 
-.active-contact {
-    background: var(--blue);
-}
-
 
 /* =========================================================
    MOBILE MENU
@@ -241,10 +243,10 @@ textarea {
 .menu-toggle {
     display: none;
 
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 
-    border: none;
+    border: 0;
     border-radius: 8px;
 
     background: var(--sky-light);
@@ -261,6 +263,56 @@ textarea {
     margin: 5px auto;
 
     background: var(--blue-dark);
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+    color: var(--blue);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    max-width: 800px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: var(--blue-dark);
+
+    font-size: clamp(34px, 4vw, 50px);
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--text-light);
+
+    font-size: 16px;
 }
 
 
@@ -288,7 +340,7 @@ textarea {
 }
 
 .hero-container {
-    width: min(1240px, calc(100% - 80px));
+    width: min(1240px, 90%);
 
     min-height: 650px;
 
@@ -306,22 +358,22 @@ textarea {
 .hero-eyebrow {
     color: var(--blue);
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
 
     letter-spacing: 2px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .hero-content h1 {
     color: var(--blue-dark);
 
-    font-size: clamp(44px, 5vw, 68px);
+    font-size: clamp(42px, 5.5vw, 70px);
 
-    line-height: 1.06;
+    line-height: 1.05;
 
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
 
     margin-bottom: 22px;
 }
@@ -333,15 +385,16 @@ textarea {
 
 .hero-content h2 {
     display: flex;
+
     flex-wrap: wrap;
 
     gap: 9px;
 
     color: var(--text);
 
-    font-size: 18px;
+    font-size: 17px;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 1.8px;
 
     margin-bottom: 27px;
 }
@@ -351,7 +404,7 @@ textarea {
 }
 
 .hero-description {
-    max-width: 680px;
+    max-width: 670px;
 
     color: var(--text-light);
 
@@ -362,6 +415,7 @@ textarea {
 
 .hero-buttons {
     display: flex;
+
     align-items: center;
 
     flex-wrap: wrap;
@@ -427,7 +481,7 @@ textarea {
 
 
 /* =========================================================
-   HOME PHOTO
+   HERO IMAGE
 ========================================================= */
 
 .hero-image-area {
@@ -436,6 +490,7 @@ textarea {
     min-height: 580px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
@@ -467,8 +522,7 @@ textarea {
 
     border-radius: 220px 220px 35px 35px;
 
-    box-shadow:
-        0 30px 70px rgba(18, 59, 93, 0.18);
+    box-shadow: 0 30px 70px rgba(18, 59, 93, 0.18);
 }
 
 .hero-photo {
@@ -476,6 +530,7 @@ textarea {
     height: 100%;
 
     object-fit: cover;
+
     object-position: center top;
 }
 
@@ -493,8 +548,7 @@ textarea {
 
     border-left: 4px solid var(--blue);
 
-    box-shadow:
-        0 15px 35px rgba(18, 59, 93, 0.12);
+    box-shadow: 0 15px 35px rgba(18, 59, 93, 0.12);
 }
 
 .image-caption strong {
@@ -544,8 +598,6 @@ textarea {
     align-items: center;
     justify-content: center;
 
-    gap: 10px;
-
     border: 1px solid var(--border);
 
     background: white;
@@ -558,246 +610,12 @@ textarea {
     transition: 0.3s ease;
 }
 
-.experience-tag i {
-    color: var(--blue);
-}
-
 .experience-tag:hover {
     border-color: var(--blue-medium);
 
     transform: translateY(-4px);
 
-    box-shadow:
-        0 12px 30px rgba(18, 59, 93, 0.08);
-}
-
-
-/* =========================================================
-   COMMON SECTION HEADINGS
-========================================================= */
-
-.section-label {
-    color: var(--blue);
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: 2.2px;
-
-    margin-bottom: 12px;
-}
-
-.section-heading {
-    max-width: 720px;
-
-    margin-bottom: 50px;
-}
-
-.section-heading.centered {
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-}
-
-.section-heading h2 {
-    color: var(--blue-dark);
-
-    font-size: clamp(32px, 4vw, 48px);
-
-    line-height: 1.15;
-
-    margin-bottom: 18px;
-}
-
-.section-heading h2 span {
-    display: block;
-
-    color: var(--blue);
-}
-
-.section-heading p:last-child {
-    color: var(--text-light);
-}
-
-
-/* =========================================================
-   ABOUT ME PAGE
-   IMPORTANT CORRECTION
-========================================================= */
-
-.about-page {
-    background: #ffffff;
-}
-
-
-/*
-   Main About content.
-
-   This creates the important left/right space
-   that was missing in your screenshot.
-*/
-
-.about-page .content-section {
-    padding: 145px 0 100px;
-    background: #ffffff;
-}
-
-.about-page .content-container {
-    width: min(1080px, calc(100% - 120px));
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* About content itself */
-
-.about-page .content-main {
-    width: 100%;
-    max-width: 980px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* About paragraphs */
-
-.about-page .content-main p {
-    color: var(--text);
-
-    font-size: 17px;
-
-    line-height: 1.9;
-
-    margin-bottom: 22px;
-
-    text-align: left;
-}
-
-
-/* Bold text */
-
-.about-page .content-main strong {
-    color: var(--blue-dark);
-}
-
-
-/* =========================================================
-   ABOUT PROFILE INFORMATION
-========================================================= */
-
-.about-page .profile-card {
-    width: 100%;
-    max-width: 980px;
-
-    margin: 45px auto 0;
-
-    padding: 24px 0;
-
-    background: transparent;
-
-    border: none;
-
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-
-    text-align: left;
-}
-
-.about-page .profile-card-image {
-    display: none;
-}
-
-.about-page .profile-card h3 {
-    color: var(--blue-dark);
-
-    font-size: 23px;
-
-    margin-bottom: 4px;
-}
-
-.about-page .profile-card p {
-    color: var(--blue);
-
-    font-size: 14px;
-
-    margin: 0;
-}
-
-
-/* =========================================================
-   ABOUT WHAT MATTERS
-========================================================= */
-
-.values-section {
-    padding: 100px 0;
-
-    background: #f7fcfe;
-}
-
-.values-section .section-container {
-    width: min(1080px, calc(100% - 120px));
-}
-
-.values-section .section-heading {
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-}
-
-.values-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 20px;
-}
-
-.value-card {
-    padding: 30px;
-
-    background: white;
-
-    border: 1px solid var(--border);
-
-    transition: 0.3s ease;
-}
-
-.value-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 18px 35px rgba(18, 59, 93, 0.08);
-}
-
-.value-number {
-    color: var(--blue-medium);
-
-    font-size: 30px;
-
-    font-weight: 800;
-
-    margin-bottom: 18px;
-}
-
-.value-card h3 {
-    color: var(--blue-dark);
-
-    font-size: 20px;
-
-    margin-bottom: 8px;
-}
-
-.value-card p {
-    color: var(--text-light);
-
-    font-size: 14px;
-
-    line-height: 1.7;
+    box-shadow: 0 12px 30px rgba(18, 59, 93, 0.08);
 }
 
 
@@ -820,7 +638,7 @@ textarea {
 }
 
 .statement-small {
-    color: var(--blue-medium);
+    color: var(--sky);
 
     font-size: 11px;
 
@@ -842,7 +660,7 @@ textarea {
 }
 
 .statement-container h2 span {
-    color: var(--blue-medium);
+    color: var(--sky);
 
     display: block;
 }
@@ -859,11 +677,443 @@ textarea {
 
 
 /* =========================================================
-   EXPERIENCE / CAREER TIMELINE
+   JOURNEY
+========================================================= */
+
+.journey-section {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.journey-grid {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 16px;
+}
+
+.journey-card {
+    min-height: 275px;
+
+    padding: 27px 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    transition: 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--blue-medium);
+
+    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
+}
+
+.journey-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    color: var(--blue);
+
+    background: var(--sky-light);
+}
+
+.journey-card h3 {
+    color: var(--blue-dark);
+
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+.journey-card p {
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+.journey-card > span {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    color: var(--blue);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.closing-section,
+.simple-statement {
+    padding: 90px 20px;
+
+    background: var(--sky-light);
+}
+
+.closing-container {
+    width: min(850px, 90%);
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.closing-container p {
+    color: var(--text-light);
+
+    font-size: 20px;
+}
+
+.closing-container h2 {
+    color: var(--blue-dark);
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    margin: 5px 0 30px;
+}
+
+
+/* =========================================================
+   INNER PAGE HERO
+========================================================= */
+
+.page-hero {
+    padding: 165px 20px 90px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(169, 221, 241, 0.5),
+            transparent 30%
+        ),
+        var(--sky-light);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero-container {
+    width: min(1000px, 88%);
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.page-hero h1 {
+    color: var(--blue-dark);
+
+    font-size: clamp(40px, 6vw, 65px);
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+}
+
+.page-hero h1 span {
+    display: block;
+
+    color: var(--blue);
+}
+
+.page-hero p:last-child {
+    max-width: 760px;
+
+    margin: auto;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ABOUT / CONTENT SECTION
+   IMPORTANT FIX FOR YOUR CURRENT PROBLEM
+========================================================= */
+
+.content-section {
+    padding: 105px 0 115px;
+
+    background: #ffffff;
+}
+
+
+/*
+   This creates the white space on both sides.
+   Your text will NEVER stretch to the browser edges.
+*/
+
+.content-section .content-container {
+    width: min(1050px, 82%);
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Main content */
+
+.content-main {
+    width: 100%;
+
+    max-width: 980px;
+
+    margin: 0 auto;
+}
+
+
+/* About paragraphs */
+
+.content-main p {
+    color: var(--text);
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    text-align: left;
+}
+
+
+/* Strong text */
+
+.content-main strong {
+    color: var(--blue-dark);
+
+    font-weight: 700;
+}
+
+
+/*
+   Intro paragraph / first sentence
+*/
+
+.content-main > p:first-child {
+    color: var(--blue-dark);
+
+    font-size: 18px;
+
+    line-height: 1.85;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================================================
+   ABOUT SIGNATURE / NAME
+========================================================= */
+
+.about-signature {
+    width: 100%;
+
+    margin-top: 40px;
+
+    padding: 25px 30px;
+
+    text-align: right;
+
+    border-right: 4px solid var(--blue);
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        var(--sky-light)
+    );
+}
+
+.about-signature h3 {
+    color: var(--blue-dark);
+
+    font-size: 27px;
+
+    margin-bottom: 3px;
+}
+
+.about-signature p {
+    margin: 0;
+
+    color: var(--blue);
+
+    font-size: 14px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   PROFILE CARD
+========================================================= */
+
+.profile-card {
+    max-width: 340px;
+
+    margin: 50px 0 0 auto;
+
+    padding: 25px;
+
+    border: 1px solid var(--border);
+
+    background: var(--sky-light);
+
+    text-align: center;
+}
+
+.profile-card-image {
+    width: 100%;
+    height: 320px;
+
+    overflow: hidden;
+
+    margin-bottom: 18px;
+}
+
+.profile-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+}
+
+.profile-card h3 {
+    color: var(--blue-dark);
+
+    font-size: 18px;
+}
+
+.profile-card p {
+    color: var(--text-light);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   WHAT MATTERS / VALUES
+========================================================= */
+
+.values-section {
+    padding: 105px 0 115px;
+
+    background: #f7fcfe;
+}
+
+
+/*
+   Centered title with generous space.
+*/
+
+.values-section .section-heading {
+    width: min(850px, 85%);
+
+    margin: 0 auto 65px;
+}
+
+.values-section .section-heading h2 {
+    font-size: clamp(36px, 4.5vw, 56px);
+
+    line-height: 1.15;
+
+    color: var(--blue-dark);
+}
+
+
+/* Values grid */
+
+.values-grid {
+    width: min(1050px, 82%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.value-card {
+    padding: 32px 27px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    min-height: 210px;
+
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--blue-medium);
+
+    box-shadow: 0 18px 40px rgba(18, 59, 93, 0.08);
+}
+
+.value-number {
+    color: var(--blue);
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.value-card h3 {
+    color: var(--blue-dark);
+
+    font-size: 20px;
+
+    margin-bottom: 9px;
+}
+
+.value-card p {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   TIMELINE
 ========================================================= */
 
 .timeline-section {
-    padding: 100px 0;
+    padding: 105px 0;
 
     background: white;
 }
@@ -871,7 +1121,7 @@ textarea {
 .timeline {
     position: relative;
 
-    max-width: 1000px;
+    width: min(1000px, 82%);
 
     margin: auto;
 }
@@ -931,8 +1181,7 @@ textarea {
 
     background: var(--blue);
 
-    box-shadow:
-        0 0 0 3px var(--sky);
+    box-shadow: 0 0 0 3px var(--sky);
 }
 
 .timeline-content {
@@ -989,7 +1238,7 @@ textarea {
 }
 
 .journey-highlight h2:last-child {
-    color: var(--blue-medium);
+    color: var(--sky);
 }
 
 
@@ -998,6 +1247,10 @@ textarea {
 ========================================================= */
 
 .feature-grid {
+    width: min(1050px, 82%);
+
+    margin: auto;
+
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
@@ -1022,8 +1275,7 @@ textarea {
 
     border-color: var(--blue-medium);
 
-    box-shadow:
-        0 20px 40px rgba(18, 59, 93, 0.09);
+    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
 }
 
 .feature-icon {
@@ -1066,15 +1318,15 @@ textarea {
 ========================================================= */
 
 .honor-grid {
+    width: min(950px, 82%);
+
+    margin: auto;
+
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
-
-    max-width: 950px;
-
-    margin: auto;
 }
 
 .honor-card {
@@ -1092,8 +1344,7 @@ textarea {
 .honor-card:hover {
     transform: translateY(-7px);
 
-    box-shadow:
-        0 20px 40px rgba(18, 59, 93, 0.09);
+    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
 }
 
 .honor-icon {
@@ -1136,12 +1387,16 @@ textarea {
 ========================================================= */
 
 .contact-section {
-    padding: 100px 0;
+    padding: 105px 0;
 
     background: white;
 }
 
 .contact-grid {
+    width: min(1050px, 82%);
+
+    margin: auto;
+
     display: grid;
 
     grid-template-columns: 0.8fr 1.2fr;
@@ -1316,8 +1571,7 @@ textarea {
 .form-group textarea:focus {
     border-color: var(--blue);
 
-    box-shadow:
-        0 0 0 3px rgba(28, 120, 168, 0.08);
+    box-shadow: 0 0 0 3px rgba(28, 120, 168, 0.08);
 }
 
 .form-message {
@@ -1340,6 +1594,10 @@ textarea {
 }
 
 .footer-container {
+    width: min(1180px, 90%);
+
+    margin: auto;
+
     padding: 55px 0;
 
     display: grid;
@@ -1425,13 +1683,13 @@ textarea {
 
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   TABLET
 ========================================================= */
 
 @media (max-width: 1200px) {
 
-    .header-container {
-        width: calc(100% - 40px);
+    .header-brand {
+        font-size: 18px;
     }
 
     .nav-link {
@@ -1442,8 +1700,6 @@ textarea {
     }
 
     .hero-container {
-        width: calc(100% - 60px);
-
         gap: 35px;
     }
 
@@ -1455,9 +1711,8 @@ textarea {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .about-page .content-container,
-    .values-section .section-container {
-        width: calc(100% - 80px);
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1492,8 +1747,7 @@ textarea {
 
         border-bottom: 1px solid var(--border);
 
-        box-shadow:
-            0 15px 30px rgba(18, 59, 93, 0.08);
+        box-shadow: 0 15px 30px rgba(18, 59, 93, 0.08);
     }
 
     .main-navigation.open {
@@ -1532,24 +1786,29 @@ textarea {
         min-height: 520px;
     }
 
-    .about-page .content-container {
-        width: calc(100% - 80px);
+    .content-section .content-container {
+        width: 84%;
     }
 
-    .about-page .content-main {
-        max-width: 100%;
+    .content-main {
+        max-width: 850px;
     }
 
-    .about-page .content-main p {
-        font-size: 16px;
+    .profile-card {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
+
+        width: 84%;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
+
+        width: 84%;
     }
 
     .footer-container {
@@ -1570,12 +1829,10 @@ textarea {
 
     .header-container {
         min-height: 68px;
-
-        width: calc(100% - 30px);
     }
 
-    .site-logo {
-        font-size: 17px;
+    .header-brand {
+        font-size: 16px;
     }
 
     .header-right {
@@ -1592,16 +1849,15 @@ textarea {
         font-size: 11px;
     }
 
-    .main-navigation {
-        top: 68px;
-    }
+
+    /* HOME */
 
     .hero-section {
-        padding-top: 110px;
+        padding-top: 115px;
     }
 
     .hero-container {
-        width: calc(100% - 30px);
+        width: 90%;
     }
 
     .hero-content h1 {
@@ -1611,15 +1867,13 @@ textarea {
     }
 
     .hero-content h2 {
-        font-size: 13px;
+        font-size: 12px;
 
         letter-spacing: 1px;
     }
 
     .hero-description {
         font-size: 15px;
-
-        line-height: 1.8;
     }
 
     .hero-image-area {
@@ -1642,40 +1896,7 @@ textarea {
     }
 
 
-    /* ABOUT MOBILE */
-
-    .about-page .content-section {
-        padding: 115px 0 70px;
-    }
-
-    .about-page .content-container {
-        width: calc(100% - 36px);
-    }
-
-    .about-page .content-main p {
-        font-size: 15px;
-
-        line-height: 1.85;
-
-        margin-bottom: 20px;
-    }
-
-    .about-page .profile-card {
-        margin-top: 30px;
-
-        padding: 20px 0;
-    }
-
-    .about-page .profile-card h3 {
-        font-size: 20px;
-    }
-
-    .about-page .profile-card p {
-        font-size: 13px;
-    }
-
-
-    /* EXPERIENCE TAGS */
+    /* EXPERIENCE */
 
     .experience-tags {
         display: grid;
@@ -1695,17 +1916,85 @@ textarea {
     }
 
 
+    /* ABOUT */
+
+    .content-section {
+        padding: 80px 0 90px;
+    }
+
+    .content-section .content-container {
+        width: 88%;
+    }
+
+    .content-main {
+        width: 100%;
+    }
+
+    .content-main p,
+    .content-main > p:first-child {
+        font-size: 15px;
+
+        line-height: 1.85;
+
+        text-align: left;
+    }
+
+
+    /* SIGNATURE */
+
+    .about-signature {
+        padding: 20px;
+
+        margin-top: 30px;
+    }
+
+    .about-signature h3 {
+        font-size: 22px;
+    }
+
+    .about-signature p {
+        font-size: 13px;
+    }
+
+
     /* VALUES */
 
+    .values-section {
+        padding: 80px 0;
+    }
+
+    .values-section .section-heading {
+        width: 88%;
+
+        margin-bottom: 45px;
+    }
+
+    .values-section .section-heading h2 {
+        font-size: 34px;
+    }
+
     .values-grid {
+        width: 88%;
+
         grid-template-columns: 1fr;
     }
 
 
-    /* FEATURES */
+    /* PROFILE */
+
+    .profile-card {
+        width: 100%;
+
+        max-width: 340px;
+    }
+
+
+    /* FEATURE */
 
     .feature-grid {
         grid-template-columns: 1fr;
+
+        width: 88%;
     }
 
 
@@ -1713,10 +2002,16 @@ textarea {
 
     .honor-grid {
         grid-template-columns: 1fr;
+
+        width: 88%;
     }
 
 
     /* TIMELINE */
+
+    .timeline {
+        width: 88%;
+    }
 
     .timeline::before {
         left: 8px;
@@ -1763,6 +2058,10 @@ textarea {
 
     /* CONTACT */
 
+    .contact-grid {
+        width: 88%;
+    }
+
     .form-row {
         grid-template-columns: 1fr;
 
@@ -1779,10 +2078,6 @@ textarea {
     .footer-navigation {
         grid-template-columns: 1fr;
     }
-
-    .footer-social {
-        justify-content: flex-start;
-    }
 }
 
 
@@ -1790,10 +2085,10 @@ textarea {
    VERY SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 420px) {
+@media (max-width: 400px) {
 
-    .site-logo {
-        font-size: 15px;
+    .header-brand {
+        font-size: 14px;
     }
 
     .contact-button {
@@ -1806,10 +2101,6 @@ textarea {
         font-size: 36px;
     }
 
-    .hero-content h2 {
-        font-size: 11px;
-    }
-
     .hero-image-background {
         width: 285px;
         height: 370px;
@@ -1820,7 +2111,12 @@ textarea {
         height: 360px;
     }
 
-    .about-page .content-container {
-        width: calc(100% - 28px);
+    .content-section .content-container,
+    .values-grid,
+    .feature-grid,
+    .honor-grid,
+    .timeline,
+    .contact-grid {
+        width: 90%;
     }
 }
