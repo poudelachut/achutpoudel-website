@@ -1,12 +1,12 @@
 /* =========================================================
-   ACHUT POUDEL PERSONAL WEBSITE
-   FINAL STYLE.CSS
+   ACHUT POUDEL — PERSONAL PROFESSIONAL WEBSITE
+   COMPLETE STYLE.CSS
    Desktop + Laptop + Tablet + Mobile
 ========================================================= */
 
 
 /* =========================================================
-   GLOBAL RESET
+   1. GLOBAL RESET
 ========================================================= */
 
 * {
@@ -17,6 +17,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -45,20 +46,25 @@ textarea {
 
 
 /* =========================================================
-   COLOR SYSTEM
+   2. COLOR SYSTEM
 ========================================================= */
 
 :root {
+
     --blue-dark: #123b5d;
+
     --blue: #1c78a8;
+
     --blue-medium: #3b98c4;
 
     --sky: #cfeefa;
+
     --sky-light: #eefaff;
 
     --white: #ffffff;
 
     --text: #173b57;
+
     --text-light: #5c7485;
 
     --border: #d8edf5;
@@ -68,23 +74,56 @@ textarea {
 
 
 /* =========================================================
-   COMMON CONTAINERS
+   3. COMMON CONTAINERS
 ========================================================= */
 
 .section-container,
 .content-container {
-    width: min(1080px, 84%);
-    margin-left: auto;
-    margin-right: auto;
+    width: min(1180px, 90%);
+    margin: 0 auto;
 }
 
 .content-container {
-    max-width: 1050px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: var(--blue-dark);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.section-heading p {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.8;
 }
 
 
 /* =========================================================
-   HEADER
+   4. HEADER
 ========================================================= */
 
 .site-header {
@@ -102,8 +141,9 @@ textarea {
 }
 
 .header-container {
-    width: min(1600px, 94%);
+    width: min(1450px, 94%);
     min-height: 78px;
+
     margin: auto;
 
     display: flex;
@@ -115,24 +155,30 @@ textarea {
 
 
 /* =========================================================
-   HEADER BRAND
+   5. HEADER BRAND
 ========================================================= */
 
 .header-brand {
+    flex-shrink: 0;
+}
+
+.header-brand a {
     color: var(--blue-dark);
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 500;
     white-space: nowrap;
 }
 
 
 /* =========================================================
-   NAVIGATION
+   6. MAIN NAVIGATION
 ========================================================= */
 
 .main-navigation {
     display: flex;
     align-items: center;
+    justify-content: center;
+
     gap: 3px;
 }
 
@@ -143,8 +189,10 @@ textarea {
 
     color: var(--blue-dark);
 
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
+
+    white-space: nowrap;
 
     transition: 0.3s ease;
 }
@@ -154,7 +202,7 @@ textarea {
 
     position: absolute;
 
-    bottom: 2px;
+    bottom: 3px;
     left: 11px;
     right: 11px;
 
@@ -163,7 +211,6 @@ textarea {
     background: var(--blue);
 
     transform: scaleX(0);
-
     transition: 0.3s ease;
 }
 
@@ -179,13 +226,15 @@ textarea {
 
 
 /* =========================================================
-   HEADER RIGHT
+   7. HEADER RIGHT
 ========================================================= */
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 15px;
+
+    flex-shrink: 0;
 }
 
 .social-links {
@@ -194,8 +243,8 @@ textarea {
 }
 
 .social-links a {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
 
     display: flex;
     align-items: center;
@@ -212,12 +261,11 @@ textarea {
 .social-links a:hover {
     color: white;
     background: var(--blue);
-
     transform: translateY(-2px);
 }
 
 .contact-button {
-    padding: 11px 20px;
+    padding: 10px 19px;
 
     color: white;
     background: var(--blue-dark);
@@ -227,6 +275,8 @@ textarea {
     font-size: 12px;
     font-weight: 700;
 
+    white-space: nowrap;
+
     transition: 0.3s ease;
 }
 
@@ -235,9 +285,13 @@ textarea {
     transform: translateY(-2px);
 }
 
+.active-contact {
+    background: var(--blue);
+}
+
 
 /* =========================================================
-   MOBILE MENU
+   8. MOBILE MENU BUTTON
 ========================================================= */
 
 .menu-toggle {
@@ -267,57 +321,7 @@ textarea {
 
 
 /* =========================================================
-   SECTION LABEL
-========================================================= */
-
-.section-label {
-    color: var(--blue);
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 2.5px;
-
-    margin-bottom: 12px;
-}
-
-
-/* =========================================================
-   SECTION HEADING
-========================================================= */
-
-.section-heading {
-    max-width: 800px;
-
-    margin: 0 auto 55px;
-
-    text-align: center;
-}
-
-.section-heading h2 {
-    color: var(--blue-dark);
-
-    font-size: clamp(34px, 4vw, 50px);
-
-    line-height: 1.15;
-
-    margin-bottom: 18px;
-}
-
-.section-heading h2 span {
-    display: block;
-    color: var(--blue);
-}
-
-.section-heading p {
-    color: var(--text-light);
-
-    font-size: 16px;
-}
-
-
-/* =========================================================
-   HOME HERO
+   9. HOME HERO
 ========================================================= */
 
 .hero-section {
@@ -341,13 +345,11 @@ textarea {
 
 .hero-container {
     width: min(1240px, 90%);
-
     min-height: 650px;
 
     margin: auto;
 
     display: grid;
-
     grid-template-columns: 1.05fr 0.95fr;
 
     align-items: center;
@@ -355,10 +357,15 @@ textarea {
     gap: 70px;
 }
 
+
+/* =========================================================
+   10. HERO CONTENT
+========================================================= */
+
 .hero-eyebrow {
     color: var(--blue);
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
 
     letter-spacing: 2px;
@@ -369,7 +376,7 @@ textarea {
 .hero-content h1 {
     color: var(--blue-dark);
 
-    font-size: clamp(42px, 5.5vw, 70px);
+    font-size: clamp(45px, 6vw, 74px);
 
     line-height: 1.05;
 
@@ -383,18 +390,24 @@ textarea {
     color: var(--blue);
 }
 
+
+/* =========================================================
+   HERO SUBTITLE
+========================================================= */
+
 .hero-content h2 {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 9px;
 
     color: var(--text);
 
-    font-size: 17px;
+    font-size: 16px;
 
-    letter-spacing: 1.8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
 
     margin-bottom: 27px;
 }
@@ -402,6 +415,11 @@ textarea {
 .hero-content h2 span {
     color: var(--blue-medium);
 }
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
 
 .hero-description {
     max-width: 670px;
@@ -412,6 +430,11 @@ textarea {
 
     line-height: 1.9;
 }
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .hero-buttons {
     display: flex;
@@ -440,6 +463,7 @@ textarea {
     border-radius: 30px;
 
     font-size: 13px;
+
     font-weight: 700;
 
     transition: 0.3s ease;
@@ -481,7 +505,7 @@ textarea {
 
 
 /* =========================================================
-   HERO IMAGE
+   11. HERO IMAGE
 ========================================================= */
 
 .hero-image-area {
@@ -522,7 +546,8 @@ textarea {
 
     border-radius: 220px 220px 35px 35px;
 
-    box-shadow: 0 30px 70px rgba(18, 59, 93, 0.18);
+    box-shadow:
+        0 30px 70px rgba(18, 59, 93, 0.18);
 }
 
 .hero-photo {
@@ -533,6 +558,11 @@ textarea {
 
     object-position: center top;
 }
+
+
+/* =========================================================
+   12. HERO IMAGE CAPTION
+========================================================= */
 
 .image-caption {
     position: absolute;
@@ -548,7 +578,8 @@ textarea {
 
     border-left: 4px solid var(--blue);
 
-    box-shadow: 0 15px 35px rgba(18, 59, 93, 0.12);
+    box-shadow:
+        0 15px 35px rgba(18, 59, 93, 0.12);
 }
 
 .image-caption strong {
@@ -569,7 +600,7 @@ textarea {
 
 
 /* =========================================================
-   EXPERIENCE ACROSS
+   13. EXPERIENCE ACROSS
 ========================================================= */
 
 .experience-across-section {
@@ -598,6 +629,8 @@ textarea {
     align-items: center;
     justify-content: center;
 
+    gap: 10px;
+
     border: 1px solid var(--border);
 
     background: white;
@@ -610,17 +643,22 @@ textarea {
     transition: 0.3s ease;
 }
 
+.experience-tag i {
+    color: var(--blue);
+}
+
 .experience-tag:hover {
     border-color: var(--blue-medium);
 
     transform: translateY(-4px);
 
-    box-shadow: 0 12px 30px rgba(18, 59, 93, 0.08);
+    box-shadow:
+        0 12px 30px rgba(18, 59, 93, 0.08);
 }
 
 
 /* =========================================================
-   LEADERSHIP STATEMENT
+   14. LEADERSHIP STATEMENT
 ========================================================= */
 
 .leadership-statement-section {
@@ -638,7 +676,7 @@ textarea {
 }
 
 .statement-small {
-    color: var(--sky);
+    color: var(--blue-medium);
 
     font-size: 11px;
 
@@ -660,7 +698,7 @@ textarea {
 }
 
 .statement-container h2 span {
-    color: var(--sky);
+    color: var(--blue-medium);
 
     display: block;
 }
@@ -677,7 +715,7 @@ textarea {
 
 
 /* =========================================================
-   JOURNEY
+   15. JOURNEY
 ========================================================= */
 
 .journey-section {
@@ -715,7 +753,8 @@ textarea {
 
     border-color: var(--blue-medium);
 
-    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
+    box-shadow:
+        0 20px 40px rgba(18, 59, 93, 0.09);
 }
 
 .journey-icon {
@@ -766,7 +805,7 @@ textarea {
 
 
 /* =========================================================
-   CLOSING
+   16. CLOSING SECTION
 ========================================================= */
 
 .closing-section,
@@ -800,7 +839,7 @@ textarea {
 
 
 /* =========================================================
-   INNER PAGE HERO
+   17. INNER PAGE HERO
 ========================================================= */
 
 .page-hero {
@@ -818,7 +857,7 @@ textarea {
 }
 
 .page-hero-container {
-    width: min(1000px, 88%);
+    width: min(1000px, 90%);
 
     margin: auto;
 
@@ -841,7 +880,7 @@ textarea {
     color: var(--blue);
 }
 
-.page-hero p:last-child {
+.page-hero p {
     max-width: 760px;
 
     margin: auto;
@@ -849,61 +888,63 @@ textarea {
     color: var(--text-light);
 
     font-size: 16px;
+
+    line-height: 1.8;
 }
 
 
 /* =========================================================
-   ABOUT / CONTENT SECTION
-   IMPORTANT FIX FOR YOUR CURRENT PROBLEM
+   18. ABOUT / CONTENT SECTION
+   IMPORTANT: CENTERED AND LIMITED WIDTH
 ========================================================= */
 
 .content-section {
-    padding: 105px 0 115px;
+    padding: 110px 0;
 
     background: #ffffff;
 }
 
+.content-container {
+    width: min(1180px, 90%);
 
-/*
-   This creates the white space on both sides.
-   Your text will NEVER stretch to the browser edges.
-*/
+    margin: 0 auto;
 
-.content-section .content-container {
-    width: min(1050px, 82%);
-
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
+.content-grid {
+    display: block;
 
-/* Main content */
+    width: 100%;
+}
 
 .content-main {
-    width: 100%;
-
-    max-width: 980px;
+    width: min(920px, 100%);
 
     margin: 0 auto;
 }
 
 
-/* About paragraphs */
+/* =========================================================
+   ABOUT TEXT
+========================================================= */
 
 .content-main p {
-    color: var(--text);
+    width: 100%;
+
+    max-width: 920px;
+
+    margin: 0 auto 24px;
+
+    color: var(--text-light);
 
     font-size: 17px;
 
     line-height: 1.9;
 
-    margin-bottom: 25px;
-
-    text-align: left;
+    text-align: center;
 }
-
-
-/* Strong text */
 
 .content-main strong {
     color: var(--blue-dark);
@@ -912,72 +953,70 @@ textarea {
 }
 
 
-/*
-   Intro paragraph / first sentence
-*/
+/* =========================================================
+   ABOUT INTRO
+========================================================= */
 
-.content-main > p:first-child {
-    color: var(--blue-dark);
+.about-intro {
+    width: min(900px, 100%);
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.about-intro p {
+    color: var(--text-light);
 
     font-size: 18px;
 
-    line-height: 1.85;
+    line-height: 1.9;
 
-    margin-bottom: 28px;
+    margin-bottom: 24px;
 }
 
 
 /* =========================================================
-   ABOUT SIGNATURE / NAME
+   ABOUT SIGNATURE
 ========================================================= */
 
 .about-signature {
-    width: 100%;
+    width: min(900px, 100%);
 
-    margin-top: 40px;
+    margin: 45px auto 70px;
 
-    padding: 25px 30px;
+    padding-right: 20px;
 
     text-align: right;
-
-    border-right: 4px solid var(--blue);
-
-    background: linear-gradient(
-        90deg,
-        #ffffff,
-        var(--sky-light)
-    );
 }
 
 .about-signature h3 {
     color: var(--blue-dark);
 
-    font-size: 27px;
+    font-size: 22px;
 
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
 
 .about-signature p {
-    margin: 0;
-
     color: var(--blue);
 
     font-size: 14px;
 
-    text-align: right;
+    margin: 0;
 }
 
 
 /* =========================================================
-   PROFILE CARD
+   19. PROFILE CARD
 ========================================================= */
 
 .profile-card {
-    max-width: 340px;
+    width: min(340px, 100%);
 
-    margin: 50px 0 0 auto;
+    margin: 60px auto 0;
 
-    padding: 25px;
+    padding: 20px;
 
     border: 1px solid var(--border);
 
@@ -1018,39 +1057,41 @@ textarea {
 
 
 /* =========================================================
-   WHAT MATTERS / VALUES
+   20. VALUES / WHAT MATTERS
 ========================================================= */
 
 .values-section {
-    padding: 105px 0 115px;
+    padding: 110px 0;
 
     background: #f7fcfe;
 }
 
+.values-container {
+    width: min(1120px, 90%);
 
-/*
-   Centered title with generous space.
-*/
+    margin: auto;
+}
 
 .values-section .section-heading {
-    width: min(850px, 85%);
+    width: min(850px, 100%);
 
     margin: 0 auto 65px;
+
+    text-align: center;
 }
 
 .values-section .section-heading h2 {
-    font-size: clamp(36px, 4.5vw, 56px);
+    color: var(--blue-dark);
+
+    font-size: clamp(34px, 4.5vw, 58px);
 
     line-height: 1.15;
 
-    color: var(--blue-dark);
+    margin-bottom: 20px;
 }
 
-
-/* Values grid */
-
 .values-grid {
-    width: min(1050px, 82%);
+    width: min(1050px, 100%);
 
     margin: auto;
 
@@ -1062,13 +1103,15 @@ textarea {
 }
 
 .value-card {
-    padding: 32px 27px;
+    min-height: 220px;
+
+    padding: 32px 28px;
 
     background: white;
 
     border: 1px solid var(--border);
 
-    min-height: 210px;
+    text-align: center;
 
     transition: 0.3s ease;
 }
@@ -1078,17 +1121,20 @@ textarea {
 
     border-color: var(--blue-medium);
 
-    box-shadow: 0 18px 40px rgba(18, 59, 93, 0.08);
+    box-shadow:
+        0 18px 40px rgba(18, 59, 93, 0.08);
 }
 
 .value-number {
     color: var(--blue);
 
-    font-size: 30px;
+    font-size: 14px;
 
     font-weight: 800;
 
-    margin-bottom: 18px;
+    letter-spacing: 2px;
+
+    margin-bottom: 20px;
 }
 
 .value-card h3 {
@@ -1096,7 +1142,7 @@ textarea {
 
     font-size: 20px;
 
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 }
 
 .value-card p {
@@ -1105,15 +1151,17 @@ textarea {
     font-size: 14px;
 
     line-height: 1.7;
+
+    margin: 0;
 }
 
 
 /* =========================================================
-   TIMELINE
+   21. TIMELINE / EXPERIENCE
 ========================================================= */
 
 .timeline-section {
-    padding: 105px 0;
+    padding: 100px 0;
 
     background: white;
 }
@@ -1121,7 +1169,7 @@ textarea {
 .timeline {
     position: relative;
 
-    width: min(1000px, 82%);
+    width: min(1000px, 100%);
 
     margin: auto;
 }
@@ -1181,7 +1229,8 @@ textarea {
 
     background: var(--blue);
 
-    box-shadow: 0 0 0 3px var(--sky);
+    box-shadow:
+        0 0 0 3px var(--sky);
 }
 
 .timeline-content {
@@ -1214,18 +1263,22 @@ textarea {
     color: var(--text-light);
 
     font-size: 14px;
+
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   JOURNEY HIGHLIGHT
+   22. JOURNEY HIGHLIGHT
 ========================================================= */
 
 .journey-highlight {
     padding: 95px 20px;
 
     background: var(--blue-dark);
+}
 
+.journey-highlight .section-container {
     text-align: center;
 }
 
@@ -1238,24 +1291,24 @@ textarea {
 }
 
 .journey-highlight h2:last-child {
-    color: var(--sky);
+    color: var(--blue-medium);
 }
 
 
 /* =========================================================
-   FEATURE CARDS
+   23. FEATURE CARDS
 ========================================================= */
 
 .feature-grid {
-    width: min(1050px, 82%);
-
-    margin: auto;
-
     display: grid;
 
     grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
+
+    width: min(1100px, 100%);
+
+    margin: auto;
 }
 
 .feature-card {
@@ -1275,7 +1328,8 @@ textarea {
 
     border-color: var(--blue-medium);
 
-    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
+    box-shadow:
+        0 20px 40px rgba(18, 59, 93, 0.09);
 }
 
 .feature-icon {
@@ -1314,19 +1368,19 @@ textarea {
 
 
 /* =========================================================
-   HONOR
+   24. HONOR
 ========================================================= */
 
 .honor-grid {
-    width: min(950px, 82%);
-
-    margin: auto;
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
+
+    width: min(950px, 100%);
+
+    margin: auto;
 }
 
 .honor-card {
@@ -1344,7 +1398,8 @@ textarea {
 .honor-card:hover {
     transform: translateY(-7px);
 
-    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
+    box-shadow:
+        0 20px 40px rgba(18, 59, 93, 0.09);
 }
 
 .honor-icon {
@@ -1383,20 +1438,16 @@ textarea {
 
 
 /* =========================================================
-   CONTACT
+   25. CONTACT
 ========================================================= */
 
 .contact-section {
-    padding: 105px 0;
+    padding: 100px 0;
 
     background: white;
 }
 
 .contact-grid {
-    width: min(1050px, 82%);
-
-    margin: auto;
-
     display: grid;
 
     grid-template-columns: 0.8fr 1.2fr;
@@ -1404,6 +1455,10 @@ textarea {
     gap: 70px;
 
     align-items: start;
+
+    width: min(1100px, 100%);
+
+    margin: auto;
 }
 
 .contact-information h2 {
@@ -1507,7 +1562,7 @@ textarea {
 
 
 /* =========================================================
-   CONTACT FORM
+   26. CONTACT FORM
 ========================================================= */
 
 .contact-form-wrapper {
@@ -1571,7 +1626,8 @@ textarea {
 .form-group textarea:focus {
     border-color: var(--blue);
 
-    box-shadow: 0 0 0 3px rgba(28, 120, 168, 0.08);
+    box-shadow:
+        0 0 0 3px rgba(28, 120, 168, 0.08);
 }
 
 .form-message {
@@ -1584,7 +1640,7 @@ textarea {
 
 
 /* =========================================================
-   FOOTER
+   27. FOOTER
 ========================================================= */
 
 .site-footer {
@@ -1683,13 +1739,13 @@ textarea {
 
 
 /* =========================================================
-   TABLET
+   28. TABLET / SMALL LAPTOP
 ========================================================= */
 
 @media (max-width: 1200px) {
 
-    .header-brand {
-        font-size: 18px;
+    .header-container {
+        width: 94%;
     }
 
     .nav-link {
@@ -1711,26 +1767,32 @@ textarea {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .values-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .content-main {
+        width: min(900px, 100%);
     }
 }
 
 
 /* =========================================================
-   TABLET / SMALL LAPTOP
+   29. TABLET
 ========================================================= */
 
 @media (max-width: 950px) {
+
+    /* HEADER */
 
     .menu-toggle {
         display: block;
     }
 
+    .header-container {
+        min-height: 72px;
+    }
+
     .main-navigation {
         position: absolute;
 
-        top: 78px;
+        top: 72px;
         left: 0;
 
         width: 100%;
@@ -1747,7 +1809,8 @@ textarea {
 
         border-bottom: 1px solid var(--border);
 
-        box-shadow: 0 15px 30px rgba(18, 59, 93, 0.08);
+        box-shadow:
+            0 15px 30px rgba(18, 59, 93, 0.08);
     }
 
     .main-navigation.open {
@@ -1763,6 +1826,9 @@ textarea {
     .nav-link::after {
         display: none;
     }
+
+
+    /* HERO */
 
     .hero-container {
         grid-template-columns: 1fr;
@@ -1786,30 +1852,54 @@ textarea {
         min-height: 520px;
     }
 
-    .content-section .content-container {
-        width: 84%;
+
+    /* ABOUT */
+
+    .content-section {
+        padding: 90px 0;
+    }
+
+    .content-container {
+        width: min(800px, 92%);
+
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .content-main {
-        max-width: 850px;
+        width: 100%;
     }
 
-    .profile-card {
-        margin-left: auto;
-        margin-right: auto;
+    .content-main p {
+        font-size: 16px;
+
+        line-height: 1.85;
+
+        text-align: center;
     }
+
+    .about-signature {
+        text-align: center;
+
+        padding-right: 0;
+    }
+
+
+    /* VALUES */
 
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
-
-        width: 84%;
     }
+
+
+    /* CONTACT */
 
     .contact-grid {
         grid-template-columns: 1fr;
-
-        width: 84%;
     }
+
+
+    /* FOOTER */
 
     .footer-container {
         grid-template-columns: 1fr;
@@ -1822,17 +1912,21 @@ textarea {
 
 
 /* =========================================================
-   MOBILE
+   30. MOBILE
 ========================================================= */
 
 @media (max-width: 650px) {
 
+    /* HEADER */
+
     .header-container {
         min-height: 68px;
+
+        width: 94%;
     }
 
-    .header-brand {
-        font-size: 16px;
+    .header-brand a {
+        font-size: 17px;
     }
 
     .header-right {
@@ -1850,14 +1944,14 @@ textarea {
     }
 
 
-    /* HOME */
+    /* HERO */
 
     .hero-section {
         padding-top: 115px;
     }
 
     .hero-container {
-        width: 90%;
+        width: 92%;
     }
 
     .hero-content h1 {
@@ -1874,7 +1968,22 @@ textarea {
 
     .hero-description {
         font-size: 15px;
+
+        line-height: 1.8;
     }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .primary-button,
+    .secondary-button,
+    .text-button {
+        font-size: 12px;
+    }
+
+
+    /* HERO IMAGE */
 
     .hero-image-area {
         min-height: 460px;
@@ -1892,11 +2001,16 @@ textarea {
 
     .image-caption {
         left: 0;
+
         bottom: 15px;
     }
 
 
     /* EXPERIENCE */
+
+    .experience-across-section {
+        padding: 70px 0;
+    }
 
     .experience-tags {
         display: grid;
@@ -1916,56 +2030,17 @@ textarea {
     }
 
 
-    /* ABOUT */
-
-    .content-section {
-        padding: 80px 0 90px;
-    }
-
-    .content-section .content-container {
-        width: 88%;
-    }
-
-    .content-main {
-        width: 100%;
-    }
-
-    .content-main p,
-    .content-main > p:first-child {
-        font-size: 15px;
-
-        line-height: 1.85;
-
-        text-align: left;
-    }
-
-
-    /* SIGNATURE */
-
-    .about-signature {
-        padding: 20px;
-
-        margin-top: 30px;
-    }
-
-    .about-signature h3 {
-        font-size: 22px;
-    }
-
-    .about-signature p {
-        font-size: 13px;
-    }
-
-
     /* VALUES */
 
     .values-section {
-        padding: 80px 0;
+        padding: 75px 0;
+    }
+
+    .values-container {
+        width: 92%;
     }
 
     .values-section .section-heading {
-        width: 88%;
-
         margin-bottom: 45px;
     }
 
@@ -1974,27 +2049,22 @@ textarea {
     }
 
     .values-grid {
-        width: 88%;
-
         grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .value-card {
+        min-height: auto;
+
+        padding: 28px 22px;
     }
 
 
-    /* PROFILE */
-
-    .profile-card {
-        width: 100%;
-
-        max-width: 340px;
-    }
-
-
-    /* FEATURE */
+    /* FEATURES */
 
     .feature-grid {
         grid-template-columns: 1fr;
-
-        width: 88%;
     }
 
 
@@ -2002,16 +2072,10 @@ textarea {
 
     .honor-grid {
         grid-template-columns: 1fr;
-
-        width: 88%;
     }
 
 
     /* TIMELINE */
-
-    .timeline {
-        width: 88%;
-    }
 
     .timeline::before {
         left: 8px;
@@ -2056,11 +2120,64 @@ textarea {
     }
 
 
-    /* CONTACT */
+    /* ABOUT */
 
-    .contact-grid {
-        width: 88%;
+    .content-section {
+        padding: 70px 0;
     }
+
+    .content-container {
+        width: 100%;
+
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .content-main p {
+        font-size: 15px;
+
+        line-height: 1.8;
+
+        text-align: center;
+
+        margin-bottom: 20px;
+    }
+
+    .about-intro {
+        width: 100%;
+    }
+
+    .about-intro p {
+        font-size: 15px;
+    }
+
+    .about-signature {
+        width: 100%;
+
+        margin: 35px auto 50px;
+
+        padding-right: 0;
+
+        text-align: center;
+    }
+
+    .about-signature h3 {
+        font-size: 19px;
+    }
+
+    .about-signature p {
+        font-size: 13px;
+    }
+
+
+    /* PROFILE */
+
+    .profile-card {
+        margin-top: 40px;
+    }
+
+
+    /* CONTACT FORM */
 
     .form-row {
         grid-template-columns: 1fr;
@@ -2078,21 +2195,25 @@ textarea {
     .footer-navigation {
         grid-template-columns: 1fr;
     }
+
+    .footer-container {
+        padding: 40px 0;
+    }
 }
 
 
 /* =========================================================
-   VERY SMALL MOBILE
+   31. VERY SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
-    .header-brand {
-        font-size: 14px;
+    .header-brand a {
+        font-size: 15px;
     }
 
     .contact-button {
-        padding: 8px 11px;
+        padding: 8px 12px;
 
         font-size: 10px;
     }
@@ -2101,22 +2222,57 @@ textarea {
         font-size: 36px;
     }
 
+    .hero-content h2 {
+        font-size: 11px;
+
+        gap: 6px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
     .hero-image-background {
         width: 285px;
-        height: 370px;
+        height: 365px;
     }
 
     .hero-image-frame {
         width: 270px;
-        height: 360px;
+        height: 355px;
     }
 
-    .content-section .content-container,
-    .values-grid,
-    .feature-grid,
-    .honor-grid,
-    .timeline,
-    .contact-grid {
-        width: 90%;
+    .image-caption {
+        padding: 12px 15px;
+    }
+
+    .image-caption strong {
+        font-size: 12px;
+    }
+
+    .image-caption span {
+        font-size: 9px;
+    }
+
+    .content-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .content-main p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    .values-section .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .page-hero {
+        padding-top: 125px;
+    }
+
+    .page-hero h1 {
+        font-size: 36px;
     }
 }
