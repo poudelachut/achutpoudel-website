@@ -4522,139 +4522,815 @@ textarea {
 
 
 /* =========================================================
-   ABOUT PAGE — MATCH EXPERIENCE PAGE DESIGN
-========================================================= */
+   ABOUT ME PAGE
+   ========================================================= */
+
+.about-page {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #123f63;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.about-page .site-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #dcecf5;
+    position: relative;
+    z-index: 100;
+}
+
+.about-page .header-inner {
+    width: 100%;
+    max-width: 1800px;
+    min-height: 88px;
+    margin: 0 auto;
+    padding: 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    box-sizing: border-box;
+}
+
+
+/* LOGO */
+
+.about-page .site-logo {
+    flex-shrink: 0;
+
+    color: #123f63;
+    text-decoration: none;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* NAVIGATION */
+
+.about-page .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 34px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-page .main-navigation a {
+    position: relative;
+
+    color: #123f63;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 32px 0 16px;
+
+    white-space: nowrap;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-page .main-navigation a:hover {
+    color: #1983b8;
+}
+
+.about-page .main-navigation a.active {
+    color: #1983b8;
+}
+
+.about-page .main-navigation a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 8px;
+
+    height: 3px;
+
+    background: #1983b8;
+}
+
+
+/* HEADER RIGHT */
+
+.about-page .header-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* SOCIAL ICONS */
+
+.about-page .social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-page .social-links a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #eef8fc;
+    color: #123f63;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-page .social-links a:hover {
+    background: #123f63;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* CONTACT BUTTON */
+
+.about-page .contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 0 28px;
+
+    background: #123f63;
+    color: #ffffff;
+
+    border-radius: 28px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.about-page .contact-button:hover {
+    background: #1983b8;
+    transform: translateY(-2px);
+}
 
 
 /* =========================================================
    ABOUT HERO
-========================================================= */
+   ========================================================= */
 
-.about-page-hero {
+.about-page .about-hero {
+    width: 100%;
+    background: #eef9fd;
 
-    min-height: 535px;
+    border-bottom: 1px solid #d6eaf3;
+}
 
-    padding: 145px 20px 90px;
 
+/* MAIN CONTAINER */
+
+.about-page .about-container {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding: 85px 65px 100px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(380px, 0.75fr);
+
+    gap: 95px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+
+.about-page .about-content {
+    min-width: 0;
+}
+
+
+/* LABEL */
+
+.about-page .section-label {
+    margin-bottom: 18px;
+
+    color: #287a9e;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* MAIN HEADING */
+
+.about-page .about-content h1 {
+    margin: 0 0 25px;
+
+    max-width: 780px;
+
+    color: #123f63;
+
+    font-size: clamp(42px, 4vw, 64px);
+
+    line-height: 1.08;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+}
+
+.about-page .about-content h1 span {
+    display: block;
+
+    color: #1983b8;
+}
+
+
+/* INTRO */
+
+.about-page .about-intro {
+    max-width: 760px;
+
+    margin: 0 0 42px;
+
+    color: #4a708d;
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.about-page .about-highlights {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 48px;
+    row-gap: 28px;
+}
+
+
+/* INDIVIDUAL POINT */
+
+.about-page .about-point {
+    display: grid;
+
+    grid-template-columns: 38px minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding-bottom: 23px;
+
+    border-bottom: 1px solid #d8e9f1;
+}
+
+
+/* NUMBER */
+
+.about-page .point-number {
+    color: #1983b8;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    padding-top: 3px;
+}
+
+
+/* TITLE */
+
+.about-page .about-point strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #123f63;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* DESCRIPTION */
+
+.about-page .about-point p {
+    margin: 0;
+
+    color: #54738a;
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   SIGNATURE
+   ========================================================= */
+
+.about-page .about-signature {
+    margin-top: 45px;
+
+    padding-left: 20px;
+
+    border-left: 4px solid #1983b8;
+}
+
+.about-page .about-signature h3 {
+    margin: 0 0 7px;
+
+    color: #123f63;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.about-page .about-signature p {
+    margin: 0;
+
+    color: #287a9e;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   RIGHT PHOTO
+   ========================================================= */
+
+.about-page .about-photo-column {
     display: flex;
+
+    flex-direction: column;
 
     align-items: center;
 
     justify-content: center;
 
-    background:
-
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(169, 221, 241, 0.55),
-            transparent 32%
-        ),
-
-        linear-gradient(
-            120deg,
-            #eefaff 0%,
-            #eefaff 65%,
-            #dff5fc 100%
-        );
-
-    border-bottom: 1px solid var(--border);
-
+    min-width: 0;
 }
 
 
-.about-page-hero-container {
+/* PHOTO WRAPPER */
 
-    width: min(1050px, 90%);
+.about-page .about-photo-wrapper {
+    position: relative;
 
-    margin: 0 auto;
+    width: 100%;
+    max-width: 510px;
 
-    text-align: center;
+    padding: 0 0 18px 18px;
 
+    box-sizing: border-box;
 }
 
 
-.about-page-label {
+/* BLUE ACCENT */
 
-    margin-bottom: 12px;
+.about-page .photo-accent {
+    position: absolute;
 
-    color: #56758a;
+    top: 20px;
+    left: 0;
 
-    font-size: 14px;
+    width: 100%;
+    height: calc(100% - 38px);
 
-    font-weight: 800;
+    border: 2px solid #1983b8;
 
-    letter-spacing: 3px;
-
+    z-index: 0;
 }
 
 
-.about-page-hero h1 {
+/* IMAGE */
 
-    margin: 0;
-
-    color: var(--blue-dark);
-
-    font-size: clamp(55px, 6vw, 78px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-    font-weight: 700;
-
-}
-
-
-.about-page-hero h1 span {
+.about-page .about-photo {
+    position: relative;
 
     display: block;
 
-    color: var(--blue);
+    width: 100%;
 
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    z-index: 1;
+
+    border: 8px solid #ffffff;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 18px 45px rgba(18, 63, 99, 0.14);
 }
 
 
-.about-page-subtitle {
+/* PHOTO CAPTION */
 
-    margin: 28px auto 20px;
+.about-page .photo-caption {
+    width: 100%;
+    max-width: 510px;
 
-    color: #45677e;
+    margin-top: 24px;
+
+    padding-left: 18px;
+
+    box-sizing: border-box;
+}
+
+.about-page .photo-caption strong {
+    display: block;
+
+    color: #123f63;
 
     font-size: 20px;
+    font-weight: 700;
 
-    line-height: 1.6;
+    margin-bottom: 6px;
+}
 
+.about-page .photo-caption span {
+    display: block;
+
+    color: #287a9e;
+
+    font-size: 14px;
+
+    font-weight: 500;
 }
 
 
-.about-page-description {
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
-    max-width: 850px;
+.about-page .site-footer {
+    background: #ffffff;
+
+    border-top: 1px solid #e2edf2;
+}
+
+.about-page .footer-inner {
+    max-width: 1450px;
 
     margin: 0 auto;
 
-    color: #55758b;
+    padding: 25px 65px;
 
-    font-size: 15px;
+    box-sizing: border-box;
 
-    line-height: 2;
+    text-align: center;
+}
 
+.about-page .footer-inner p {
+    margin: 0;
+
+    color: #678095;
+
+    font-size: 13px;
 }
 
 
-.about-page-description span {
+/* =========================================================
+   TABLET
+   ========================================================= */
 
-    color: var(--blue);
+@media (max-width: 1200px) {
 
-    padding: 0 5px;
+    .about-page .header-inner {
+        padding: 0 30px;
+    }
+
+    .about-page .main-navigation {
+        gap: 20px;
+    }
+
+    .about-page .main-navigation a {
+        font-size: 13px;
+    }
+
+    .about-page .about-container {
+        padding: 70px 45px 85px;
+
+        gap: 55px;
+
+        grid-template-columns:
+            minmax(0, 1.2fr)
+            minmax(320px, 0.8fr);
+    }
+
+    .about-page .about-highlights {
+        column-gap: 30px;
+    }
 
 }
 
 
 /* =========================================================
-   ABOUT MAIN CONTENT
-========================================================= */
+   SMALL TABLET
+   ========================================================= */
 
+@media (max-width: 1000px) {
+
+    .about-page .header-inner {
+        min-height: auto;
+
+        padding: 20px 28px;
+
+        flex-wrap: wrap;
+    }
+
+    .about-page .site-logo {
+        order: 1;
+    }
+
+    .about-page .header-right {
+        order: 2;
+    }
+
+    .about-page .main-navigation {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        overflow-x: auto;
+
+        padding-top: 5px;
+    }
+
+    .about-page .main-navigation a {
+        padding-top: 12px;
+    }
+
+    .about-page .about-container {
+        grid-template-columns: 1fr;
+
+        max-width: 850px;
+
+        gap: 65px;
+
+        padding: 65px 45px 80px;
+    }
+
+    .about-page .about-content {
+        text-align: left;
+    }
+
+    .about-page .about-photo-column {
+        order: 2;
+    }
+
+    .about-page .about-photo-wrapper {
+        max-width: 520px;
+    }
+
+    .about-page .photo-caption {
+        max-width: 520px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .about-page .header-inner {
+        padding: 18px 20px;
+
+        gap: 16px;
+    }
+
+    .about-page .site-logo {
+        font-size: 18px;
+    }
+
+    .about-page .header-right {
+        gap: 10px;
+    }
+
+    .about-page .social-links {
+        display: none;
+    }
+
+    .about-page .contact-button {
+        min-height: 42px;
+
+        padding: 0 18px;
+
+        font-size: 13px;
+    }
+
+    .about-page .main-navigation {
+        justify-content: flex-start;
+
+        gap: 24px;
+
+        padding-bottom: 3px;
+    }
+
+    .about-page .main-navigation a {
+        font-size: 12px;
+
+        padding: 10px 0 12px;
+    }
+
+    .about-page .main-navigation a.active::after {
+        bottom: 3px;
+    }
+
+
+    /* ABOUT */
+
+    .about-page .about-container {
+        padding: 50px 22px 65px;
+
+        gap: 50px;
+    }
+
+    .about-page .section-label {
+        font-size: 12px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .about-page .about-content h1 {
+        font-size: 40px;
+
+        line-height: 1.08;
+
+        letter-spacing: -1px;
+    }
+
+    .about-page .about-intro {
+        font-size: 16px;
+
+        line-height: 1.65;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* ONE COLUMN BULLETS */
+
+    .about-page .about-highlights {
+        grid-template-columns: 1fr;
+
+        row-gap: 0;
+    }
+
+    .about-page .about-point {
+        grid-template-columns: 34px minmax(0, 1fr);
+
+        gap: 10px;
+
+        padding: 18px 0;
+    }
+
+    .about-page .about-point strong {
+        font-size: 15px;
+    }
+
+    .about-page .about-point p {
+        font-size: 13px;
+    }
+
+
+    /* PHOTO */
+
+    .about-page .about-photo-wrapper {
+        max-width: 100%;
+
+        padding-left: 10px;
+    }
+
+    .about-page .photo-accent {
+        top: 12px;
+    }
+
+    .about-page .about-photo {
+        border-width: 5px;
+    }
+
+    .about-page .photo-caption {
+        padding-left: 10px;
+    }
+
+
+    /* FOOTER */
+
+    .about-page .footer-inner {
+        padding: 22px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    .about-page .site-logo {
+        font-size: 17px;
+    }
+
+    .about-page .contact-button {
+        padding: 0 14px;
+
+        font-size: 12px;
+    }
+
+    .about-page .main-navigation {
+        gap: 20px;
+    }
+
+    .about-page .about-container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .about-page .about-content h1 {
+        font-size: 34px;
+    }
+
+    .about-page .about-intro {
+        font-size: 15px;
+    }
+
+}
 .about-main-section {
 
     padding: 100px 0 90px;
