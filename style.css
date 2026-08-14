@@ -5197,3 +5197,550 @@ textarea {
     }
 
 }
+
+
+
+/* =========================================================
+   ABOUT ME PAGE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   ABOUT HERO
+--------------------------------------------------------- */
+
+.about-hero {
+    width: 100%;
+    background: #ffffff;
+    padding: 90px 0 100px;
+}
+
+
+.about-container {
+    width: min(1200px, calc(100% - 100px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.85fr);
+
+    gap: 90px;
+
+    align-items: center;
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT CONTENT
+--------------------------------------------------------- */
+
+.about-content {
+    width: 100%;
+}
+
+
+.about-content .section-label {
+    margin-bottom: 18px;
+}
+
+
+.about-content h1 {
+    margin: 0 0 28px;
+
+    font-size: clamp(42px, 4.2vw, 64px);
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    color: #123f63;
+}
+
+
+.about-intro {
+    max-width: 680px;
+
+    margin: 0 0 30px;
+
+    font-size: 21px;
+    line-height: 1.65;
+
+    color: #287fb2;
+
+    font-weight: 500;
+}
+
+
+.about-text {
+    max-width: 700px;
+}
+
+
+.about-text p {
+    margin: 0 0 20px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #234f72;
+}
+
+
+.about-text strong {
+    color: #123f63;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   IDENTITY
+--------------------------------------------------------- */
+
+.about-identity {
+    margin-top: 35px;
+
+    padding-left: 20px;
+
+    border-left: 4px solid #1685bb;
+}
+
+
+.about-identity h3 {
+    margin: 0 0 6px;
+
+    font-size: 23px;
+
+    color: #123f63;
+}
+
+
+.about-identity p {
+    margin: 0;
+
+    font-size: 15px;
+
+    color: #287fb2;
+
+    letter-spacing: .3px;
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT IMAGE
+--------------------------------------------------------- */
+
+.about-image-wrapper {
+    width: 100%;
+
+    position: relative;
+}
+
+
+.about-image-frame {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    background: #edf8fc;
+
+    box-shadow:
+        0 25px 60px rgba(18, 63, 99, 0.16);
+
+}
+
+
+.about-image {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform .5s ease;
+}
+
+
+.about-image-frame:hover .about-image {
+    transform: scale(1.025);
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE CAPTION
+--------------------------------------------------------- */
+
+.image-caption {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 18px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #287fb2;
+}
+
+
+.image-caption span {
+    position: relative;
+}
+
+
+.image-caption span:not(:last-child)::after {
+    content: "•";
+
+    position: absolute;
+
+    right: -12px;
+
+    color: #1685bb;
+}
+
+
+/* ---------------------------------------------------------
+   PRINCIPLES SECTION
+--------------------------------------------------------- */
+
+.principles-section {
+    width: 100%;
+
+    padding: 110px 0 120px;
+
+    background: #eefaff;
+
+    border-top: 1px solid #d7edf7;
+}
+
+
+.section-heading {
+    width: min(900px, calc(100% - 100px));
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+
+.section-heading .section-label {
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    margin: 0;
+
+    font-size: clamp(40px, 5vw, 64px);
+
+    line-height: 1.05;
+
+    letter-spacing: -1px;
+
+    color: #123f63;
+
+    font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   PRINCIPLE GRID
+--------------------------------------------------------- */
+
+.principles-grid {
+    width: min(1200px, calc(100% - 100px));
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 28px;
+}
+
+
+.principle-card {
+    padding: 32px 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #d9edf6;
+
+    border-radius: 8px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.principle-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(18, 63, 99, 0.10);
+}
+
+
+.principle-number {
+    display: block;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+
+    color: #1685bb;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.principle-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 23px;
+
+    color: #123f63;
+}
+
+
+.principle-card p {
+    margin: 0;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: #456b86;
+}
+
+
+/* =========================================================
+   ABOUT ME — TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .about-container {
+
+        width: min(900px, calc(100% - 70px));
+
+        grid-template-columns:
+            1fr 0.9fr;
+
+        gap: 55px;
+    }
+
+
+    .about-content h1 {
+        font-size: 48px;
+    }
+
+
+    .about-intro {
+        font-size: 19px;
+    }
+
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+
+    .principles-grid {
+
+        width: min(900px, calc(100% - 70px));
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   ABOUT ME — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-hero {
+
+        padding: 60px 0 70px;
+    }
+
+
+    .about-container {
+
+        width: calc(100% - 40px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+
+    .about-content {
+
+        order: 1;
+    }
+
+
+    .about-image-wrapper {
+
+        order: 2;
+    }
+
+
+    .about-content .section-label {
+
+        margin-bottom: 15px;
+    }
+
+
+    .about-content h1 {
+
+        font-size: 40px;
+
+        line-height: 1.08;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .about-intro {
+
+        font-size: 18px;
+
+        line-height: 1.6;
+    }
+
+
+    .about-text p {
+
+        font-size: 16px;
+
+        line-height: 1.75;
+    }
+
+
+    .about-image {
+
+        aspect-ratio: 4 / 5;
+    }
+
+
+    .image-caption {
+
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .principles-section {
+
+        padding: 75px 0 80px;
+    }
+
+
+    .section-heading {
+
+        width: calc(100% - 40px);
+
+        margin-bottom: 45px;
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 40px;
+
+        line-height: 1.1;
+    }
+
+
+    .principles-grid {
+
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .principle-card {
+
+        padding: 27px 24px;
+    }
+
+}
+
+
+/* =========================================================
+   ABOUT ME — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .about-container {
+
+        width: calc(100% - 30px);
+    }
+
+
+    .about-content h1 {
+
+        font-size: 34px;
+    }
+
+
+    .about-intro {
+
+        font-size: 17px;
+    }
+
+
+    .about-text p {
+
+        font-size: 15px;
+    }
+
+
+    .section-heading {
+
+        width: calc(100% - 30px);
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 34px;
+    }
+
+
+    .principles-grid {
+
+        width: calc(100% - 30px);
+    }
+
+}
