@@ -2064,3 +2064,286 @@ body:has(.content-main) .value-card p {
         height: 340px;
     }
 }
+
+
+/* =========================================================
+   ABOUT ME PAGE — FINAL LAYOUT
+   Keeps the same website design as other pages
+========================================================= */
+
+.about-page {
+    background: #ffffff;
+    padding: 90px 0 110px;
+}
+
+.about-page .content-container {
+    width: min(1180px, 88%);
+    margin: 0 auto;
+}
+
+.about-page .content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 80px;
+    align-items: start;
+}
+
+/* LEFT CONTENT */
+
+.about-page .content-main {
+    min-width: 0;
+}
+
+.about-page .content-main h2 {
+    margin: 0 0 32px;
+    color: #123b5d;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.12;
+    font-weight: 800;
+}
+
+.about-page .content-main h2 span {
+    display: block;
+    color: #1c78a8;
+}
+
+.about-points {
+    margin: 0;
+    padding-left: 28px;
+    color: #173b57;
+}
+
+.about-points li {
+    padding-left: 8px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.about-points li::marker {
+    color: #1c78a8;
+    font-weight: 800;
+}
+
+.about-points strong {
+    color: #123b5d;
+    font-weight: 700;
+}
+
+
+/* RIGHT PHOTO */
+
+.about-page .profile-card {
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    padding: 14px;
+    background: #f7fcfe;
+    border: 1px solid #d8edf5;
+    border-radius: 4px;
+    box-shadow: 0 18px 45px rgba(18, 59, 93, 0.10);
+    text-align: center;
+}
+
+.about-page .profile-card-image {
+    width: 100%;
+    height: 440px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    background: #eefaff;
+}
+
+.about-page .profile-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.about-page .profile-card h3 {
+    margin: 4px 0 4px;
+    color: #123b5d;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.about-page .profile-card p {
+    margin: 0;
+    color: #5c7485;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ABOUT HERO — SAME STYLE FAMILY AS EXPERIENCE
+========================================================= */
+
+.page-hero {
+    padding: 150px 20px 85px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(169, 221, 241, 0.55),
+            transparent 30%
+        ),
+        #eefaff;
+
+    border-bottom: 1px solid #d8edf5;
+}
+
+.page-hero-container {
+    width: min(1000px, 88%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-hero .section-label {
+    color: #1c78a8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 15px;
+}
+
+.page-hero h1 {
+    margin: 0 0 20px;
+    color: #123b5d;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.05;
+    font-weight: 800;
+}
+
+.page-hero h1 span {
+    display: block;
+    color: #1c78a8;
+}
+
+.page-hero p:last-child {
+    max-width: 760px;
+    margin: 0 auto;
+    color: #5c7485;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+    .about-page {
+        padding: 75px 0 90px;
+    }
+
+    .about-page .content-grid {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 45px;
+    }
+
+    .about-page .profile-card {
+        max-width: 300px;
+    }
+
+    .about-page .profile-card-image {
+        height: 370px;
+    }
+
+    .about-points li {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .page-hero {
+        padding: 120px 20px 65px;
+    }
+
+    .page-hero-container {
+        width: 90%;
+    }
+
+    .page-hero h1 {
+        font-size: 42px;
+    }
+
+    .page-hero p:last-child {
+        font-size: 14px;
+    }
+
+    .about-page {
+        padding: 65px 0 70px;
+    }
+
+    .about-page .content-container {
+        width: 90%;
+    }
+
+    .about-page .content-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-page .content-main h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .about-points {
+        padding-left: 24px;
+    }
+
+    .about-points li {
+        font-size: 13.5px;
+        line-height: 1.75;
+        margin-bottom: 13px;
+    }
+
+    .about-page .profile-card {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .about-page .profile-card-image {
+        height: 390px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .page-hero {
+        padding-top: 105px;
+    }
+
+    .page-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-page .content-main h2 {
+        font-size: 29px;
+    }
+
+    .about-points li {
+        font-size: 13px;
+    }
+
+    .about-page .profile-card-image {
+        height: 350px;
+    }
+}
