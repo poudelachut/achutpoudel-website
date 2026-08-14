@@ -42,7 +42,17 @@
           rel="stylesheet">
 </head>
 
+<script>
+function setActive(element) {
+    // Remove active class from all menu items
+    document.querySelectorAll('.navbar a').forEach(link => {
+        link.classList.remove('active');
+    });
 
+    // Highlight the clicked menu
+    element.classList.add('active');
+}
+</script>
 <body>
 
 
