@@ -1,4 +1,1642 @@
 /* =========================================================
+   ADV. ACHUT POUDEL
+   COMPLETE WEBSITE STYLE.CSS
+   FINAL VERSION
+   ========================================================= */
+
+
+/* =========================================================
+   01. GLOBAL RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #123f63;
+    background: #ffffff;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   02. WEBSITE VARIABLES
+   ========================================================= */
+
+:root {
+
+    /* Main colors */
+    --navy: #123f63;
+    --navy-dark: #0d3555;
+    --blue: #1683bd;
+    --blue-dark: #116d9f;
+
+    /* Light blue backgrounds */
+    --blue-light: #eefaff;
+    --blue-soft: #f5fbfe;
+
+    /* Basic colors */
+    --white: #ffffff;
+
+    /* Borders */
+    --border: #d8eaf2;
+    --border-light: #e7f2f7;
+
+    /* Text */
+    --text: #123f63;
+    --text-light: #53748d;
+
+    /* Layout */
+    --max-width: 1180px;
+    --wide-width: 1380px;
+
+    /* Shadows */
+    --shadow-small:
+        0 5px 20px rgba(18, 63, 99, 0.06);
+
+    --shadow-medium:
+        0 12px 35px rgba(18, 63, 99, 0.09);
+
+    --shadow-large:
+        0 25px 60px rgba(18, 63, 99, 0.13);
+}
+
+
+/* =========================================================
+   03. COMMON CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(
+        var(--max-width),
+        calc(100% - 80px)
+    );
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   04. HEADER
+   SAME HEADER FOR ALL PAGES
+   ========================================================= */
+
+header,
+.site-header,
+.navbar {
+
+    width: 100%;
+
+    min-height: 90px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* Header inner */
+
+header .container,
+.site-header .container,
+.navbar .container {
+
+    width: min(
+        var(--wide-width),
+        calc(100% - 90px)
+    );
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================================
+   05. LOGO / NAME
+   ========================================================= */
+
+.logo,
+.site-logo,
+.brand {
+
+    color: var(--navy);
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   06. MAIN NAVIGATION
+   ========================================================= */
+
+nav,
+.nav-links {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 32px;
+}
+
+nav a,
+.nav-links a {
+
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    color: var(--navy);
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    padding:
+        34px 0
+        25px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+nav a:hover,
+.nav-links a:hover {
+
+    color: var(--blue);
+}
+
+nav a.active,
+.nav-links a.active {
+
+    color: var(--blue);
+}
+
+
+/* Active navigation underline */
+
+nav a.active::after,
+.nav-links a.active::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 17px;
+
+    height: 3px;
+
+    background: var(--blue);
+
+    border-radius: 3px;
+}
+
+
+/* =========================================================
+   07. SOCIAL MEDIA
+   ========================================================= */
+
+.social-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.social-links a {
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eef9fd;
+
+    color: var(--navy);
+
+    font-size: 16px;
+    font-weight: 700;
+
+    transition:
+        all 0.25s ease;
+}
+
+.social-links a:hover {
+
+    background: var(--blue);
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   08. CONTACT BUTTON
+   ========================================================= */
+
+.contact-btn,
+.btn-contact {
+
+    min-height: 48px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        0 25px;
+
+    border-radius: 28px;
+
+    background: var(--navy);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.contact-btn:hover,
+.btn-contact:hover {
+
+    background: var(--blue);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 22px
+        rgba(22, 131, 189, 0.18);
+}
+
+
+/* =========================================================
+   09. GENERAL PAGE HERO
+   EXPERIENCE / LEARNING / COMMUNITY / HONOR
+   ========================================================= */
+
+.page-hero,
+.inner-hero,
+.experience-hero {
+
+    width: 100%;
+
+    min-height: 535px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(22, 131, 189, 0.09),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #eefaff 0%,
+            #eaf8fd 50%,
+            #ffffff 100%
+        );
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+/* Hero inner */
+
+.page-hero-content,
+.inner-hero-content {
+
+    width:
+        min(
+            1000px,
+            calc(100% - 70px)
+        );
+
+    margin: 0 auto;
+}
+
+
+/* Small heading */
+
+.eyebrow,
+.page-label {
+
+    margin-bottom: 12px;
+
+    color: #53748d;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* Main hero heading */
+
+.page-hero h1,
+.inner-hero h1 {
+
+    margin-bottom: 22px;
+
+    color: var(--navy);
+
+    font-size:
+        clamp(55px, 6vw, 82px);
+
+    line-height: 1.04;
+
+    font-weight: 800;
+}
+
+.page-hero h1 span,
+.inner-hero h1 span {
+
+    color: var(--blue);
+}
+
+
+/* Hero paragraph */
+
+.page-hero p,
+.inner-hero p {
+
+    max-width: 900px;
+
+    margin:
+        0 auto;
+
+    color: #426984;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   10. GENERAL SECTION
+   ========================================================= */
+
+.section {
+
+    width: 100%;
+
+    padding:
+        100px 0;
+}
+
+.section-title {
+
+    margin-bottom: 55px;
+
+    text-align: center;
+}
+
+.section-title .eyebrow {
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+
+    color: var(--navy);
+
+    font-size:
+        clamp(40px, 5vw, 60px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   11. GENERAL CARDS
+   ========================================================= */
+
+.card {
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        var(--shadow-small);
+}
+
+
+/* =========================================================
+   12. ABOUT ME PAGE
+   ========================================================= */
+
+.about-page {
+
+    width: 100%;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   13. ABOUT HERO
+   MATCHES EXPERIENCE PAGE STYLE
+   ========================================================= */
+
+.about-page .about-hero {
+
+    width: 100%;
+
+    min-height: 535px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding:
+        80px 0;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(22, 131, 189, 0.09),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #eefaff 0%,
+            #eaf8fd 50%,
+            #ffffff 100%
+        );
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.about-page .about-hero-inner {
+
+    width:
+        min(
+            1000px,
+            calc(100% - 70px)
+        );
+
+    margin: 0 auto;
+}
+
+
+.about-page .about-eyebrow {
+
+    margin-bottom: 12px;
+
+    color: #53748d;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.about-page .about-hero h1 {
+
+    margin-bottom: 24px;
+
+    color: var(--navy);
+
+    font-size:
+        clamp(55px, 6vw, 80px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+}
+
+
+.about-page .about-hero h1 span {
+
+    color: var(--blue);
+}
+
+
+.about-page .about-hero p {
+
+    max-width: 900px;
+
+    margin:
+        0 auto;
+
+    color: #426984;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   14. ABOUT CONTENT
+   LEFT CONTENT / RIGHT PHOTO
+   ========================================================= */
+
+.about-page .about-content {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        95px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(360px, 0.92fr);
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   15. ABOUT LEFT CONTENT
+   ========================================================= */
+
+.about-page .about-text {
+
+    width: 100%;
+
+    min-width: 0;
+}
+
+
+.about-page .about-text h2 {
+
+    margin-bottom: 24px;
+
+    color: var(--navy);
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+
+.about-page .about-intro {
+
+    max-width: 700px;
+
+    margin-bottom: 30px;
+
+    color: #486b82;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   16. ABOUT BULLET LIST
+   ========================================================= */
+
+.about-page .about-list {
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+.about-page .about-list li {
+
+    position: relative;
+
+    margin-bottom: 15px;
+
+    padding-left: 30px;
+
+    color: #234c68;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+}
+
+
+/* Bullet */
+
+.about-page .about-list li::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 3px;
+
+    top: 10px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--blue);
+}
+
+
+.about-page .about-list strong {
+
+    color: var(--navy);
+
+    font-weight: 750;
+}
+
+
+/* =========================================================
+   17. ABOUT SIGNATURE
+   ========================================================= */
+
+.about-page .about-signature {
+
+    margin-top: 32px;
+
+    padding-top: 24px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+.about-page .about-signature h3 {
+
+    margin-bottom: 5px;
+
+    color: var(--navy);
+
+    font-size: 23px;
+
+    font-weight: 800;
+}
+
+
+.about-page .about-signature p {
+
+    color: #4b6d82;
+
+    font-size: 15px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================================
+   18. ABOUT PHOTO
+   RIGHT SIDE
+   ========================================================= */
+
+.about-page .about-photo {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+}
+
+
+.about-page .about-photo-frame {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    position: relative;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dcebf2;
+
+    border-radius: 20px;
+
+    box-shadow:
+        var(--shadow-large);
+}
+
+
+/* Decorative blue corner */
+
+.about-page .about-photo-frame::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    right: -10px;
+
+    width: 80px;
+    height: 80px;
+
+    border-top:
+        4px solid var(--blue);
+
+    border-right:
+        4px solid var(--blue);
+
+    border-radius:
+        0 18px 0 0;
+
+    pointer-events: none;
+}
+
+
+.about-page .about-photo-frame img {
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 13px;
+}
+
+
+/* =========================================================
+   19. ABOUT HIGHLIGHTS
+   ========================================================= */
+
+.about-page .about-highlights {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        0 0 100px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.about-page .about-highlight {
+
+    padding: 28px;
+
+    background: #f5fbfe;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.about-page .about-highlight:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--shadow-small);
+}
+
+
+.about-page .about-highlight h3 {
+
+    margin-bottom: 8px;
+
+    color: var(--navy);
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+.about-page .about-highlight p {
+
+    color: #537287;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   20. EXPERIENCE PAGE
+   ========================================================= */
+
+.experience-page {
+
+    width: 100%;
+
+    background: #ffffff;
+}
+
+
+.experience-page .experience-hero {
+
+    min-height: 535px;
+}
+
+
+.experience-content {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        90px 0;
+}
+
+
+/* =========================================================
+   21. LEARNING & DEVELOPMENT
+   ========================================================= */
+
+.learning-page {
+
+    width: 100%;
+
+    background: #ffffff;
+}
+
+
+.learning-content {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        90px 0;
+}
+
+
+/* =========================================================
+   22. COMMUNITY ENGAGEMENT
+   ========================================================= */
+
+.community-page {
+
+    width: 100%;
+
+    background: #ffffff;
+}
+
+
+.community-content {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        90px 0;
+}
+
+
+/* =========================================================
+   23. HONOR
+   ========================================================= */
+
+.honor-page {
+
+    width: 100%;
+
+    background: #ffffff;
+}
+
+
+.honor-content {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        90px 0;
+}
+
+
+/* =========================================================
+   24. CONTACT PAGE
+   ========================================================= */
+
+.contact-page {
+
+    width: 100%;
+
+    background: #ffffff;
+}
+
+
+.contact-content {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    padding:
+        90px 0;
+}
+
+
+.contact-form {
+
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding:
+        15px 17px;
+
+    color: var(--navy);
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    border-color:
+        var(--blue);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(22, 131, 189, 0.10);
+}
+
+
+.contact-form textarea {
+
+    min-height: 160px;
+
+    resize: vertical;
+}
+
+
+/* =========================================================
+   25. FOOTER
+   ========================================================= */
+
+footer,
+.site-footer {
+
+    width: 100%;
+
+    padding:
+        50px 0;
+
+    background:
+        var(--navy);
+
+    color:
+        #ffffff;
+}
+
+
+footer .container,
+.site-footer .container {
+
+    width:
+        min(
+            var(--max-width),
+            calc(100% - 80px)
+        );
+
+    margin:
+        0 auto;
+
+    text-align: center;
+}
+
+
+footer p,
+.site-footer p {
+
+    color:
+        #d8edf7;
+
+    font-size:
+        14px;
+}
+
+
+/* =========================================================
+   26. MOBILE MENU
+   ========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+
+    background:
+        transparent;
+
+    color:
+        var(--navy);
+
+    font-size:
+        25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   27. TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    header .container,
+    .site-header .container,
+    .navbar .container {
+
+        width:
+            calc(100% - 50px);
+    }
+
+
+    nav,
+    .nav-links {
+
+        gap: 20px;
+    }
+
+
+    nav a,
+    .nav-links a {
+
+        font-size:
+            13px;
+    }
+
+
+    .about-page .about-content {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(320px, 0.8fr);
+
+        gap:
+            45px;
+    }
+
+
+    .about-page .about-photo-frame {
+
+        max-width:
+            420px;
+    }
+}
+
+
+/* =========================================================
+   28. MOBILE — 850px
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    header,
+    .site-header,
+    .navbar {
+
+        min-height:
+            75px;
+    }
+
+
+    header .container,
+    .site-header .container,
+    .navbar .container {
+
+        width:
+            calc(100% - 35px);
+
+        min-height:
+            75px;
+    }
+
+
+    .logo,
+    .site-logo,
+    .brand {
+
+        font-size:
+            18px;
+    }
+
+
+    nav,
+    .nav-links {
+
+        display:
+            none;
+    }
+
+
+    .menu-toggle {
+
+        display:
+            flex;
+
+        align-items:
+            center;
+
+        justify-content:
+            center;
+    }
+
+
+    .social-links {
+
+        display:
+            none;
+    }
+
+
+    .contact-btn,
+    .btn-contact {
+
+        min-height:
+            42px;
+
+        padding:
+            0 18px;
+
+        font-size:
+            13px;
+    }
+
+
+    /* About hero */
+
+    .about-page .about-hero {
+
+        min-height:
+            430px;
+
+        padding:
+            70px 0;
+    }
+
+
+    .about-page .about-hero-inner {
+
+        width:
+            calc(100% - 40px);
+    }
+
+
+    .about-page .about-hero h1 {
+
+        font-size:
+            48px;
+    }
+
+
+    .about-page .about-hero p {
+
+        font-size:
+            16px;
+    }
+
+
+    /* About content */
+
+    .about-page .about-content {
+
+        width:
+            calc(100% - 40px);
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            55px;
+
+        padding:
+            65px 0;
+    }
+
+
+    .about-page .about-text {
+
+        order:
+            1;
+    }
+
+
+    .about-page .about-photo {
+
+        order:
+            2;
+
+        justify-content:
+            center;
+    }
+
+
+    .about-page .about-photo-frame {
+
+        max-width:
+            500px;
+    }
+
+
+    /* About highlights */
+
+    .about-page .about-highlights {
+
+        width:
+            calc(100% - 40px);
+
+        grid-template-columns:
+            1fr;
+
+        padding-bottom:
+            65px;
+    }
+
+
+    /* General hero */
+
+    .page-hero,
+    .inner-hero,
+    .experience-hero {
+
+        min-height:
+            430px;
+    }
+
+
+    .page-hero h1,
+    .inner-hero h1 {
+
+        font-size:
+            50px;
+    }
+
+
+    .page-hero p,
+    .inner-hero p {
+
+        font-size:
+            17px;
+    }
+}
+
+
+/* =========================================================
+   29. SMALL MOBILE — 520px
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .container {
+
+        width:
+            calc(100% - 30px);
+    }
+
+
+    header .container,
+    .site-header .container,
+    .navbar .container {
+
+        width:
+            calc(100% - 25px);
+    }
+
+
+    .about-page .about-hero-inner {
+
+        width:
+            calc(100% - 30px);
+    }
+
+
+    .about-page .about-content {
+
+        width:
+            calc(100% - 30px);
+    }
+
+
+    .about-page .about-highlights {
+
+        width:
+            calc(100% - 30px);
+    }
+
+
+    .about-page .about-hero h1 {
+
+        font-size:
+            40px;
+    }
+
+
+    .about-page .about-eyebrow {
+
+        font-size:
+            12px;
+
+        letter-spacing:
+            2px;
+    }
+
+
+    .about-page .about-text h2 {
+
+        font-size:
+            28px;
+    }
+
+
+    .about-page .about-list li {
+
+        padding-left:
+            27px;
+
+        margin-bottom:
+            13px;
+
+        font-size:
+            14px;
+
+        line-height:
+            1.6;
+    }
+
+
+    .about-page .about-photo-frame {
+
+        padding:
+            8px;
+
+        border-radius:
+            14px;
+    }
+
+
+    .about-page .about-photo-frame img {
+
+        border-radius:
+            9px;
+    }
+
+
+    .page-hero h1,
+    .inner-hero h1 {
+
+        font-size:
+            42px;
+    }
+}
+
+
+/* =========================================================
+   30. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+
+    outline:
+        3px solid
+        rgba(22, 131, 189, 0.35);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   31. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+
+        scroll-behavior:
+            auto;
+    }
+
+
+    *,
+    *::before,
+    *::after {
+
+        animation:
+            none !important;
+
+        transition:
+            none !important;
+    }
+}
+
+
+/* =========================================================
+   END OF STYLE.CSS
+   ========================================================= *//* =========================================================
    ACHUT POUDEL PERSONAL WEBSITE
    COMPLETE STYLE.CSS
    DESKTOP / LAPTOP / TABLET + MOBILE
