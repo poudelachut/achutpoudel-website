@@ -1,11 +1,8 @@
 /* =========================================================
-   ADV. ACHUT POUDEL — PERSONAL WEBSITE
+   ACHUT POUDEL PERSONAL WEBSITE
    COMPLETE STYLE.CSS
-   ========================================================= */
-
-/* =========================================================
-   1. RESET
-   ========================================================= */
+   DESKTOP / LAPTOP / TABLET + MOBILE
+========================================================= */
 
 * {
     margin: 0;
@@ -18,16 +15,11 @@ html {
 }
 
 body {
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #173b57;
     background: #ffffff;
-    color: #123b5d;
-    line-height: 1.6;
+    line-height: 1.7;
     overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 a {
@@ -35,1001 +27,2040 @@ a {
     color: inherit;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
 button,
 input,
 textarea {
-    font: inherit;
+    font-family: inherit;
 }
-
-
-/* =========================================================
-   2. GLOBAL VARIABLES
-   ========================================================= */
 
 :root {
-    --navy: #123f63;
-    --navy-dark: #0d3555;
-    --blue: #1683bd;
-    --blue-light: #eaf7fc;
-    --blue-soft: #f3fbfe;
+    --blue-dark: #123b5d;
+    --blue: #1c78a8;
+    --blue-medium: #3b98c4;
+    --sky: #cfeefa;
+    --sky-light: #eefaff;
     --white: #ffffff;
-    --border: #d9eaf2;
-
-    --container: 1180px;
-    --header-height: 90px;
-
-    --shadow-soft: 0 10px 35px rgba(18, 63, 99, 0.08);
+    --text: #173b57;
+    --text-light: #5c7485;
+    --border: #d8edf5;
+    --gold: #c79b42;
 }
 
-
-/* =========================================================
-   3. COMMON CONTAINER
-   ========================================================= */
-
-.container {
-    width: min(var(--container), calc(100% - 80px));
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   4. HEADER / NAVIGATION
-   SAME STYLE FOR ALL PAGES
-   ========================================================= */
-
-header,
-.site-header,
-.navbar {
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: var(--header-height);
-    background: #ffffff;
-    border-bottom: 1px solid var(--border);
-
-    display: flex;
-    align-items: center;
-    position: relative;
     z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
 }
 
-header .container,
-.site-header .container,
-.navbar .container {
-    width: min(1380px, calc(100% - 90px));
-    margin: 0 auto;
-
+.header-container {
+    width: min(1450px, 94%);
+    min-height: 78px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
-
-/* Logo / Name */
-
-.logo,
-.site-logo,
-.brand {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--navy);
-    white-space: nowrap;
-}
-
-
-/* Navigation */
-
-nav,
-.nav-links {
+.main-navigation {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 34px;
+    gap: 3px;
 }
 
-nav a,
-.nav-links a {
+.nav-link {
     position: relative;
-
-    color: var(--navy);
-    font-size: 14px;
+    padding: 10px 11px;
+    color: var(--blue-dark);
+    font-size: 12px;
     font-weight: 700;
-
-    padding: 33px 0 25px;
-
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
+    transition: 0.3s ease;
 }
 
-nav a:hover,
-.nav-links a:hover {
-    color: var(--blue);
-}
-
-nav a.active,
-.nav-links a.active {
-    color: var(--blue);
-}
-
-nav a.active::after,
-.nav-links a.active::after {
+.nav-link::after {
     content: "";
-
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 18px;
-
-    height: 3px;
+    bottom: 3px;
+    left: 11px;
+    right: 11px;
+    height: 2px;
     background: var(--blue);
+    transform: scaleX(0);
+    transition: 0.3s ease;
 }
 
+.nav-link:hover,
+.nav-link.active {
+    color: var(--blue);
+}
 
-/* =========================================================
-   5. SOCIAL ICONS
-   ========================================================= */
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
 
 .social-links {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    gap: 7px;
 }
 
 .social-links a {
-    width: 40px;
-    height: 40px;
-
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
-    background: #eef9fd;
-    color: var(--navy);
-
-    font-size: 16px;
-    font-weight: 700;
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease;
+    color: var(--blue-dark);
+    background: var(--sky-light);
+    transition: 0.3s ease;
 }
 
 .social-links a:hover {
+    color: white;
     background: var(--blue);
-    color: #ffffff;
     transform: translateY(-2px);
 }
 
-
-/* =========================================================
-   6. CONTACT BUTTON
-   ========================================================= */
-
-.contact-btn,
-.btn-contact {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 48px;
-    padding: 0 25px;
-
-    border-radius: 28px;
-
-    background: var(--navy);
-    color: #ffffff;
-
-    font-size: 14px;
+.contact-button {
+    padding: 10px 19px;
+    color: white;
+    background: var(--blue-dark);
+    border-radius: 30px;
+    font-size: 12px;
     font-weight: 700;
-
-    transition:
-        background 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    transition: 0.3s ease;
 }
 
-.contact-btn:hover,
-.btn-contact:hover {
+.contact-button:hover {
     background: var(--blue);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(22, 131, 189, 0.20);
 }
 
-
-/* =========================================================
-   7. GENERAL PAGE HERO
-   Used by Experience / Learning / Community / Honor
-   ========================================================= */
-
-.page-hero,
-.inner-hero,
-.experience-hero {
-    min-height: 535px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at 85% 20%,
-            rgba(22, 131, 189, 0.08),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #eefaff 0%,
-            #e9f7fc 50%,
-            #f8fdff 100%
-        );
-
-    border-bottom: 1px solid var(--border);
-}
-
-.page-hero-content,
-.inner-hero-content {
-    width: min(1000px, calc(100% - 60px));
-    margin: 0 auto;
-}
-
-.eyebrow,
-.page-label {
-    margin-bottom: 10px;
-
-    color: #53748d;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
-
-.page-hero h1,
-.inner-hero h1 {
-    color: var(--navy);
-
-    font-size: clamp(56px, 6vw, 82px);
-    line-height: 1.05;
-    font-weight: 800;
-
-    margin-bottom: 22px;
-}
-
-.page-hero h1 span,
-.inner-hero h1 span {
-    color: var(--blue);
-}
-
-.page-hero p,
-.inner-hero p {
-    max-width: 900px;
-    margin: 0 auto;
-
-    color: #426984;
-
-    font-size: 20px;
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   8. GENERAL SECTION
-   ========================================================= */
-
-section {
-    width: 100%;
-}
-
-.section {
-    padding: 100px 0;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 55px;
-}
-
-.section-title .eyebrow {
-    margin-bottom: 10px;
-}
-
-.section-title h2 {
-    color: var(--navy);
-
-    font-size: clamp(40px, 5vw, 60px);
-    line-height: 1.15;
-
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   9. ABOUT ME PAGE
-   IMPORTANT:
-   Everything below is scoped to About Me.
-   It prevents About from breaking the other pages.
-   ========================================================= */
-
-
-/* Main About wrapper */
-
-.about-page {
-    width: 100%;
-    background: #ffffff;
-}
-
-
-/* About hero */
-
-.about-page .about-hero {
-    min-height: 535px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 90px 0;
-
-    background:
-        radial-gradient(
-            circle at 85% 15%,
-            rgba(22, 131, 189, 0.09),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #eefaff 0%,
-            #eaf8fd 50%,
-            #ffffff 100%
-        );
-
-    border-bottom: 1px solid var(--border);
-}
-
-.about-page .about-hero-inner {
-    width: min(1050px, calc(100% - 80px));
-    margin: 0 auto;
-}
-
-.about-page .about-eyebrow {
-    color: #53748d;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-    text-transform: uppercase;
-
-    margin-bottom: 12px;
-}
-
-.about-page .about-hero h1 {
-    color: var(--navy);
-
-    font-size: clamp(52px, 6vw, 78px);
-    line-height: 1.05;
-
-    font-weight: 800;
-
-    margin-bottom: 25px;
-}
-
-.about-page .about-hero h1 span {
-    color: var(--blue);
-}
-
-.about-page .about-hero p {
-    max-width: 900px;
-    margin: 0 auto;
-
-    color: #426984;
-
-    font-size: 19px;
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   10. ABOUT CONTENT
-   LEFT TEXT + RIGHT PHOTO
-   ========================================================= */
-
-.about-page .about-content {
-    width: min(1180px, calc(100% - 80px));
-
-    margin: 0 auto;
-
-    padding: 95px 0;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(360px, 0.92fr);
-
-    gap: 75px;
-
-    align-items: center;
-}
-
-
-/* LEFT SIDE */
-
-.about-page .about-text {
-    min-width: 0;
-}
-
-.about-page .about-text h2 {
-    color: var(--navy);
-
-    font-size: 34px;
-    line-height: 1.2;
-
-    font-weight: 800;
-
-    margin-bottom: 25px;
-}
-
-.about-page .about-intro {
-    color: #486b82;
-
-    font-size: 16px;
-    line-height: 1.8;
-
-    margin-bottom: 30px;
-
-    max-width: 700px;
-}
-
-
-/* Bullet list */
-
-.about-page .about-list {
-    list-style: none;
-
-    padding: 0;
-    margin: 0;
-}
-
-.about-page .about-list li {
-    position: relative;
-
-    padding-left: 34px;
-    margin-bottom: 16px;
-
-    color: #234c68;
-
-    font-size: 15px;
-    line-height: 1.65;
-}
-
-.about-page .about-list li::before {
-    content: "";
-
-    position: absolute;
-
-    left: 5px;
-    top: 10px;
-
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
+.active-contact {
     background: var(--blue);
 }
-
-.about-page .about-list strong {
-    color: var(--navy);
-    font-weight: 750;
-}
-
-
-/* =========================================================
-   11. ABOUT SIGNATURE
-   ========================================================= */
-
-.about-page .about-signature {
-    margin-top: 32px;
-    padding-top: 24px;
-
-    border-top: 1px solid var(--border);
-}
-
-.about-page .about-signature h3 {
-    color: var(--navy);
-
-    font-size: 23px;
-    font-weight: 800;
-
-    margin-bottom: 5px;
-}
-
-.about-page .about-signature p {
-    color: #4b6d82;
-
-    font-size: 15px;
-    letter-spacing: 0.3px;
-}
-
-
-/* =========================================================
-   12. ABOUT PHOTO — RIGHT SIDE
-   ========================================================= */
-
-.about-page .about-photo {
-    width: 100%;
-
-    display: flex;
-    justify-content: flex-end;
-}
-
-.about-page .about-photo-frame {
-    width: 100%;
-    max-width: 480px;
-
-    position: relative;
-
-    padding: 12px;
-
-    background: #ffffff;
-
-    border: 1px solid #dcebf2;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 25px 60px rgba(18, 63, 99, 0.13);
-}
-
-.about-page .about-photo-frame::before {
-    content: "";
-
-    position: absolute;
-
-    top: -10px;
-    right: -10px;
-
-    width: 80px;
-    height: 80px;
-
-    border-top: 4px solid var(--blue);
-    border-right: 4px solid var(--blue);
-
-    border-radius: 0 18px 0 0;
-
-    pointer-events: none;
-}
-
-.about-page .about-photo-frame img {
-    width: 100%;
-
-    aspect-ratio: 4 / 5;
-
-    object-fit: cover;
-
-    border-radius: 13px;
-}
-
-
-/* =========================================================
-   13. ABOUT HIGHLIGHT STRIP
-   ========================================================= */
-
-.about-page .about-highlights {
-    width: min(1180px, calc(100% - 80px));
-
-    margin: 0 auto;
-
-    padding: 0 0 100px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 22px;
-}
-
-.about-page .about-highlight {
-    padding: 28px;
-
-    background: #f5fbfe;
-
-    border: 1px solid #dcecf3;
-
-    border-radius: 14px;
-}
-
-.about-page .about-highlight h3 {
-    color: var(--navy);
-
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.about-page .about-highlight p {
-    color: #537287;
-
-    font-size: 14px;
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   14. GENERAL CARDS
-   ========================================================= */
-
-.card {
-    background: #ffffff;
-
-    border: 1px solid var(--border);
-    border-radius: 16px;
-
-    box-shadow: var(--shadow-soft);
-
-    padding: 30px;
-}
-
-
-/* =========================================================
-   15. EXPERIENCE PAGE
-   ========================================================= */
-
-.experience-page {
-    width: 100%;
-    background: #ffffff;
-}
-
-.experience-page .experience-hero {
-    min-height: 535px;
-}
-
-.experience-content {
-    width: min(1180px, calc(100% - 80px));
-    margin: 0 auto;
-
-    padding: 90px 0;
-}
-
-
-/* =========================================================
-   16. LEARNING & DEVELOPMENT
-   ========================================================= */
-
-.learning-page {
-    background: #ffffff;
-}
-
-.learning-content {
-    width: min(1180px, calc(100% - 80px));
-    margin: 0 auto;
-
-    padding: 90px 0;
-}
-
-
-/* =========================================================
-   17. COMMUNITY ENGAGEMENT
-   ========================================================= */
-
-.community-page {
-    background: #ffffff;
-}
-
-.community-content {
-    width: min(1180px, calc(100% - 80px));
-    margin: 0 auto;
-
-    padding: 90px 0;
-}
-
-
-/* =========================================================
-   18. HONOR PAGE
-   ========================================================= */
-
-.honor-page {
-    background: #ffffff;
-}
-
-.honor-content {
-    width: min(1180px, calc(100% - 80px));
-    margin: 0 auto;
-
-    padding: 90px 0;
-}
-
-
-/* =========================================================
-   19. FOOTER
-   ========================================================= */
-
-footer,
-.site-footer {
-    width: 100%;
-
-    padding: 50px 0;
-
-    background: var(--navy);
-
-    color: #ffffff;
-}
-
-footer .container,
-.site-footer .container {
-    width: min(1180px, calc(100% - 80px));
-    margin: 0 auto;
-
-    text-align: center;
-}
-
-footer p,
-.site-footer p {
-    color: #d9edf7;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   20. MOBILE MENU
-   ========================================================= */
 
 .menu-toggle {
     display: none;
-
+    width: 40px;
+    height: 40px;
     border: 0;
-    background: transparent;
-
-    color: var(--navy);
-
-    font-size: 25px;
-
+    border-radius: 8px;
+    background: var(--sky-light);
     cursor: pointer;
 }
 
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px auto;
+    background: var(--blue-dark);
+}
+
+.section-container,
+.content-container {
+    width: min(1180px, 90%);
+    margin: auto;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.section-heading.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-heading h2 {
+    color: var(--blue-dark);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.section-heading p:last-child {
+    color: var(--text-light);
+}
+
+.hero-section {
+    min-height: 100vh;
+    padding: 145px 0 85px;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(169, 221, 241, 0.55), transparent 30%),
+        linear-gradient(120deg, #ffffff 0%, #ffffff 70%, #eefaff 100%);
+}
+
+.hero-container {
+    width: min(1240px, 90%);
+    min-height: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-eyebrow {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    color: var(--blue-dark);
+    font-size: clamp(40px, 5vw, 62px);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: var(--blue);
+}
+
+.hero-content h2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: var(--text);
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin-bottom: 27px;
+}
+
+.hero-content h2 span {
+    color: var(--blue-medium);
+}
+
+.hero-description {
+    max-width: 670px;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.primary-button,
+.secondary-button,
+.text-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-button {
+    color: white;
+    background: var(--blue-dark);
+}
+
+.primary-button:hover {
+    background: var(--blue);
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    color: var(--blue-dark);
+    background: white;
+    border: 1px solid var(--sky);
+}
+
+.secondary-button:hover {
+    background: var(--sky-light);
+    transform: translateY(-3px);
+}
+
+.text-button {
+    color: var(--blue);
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.text-button:hover {
+    transform: translateX(4px);
+}
+
+.hero-image-area {
+    position: relative;
+    min-height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image-background {
+    position: absolute;
+    width: 455px;
+    height: 535px;
+    border-radius: 50% 50% 45% 45%;
+    background: var(--sky);
+    transform: rotate(5deg);
+}
+
+.hero-image-frame {
+    position: relative;
+    z-index: 2;
+    width: 405px;
+    height: 525px;
+    overflow: hidden;
+    border: 10px solid white;
+    border-radius: 220px 220px 35px 35px;
+    box-shadow: 0 30px 70px rgba(18, 59, 93, 0.18);
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.image-caption {
+    position: absolute;
+    z-index: 4;
+    left: 20px;
+    bottom: 32px;
+    padding: 15px 21px;
+    background: rgba(255, 255, 255, 0.97);
+    border-left: 4px solid var(--blue);
+    box-shadow: 0 15px 35px rgba(18, 59, 93, 0.12);
+}
+
+.image-caption strong {
+    display: block;
+    color: var(--blue-dark);
+    font-size: 14px;
+}
+
+.image-caption span {
+    display: block;
+    color: var(--text-light);
+    font-size: 10px;
+}
+
+.experience-across-section {
+    padding: 95px 0;
+    background: #f7fcfe;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.experience-tag {
+    min-width: 180px;
+    padding: 17px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--blue-dark);
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.experience-tag i {
+    color: var(--blue);
+}
+
+.experience-tag:hover {
+    border-color: var(--blue-medium);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(18, 59, 93, 0.08);
+}
+
+.leadership-statement-section {
+    padding: 105px 20px;
+    background: var(--blue-dark);
+}
+
+.statement-container {
+    width: min(920px, 90%);
+    margin: auto;
+    text-align: center;
+}
+
+.statement-small {
+    color: var(--blue-medium);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.statement-container h2 {
+    color: white;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.statement-container h2 span {
+    color: var(--blue-medium);
+    display: block;
+}
+
+.statement-container > p:last-child {
+    max-width: 720px;
+    margin: auto;
+    color: #d7edf7;
+    font-size: 16px;
+}
+
+.journey-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.journey-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.journey-card {
+    min-height: 275px;
+    padding: 27px 22px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    background: white;
+    transition: 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue-medium);
+    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
+}
+
+.journey-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    color: var(--blue);
+    background: var(--sky-light);
+}
+
+.journey-card h3 {
+    color: var(--blue-dark);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.journey-card p {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.journey-card > span {
+    margin-top: auto;
+    padding-top: 20px;
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.closing-section,
+.simple-statement {
+    padding: 90px 20px;
+    background: var(--sky-light);
+}
+
+.closing-container {
+    width: min(850px, 90%);
+    margin: auto;
+    text-align: center;
+}
+
+.closing-container p {
+    color: var(--text-light);
+    font-size: 20px;
+}
+
+.closing-container h2 {
+    color: var(--blue-dark);
+    font-size: clamp(30px, 4vw, 48px);
+    margin: 5px 0 30px;
+}
+
+.page-hero {
+    padding: 165px 20px 90px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(169, 221, 241, 0.5), transparent 30%),
+        var(--sky-light);
+    border-bottom: 1px solid var(--border);
+}
+
+.page-hero-container {
+    width: min(1000px, 90%);
+    margin: auto;
+    text-align: center;
+}
+
+.page-hero h1 {
+    color: var(--blue-dark);
+    font-size: clamp(40px, 6vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.page-hero h1 span {
+    display: block;
+    color: var(--blue);
+}
+
+.page-hero p:last-child {
+    max-width: 760px;
+    margin: auto;
+    color: var(--text-light);
+    font-size: 16px;
+}
+
+.content-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 70px;
+    align-items: start;
+}
+
+.content-main p {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.95;
+    margin-bottom: 24px;
+}
+
+.content-main strong {
+    color: var(--blue-dark);
+}
+
+.profile-card {
+    padding: 20px;
+    border: 1px solid var(--border);
+    background: var(--sky-light);
+    text-align: center;
+}
+
+.profile-card-image {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.profile-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.profile-card h3 {
+    color: var(--blue-dark);
+    font-size: 18px;
+}
+
+.profile-card p {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.values-section {
+    padding: 100px 0;
+    background: #f7fcfe;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    padding: 30px;
+    background: white;
+    border: 1px solid var(--border);
+}
+
+.value-number {
+    color: var(--blue-medium);
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.value-card h3 {
+    color: var(--blue-dark);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.value-card p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.timeline-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 175px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--sky);
+}
+
+.timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 150px 50px 1fr;
+    gap: 15px;
+    min-height: 150px;
+}
+
+.timeline-year {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 800;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.timeline-dot {
+    position: relative;
+    z-index: 2;
+    width: 14px;
+    height: 14px;
+    margin: 5px auto;
+    border: 3px solid white;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 3px var(--sky);
+}
+
+.timeline-content {
+    padding: 0 0 45px;
+}
+
+.timeline-role {
+    color: var(--blue);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.timeline-content h2 {
+    color: var(--blue-dark);
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 5px 0;
+}
+
+.timeline-content p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.journey-highlight {
+    padding: 95px 20px;
+    background: var(--blue-dark);
+}
+
+.journey-highlight h2 {
+    color: white;
+    font-size: clamp(26px, 4vw, 43px);
+    margin: 8px 0;
+}
+
+.journey-highlight h2:last-child {
+    color: var(--blue-medium);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    min-height: 280px;
+    padding: 30px 25px;
+    border: 1px solid var(--border);
+    background: white;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--blue-medium);
+    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    background: var(--sky-light);
+    border-radius: 13px;
+}
+
+.feature-card h3 {
+    color: var(--blue-dark);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.honor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 950px;
+    margin: auto;
+}
+
+.honor-card {
+    padding: 35px;
+    text-align: center;
+    border: 1px solid var(--border);
+    background: white;
+    transition: 0.3s ease;
+}
+
+.honor-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 40px rgba(18, 59, 93, 0.09);
+}
+
+.honor-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--blue);
+    background: var(--sky-light);
+    font-size: 23px;
+}
+
+.honor-card h3 {
+    color: var(--blue-dark);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.honor-card p {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.contact-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.contact-information h2 {
+    color: var(--blue-dark);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.contact-information > p {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    background: var(--sky-light);
+    border-radius: 10px;
+}
+
+.contact-item span {
+    display: block;
+    color: var(--text-light);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-item a,
+.contact-item p {
+    color: var(--blue-dark);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.contact-social {
+    display: flex;
+    gap: 9px;
+    margin-top: 30px;
+}
+
+.contact-social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue-dark);
+    background: var(--sky-light);
+    border-radius: 50%;
+}
+
+.contact-social a:hover {
+    color: white;
+    background: var(--blue);
+}
+
+.contact-form-wrapper {
+    padding: 35px;
+    background: var(--sky-light);
+    border: 1px solid var(--border);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--blue-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    outline: none;
+    background: white;
+    color: var(--text);
+    font-size: 14px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(28, 120, 168, 0.08);
+}
+
+.form-message {
+    margin-top: 15px;
+    color: var(--blue);
+    font-size: 13px;
+}
+
+.site-footer {
+    background: white;
+    border-top: 1px solid var(--border);
+}
+
+.footer-container {
+    width: min(1180px, 90%);
+    margin: auto;
+    padding: 55px 0;
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 0.5fr;
+    gap: 45px;
+}
+
+.footer-brand h3 {
+    color: var(--blue-dark);
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+.footer-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.footer-navigation a {
+    color: var(--text-light);
+    font-size: 12px;
+}
+
+.footer-navigation a:hover {
+    color: var(--blue);
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.footer-social a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--blue-dark);
+    background: var(--sky-light);
+}
+
+.footer-social a:hover {
+    color: white;
+    background: var(--blue);
+}
+
+.footer-bottom {
+    padding: 18px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.footer-bottom p {
+    color: var(--text-light);
+    font-size: 11px;
+}
+
 
 /* =========================================================
-   21. RESPONSIVE — TABLET
-   ========================================================= */
+   RESPONSIVE — UP TO 1200px
+========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
 
-    header .container,
-    .site-header .container,
-    .navbar .container {
-        width: calc(100% - 50px);
+    .header-container {
+        width: 94%;
     }
 
-    nav,
-    .nav-links {
-        gap: 20px;
+    .nav-link {
+        padding-left: 7px;
+        padding-right: 7px;
+        font-size: 11px;
     }
 
-    nav a,
-    .nav-links a {
-        font-size: 13px;
+    .hero-container {
+        gap: 35px;
     }
 
-    .about-page .about-content {
-        grid-template-columns:
-            minmax(0, 1fr)
-            minmax(320px, 0.8fr);
-
-        gap: 45px;
+    .hero-content h1 {
+        font-size: clamp(42px, 5.5vw, 62px);
     }
 
-    .about-page .about-photo-frame {
-        max-width: 410px;
+    .hero-image-background {
+        width: 410px;
+        height: 500px;
+    }
+
+    .hero-image-frame {
+        width: 370px;
+        height: 490px;
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 
 /* =========================================================
-   22. RESPONSIVE — MOBILE
-   ========================================================= */
+   RESPONSIVE — UP TO 950px
+========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
 
-    :root {
-        --header-height: 75px;
-    }
-
-    header,
-    .site-header,
-    .navbar {
-        min-height: 75px;
-    }
-
-    header .container,
-    .site-header .container,
-    .navbar .container {
-        width: calc(100% - 35px);
-    }
-
-    .logo,
-    .site-logo,
-    .brand {
-        font-size: 18px;
-    }
-
-    nav,
-    .nav-links {
-        display: none;
+    .header-container {
+        min-height: 72px;
     }
 
     .menu-toggle {
         display: block;
     }
 
+    .main-navigation {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 30px rgba(18, 59, 93, 0.08);
+    }
+
+    .main-navigation.open {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 13px 15px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: var(--sky-light);
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .social-links {
+        gap: 5px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 125px 0 70px;
+    }
+
+    .hero-container {
+        width: min(850px, 90%);
+        min-height: auto;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 55px;
+    }
+
+    .hero-content {
+        order: 1;
+    }
+
+    .hero-image-area {
+        order: 2;
+    }
+
+    .hero-eyebrow {
+        font-size: 15px;
+        letter-spacing: 1.8px;
+        margin-bottom: 16px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(42px, 7vw, 58px);
+        line-height: 1.08;
+        letter-spacing: -1.2px;
+    }
+
+    .hero-content h2 {
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .hero-description {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image-area {
+        min-height: 520px;
+    }
+
+    .hero-image-background {
+        width: 390px;
+        height: 480px;
+    }
+
+    .hero-image-frame {
+        width: 355px;
+        height: 470px;
+    }
+
+    .experience-across-section {
+        padding: 75px 0;
+    }
+
+    .experience-tags {
+        gap: 12px;
+    }
+
+    .experience-tag {
+        min-width: 160px;
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 340px;
+        margin: auto;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — UP TO 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+    body {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .section-container,
+    .content-container {
+        width: 90%;
+    }
+
+    .header-container {
+        width: 92%;
+        min-height: 68px;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
     .social-links {
         display: none;
     }
 
-    .contact-btn,
-    .btn-contact {
-        min-height: 42px;
-        padding: 0 18px;
+    .contact-button {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .main-navigation {
+        top: 68px;
+    }
+
+    .hero-section {
+        padding: 105px 0 55px;
+    }
+
+    .hero-container {
+        width: 90%;
+        gap: 40px;
+    }
+
+    .hero-eyebrow {
         font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: 1.4px;
+        margin-bottom: 14px;
     }
 
-
-    /* ABOUT */
-
-    .about-page .about-hero {
-        min-height: 430px;
-        padding: 70px 0;
+    .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.1;
+        letter-spacing: -0.8px;
+        margin-bottom: 18px;
     }
 
-    .about-page .about-hero-inner {
-        width: calc(100% - 40px);
+    .hero-content h2 {
+        justify-content: center;
+        gap: 6px;
+        font-size: 12px;
+        line-height: 1.6;
+        letter-spacing: 0.8px;
+        margin-bottom: 20px;
     }
 
-    .about-page .about-hero h1 {
-        font-size: 48px;
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.8;
+        max-width: 100%;
     }
 
-    .about-page .about-hero p {
-        font-size: 16px;
+    .hero-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 25px;
     }
 
-    .about-page .about-content {
-        width: calc(100% - 40px);
+    .primary-button,
+    .secondary-button {
+        padding: 11px 18px;
+        font-size: 12px;
+    }
 
-        grid-template-columns: 1fr;
+    .hero-image-area {
+        min-height: 450px;
+    }
 
-        gap: 50px;
+    .hero-image-background {
+        width: 315px;
+        height: 395px;
+    }
 
+    .hero-image-frame {
+        width: 295px;
+        height: 390px;
+        border-width: 8px;
+        border-radius: 170px 170px 30px 30px;
+    }
+
+    .image-caption {
+        left: 0;
+        bottom: 10px;
+        padding: 12px 16px;
+    }
+
+    .image-caption strong {
+        font-size: 12px;
+    }
+
+    .image-caption span {
+        font-size: 9px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+        line-height: 1.15;
+        margin-bottom: 14px;
+    }
+
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 1.8px;
+        margin-bottom: 10px;
+    }
+
+    .experience-across-section {
         padding: 65px 0;
     }
 
-    .about-page .about-photo {
-        justify-content: center;
-
-        order: 2;
-    }
-
-    .about-page .about-text {
-        order: 1;
-    }
-
-    .about-page .about-photo-frame {
-        max-width: 500px;
-    }
-
-    .about-page .about-highlights {
-        width: calc(100% - 40px);
-
+    .experience-tags {
+        display: grid;
         grid-template-columns: 1fr;
-
-        padding-bottom: 65px;
+        gap: 10px;
     }
 
-
-    /* OTHER PAGES */
-
-    .page-hero,
-    .inner-hero,
-    .experience-hero {
-        min-height: 430px;
+    .experience-tag {
+        width: 100%;
+        min-width: 0;
+        padding: 14px 16px;
+        font-size: 12px;
     }
 
-    .page-hero h1,
-    .inner-hero h1 {
-        font-size: 50px;
+    .leadership-statement-section {
+        padding: 70px 20px;
     }
 
-    .page-hero p,
-    .inner-hero p {
+    .statement-container {
+        width: 92%;
+    }
+
+    .statement-small {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+
+    .statement-container h2 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .statement-container > p:last-child {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .journey-section {
+        padding: 70px 0;
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .journey-card {
+        min-height: auto;
+        padding: 24px 20px;
+    }
+
+    .journey-card h3 {
         font-size: 17px;
     }
-}
 
-
-/* =========================================================
-   23. SMALL MOBILE
-   ========================================================= */
-
-@media (max-width: 520px) {
-
-    .container {
-        width: calc(100% - 30px);
+    .journey-card p {
+        font-size: 13px;
     }
 
-    .about-page .about-content {
-        width: calc(100% - 30px);
+    .closing-section,
+    .simple-statement {
+        padding: 65px 20px;
     }
 
-    .about-page .about-highlights {
-        width: calc(100% - 30px);
+    .closing-container {
+        width: 92%;
     }
 
-    .about-page .about-hero-inner {
-        width: calc(100% - 30px);
+    .closing-container p {
+        font-size: 16px;
     }
 
-    .about-page .about-hero h1 {
+    .closing-container h2 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+    }
+
+    .page-hero {
+        padding: 125px 20px 65px;
+    }
+
+    .page-hero-container {
+        width: 92%;
+    }
+
+    .page-hero h1 {
         font-size: 40px;
+        line-height: 1.1;
+        margin-bottom: 15px;
     }
 
-    .about-page .about-eyebrow {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-
-    .about-page .about-text h2 {
-        font-size: 28px;
-    }
-
-    .about-page .about-list li {
+    .page-hero p:last-child {
         font-size: 14px;
-        padding-left: 28px;
-        margin-bottom: 13px;
+        line-height: 1.8;
     }
 
-    .about-page .about-photo-frame {
-        padding: 8px;
-        border-radius: 14px;
+    .content-section {
+        padding: 70px 0;
     }
 
-    .about-page .about-photo-frame img {
-        border-radius: 9px;
+    .content-main p {
+        font-size: 14px;
+        line-height: 1.85;
+        margin-bottom: 20px;
+    }
+
+    .profile-card {
+        padding: 16px;
+    }
+
+    .profile-card-image {
+        height: 300px;
+    }
+
+    .values-section {
+        padding: 70px 0;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .value-card {
+        padding: 24px;
+    }
+
+    .value-number {
+        font-size: 30px;
+    }
+
+    .value-card h3 {
+        font-size: 18px;
+    }
+
+    .timeline-section {
+        padding: 70px 0;
+    }
+
+    .timeline {
+        width: 100%;
+    }
+
+    .timeline::before {
+        left: 7px;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        gap: 12px;
+        min-height: auto;
+    }
+
+    .timeline-year {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
+
+    .timeline-dot {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        width: 13px;
+        height: 13px;
+        margin-top: 4px;
+    }
+
+    .timeline-content {
+        grid-column: 2;
+        grid-row: 2;
+        padding-bottom: 35px;
+    }
+
+    .timeline-role {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .timeline-content h2 {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .timeline-content p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .journey-highlight {
+        padding: 70px 20px;
+    }
+
+    .journey-highlight h2 {
+        font-size: 29px;
+        line-height: 1.2;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .feature-card {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .feature-icon {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+        font-size: 18px;
+    }
+
+    .feature-card p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .honor-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .honor-card {
+        padding: 28px 20px;
+    }
+
+    .honor-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 21px;
+    }
+
+    .honor-card h3 {
+        font-size: 19px;
+    }
+
+    .honor-card p {
+        font-size: 13px;
+    }
+
+    .contact-section {
+        padding: 70px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact-information h2 {
+        font-size: 34px;
+    }
+
+    .contact-information > p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .contact-item {
+        gap: 12px;
+        margin: 17px 0;
+    }
+
+    .contact-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 17px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 13px;
+        font-size: 13px;
+    }
+
+    .contact-form-wrapper {
+        padding: 22px 18px;
+    }
+
+    .site-footer {
+        text-align: left;
+    }
+
+    .footer-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 45px 0;
+    }
+
+    .footer-navigation {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .footer-navigation a {
+        font-size: 12px;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        padding: 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+        line-height: 1.6;
     }
 }
 
 
 /* =========================================================
-   24. ACCESSIBILITY
-   ========================================================= */
+   VERY SMALL PHONES — UP TO 400px
+========================================================= */
 
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid rgba(22, 131, 189, 0.35);
-    outline-offset: 3px;
-}
+@media (max-width: 400px) {
 
-
-/* =========================================================
-   25. REDUCE MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
+    .header-container {
+        width: 94%;
     }
 
-    *,
-    *::before,
-    *::after {
-        transition: none !important;
-        animation: none !important;
+    .contact-button {
+        padding: 8px 11px;
+        font-size: 10px;
+    }
+
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
+    .hero-eyebrow {
+        font-size: 12px;
+        letter-spacing: 1.1px;
+    }
+
+    .hero-content h2 {
+        font-size: 11px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-image-area {
+        min-height: 410px;
+    }
+
+    .hero-image-background {
+        width: 280px;
+        height: 355px;
+    }
+
+    .hero-image-frame {
+        width: 260px;
+        height: 350px;
+    }
+
+    .image-caption {
+        padding: 10px 13px;
+    }
+
+    .image-caption strong {
+        font-size: 11px;
+    }
+
+    .image-caption span {
+        font-size: 8px;
+    }
+
+    .primary-button,
+    .secondary-button {
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+    .page-hero h1 {
+        font-size: 34px;
+    }
+
+    .statement-container h2 {
+        font-size: 30px;
+    }
+
+    .journey-highlight h2 {
+        font-size: 27px;
+    }
+
+    .footer-navigation {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   ABOUT ME PAGE — PAGE-SPECIFIC CORRECTION ONLY
+   Keeps Home / Experience / Learning / Community / Honor /
+   Contact styling unchanged.
+========================================================= */
+
+/* About page: balanced two-column layout */
+body:has(.content-main) .content-section {
+    padding: 115px 0 95px;
+    background: #ffffff;
+}
+
+body:has(.content-main) .content-container {
+    width: min(1180px, 88%);
+    margin: 0 auto;
+}
+
+body:has(.content-main) .content-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(300px, 0.85fr);
+    gap: 70px;
+    align-items: center;
+}
+
+/* About text: smaller, cleaner and easier to read */
+body:has(.content-main) .content-main {
+    min-width: 0;
+}
+
+body:has(.content-main) .content-main p {
+    margin: 0 0 15px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+body:has(.content-main) .content-main ul,
+body:has(.content-main) .content-main ol {
+    margin: 8px 0 20px 20px;
+    padding-left: 18px;
+    color: var(--text);
+}
+
+body:has(.content-main) .content-main li {
+    margin-bottom: 7px;
+    padding-left: 4px;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+body:has(.content-main) .content-main li::marker {
+    color: var(--blue);
+}
+
+body:has(.content-main) .content-main strong {
+    color: var(--blue-dark);
+    font-weight: 700;
+}
+
+/* About photo: always stays on the right on desktop */
+body:has(.content-main) .profile-card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 0 0 auto;
+    padding: 14px;
+    background: #f7fcfe;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 18px 45px rgba(18, 59, 93, 0.08);
+}
+
+body:has(.content-main) .profile-card-image {
+    width: 100%;
+    height: 430px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background: #eefaff;
+}
+
+body:has(.content-main) .profile-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+}
+
+body:has(.content-main) .profile-card h3 {
+    margin: 2px 0 3px;
+    color: var(--blue-dark);
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+body:has(.content-main) .profile-card p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* If the About heading uses page-hero, keep it visually identical
+   to the other inner pages. */
+body:has(.content-main) .page-hero {
+    padding: 145px 20px 70px;
+}
+
+body:has(.content-main) .page-hero-container {
+    width: min(1000px, 88%);
+}
+
+body:has(.content-main) .page-hero h1 {
+    font-size: clamp(38px, 5vw, 58px);
+}
+
+/* About values/principles section */
+body:has(.content-main) .values-section {
+    padding: 90px 0;
+    background: #f7fcfe;
+}
+
+body:has(.content-main) .values-grid {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+}
+
+body:has(.content-main) .value-card {
+    padding: 26px;
+}
+
+body:has(.content-main) .value-number {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+body:has(.content-main) .value-card h3 {
+    font-size: 18px;
+}
+
+body:has(.content-main) .value-card p {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* About page — desktop/tablet */
+@media (max-width: 950px) {
+    body:has(.content-main) .content-section {
+        padding: 100px 0 75px;
+    }
+
+    body:has(.content-main) .content-grid {
+        grid-template-columns: 1fr 300px;
+        gap: 40px;
+        align-items: start;
+    }
+
+    body:has(.content-main) .content-main p,
+    body:has(.content-main) .content-main li {
+        font-size: 13.5px;
+    }
+
+    body:has(.content-main) .profile-card {
+        max-width: 300px;
+    }
+
+    body:has(.content-main) .profile-card-image {
+        height: 360px;
+    }
+}
+
+/* About page — mobile: content first, photo below */
+@media (max-width: 650px) {
+    body:has(.content-main) .content-section {
+        padding: 80px 0 60px;
+    }
+
+    body:has(.content-main) .content-container {
+        width: 90%;
+    }
+
+    body:has(.content-main) .content-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        align-items: start;
+    }
+
+    body:has(.content-main) .content-main p,
+    body:has(.content-main) .content-main li {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    body:has(.content-main) .content-main ul,
+    body:has(.content-main) .content-main ol {
+        margin-left: 16px;
+        padding-left: 16px;
+    }
+
+    body:has(.content-main) .profile-card {
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+        padding: 12px;
+    }
+
+    body:has(.content-main) .profile-card-image {
+        height: 380px;
+    }
+
+    body:has(.content-main) .values-section {
+        padding: 65px 0;
+    }
+
+    body:has(.content-main) .values-grid {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    body:has(.content-main) .content-main p,
+    body:has(.content-main) .content-main li {
+        font-size: 12.5px;
+    }
+
+    body:has(.content-main) .profile-card-image {
+        height: 340px;
     }
 }
