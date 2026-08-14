@@ -1,12 +1,10 @@
 /* =========================================================
    ADV. ACHUT POUDEL — PERSONAL WEBSITE
    COMPLETE STYLE.CSS
-   Blue & White Professional Executive Design
    ========================================================= */
 
-
 /* =========================================================
-   1. GLOBAL RESET
+   1. RESET
    ========================================================= */
 
 * {
@@ -20,9 +18,9 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
     background: #ffffff;
-    color: #123f63;
+    color: #123b5d;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -33,36 +31,75 @@ img {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
 button,
-a {
-    -webkit-tap-highlight-color: transparent;
+input,
+textarea {
+    font: inherit;
 }
 
 
 /* =========================================================
-   2. MAIN HEADER / NAVIGATION
+   2. GLOBAL VARIABLES
+   ========================================================= */
+
+:root {
+    --navy: #123f63;
+    --navy-dark: #0d3555;
+    --blue: #1683bd;
+    --blue-light: #eaf7fc;
+    --blue-soft: #f3fbfe;
+    --white: #ffffff;
+    --border: #d9eaf2;
+
+    --container: 1180px;
+    --header-height: 90px;
+
+    --shadow-soft: 0 10px 35px rgba(18, 63, 99, 0.08);
+}
+
+
+/* =========================================================
+   3. COMMON CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(var(--container), calc(100% - 80px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   4. HEADER / NAVIGATION
+   SAME STYLE FOR ALL PAGES
    ========================================================= */
 
 header,
 .site-header,
 .navbar {
     width: 100%;
-    min-height: 88px;
+    min-height: var(--header-height);
     background: #ffffff;
-    border-bottom: 1px solid #dceaf2;
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+header .container,
+.site-header .container,
+.navbar .container {
+    width: min(1380px, calc(100% - 90px));
+    margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 48px;
-
-    position: relative;
-    z-index: 1000;
 }
 
 
@@ -73,7 +110,7 @@ header,
 .brand {
     font-size: 20px;
     font-weight: 500;
-    color: #123f63;
+    color: var(--navy);
     white-space: nowrap;
 }
 
@@ -92,13 +129,11 @@ nav a,
 .nav-links a {
     position: relative;
 
+    color: var(--navy);
     font-size: 14px;
     font-weight: 700;
-    color: #123f63;
 
-    padding: 30px 0 24px;
-
-    white-space: nowrap;
+    padding: 33px 0 25px;
 
     transition:
         color 0.25s ease,
@@ -107,15 +142,12 @@ nav a,
 
 nav a:hover,
 .nav-links a:hover {
-    color: #1681bd;
+    color: var(--blue);
 }
-
-
-/* Active navigation */
 
 nav a.active,
 .nav-links a.active {
-    color: #1681bd;
+    color: var(--blue);
 }
 
 nav a.active::after,
@@ -125,17 +157,15 @@ nav a.active::after,
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 15px;
+    bottom: 18px;
 
     height: 3px;
-
-    background: #1681bd;
-    border-radius: 3px;
+    background: var(--blue);
 }
 
 
 /* =========================================================
-   3. HEADER SOCIAL ICONS
+   5. SOCIAL ICONS
    ========================================================= */
 
 .social-links {
@@ -148,14 +178,14 @@ nav a.active::after,
     width: 40px;
     height: 40px;
 
-    border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: #eef8fc;
-    color: #123f63;
+    border-radius: 50%;
+
+    background: #eef9fd;
+    color: var(--navy);
 
     font-size: 16px;
     font-weight: 700;
@@ -167,14 +197,14 @@ nav a.active::after,
 }
 
 .social-links a:hover {
-    background: #123f63;
+    background: var(--blue);
     color: #ffffff;
     transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   4. CONTACT BUTTON
+   6. CONTACT BUTTON
    ========================================================= */
 
 .contact-btn,
@@ -183,13 +213,12 @@ nav a.active::after,
     align-items: center;
     justify-content: center;
 
-    margin-left: 10px;
+    min-height: 48px;
+    padding: 0 25px;
 
-    padding: 14px 25px;
+    border-radius: 28px;
 
-    border-radius: 30px;
-
-    background: #123f63;
+    background: var(--navy);
     color: #ffffff;
 
     font-size: 14px;
@@ -197,208 +226,296 @@ nav a.active::after,
 
     transition:
         background 0.25s ease,
-        transform 0.25s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .contact-btn:hover,
 .btn-contact:hover {
-    background: #1681bd;
+    background: var(--blue);
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(22, 131, 189, 0.20);
 }
 
 
 /* =========================================================
-   5. GENERAL PAGE CONTAINER
-   ========================================================= */
-
-.page-container,
-.section-container,
-.container {
-    width: min(1200px, calc(100% - 120px));
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   6. GENERAL PAGE HERO
+   7. GENERAL PAGE HERO
+   Used by Experience / Learning / Community / Honor
    ========================================================= */
 
 .page-hero,
-.inner-hero {
+.inner-hero,
+.experience-hero {
     min-height: 535px;
 
     display: flex;
-    flex-direction: column;
-
     align-items: center;
     justify-content: center;
 
     text-align: center;
 
-    padding: 80px 30px;
-
     background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(22, 131, 189, 0.08),
+            transparent 40%
+        ),
         linear-gradient(
-            110deg,
+            135deg,
             #eefaff 0%,
-            #eaf8fd 55%,
-            #dff4fb 100%
+            #e9f7fc 50%,
+            #f8fdff 100%
         );
 
-    border-bottom: 1px solid #d3eaf3;
+    border-bottom: 1px solid var(--border);
 }
 
-.page-hero .eyebrow,
-.inner-hero .eyebrow {
-    margin-bottom: 12px;
+.page-hero-content,
+.inner-hero-content {
+    width: min(1000px, calc(100% - 60px));
+    margin: 0 auto;
+}
 
-    font-size: 20px;
+.eyebrow,
+.page-label {
+    margin-bottom: 10px;
+
+    color: #53748d;
+
+    font-size: 15px;
     font-weight: 800;
 
     letter-spacing: 3px;
-
-    color: #5a7890;
+    text-transform: uppercase;
 }
 
 .page-hero h1,
 .inner-hero h1 {
-    max-width: 800px;
+    color: var(--navy);
 
-    font-size: clamp(58px, 6vw, 82px);
+    font-size: clamp(56px, 6vw, 82px);
     line-height: 1.05;
-
     font-weight: 800;
 
-    color: #123f63;
-
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .page-hero h1 span,
 .inner-hero h1 span {
-    color: #1681bd;
+    color: var(--blue);
 }
 
 .page-hero p,
 .inner-hero p {
-    max-width: 850px;
+    max-width: 900px;
+    margin: 0 auto;
+
+    color: #426984;
 
     font-size: 20px;
     line-height: 1.7;
-
-    color: #52728b;
 }
 
 
 /* =========================================================
-   7. ABOUT ME PAGE
+   8. GENERAL SECTION
    ========================================================= */
 
-.about-section {
+section {
     width: 100%;
+}
 
-    padding: 90px 0 110px;
+.section {
+    padding: 100px 0;
+}
 
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title .eyebrow {
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    color: var(--navy);
+
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   9. ABOUT ME PAGE
+   IMPORTANT:
+   Everything below is scoped to About Me.
+   It prevents About from breaking the other pages.
+   ========================================================= */
+
+
+/* Main About wrapper */
+
+.about-page {
+    width: 100%;
     background: #ffffff;
 }
 
 
-/* About page main wrapper */
+/* About hero */
 
-.about-container {
-    width: min(1200px, calc(100% - 140px));
+.about-page .about-hero {
+    min-height: 535px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 90px 0;
+
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(22, 131, 189, 0.09),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #eefaff 0%,
+            #eaf8fd 50%,
+            #ffffff 100%
+        );
+
+    border-bottom: 1px solid var(--border);
+}
+
+.about-page .about-hero-inner {
+    width: min(1050px, calc(100% - 80px));
+    margin: 0 auto;
+}
+
+.about-page .about-eyebrow {
+    color: #53748d;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.about-page .about-hero h1 {
+    color: var(--navy);
+
+    font-size: clamp(52px, 6vw, 78px);
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+.about-page .about-hero h1 span {
+    color: var(--blue);
+}
+
+.about-page .about-hero p {
+    max-width: 900px;
+    margin: 0 auto;
+
+    color: #426984;
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   10. ABOUT CONTENT
+   LEFT TEXT + RIGHT PHOTO
+   ========================================================= */
+
+.about-page .about-content {
+    width: min(1180px, calc(100% - 80px));
 
     margin: 0 auto;
 
+    padding: 95px 0;
+
     display: grid;
 
-    grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+    grid-template-columns:
+        minmax(0, 1.08fr)
+        minmax(360px, 0.92fr);
 
-    gap: 80px;
+    gap: 75px;
 
     align-items: center;
 }
 
 
-/* =========================================================
-   8. ABOUT LEFT CONTENT
-   ========================================================= */
+/* LEFT SIDE */
 
-.about-content {
+.about-page .about-text {
     min-width: 0;
 }
 
-.about-content .eyebrow {
-    display: block;
+.about-page .about-text h2 {
+    color: var(--navy);
 
-    margin-bottom: 12px;
-
-    font-size: 14px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
-    color: #1681bd;
-}
-
-.about-content h1,
-.about-content h2 {
-    margin-bottom: 18px;
-
-    color: #123f63;
-
-    font-size: clamp(42px, 4vw, 58px);
-
-    line-height: 1.1;
+    font-size: 34px;
+    line-height: 1.2;
 
     font-weight: 800;
+
+    margin-bottom: 25px;
 }
 
-.about-content > p {
-    margin-bottom: 28px;
+.about-page .about-intro {
+    color: #486b82;
 
-    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.8;
 
-    font-size: 17px;
+    margin-bottom: 30px;
 
-    line-height: 1.75;
-
-    color: #4c6b82;
+    max-width: 700px;
 }
 
 
-/* =========================================================
-   9. ABOUT BULLET LIST
-   ========================================================= */
+/* Bullet list */
 
-.about-list {
+.about-page .about-list {
     list-style: none;
 
-    margin: 25px 0 32px;
-
     padding: 0;
+    margin: 0;
 }
 
-.about-list li {
+.about-page .about-list li {
     position: relative;
 
-    margin-bottom: 14px;
+    padding-left: 34px;
+    margin-bottom: 16px;
 
-    padding-left: 32px;
+    color: #234c68;
 
-    font-size: 15.5px;
-
+    font-size: 15px;
     line-height: 1.65;
-
-    color: #234f70;
 }
 
-.about-list li::before {
+.about-page .about-list li::before {
     content: "";
 
     position: absolute;
 
-    left: 0;
+    left: 5px;
     top: 10px;
 
     width: 8px;
@@ -406,283 +523,289 @@ nav a.active::after,
 
     border-radius: 50%;
 
-    background: #1681bd;
+    background: var(--blue);
 }
 
-.about-list li strong {
-    color: #123f63;
-    font-weight: 800;
+.about-page .about-list strong {
+    color: var(--navy);
+    font-weight: 750;
 }
 
 
 /* =========================================================
-   10. ABOUT NAME / DESIGNATION
+   11. ABOUT SIGNATURE
    ========================================================= */
 
-.about-signature {
+.about-page .about-signature {
     margin-top: 32px;
+    padding-top: 24px;
 
-    padding-top: 22px;
-
-    border-top: 1px solid #dceaf2;
+    border-top: 1px solid var(--border);
 }
 
-.about-signature h3 {
-    margin-bottom: 5px;
+.about-page .about-signature h3 {
+    color: var(--navy);
 
-    font-size: 22px;
-
-    color: #123f63;
-
+    font-size: 23px;
     font-weight: 800;
+
+    margin-bottom: 5px;
 }
 
-.about-signature p {
+.about-page .about-signature p {
+    color: #4b6d82;
+
     font-size: 15px;
-
-    color: #4d718a;
-
     letter-spacing: 0.3px;
 }
 
 
 /* =========================================================
-   11. ABOUT PHOTO — RIGHT SIDE
+   12. ABOUT PHOTO — RIGHT SIDE
    ========================================================= */
 
-.about-image {
+.about-page .about-photo {
     width: 100%;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-.about-image img {
+.about-page .about-photo-frame {
     width: 100%;
-    max-width: 500px;
+    max-width: 480px;
 
-    height: 620px;
+    position: relative;
+
+    padding: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #dcebf2;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(18, 63, 99, 0.13);
+}
+
+.about-page .about-photo-frame::before {
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    right: -10px;
+
+    width: 80px;
+    height: 80px;
+
+    border-top: 4px solid var(--blue);
+    border-right: 4px solid var(--blue);
+
+    border-radius: 0 18px 0 0;
+
+    pointer-events: none;
+}
+
+.about-page .about-photo-frame img {
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
 
     object-fit: cover;
 
-    border-radius: 2px;
-
-    box-shadow:
-        0 20px 50px rgba(18, 63, 99, 0.12);
-
-    border: 1px solid #e0edf3;
-}
-
-
-/* If your HTML uses .about-photo */
-
-.about-photo {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-}
-
-.about-photo img {
-    width: 100%;
-    max-width: 500px;
-
-    height: 620px;
-
-    object-fit: cover;
-
-    border-radius: 2px;
-
-    box-shadow:
-        0 20px 50px rgba(18, 63, 99, 0.12);
+    border-radius: 13px;
 }
 
 
 /* =========================================================
-   12. EXPERIENCE PAGE
+   13. ABOUT HIGHLIGHT STRIP
    ========================================================= */
 
-.experience-hero {
-    min-height: 535px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 80px 30px;
-
-    background:
-        linear-gradient(
-            110deg,
-            #eefaff 0%,
-            #e8f7fc 55%,
-            #dff4fb 100%
-        );
-
-    border-bottom: 1px solid #d3eaf3;
-}
-
-.experience-hero .eyebrow {
-    font-size: 20px;
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
-    color: #5b7890;
-
-    margin-bottom: 10px;
-}
-
-.experience-hero h1 {
-    font-size: clamp(60px, 6vw, 82px);
-
-    line-height: 1.05;
-
-    color: #123f63;
-
-    font-weight: 800;
-
-    max-width: 700px;
-
-    margin-bottom: 25px;
-}
-
-.experience-hero h1 span {
-    color: #1681bd;
-}
-
-.experience-hero p {
-    max-width: 850px;
-
-    font-size: 19px;
-
-    line-height: 1.8;
-
-    color: #52728b;
-}
-
-
-/* =========================================================
-   13. GENERAL CONTENT SECTIONS
-   ========================================================= */
-
-.content-section {
-    width: min(1200px, calc(100% - 140px));
+.about-page .about-highlights {
+    width: min(1180px, calc(100% - 80px));
 
     margin: 0 auto;
 
-    padding: 90px 0;
-}
+    padding: 0 0 100px;
 
-.content-section h2 {
-    margin-bottom: 20px;
-
-    color: #123f63;
-
-    font-size: 42px;
-
-    font-weight: 800;
-}
-
-.content-section p {
-    max-width: 850px;
-
-    font-size: 17px;
-
-    line-height: 1.8;
-
-    color: #52728b;
-}
-
-
-/* =========================================================
-   14. CARDS
-   ========================================================= */
-
-.card-grid {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 28px;
+    gap: 22px;
 }
 
-.card {
-    padding: 32px;
+.about-page .about-highlight {
+    padding: 28px;
 
-    background: #ffffff;
+    background: #f5fbfe;
 
-    border: 1px solid #dceaf2;
+    border: 1px solid #dcecf3;
 
-    border-radius: 8px;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+    border-radius: 14px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.about-page .about-highlight h3 {
+    color: var(--navy);
 
-    box-shadow:
-        0 15px 35px rgba(18, 63, 99, 0.10);
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
-.card h3 {
-    margin-bottom: 10px;
+.about-page .about-highlight p {
+    color: #537287;
 
-    font-size: 21px;
-
-    color: #123f63;
-}
-
-.card p {
-    font-size: 15px;
-
-    color: #58758b;
-
+    font-size: 14px;
     line-height: 1.7;
 }
 
 
 /* =========================================================
-   15. FOOTER
+   14. GENERAL CARDS
    ========================================================= */
 
-footer {
-    width: 100%;
+.card {
+    background: #ffffff;
 
-    padding: 45px 30px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
 
-    text-align: center;
+    box-shadow: var(--shadow-soft);
 
-    background: #123f63;
-
-    color: #ffffff;
-}
-
-footer p {
-    font-size: 14px;
-
-    color: #dcecf5;
+    padding: 30px;
 }
 
 
 /* =========================================================
-   16. MOBILE NAVIGATION
+   15. EXPERIENCE PAGE
+   ========================================================= */
+
+.experience-page {
+    width: 100%;
+    background: #ffffff;
+}
+
+.experience-page .experience-hero {
+    min-height: 535px;
+}
+
+.experience-content {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+
+/* =========================================================
+   16. LEARNING & DEVELOPMENT
+   ========================================================= */
+
+.learning-page {
+    background: #ffffff;
+}
+
+.learning-content {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+
+/* =========================================================
+   17. COMMUNITY ENGAGEMENT
+   ========================================================= */
+
+.community-page {
+    background: #ffffff;
+}
+
+.community-content {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+
+/* =========================================================
+   18. HONOR PAGE
+   ========================================================= */
+
+.honor-page {
+    background: #ffffff;
+}
+
+.honor-content {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+
+    padding: 90px 0;
+}
+
+
+/* =========================================================
+   19. FOOTER
+   ========================================================= */
+
+footer,
+.site-footer {
+    width: 100%;
+
+    padding: 50px 0;
+
+    background: var(--navy);
+
+    color: #ffffff;
+}
+
+footer .container,
+.site-footer .container {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+footer p,
+.site-footer p {
+    color: #d9edf7;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   20. MOBILE MENU
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--navy);
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   21. RESPONSIVE — TABLET
    ========================================================= */
 
 @media (max-width: 1100px) {
 
-    header,
-    .site-header,
-    .navbar {
-        padding: 0 28px;
+    header .container,
+    .site-header .container,
+    .navbar .container {
+        width: calc(100% - 50px);
     }
 
     nav,
@@ -695,339 +818,218 @@ footer p {
         font-size: 13px;
     }
 
-    .about-container {
-        width: min(1100px, calc(100% - 80px));
-
-        grid-template-columns: 1fr 0.9fr;
+    .about-page .about-content {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(320px, 0.8fr);
 
         gap: 45px;
     }
-}
 
-
-/* =========================================================
-   17. TABLET
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-    header,
-    .site-header,
-    .navbar {
-        min-height: auto;
-
-        padding: 22px 25px;
-
-        flex-wrap: wrap;
-
-        gap: 18px;
-    }
-
-    nav,
-    .nav-links {
-        order: 3;
-
-        width: 100%;
-
-        justify-content: center;
-
-        flex-wrap: wrap;
-
-        gap: 18px;
-    }
-
-    nav a,
-    .nav-links a {
-        padding: 8px 0;
-    }
-
-    nav a.active::after,
-    .nav-links a.active::after {
-        bottom: 0;
-    }
-
-    .social-links {
-        margin-left: auto;
-    }
-
-    .about-container {
-        width: min(760px, calc(100% - 60px));
-
-        grid-template-columns: 1fr;
-
-        gap: 55px;
-    }
-
-    .about-content {
-        text-align: left;
-    }
-
-    .about-image,
-    .about-photo {
-        order: 2;
-    }
-
-    .about-image img,
-    .about-photo img {
-        height: 550px;
-
-        max-width: 600px;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr 1fr;
+    .about-page .about-photo-frame {
+        max-width: 410px;
     }
 }
 
 
 /* =========================================================
-   18. MOBILE
+   22. RESPONSIVE — MOBILE
    ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
 
-    body {
-        font-size: 15px;
+    :root {
+        --header-height: 75px;
     }
-
-
-    /* Header */
 
     header,
     .site-header,
     .navbar {
-        padding: 18px 18px;
+        min-height: 75px;
+    }
 
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 15px;
+    header .container,
+    .site-header .container,
+    .navbar .container {
+        width: calc(100% - 35px);
     }
 
     .logo,
     .site-logo,
     .brand {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     nav,
     .nav-links {
-        width: 100%;
-
-        gap: 12px 18px;
+        display: none;
     }
 
-    nav a,
-    .nav-links a {
-        font-size: 12px;
-
-        padding: 5px 0;
-    }
-
-    nav a.active::after,
-    .nav-links a.active::after {
-        bottom: -3px;
+    .menu-toggle {
+        display: block;
     }
 
     .social-links {
-        justify-content: center;
-
-        margin: 0;
-    }
-
-    .social-links a {
-        width: 36px;
-        height: 36px;
+        display: none;
     }
 
     .contact-btn,
     .btn-contact {
-        margin-left: 0;
-
-        padding: 11px 20px;
-
+        min-height: 42px;
+        padding: 0 18px;
         font-size: 13px;
     }
 
 
-    /* General containers */
+    /* ABOUT */
 
-    .page-container,
-    .section-container,
-    .container,
-    .content-section {
-        width: calc(100% - 36px);
+    .about-page .about-hero {
+        min-height: 430px;
+        padding: 70px 0;
+    }
+
+    .about-page .about-hero-inner {
+        width: calc(100% - 40px);
+    }
+
+    .about-page .about-hero h1 {
+        font-size: 48px;
+    }
+
+    .about-page .about-hero p {
+        font-size: 16px;
+    }
+
+    .about-page .about-content {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 65px 0;
+    }
+
+    .about-page .about-photo {
+        justify-content: center;
+
+        order: 2;
+    }
+
+    .about-page .about-text {
+        order: 1;
+    }
+
+    .about-page .about-photo-frame {
+        max-width: 500px;
+    }
+
+    .about-page .about-highlights {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr;
+
+        padding-bottom: 65px;
     }
 
 
-    /* Hero */
+    /* OTHER PAGES */
 
     .page-hero,
     .inner-hero,
     .experience-hero {
-        min-height: 470px;
-
-        padding: 65px 20px;
-    }
-
-    .page-hero .eyebrow,
-    .inner-hero .eyebrow,
-    .experience-hero .eyebrow {
-        font-size: 14px;
-
-        letter-spacing: 2px;
+        min-height: 430px;
     }
 
     .page-hero h1,
-    .inner-hero h1,
-    .experience-hero h1 {
-        font-size: 48px;
-
-        line-height: 1.08;
+    .inner-hero h1 {
+        font-size: 50px;
     }
 
     .page-hero p,
-    .inner-hero p,
-    .experience-hero p {
-        font-size: 16px;
-
-        line-height: 1.7;
-    }
-
-
-    /* About */
-
-    .about-section {
-        padding: 60px 0 75px;
-    }
-
-    .about-container {
-        width: calc(100% - 36px);
-
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .about-content h1,
-    .about-content h2 {
-        font-size: 38px;
-    }
-
-    .about-content > p {
-        font-size: 15px;
-
-        line-height: 1.7;
-    }
-
-    .about-list {
-        margin-top: 20px;
-    }
-
-    .about-list li {
-        margin-bottom: 12px;
-
-        padding-left: 25px;
-
-        font-size: 14px;
-
-        line-height: 1.6;
-    }
-
-    .about-list li::before {
-        width: 7px;
-        height: 7px;
-
-        top: 9px;
-    }
-
-    .about-signature {
-        margin-top: 25px;
-
-        padding-top: 18px;
-    }
-
-    .about-signature h3 {
-        font-size: 19px;
-    }
-
-    .about-signature p {
-        font-size: 14px;
-    }
-
-    .about-image img,
-    .about-photo img {
-        width: 100%;
-
-        height: 480px;
-
-        max-width: 100%;
-    }
-
-
-    /* General content */
-
-    .content-section {
-        padding: 60px 0;
-    }
-
-    .content-section h2 {
-        font-size: 34px;
-    }
-
-    .content-section p {
-        font-size: 15px;
-    }
-
-
-    /* Cards */
-
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        padding: 25px;
-    }
-
-
-    /* Footer */
-
-    footer {
-        padding: 35px 20px;
+    .inner-hero p {
+        font-size: 17px;
     }
 }
 
 
 /* =========================================================
-   19. VERY SMALL MOBILE
+   23. SMALL MOBILE
    ========================================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 520px) {
 
-    nav,
-    .nav-links {
-        gap: 9px 13px;
+    .container {
+        width: calc(100% - 30px);
     }
 
-    nav a,
-    .nav-links a {
-        font-size: 11px;
+    .about-page .about-content {
+        width: calc(100% - 30px);
     }
 
-    .page-hero h1,
-    .inner-hero h1,
-    .experience-hero h1 {
+    .about-page .about-highlights {
+        width: calc(100% - 30px);
+    }
+
+    .about-page .about-hero-inner {
+        width: calc(100% - 30px);
+    }
+
+    .about-page .about-hero h1 {
         font-size: 40px;
     }
 
-    .about-content h1,
-    .about-content h2 {
-        font-size: 34px;
+    .about-page .about-eyebrow {
+        font-size: 12px;
+        letter-spacing: 2px;
     }
 
-    .about-list li {
-        font-size: 13.5px;
+    .about-page .about-text h2 {
+        font-size: 28px;
+    }
+
+    .about-page .about-list li {
+        font-size: 14px;
+        padding-left: 28px;
+        margin-bottom: 13px;
+    }
+
+    .about-page .about-photo-frame {
+        padding: 8px;
+        border-radius: 14px;
+    }
+
+    .about-page .about-photo-frame img {
+        border-radius: 9px;
+    }
+}
+
+
+/* =========================================================
+   24. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(22, 131, 189, 0.35);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   25. REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
     }
 }
