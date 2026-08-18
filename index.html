@@ -2,330 +2,718 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Adv. Achut Poudel — Leadership, Human Resources, Business Strategy, Governance, Law & Compliance, Operations and Professional Development.">
+          content="Adv. Achut Poudel — Leadership, People, Business and Governance professional with more than 20 years of professional experience.">
+
+    <meta name="keywords"
+          content="Achut Poudel, Advocate Achut Poudel, HR, Leadership, Governance, Business, Law, Compliance, Training">
 
     <meta name="author"
           content="Adv. Achut Poudel">
 
     <title>
-        Adv. Achut Poudel | Leadership That Turns Experience Into Impact
+        Adv. Achut Poudel | Leadership • People • Business • Governance
     </title>
 
-    <!-- Favicon -->
-    <link rel="icon"
-          type="image/png"
-          href="image/favicon.png">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet"
-          href="style.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
-          rel="stylesheet">
 </head>
 
-<script>
-function setActive(element) {
-    // Remove active class from all menu items
-    document.querySelectorAll('.navbar a').forEach(link => {
-        link.classList.remove('active');
-    });
 
-    // Highlight the clicked menu
-    element.classList.add('active');
-}
-</script>
 <body>
 
 
-<!-- =========================================================
+<!-- =====================================================
      HEADER
-========================================================= -->
+     ===================================================== -->
 
 <header class="site-header">
 
-    <div class="header-container">
+    <div class="header-inner">
+
+        <!-- BRAND -->
+        <a href="index.html" class="brand">
+
+            <span class="brand-mark">AP</span>
+
+            <span class="brand-text">
+                <strong>Adv. Achut Poudel</strong>
+                <small>
+                    Leadership • People • Business • Governance
+                </small>
+            </span>
+
+        </a>
 
 
-        <!-- LEFT NAVIGATION -->
+        <!-- MAIN NAVIGATION -->
+        <nav class="main-navigation" id="mainNavigation">
 
-        <nav class="main-navigation"
-             id="mainNavigation">
-
-            <a href="index.html"
-               class="nav-link active">
+            <a href="index.html" class="nav-link">
                 Home
             </a>
 
-            <a href="about.html"
-               class="nav-link">
+            <a href="about.html" class="nav-link">
                 About Me
             </a>
 
-            <a href="experience.html"
-               class="nav-link">
-                Experience
+            <a href="achievement.html" class="nav-link">
+                My Achievement
             </a>
 
-            <a href="learning.html"
-               class="nav-link">
-                Learning & Development
-            </a>
-
-            <a href="community.html"
-               class="nav-link">
-                Community Engagement
-            </a>
-
-            <a href="honor.html"
-               class="nav-link">
-                Honor
+            <a href="resources.html" class="nav-link">
+                Training &amp; Workshops
             </a>
 
         </nav>
 
 
         <!-- RIGHT SIDE -->
-
         <div class="header-right">
 
-
-            <!-- SOCIAL MEDIA -->
-
+            <!-- SOCIAL ICONS ONLY -->
             <div class="social-links">
 
-                <a href="https://www.linkedin.com/in/achutpdl/"
+                <a href="#"
+                   aria-label="LinkedIn"
                    target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="LinkedIn">
-
-                    <i class="fab fa-linkedin-in"></i>
-
+                   rel="noopener noreferrer">
+                    in
                 </a>
 
-
-                <a href="https://www.facebook.com/"
+                <a href="#"
+                   aria-label="Facebook"
                    target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Facebook">
-
-                    <i class="fab fa-facebook-f"></i>
-
+                   rel="noopener noreferrer">
+                    f
                 </a>
 
-
-                <a href="https://www.youtube.com/"
+                <a href="#"
+                   aria-label="YouTube"
                    target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="YouTube">
-
-                    <i class="fab fa-youtube"></i>
-
-                </a>
-
-
-                <a href="https://www.instagram.com/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Instagram">
-
-                    <i class="fab fa-instagram"></i>
-
+                   rel="noopener noreferrer">
+                    ▶
                 </a>
 
             </div>
 
 
             <!-- CONTACT -->
-
-            <a href="contact.html"
-               class="contact-button">
-
+            <a href="contact.html" class="contact-button">
                 Contact Me
-
             </a>
 
-
-            <!-- MOBILE MENU -->
-
-            <button class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Open navigation menu"
-                    aria-expanded="false">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
         </div>
+
+
+        <!-- MOBILE MENU -->
+        <button class="mobile-menu-button"
+                id="menuButton"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
 
     </div>
 
 </header>
 
 
-
-<!-- =========================================================
-     MAIN
-========================================================= -->
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
 
 <main>
 
 
-<!-- =========================================================
-     HOME HERO
-========================================================= -->
+<!-- =====================================================
+     HERO SECTION
+     ===================================================== -->
 
-<section class="hero-section"
-         id="home">
-
+<section class="hero">
 
     <div class="hero-container">
 
 
-        <!-- LEFT CONTENT -->
+        <!-- ================= LEFT CONTENT ================= -->
 
         <div class="hero-content">
 
 
-            <p class="hero-eyebrow">
-                LEADERSHIP • PEOPLE • BUSINESS • GOVERNANCE
-            </p>
+            <!-- EYEBROW -->
 
+            <div class="eyebrow">
+
+                <span></span>
+
+                LEADERSHIP • PEOPLE • BUSINESS • GOVERNANCE
+
+            </div>
+
+
+            <!-- MAIN HEADING -->
 
             <h1>
 
-                Leadership That Turns
+                Leadership That
 
-                <span>
-                    Experience Into Impact.
-                </span>
+                <strong>
+                    Turns Experience
+                </strong>
+
+                Into Impact
 
             </h1>
 
 
-            <h2>
-
-                Strategy
-
-                <span>•</span>
-
-                People
-
-                <span>•</span>
-
-                Business
-
-                <span>•</span>
-
-                Governance
-
-            </h2>
-
+            <!-- INTRODUCTION -->
 
             <p class="hero-description">
 
-                A leadership journey shaped by diverse experiences,
-                challenging environments, and a constant commitment
-                to growth, excellence, and meaningful results.
+                More than 20 years of professional experience
+                across human resources, banking, business
+                operations, administration, law, compliance,
+                branding, digital transformation and
+                organizational development.
 
             </p>
 
 
-            <!-- BUTTONS -->
+            <!-- PROFESSIONAL AREAS -->
+
+            <div class="expertise-list">
+
+
+                <div>
+                    Business Leadership
+                </div>
+
+
+                <div>
+                    Branding &amp; Digital Transformation
+                </div>
+
+
+                <div>
+                    Human Resources, Administration &amp; Operations
+                </div>
+
+
+                <div>
+                    Learning &amp; Development
+                </div>
+
+
+                <div>
+                    Governance
+                </div>
+
+
+                <div>
+                    Law / Compliance
+                </div>
+
+
+                <div>
+                    Banking
+                </div>
+
+
+                <div>
+                    Organizational Development
+                </div>
+
+
+            </div>
+
+
+            <!-- ACTION BUTTONS -->
 
             <div class="hero-buttons">
 
 
-                <a href="Adv-Achut-Poudel-CV.pdf"
-                   class="primary-button"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a href="achievement.html"
+                   class="gold-button">
 
-                    Resume
+                    Explore Experience
 
-                    <i class="fas fa-arrow-down"></i>
-
-                </a>
-
-
-                <a href="about.html"
-                   class="secondary-button">
-
-                    Explore the Journey
-
-                    <i class="fas fa-arrow-right"></i>
+                    <span>
+                        →
+                    </span>
 
                 </a>
 
 
                 <a href="contact.html"
-                   class="text-button">
+                   class="outline-button">
 
-                    Connect
-
-                    <i class="fas fa-arrow-right"></i>
+                    Get in Touch
 
                 </a>
 
+
             </div>
+
+
+            <!-- RESUME -->
+
+            <a href="Adv-Achut-Poudel-CV.pdf"
+               class="resume-button"
+               download>
+
+                <span class="download-icon">
+                    ↓
+                </span>
+
+                Download Resume
+
+            </a>
+
 
         </div>
 
 
 
-        <!-- RIGHT PHOTO -->
+        <!-- ================= RIGHT PHOTO ================= -->
 
         <div class="hero-image-area">
 
 
-            <div class="hero-image-background"></div>
+            <div class="image-label">
 
-
-            <div class="hero-image-frame">
-
-                <!-- IMPORTANT:
-                     Your GitHub folder is "image"
-                     NOT "images"
-                -->
-
-                <img src="image/achut-poudel.jpg"
-                     alt="Adv. Achut Poudel"
-                     class="hero-photo">
+                PROFESSIONAL PROFILE
 
             </div>
 
 
-            <!-- NAME CARD -->
+            <div class="image-wrapper">
 
-            <div class="image-caption">
+
+                <!-- DECORATIVE CORNERS -->
+
+                <div class="corner top-left"></div>
+
+                <div class="corner bottom-right"></div>
+
+
+                <!-- PROFESSIONAL PHOTO -->
+
+                <img
+                    src="image/achut-poudel.jpg"
+                    alt="Adv. Achut Poudel professional photograph"
+                >
+
+
+                <!-- PHOTO CAPTION -->
+
+                <div class="image-caption">
+
+                    <strong>
+                        ADV. ACHUT POUDEL
+                    </strong>
+
+                    <span>
+                        Leadership • People • Business
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SCROLL INDICATOR -->
+
+    <div class="scroll-indicator">
+
+        <span></span>
+
+        SCROLL TO EXPLORE
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFESSIONAL PROFILE
+     ===================================================== -->
+
+<section class="introduction">
+
+
+    <div class="content-container">
+
+
+        <div class="section-number">
+            01
+        </div>
+
+
+        <div class="intro-content">
+
+
+            <div class="section-label">
+                PROFESSIONAL PROFILE
+            </div>
+
+
+            <h2>
+
+                Experience across people,
+                business and governance.
+
+            </h2>
+
+
+            <p>
+
+                My professional journey spans Human Resources,
+                banking, business operations, administration,
+                law, compliance, branding, digital transformation
+                and organizational development.
+
+            </p>
+
+
+            <a href="about.html"
+               class="text-link">
+
+                Discover My Story →
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     AREAS OF EXPERTISE
+     ===================================================== -->
+
+<section class="expertise-section">
+
+
+    <div class="content-container">
+
+
+        <div class="section-heading">
+
+
+            <div>
+
+                <div class="section-label">
+
+                    AREAS OF EXPERTISE
+
+                </div>
+
+
+                <h2>
+
+                    Where experience
+                    creates value.
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                A multidisciplinary professional perspective
+                developed through more than two decades of
+                experience.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- EXPERTISE CARDS -->
+
+        <div class="cards">
+
+
+            <!-- CARD 01 -->
+
+            <article class="card">
+
+
+                <span class="card-number">
+                    01
+                </span>
+
+
+                <h3>
+                    Business Leadership
+                </h3>
+
+
+                <p>
+
+                    Strategic leadership, decision-making,
+                    business thinking and organizational
+                    performance.
+
+                </p>
+
+
+                <a href="achievement.html">
+
+                    Explore →
+
+                </a>
+
+
+            </article>
+
+
+
+            <!-- CARD 02 -->
+
+            <article class="card">
+
+
+                <span class="card-number">
+                    02
+                </span>
+
+
+                <h3>
+                    Human Resources
+                </h3>
+
+
+                <p>
+
+                    HR strategy, people management,
+                    administration, operations and
+                    organizational effectiveness.
+
+                </p>
+
+
+                <a href="about.html">
+
+                    Explore →
+
+                </a>
+
+
+            </article>
+
+
+
+            <!-- CARD 03 -->
+
+            <article class="card">
+
+
+                <span class="card-number">
+                    03
+                </span>
+
+
+                <h3>
+                    Governance &amp; Law
+                </h3>
+
+
+                <p>
+
+                    Governance, legal compliance, policy
+                    and responsible organizational
+                    practices.
+
+                </p>
+
+
+                <a href="achievement.html">
+
+                    Explore →
+
+                </a>
+
+
+            </article>
+
+
+
+            <!-- CARD 04 -->
+
+            <article class="card">
+
+
+                <span class="card-number">
+                    04
+                </span>
+
+
+                <h3>
+                    Learning &amp; Development
+                </h3>
+
+
+                <p>
+
+                    Training, workshops, professional
+                    development and capability building.
+
+                </p>
+
+
+                <a href="resources.html">
+
+                    Explore →
+
+                </a>
+
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFESSIONAL JOURNEY
+     ===================================================== -->
+
+<section class="journey">
+
+
+    <div class="content-container journey-container">
+
+
+        <!-- LEFT -->
+
+        <div class="journey-text">
+
+
+            <div class="section-label light">
+
+                PROFESSIONAL JOURNEY
+
+            </div>
+
+
+            <h2>
+
+                A career built on
+                continuous learning.
+
+            </h2>
+
+
+            <p>
+
+                From banking and human resources to business,
+                law, governance and organizational development,
+                my career has continuously evolved through
+                experience, learning and responsibility.
+
+            </p>
+
+
+            <a href="achievement.html"
+               class="gold-button">
+
+                View My Achievement →
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- RIGHT STATS -->
+
+        <div class="stats">
+
+
+            <div class="stat">
 
                 <strong>
-                    Adv. Achut Poudel
+                    20+
                 </strong>
 
                 <span>
-                    Leadership • HR • Business • Law
+                    Years Experience
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    MBA
+                </strong>
+
+                <span>
+                    Human Resource Management
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    MBS
+                </strong>
+
+                <span>
+                    Finance
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>
+                    LLB
+                </strong>
+
+                <span>
+                    Advocate
                 </span>
 
             </div>
@@ -336,385 +724,108 @@ function setActive(element) {
 
     </div>
 
+
 </section>
 
 
 
-<!-- =========================================================
-     EXPERIENCE ACROSS
-========================================================= -->
+<!-- =====================================================
+     TRAINING & WORKSHOPS
+     ===================================================== -->
 
-<section class="experience-across-section">
-
-
-    <div class="section-container">
+<section class="training">
 
 
-        <div class="section-heading centered">
+    <div class="content-container training-box">
 
-            <p class="section-label">
-                EXPERIENCE ACROSS
-            </p>
+
+        <div>
+
+
+            <div class="section-label">
+
+                LEARNING &amp; DEVELOPMENT
+
+            </div>
+
 
             <h2>
 
-                Diverse Experience.
-
-                <span>
-                    Integrated Perspective.
-                </span>
+                Training &amp; Workshops
 
             </h2>
 
-        </div>
 
+            <p>
 
+                Professional training programs, workshops,
+                seminars and learning initiatives.
 
-        <div class="experience-tags">
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-compass"></i>
-
-                <span>
-                    Leadership
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-users"></i>
-
-                <span>
-                    Human Resources
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-chart-line"></i>
-
-                <span>
-                    Business Strategy
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-building-columns"></i>
-
-                <span>
-                    Governance
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-scale-balanced"></i>
-
-                <span>
-                    Law & Compliance
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-gears"></i>
-
-                <span>
-                    Operations
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-building"></i>
-
-                <span>
-                    Banking
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-laptop-code"></i>
-
-                <span>
-                    Digital Transformation
-                </span>
-
-            </div>
-
-
-            <div class="experience-tag">
-
-                <i class="fas fa-bullhorn"></i>
-
-                <span>
-                    Branding & Business Development
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     LEADERSHIP PHILOSOPHY
-========================================================= -->
-
-<section class="leadership-statement-section">
-
-
-    <div class="statement-container">
-
-
-        <p class="statement-small">
-            LEADERSHIP PHILOSOPHY
-        </p>
-
-
-        <h2>
-
-            Lead With Purpose.
-
-            <span>
-                Create With Impact.
-            </span>
-
-        </h2>
-
-
-        <p>
-
-            Leadership is about creating clarity,
-            building trust, developing people and
-            turning experience into meaningful results.
-
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     JOURNEY
-========================================================= -->
-
-<section class="journey-section">
-
-
-    <div class="section-container">
-
-
-        <div class="section-heading centered">
-
-            <p class="section-label">
-                THE JOURNEY
             </p>
 
-            <h2>
-
-                Leadership Beyond
-
-                <span>
-                    One Discipline.
-                </span>
-
-            </h2>
 
         </div>
 
 
+        <a href="resources.html"
+           class="gold-button">
 
-        <div class="journey-grid">
-
-
-            <div class="journey-card">
-
-                <div class="journey-icon">
-
-                    <i class="fas fa-users"></i>
-
-                </div>
-
-                <h3>
-                    People
-                </h3>
-
-                <p>
-                    Building trust, developing capability
-                    and creating strong organizational cultures.
-                </p>
-
-                <span>
-                    Human Resources
-                </span>
-
-            </div>
-
-
-
-            <div class="journey-card">
-
-                <div class="journey-icon">
-
-                    <i class="fas fa-chart-line"></i>
-
-                </div>
-
-                <h3>
-                    Business
-                </h3>
-
-                <p>
-                    Connecting strategy, operations and
-                    business decisions with measurable outcomes.
-                </p>
-
-                <span>
-                    Business Strategy
-                </span>
-
-            </div>
-
-
-
-            <div class="journey-card">
-
-                <div class="journey-icon">
-
-                    <i class="fas fa-scale-balanced"></i>
-
-                </div>
-
-                <h3>
-                    Governance
-                </h3>
-
-                <p>
-                    Understanding organizational responsibility,
-                    compliance and sound decision-making.
-                </p>
-
-                <span>
-                    Law & Compliance
-                </span>
-
-            </div>
-
-
-
-            <div class="journey-card">
-
-                <div class="journey-icon">
-
-                    <i class="fas fa-gears"></i>
-
-                </div>
-
-                <h3>
-                    Operations
-                </h3>
-
-                <p>
-                    Turning plans into practical execution
-                    through disciplined organizational systems.
-                </p>
-
-                <span>
-                    Operations
-                </span>
-
-            </div>
-
-
-
-            <div class="journey-card">
-
-                <div class="journey-icon">
-
-                    <i class="fas fa-lightbulb"></i>
-
-                </div>
-
-                <h3>
-                    Growth
-                </h3>
-
-                <p>
-                    Continuous learning, innovation and
-                    professional development.
-                </p>
-
-                <span>
-                    Learning & Development
-                </span>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     CLOSING
-========================================================= -->
-
-<section class="closing-section">
-
-
-    <div class="closing-container">
-
-
-        <p>
-            Experience shapes the perspective.
-        </p>
-
-
-        <h2>
-            Learning shapes the future.
-        </h2>
-
-
-        <a href="contact.html"
-           class="primary-button">
-
-            Connect
-
-            <i class="fas fa-arrow-right"></i>
+            Explore Training →
 
         </a>
 
+
     </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CONTACT CTA
+     ===================================================== -->
+
+<section class="final-cta">
+
+
+    <div class="content-container">
+
+
+        <div class="section-label">
+
+            CONNECT
+
+        </div>
+
+
+        <h2>
+
+            Let's create meaningful
+            professional impact.
+
+        </h2>
+
+
+        <p>
+
+            For professional discussions, training,
+            workshops, collaboration or organizational
+            opportunities, I would be pleased to connect.
+
+        </p>
+
+
+        <a href="contact.html"
+           class="gold-button">
+
+            Contact Me →
+
+        </a>
+
+
+    </div>
+
 
 </section>
 
@@ -723,124 +834,140 @@ function setActive(element) {
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================= -->
+     ===================================================== -->
 
-<footer class="site-footer">
-
-
-    <div class="footer-container">
+<footer class="footer">
 
 
-        <div class="footer-brand">
+    <div class="content-container footer-grid">
+
+
+        <!-- FOOTER ABOUT -->
+
+        <div>
+
 
             <h3>
+
                 Adv. Achut Poudel
+
             </h3>
 
-            <p>
-                Leadership that turns experience into impact.
+
+            <p class="footer-position">
+
+                Leadership • People • Business • Governance
+
             </p>
+
+
+            <p>
+
+                More than 20 years of multidisciplinary
+                professional experience.
+
+            </p>
+
 
         </div>
 
 
 
-        <div class="footer-navigation">
+        <!-- FOOTER NAVIGATION -->
+
+        <div>
+
+
+            <h4>
+                Navigation
+            </h4>
+
 
             <a href="index.html">
                 Home
             </a>
 
+
             <a href="about.html">
                 About Me
             </a>
 
-            <a href="experience.html">
-                Experience
+
+            <a href="achievement.html">
+                My Achievement
             </a>
 
-            <a href="learning.html">
-                Learning & Development
+
+            <a href="resources.html">
+                Training &amp; Workshops
             </a>
 
-            <a href="community.html">
-                Community Engagement
-            </a>
-
-            <a href="honor.html">
-                Honor
-            </a>
 
             <a href="contact.html">
                 Contact Me
             </a>
 
+
         </div>
 
 
 
-        <div class="footer-social">
+        <!-- PROFESSIONAL AREAS -->
+
+        <div>
 
 
-            <a href="https://www.linkedin.com/in/achutpdl/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn">
-
-                <i class="fab fa-linkedin-in"></i>
-
-            </a>
+            <h4>
+                Professional Areas
+            </h4>
 
 
-            <a href="https://www.facebook.com/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Facebook">
-
-                <i class="fab fa-facebook-f"></i>
-
-            </a>
+            <span>
+                Business Leadership
+            </span>
 
 
-            <a href="https://www.youtube.com/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="YouTube">
-
-                <i class="fab fa-youtube"></i>
-
-            </a>
+            <span>
+                Human Resources
+            </span>
 
 
-            <a href="https://www.instagram.com/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Instagram">
+            <span>
+                Governance
+            </span>
 
-                <i class="fab fa-instagram"></i>
 
-            </a>
+            <span>
+                Law &amp; Compliance
+            </span>
+
+
+            <span>
+                Organizational Development
+            </span>
 
 
         </div>
+
 
     </div>
 
 
 
+    <!-- FOOTER BOTTOM -->
+
     <div class="footer-bottom">
 
-        <p>
 
-            ©
-            <span id="currentYear"></span>
+        <div class="content-container">
 
-            Adv. Achut Poudel.
-            All Rights Reserved.
+            © 2026 Adv. Achut Poudel.
+            All rights reserved.
 
-        </p>
+        </div>
+
 
     </div>
 
@@ -849,20 +976,15 @@ function setActive(element) {
 
 
 
-<!-- JAVASCRIPT -->
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
 
 <script src="script.js"></script>
 
 
 </body>
+
 </html>
 
-
-<nav class="navbar">
-    <a href="#home" onclick="setActive(this)">Home</a>
-    <a href="#about" onclick="setActive(this)">About</a>
-    <a href="#experience" onclick="setActive(this)">Experience</a>
-    <a href="#leadership" onclick="setActive(this)">Leadership</a>
-    <a href="#learning" onclick="setActive(this)">Learning & Development</a>
-    <a href="#contact" onclick="setActive(this)">Contact</a>
-</nav>
+<a href="index.html" class="nav-link active">Home</a>
