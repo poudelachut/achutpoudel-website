@@ -1,78 +1,194 @@
 /* =========================================================
    ADV. ACHUT POUDEL
-   WEBSITE JAVASCRIPT
-========================================================= */
+   PREMIUM CINEMATIC PERSONAL WEBSITE
+   ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
 
 
     /* =====================================================
-       MOBILE MENU
-    ===================================================== */
+       MOBILE NAVIGATION
+       ===================================================== */
 
-    const menuToggle =
-        document.getElementById("menuToggle");
+    const mobileToggle =
+      document.querySelector(".mobile-toggle");
 
     const mainNavigation =
-        document.getElementById("mainNavigation");
+      document.querySelector(".main-navigation");
 
 
-    if (menuToggle && mainNavigation) {
-
-        menuToggle.addEventListener("click", function () {
-
-            mainNavigation.classList.toggle("open");
-
-
-            const isOpen =
-                mainNavigation.classList.contains("open");
+    if (
+      mobileToggle &&
+      mainNavigation
+    ) {
 
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                isOpen
+      mobileToggle.addEventListener(
+        "click",
+        function () {
+
+          const isOpen =
+            mainNavigation.classList.toggle(
+              "show"
             );
 
-        });
+
+          mobileToggle.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+          );
 
 
-        /* Close menu after clicking a link */
+          mobileToggle.setAttribute(
+            "aria-label",
+            isOpen
+              ? "Close navigation"
+              : "Open navigation"
+          );
 
-        const navigationLinks =
-            mainNavigation.querySelectorAll("a");
-
-
-        navigationLinks.forEach(function (link) {
-
-            link.addEventListener("click", function () {
-
-                mainNavigation.classList.remove("open");
-
-                menuToggle.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-            });
-
-        });
-
-    }
+        }
+      );
 
 
+      /* CLOSE AFTER NAVIGATION */
 
-    /* =====================================================
-       CURRENT YEAR
-    ===================================================== */
-
-    const currentYear =
-        document.getElementById("currentYear");
+      const navigationLinks =
+        mainNavigation.querySelectorAll("a");
 
 
-    if (currentYear) {
+      navigationLinks.forEach(
+        function (link) {
 
-        currentYear.textContent =
-            new Date().getFullYear();
+          link.addEventListener(
+            "click",
+            function () {
+
+              mainNavigation.classList.remove(
+                "show"
+              );
+
+
+              mobileToggle.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+
+              mobileToggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+              );
+
+            }
+          );
+
+        }
+      );
+
+
+      /* CLOSE WHEN CLICKING OUTSIDE */
+
+      document.addEventListener(
+        "click",
+        function (event) {
+
+          const clickedNavigation =
+            mainNavigation.contains(
+              event.target
+            );
+
+
+          const clickedButton =
+            mobileToggle.contains(
+              event.target
+            );
+
+
+          if (
+            !clickedNavigation &&
+            !clickedButton
+          ) {
+
+            mainNavigation.classList.remove(
+              "show"
+            );
+
+
+            mobileToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+
+            mobileToggle.setAttribute(
+              "aria-label",
+              "Open navigation"
+            );
+
+          }
+
+        }
+      );
+
+
+      /* ESCAPE KEY */
+
+      document.addEventListener(
+        "keydown",
+        function (event) {
+
+          if (
+            event.key === "Escape"
+          ) {
+
+            mainNavigation.classList.remove(
+              "show"
+            );
+
+
+            mobileToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+
+            mobileToggle.setAttribute(
+              "aria-label",
+              "Open navigation"
+            );
+
+          }
+
+        }
+      );
+
+
+      /* RESET WHEN RETURNING TO DESKTOP */
+
+      window.addEventListener(
+        "resize",
+        function () {
+
+          if (
+            window.innerWidth > 820
+          ) {
+
+            mainNavigation.classList.remove(
+              "show"
+            );
+
+
+            mobileToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+
+        }
+      );
 
     }
 
@@ -80,59 +196,264 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =====================================================
        ACTIVE NAVIGATION
-       Works with separate HTML pages
-    ===================================================== */
+       ===================================================== */
 
     const currentPage =
-        window.location.pathname
+      window.location.pathname
         .split("/")
-        .pop();
+        .pop() || "index.html";
 
 
     const navLinks =
-        document.querySelectorAll(".nav-link");
+      document.querySelectorAll(
+        ".main-navigation .nav-link"
+      );
 
 
-    navLinks.forEach(function (link) {
+    navLinks.forEach(
+      function (link) {
 
         const linkPage =
-            link.getAttribute("href")
-            .split("/")
-            .pop();
+          link.getAttribute("href");
+
+
+        if (!linkPage) {
+          return;
+        }
+
+
+        link.classList.remove(
+          "active"
+        );
+
+
+        link.removeAttribute(
+          "aria-current"
+        );
 
 
         if (
-            linkPage === currentPage ||
-            (currentPage === "" &&
-             linkPage === "index.html")
+          linkPage === currentPage ||
+          (
+            currentPage === "" &&
+            linkPage === "index.html"
+          )
         ) {
 
-            navLinks.forEach(function (item) {
+          link.classList.add(
+            "active"
+          );
 
-                item.classList.remove("active");
 
-            });
-
-            link.classList.add("active");
+          link.setAttribute(
+            "aria-current",
+            "page"
+          );
 
         }
 
-    });
+      }
+    );
 
 
-});
+
+    /* =====================================================
+       CINEMATIC REVEAL ANIMATION
+       ===================================================== */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
 
 
-/* =========================================================
-   WEBSITE SCRIPT
-   ========================================================= */
+    if (
+      revealElements.length > 0
+    ) {
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    const yearElement = document.getElementById("currentYear");
+      const prefersReducedMotion =
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
 
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
+
+      if (
+        prefersReducedMotion ||
+        !("IntersectionObserver" in window)
+      ) {
+
+
+        revealElements.forEach(
+          function (element) {
+
+            element.classList.add(
+              "visible"
+            );
+
+          }
+        );
+
+
+      } else {
+
+
+        const revealObserver =
+          new IntersectionObserver(
+            function (
+              entries,
+              observer
+            ) {
+
+
+              entries.forEach(
+                function (entry) {
+
+                  if (
+                    entry.isIntersecting
+                  ) {
+
+                    entry.target.classList.add(
+                      "visible"
+                    );
+
+
+                    observer.unobserve(
+                      entry.target
+                    );
+
+                  }
+
+                }
+              );
+
+
+            },
+            {
+              threshold: 0.12,
+              rootMargin:
+                "0px 0px -40px 0px"
+            }
+          );
+
+
+        revealElements.forEach(
+          function (element) {
+
+            revealObserver.observe(
+              element
+            );
+
+          }
+        );
+
+      }
+
     }
 
-});
+
+
+    /* =====================================================
+       SMOOTH INTERNAL LINKS
+       ===================================================== */
+
+    const internalLinks =
+      document.querySelectorAll(
+        'a[href^="#"]'
+      );
+
+
+    internalLinks.forEach(
+      function (link) {
+
+        link.addEventListener(
+          "click",
+          function (event) {
+
+            const targetId =
+              link.getAttribute("href");
+
+
+            if (
+              !targetId ||
+              targetId === "#"
+            ) {
+
+              return;
+
+            }
+
+
+            const target =
+              document.querySelector(
+                targetId
+              );
+
+
+            if (target) {
+
+              event.preventDefault();
+
+
+              target.scrollIntoView(
+                {
+                  behavior: "smooth",
+                  block: "start"
+                }
+              );
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+
+
+    /* =====================================================
+       REDUCED MOTION
+       ===================================================== */
+
+    const reducedMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
+
+
+    if (
+      reducedMotion.matches
+    ) {
+
+      document.documentElement.classList.add(
+        "reduce-motion"
+      );
+
+    }
+
+
+    reducedMotion.addEventListener(
+      "change",
+      function (event) {
+
+        if (event.matches) {
+
+          document.documentElement.classList.add(
+            "reduce-motion"
+          );
+
+        } else {
+
+          document.documentElement.classList.remove(
+            "reduce-motion"
+          );
+
+        }
+
+      }
+    );
+
+
+  }
+);
