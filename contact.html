@@ -1,79 +1,788 @@
-<!-- CONTACT SECTION -->
-<section class="contact-section">
+```html
+<!DOCTYPE html>
+<html lang="en">
 
-    <div class="contact-container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- LEFT SIDE: CONTACT BOX -->
-        <div class="contact-box">
+    <title>Contact Me | Adv. Achut Poudel</title>
 
-            <p class="contact-label">GET IN TOUCH</p>
+    <meta name="description"
+        content="Contact Adv. Achut Poudel for professional collaboration, consultation, leadership, HR, legal and business opportunities.">
 
-            <h1>Let's Connect</h1>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-            <p class="contact-intro">
-                Let's connect and create meaningful impact.
-            </p>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-            <form class="contact-form">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your name">
+    <!-- YOUR EXISTING WEBSITE CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =====================================================
+           CONTACT PAGE ONLY
+           Existing header, navigation and footer remain intact
+           ===================================================== */
+
+        .contact-page {
+            width: 100%;
+            background: #ffffff;
+        }
+
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 75px 30px 50px;
+        }
+
+        /* =========================
+           PAGE INTRO
+           ========================= */
+
+        .contact-intro-section {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .contact-small-title {
+            color: #0b4ea2;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .contact-intro-section h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 44px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: #111827;
+            margin: 0 auto 15px;
+            max-width: 750px;
+        }
+
+        .contact-intro-section p {
+            max-width: 650px;
+            margin: 0 auto;
+            color: #6b7280;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           MAIN TWO COLUMN AREA
+           LEFT = FORM
+           RIGHT = PHOTO
+           ========================= */
+
+        .contact-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: stretch;
+        }
+
+
+        /* =========================
+           LEFT CONTACT BOX
+           ========================= */
+
+        .contact-form-box {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            padding: 45px;
+            box-shadow: 0 18px 45px rgba(11, 78, 162, 0.08);
+        }
+
+        .contact-form-box h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            color: #111827;
+            font-size: 30px;
+            font-weight: 600;
+            margin: 0 0 10px;
+        }
+
+        .contact-form-box .box-description {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           FORM
+           ========================= */
+
+        .contact-form {
+            width: 100%;
+        }
+
+        .contact-form-group {
+            margin-bottom: 22px;
+        }
+
+        .contact-form-group label {
+            display: block;
+            color: #374151;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 7px;
+        }
+
+        .contact-form-group input,
+        .contact-form-group textarea {
+            width: 100%;
+            border: 0;
+            border-bottom: 1px solid #cbd5e1;
+            outline: none;
+            background: transparent;
+            padding: 11px 2px;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            color: #111827;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form-group input:focus,
+        .contact-form-group textarea:focus {
+            border-bottom-color: #0b4ea2;
+        }
+
+        .contact-form-group input::placeholder,
+        .contact-form-group textarea::placeholder {
+            color: #9ca3af;
+        }
+
+        .contact-form-group textarea {
+            height: 95px;
+            resize: vertical;
+        }
+
+
+        /* =========================
+           SEND BUTTON
+           ========================= */
+
+        .contact-submit {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 14px 30px;
+            border: none;
+            background: #0b4ea2;
+            color: #ffffff;
+            font-family: "Inter", sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-submit:hover {
+            background: #083b7d;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           RIGHT PHOTO
+           ========================= */
+
+        .contact-photo {
+            width: 100%;
+            min-height: 570px;
+            overflow: hidden;
+            background: #f8fafc;
+        }
+
+        .contact-photo img {
+            width: 100%;
+            height: 100%;
+            min-height: 570px;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+
+        /* =========================
+           CONTACT DETAILS
+           ICON + INFORMATION ONLY
+           ========================= */
+
+        .contact-details {
+            margin-top: 55px;
+            padding: 27px 10px;
+
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .contact-details-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            align-items: center;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+
+            color: #374151;
+            text-decoration: none;
+
+            font-size: 14px;
+            line-height: 1.5;
+
+            transition: color 0.3s ease;
+        }
+
+        .contact-detail i {
+            color: #0b4ea2;
+            font-size: 17px;
+            min-width: 18px;
+            text-align: center;
+        }
+
+        .contact-detail:hover {
+            color: #0b4ea2;
+        }
+
+
+        /* =========================
+           PROFESSIONAL AREAS
+           KEEPING YOUR EXISTING CONTENT
+           ========================= */
+
+        .professional-areas {
+            margin-top: 55px;
+            text-align: center;
+        }
+
+        .professional-areas h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 28px;
+            color: #111827;
+            margin-bottom: 25px;
+        }
+
+        .professional-area-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 12px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .professional-area-list span {
+            color: #374151;
+            font-size: 13px;
+            padding: 8px 14px;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+        }
+
+
+        /* =========================
+           MOBILE RESPONSIVE
+           ========================= */
+
+        @media (max-width: 900px) {
+
+            .contact-wrapper {
+                padding: 60px 25px 45px;
+            }
+
+            .contact-main {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .contact-photo {
+                order: -1;
+                min-height: 500px;
+            }
+
+            .contact-photo img {
+                min-height: 500px;
+            }
+
+            .contact-details-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .contact-wrapper {
+                padding: 45px 20px 35px;
+            }
+
+            .contact-intro-section {
+                margin-bottom: 35px;
+            }
+
+            .contact-intro-section h1 {
+                font-size: 32px;
+            }
+
+            .contact-intro-section p {
+                font-size: 14px;
+            }
+
+            .contact-form-box {
+                padding: 30px 25px;
+            }
+
+            .contact-form-box h2 {
+                font-size: 26px;
+            }
+
+            .contact-photo,
+            .contact-photo img {
+                min-height: 400px;
+            }
+
+            .contact-detail {
+                justify-content: flex-start;
+                padding-left: 10px;
+            }
+
+            .professional-areas {
+                margin-top: 40px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         EXISTING HEADER / NAVIGATION
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                AP
+                <span>Adv. Achut Poudel</span>
+            </a>
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About Me
+                    </a>
+                </li>
+
+                <li>
+                    <a href="achievement.html">
+                        My Achievement
+                    </a>
+                </li>
+
+                <li>
+                    <a href="training.html">
+                        Training & Workshops
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html" class="active">
+                        Contact Me
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTACT PAGE
+         ===================================================== -->
+
+    <main class="contact-page">
+
+        <div class="contact-wrapper">
+
+
+            <!-- =========================
+                 INTRO
+                 ========================= -->
+
+            <section class="contact-intro-section">
+
+                <div class="contact-small-title">
+                    GET IN TOUCH
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Your email address">
+                <h1>
+                    Let’s connect, collaborate,
+                    and create meaningful impact.
+                </h1>
+
+                <p>
+                    I welcome opportunities to connect, collaborate
+                    and create meaningful impact.
+                </p>
+
+            </section>
+
+
+
+            <!-- =========================
+                 LEFT FORM / RIGHT PHOTO
+                 ========================= -->
+
+            <section class="contact-main">
+
+
+                <!-- LEFT SIDE -->
+
+                <div class="contact-form-box">
+
+                    <h2>
+                        Let's Connect
+                    </h2>
+
+                    <p class="box-description">
+                        Please feel free to get in touch for professional
+                        collaboration, consultation, or business opportunities.
+                    </p>
+
+
+                    <form class="contact-form"
+                          action="mailto:poudel.achut@gmail.com"
+                          method="post"
+                          enctype="text/plain">
+
+
+                        <div class="contact-form-group">
+
+                            <label for="name">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="Name"
+                                placeholder="Your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="contact-form-group">
+
+                            <label for="email">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="Email"
+                                placeholder="Your email address"
+                                required>
+
+                        </div>
+
+
+                        <div class="contact-form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="Subject"
+                                placeholder="Subject">
+
+                        </div>
+
+
+                        <div class="contact-form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="Message"
+                                placeholder="Your message"
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="contact-submit">
+
+                            SEND MESSAGE
+
+                        </button>
+
+                    </form>
+
                 </div>
 
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Subject">
+
+
+                <!-- RIGHT SIDE PHOTO -->
+
+                <div class="contact-photo">
+
+                    <!--
+                    IMPORTANT:
+                    Replace the image path below with the EXACT
+                    image path currently used on your website.
+                    -->
+
+                    <img
+                        src="images/achut-poudel.jpg"
+                        alt="Professional photograph of Adv. Achut Poudel">
+
                 </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Your message"></textarea>
+            </section>
+
+
+
+            <!-- =========================
+                 CONTACT DETAILS
+                 ONLY ICON + INFORMATION
+                 ========================= -->
+
+            <section class="contact-details">
+
+                <div class="contact-details-row">
+
+
+                    <!-- EMAIL -->
+
+                    <a
+                        href="mailto:poudel.achut@gmail.com"
+                        class="contact-detail">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            poudel.achut@gmail.com
+                        </span>
+
+                    </a>
+
+
+                    <!-- MOBILE -->
+
+                    <a
+                        href="tel:+9779841151881"
+                        class="contact-detail">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <span>
+                            +977-9841151881
+                        </span>
+
+                    </a>
+
+
+                    <!-- LOCATION -->
+
+                    <div class="contact-detail">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Kathmandu, Nepal
+                        </span>
+
+                    </div>
+
+
                 </div>
 
-                <button type="submit" class="contact-button">
-                    SEND MESSAGE
-                </button>
+            </section>
 
-            </form>
+
+
+            <!-- =========================
+                 PROFESSIONAL AREAS
+                 ========================= -->
+
+            <section class="professional-areas">
+
+                <h2>
+                    Professional Areas
+                </h2>
+
+                <div class="professional-area-list">
+
+                    <span>
+                        Business Leadership
+                    </span>
+
+                    <span>
+                        Human Resources
+                    </span>
+
+                    <span>
+                        Learning & Development
+                    </span>
+
+                    <span>
+                        Governance
+                    </span>
+
+                    <span>
+                        Law & Compliance
+                    </span>
+
+                    <span>
+                        Organizational Development
+                    </span>
+
+                    <span>
+                        Banking
+                    </span>
+
+                    <span>
+                        Digital Transformation
+                    </span>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         EXISTING FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <h3>
+                    Adv. Achut Poudel
+                </h3>
+
+                <p>
+                    Leadership • People • Business • Governance
+                </p>
+
+            </div>
+
+
+            <div class="footer-navigation">
+
+                <h4>
+                    Navigation
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About Me
+                </a>
+
+                <a href="achievement.html">
+                    My Achievement
+                </a>
+
+                <a href="training.html">
+                    Training & Workshops
+                </a>
+
+                <a href="contact.html">
+                    Contact Me
+                </a>
+
+            </div>
+
+
+            <div class="footer-areas">
+
+                <h4>
+                    Professional Areas
+                </h4>
+
+                <p>
+                    Business Leadership
+                    Human Resources
+                    Governance
+                    Law & Compliance
+                    Organizational Development
+                </p>
+
+            </div>
 
         </div>
 
 
-        <!-- RIGHT SIDE: EXISTING PHOTO -->
-        <div class="contact-image">
+        <div class="footer-bottom">
 
-            <!-- KEEP YOUR EXISTING PHOTO PATH HERE -->
-            <img src="images/achut-poudel.jpg" alt="Achut Poudel">
+            © 2026 Adv. Achut Poudel. All rights reserved.
 
         </div>
 
-    </div>
+    </footer>
 
 
-    <!-- CONTACT DETAILS BELOW -->
-    <div class="contact-details-row">
+</body>
 
-        <a href="mailto:poudel.achut@gmail.com" class="contact-detail">
-            <i class="fas fa-envelope"></i>
-            <span>poudel.achut@gmail.com</span>
-        </a>
-
-        <a href="tel:+9779841151881" class="contact-detail">
-            <i class="fas fa-phone"></i>
-            <span>+977-9841151881</span>
-        </a>
-
-        <div class="contact-detail">
-            <i class="fas fa-location-dot"></i>
-            <span>Kathmandu, Nepal</span>
-        </div>
-
-    </div>
-
-</section>
+</html>
+```
