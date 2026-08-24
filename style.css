@@ -12110,3 +12110,33 @@ a {
     }
 
 }
+
+/* Left content paragraph */
+.training-intro{
+    max-width:560px;
+    margin-top:22px;
+    color:#526B78;
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* Hero layout */
+.training-hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:70px;
+    align-items:center;
+}
+
+/* Mobile */
+@media (max-width:900px){
+    .training-hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .training-hero-visual{
+        order:-1;
+        max-width:500px;
+        margin:auto;
+    }
+}
