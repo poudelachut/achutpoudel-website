@@ -5727,12 +5727,12 @@ a {
     display: block;
 
     width: 100%;
-    height: 560px;
+    height: auto;
 
-    object-fit: cover;
+    object-fit: contain;
     object-position: center top;
 
-    background: #F4FAFC;
+    background: #ffffff;
 }
 
 
