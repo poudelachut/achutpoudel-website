@@ -5470,14 +5470,53 @@ a {
 
 
 /* =========================================================
+   /* =========================================================
    CONTACT PAGE
 ========================================================= */
 
 .contact-hero {
     position: relative;
-    padding: 90px 0 100px;
-    background: #ffffff;
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    padding: 0;
+
     overflow: hidden;
+
+    background-image: url("image/contact_2.jpg");
+    background-size: cover;
+
+    /* Adjust this value to control which part of photo is visible */
+    background-position: 75% center;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   BLUE OVERLAY
+   Stronger on left for text readability,
+   lighter toward the right so the photo remains visible.
+========================================================= */
+
+.contact-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 59, 92, 0.92) 0%,
+            rgba(0, 59, 92, 0.82) 22%,
+            rgba(0, 59, 92, 0.62) 40%,
+            rgba(0, 59, 92, 0.32) 58%,
+            rgba(0, 59, 92, 0.10) 75%,
+            rgba(0, 59, 92, 0.00) 100%
+        );
+
+    z-index: 0;
 }
 
 
@@ -5486,10 +5525,25 @@ a {
 ========================================================= */
 
 .contact-layout {
+    position: relative;
+    z-index: 2;
+
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.95fr);
-    gap: 80px;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 60px;
+
     align-items: center;
+
+    width: 92%;
+    max-width: 1250px;
+
+    min-height: calc(100vh - 80px);
+
+    margin: 0 auto;
 }
 
 
@@ -5498,64 +5552,95 @@ a {
 ========================================================= */
 
 .contact-content {
-    max-width: 650px;
+    width: 100%;
+    max-width: 600px;
+
+    padding: 75px 0 90px;
+
+    text-align: left;
 }
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
 
 .section-label {
     display: flex;
     align-items: center;
-    gap: 14px;
 
-    margin-bottom: 28px;
+    gap: 12px;
 
-    color: #006994;
+    margin: 0 0 18px;
 
-    font-size: 12px;
-    font-weight: 800;
+    color: #ffffff;
 
-    letter-spacing: 0.16em;
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
 }
 
 .section-label span {
     display: block;
 
-    width: 42px;
-    height: 3px;
+    width: 38px;
+    height: 2px;
 
     background: #F4B400;
 }
 
 
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
 .contact-content h1 {
-    margin: 0 0 28px;
+    margin: 0 0 22px;
 
-    color: #003B5C;
+    color: #ffffff;
 
-    font-size: clamp(42px, 4.5vw, 68px);
-    font-weight: 400;
+    font-family: "Playfair Display", serif;
 
-    line-height: 1.05;
-    letter-spacing: -0.035em;
+    font-size: clamp(34px, 4vw, 52px);
+
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.02em;
 }
+
+
+/* If <strong> is used inside heading */
 
 .contact-content h1 strong {
-    display: block;
+    display: inline;
 
-    color: #006994;
+    color: #ffffff;
 
-    font-weight: 800;
+    font-weight: 600;
 }
 
 
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
 .contact-intro {
-    max-width: 620px;
+    max-width: 520px;
 
-    margin-bottom: 45px;
+    margin: 0 0 30px;
 
-    color: #425C6A;
+    color: rgba(255, 255, 255, 0.90);
 
-    font-size: 18px;
-    line-height: 1.8;
+    font-family: "Inter", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.65;
 }
 
 
@@ -5564,29 +5649,33 @@ a {
 ========================================================= */
 
 .contact-information {
-    padding-top: 35px;
+    padding-top: 22px;
 
-    border-top: 1px solid rgba(0, 59, 92, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .contact-information h2 {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
 
-    color: #003B5C;
+    color: #ffffff;
+
+    font-family: "Playfair Display", serif;
 
     font-size: 24px;
-    font-weight: 700;
+
+    font-weight: 600;
 }
 
 .contact-information > p {
-    max-width: 600px;
+    max-width: 500px;
 
-    margin-bottom: 30px;
+    margin: 0 0 22px;
 
-    color: #506875;
+    color: rgba(255, 255, 255, 0.82);
 
-    font-size: 15px;
-    line-height: 1.75;
+    font-size: 14px;
+
+    line-height: 1.65;
 }
 
 
@@ -5596,46 +5685,53 @@ a {
 
 .contact-details {
     display: grid;
+
     grid-template-columns: 1fr;
-    gap: 18px;
+
+    gap: 14px;
 }
 
 .contact-detail {
     display: flex;
+
     align-items: center;
 
-    gap: 15px;
+    gap: 13px;
 }
 
 .detail-icon {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
 
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border: 1px solid #F4B400;
 
-    color: #006994;
+    color: #F4B400;
 
-    font-size: 16px;
-    font-weight: 800;
+    font-size: 14px;
+
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .contact-detail span {
     display: block;
 
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 
-    color: #7A8C95;
+    color: rgba(255, 255, 255, 0.65);
 
-    font-size: 10px;
-    font-weight: 800;
+    font-size: 9px;
+
+    font-weight: 700;
 
     letter-spacing: 0.13em;
+
     text-transform: uppercase;
 }
 
@@ -5643,16 +5739,319 @@ a {
 .contact-detail p {
     margin: 0;
 
-    color: #003B5C;
+    color: #ffffff;
 
-    font-size: 14px;
+    font-size: 13px;
+
     font-weight: 600;
 
     text-decoration: none;
 }
 
 .contact-detail a:hover {
-    color: #006994;
+    color: #F4B400;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+   Keeps the right side visually open so the photograph
+   remains the main visual element.
+========================================================= */
+
+.contact-layout::after {
+    content: "";
+
+    display: block;
+
+    min-height: 400px;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+   If your HTML contains the form, this styling keeps it
+   clean and compact on the left side.
+========================================================= */
+
+.contact-form-box {
+    width: 100%;
+    max-width: 550px;
+
+    padding: 24px 26px 26px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-left: 4px solid #006994;
+
+    border-radius: 2px;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.22);
+
+    box-sizing: border-box;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form-group {
+    margin-bottom: 13px;
+}
+
+.contact-form-group label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #003B5C;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+    width: 100%;
+
+    padding: 10px 11px;
+
+    box-sizing: border-box;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 12px;
+
+    color: #003B5C;
+
+    background: #ffffff;
+
+    border: 1px solid #c8dce5;
+
+    border-radius: 2px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.contact-form-group input {
+    height: 38px;
+}
+
+.contact-form-group textarea {
+    min-height: 85px;
+
+    resize: vertical;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+    border-color: #006994;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 105, 148, 0.10);
+}
+
+
+/* =========================================================
+   SEND BUTTON
+========================================================= */
+
+.contact-submit {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 3px;
+
+    padding: 11px 20px;
+
+    color: #ffffff;
+
+    background: #006994;
+
+    border: none;
+
+    border-radius: 2px;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-submit:hover {
+    background: #003B5C;
+
+    transform: translateY(-1px);
+}
+
+.contact-submit i {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-hero {
+        background-position: 70% center;
+    }
+
+    .contact-layout {
+        grid-template-columns: 58% 42%;
+
+        gap: 25px;
+
+        width: 90%;
+    }
+
+    .contact-content {
+        padding: 65px 0 75px;
+    }
+
+    .contact-content h1 {
+        font-size: 36px;
+    }
+
+    .contact-intro {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .contact-hero {
+        min-height: 100vh;
+
+        background-position: 72% center;
+    }
+
+    .contact-hero::before {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(0, 59, 92, 0.94) 0%,
+                rgba(0, 59, 92, 0.86) 45%,
+                rgba(0, 59, 92, 0.55) 75%,
+                rgba(0, 59, 92, 0.20) 100%
+            );
+    }
+
+    .contact-layout {
+        display: block;
+
+        width: 88%;
+
+        min-height: 100vh;
+    }
+
+    .contact-content {
+        width: 100%;
+        max-width: 520px;
+
+        padding: 60px 0 70px;
+    }
+
+    .contact-content h1 {
+        font-size: 30px;
+
+        line-height: 1.2;
+
+        margin-bottom: 20px;
+    }
+
+    .contact-intro {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 28px;
+    }
+
+    .contact-information {
+        padding-top: 20px;
+    }
+
+    .contact-information h2 {
+        font-size: 22px;
+    }
+
+    .contact-layout::after {
+        display: none;
+    }
+
+    .contact-form-box {
+        padding: 21px 20px 23px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+    .contact-hero {
+        background-position: 72% center;
+    }
+
+    .contact-layout {
+        width: 90%;
+    }
+
+    .contact-content {
+        padding-top: 50px;
+    }
+
+    .section-label {
+        font-size: 10px;
+
+        letter-spacing: 0.15em;
+    }
+
+    .contact-content h1 {
+        font-size: 27px;
+    }
+
+    .contact-intro {
+        font-size: 13px;
+    }
+
+    .contact-form-box {
+        padding: 18px 16px 20px;
+    }
+
+    .contact-submit {
+        width: 100%;
+    }
 }
 
 
