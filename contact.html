@@ -1,7 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,25 +15,31 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" type="image/png" href="image/favicon1.png">
+
+    <link rel="icon" type="image/png" href="image/favicon1.png">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet"
+    <link
+        rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 
     <!-- YOUR EXISTING WEBSITE CSS -->
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CONTACT PAGE ONLY
+         ===================================================== -->
 
     <style>
 
         /* =====================================================
-           CONTACT PAGE ONLY
-           Existing header, navigation and footer remain intact
+           CONTACT PAGE
            ===================================================== */
 
         .contact-page {
@@ -39,337 +47,514 @@
             background: #ffffff;
         }
 
-        .contact-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 75px 30px 50px;
+
+        /* =====================================================
+           FULL IMAGE HERO
+           ===================================================== */
+
+        .contact-hero {
+            position: relative;
+
+            width: 100%;
+            height: 720px;
+
+            overflow: hidden;
         }
 
-        /* =========================
-           PAGE INTRO
-           ========================= */
 
-        .contact-intro-section {
+        .contact-hero-image {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center top;
+
+            display: block;
+        }
+
+
+        /* DARK BLUE OVERLAY */
+
+        .contact-hero-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(0, 59, 92, 0.38);
+        }
+
+
+        /* =====================================================
+           HERO TEXT
+           ===================================================== */
+
+        .contact-hero-content {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 90%;
+            max-width: 850px;
+
             text-align: center;
-            margin-bottom: 55px;
+
+            color: #ffffff;
         }
+
 
         .contact-small-title {
-            color: #0b4ea2;
+            font-family: "Inter", sans-serif;
+
             font-size: 13px;
             font-weight: 700;
-            letter-spacing: 2px;
+
+            letter-spacing: 3px;
+
             text-transform: uppercase;
-            margin-bottom: 12px;
+
+            margin: 0 0 18px;
         }
 
-        .contact-intro-section h1 {
+
+        .contact-hero-content h1 {
             font-family: "Playfair Display", Georgia, serif;
-            font-size: 44px;
+
+            font-size: 52px;
             line-height: 1.2;
+
             font-weight: 600;
-            color: #111827;
-            margin: 0 auto 15px;
-            max-width: 750px;
+
+            margin: 0 auto 20px;
         }
 
-        .contact-intro-section p {
+
+        .contact-hero-content p:last-child {
             max-width: 650px;
+
             margin: 0 auto;
-            color: #6b7280;
-            font-size: 15px;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 16px;
             line-height: 1.8;
         }
 
 
-        /* =========================
-           MAIN TWO COLUMN AREA
-           LEFT = FORM
-           RIGHT = PHOTO
-           ========================= */
+        /* =====================================================
+           CONTACT FORM SECTION
+           ===================================================== */
 
-        .contact-main {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: stretch;
+        .contact-form-section {
+            width: 100%;
+
+            padding: 80px 30px;
+
+            background: #ffffff;
+
+            box-sizing: border-box;
         }
 
 
-        /* =========================
-           LEFT CONTACT BOX
-           ========================= */
-
         .contact-form-box {
-            background: #ffffff;
+            width: 100%;
+            max-width: 750px;
+
+            margin: 0 auto;
+
+            padding: 50px;
+
+            box-sizing: border-box;
+
             border: 1px solid #e5e7eb;
-            padding: 45px;
+
+            background: #ffffff;
+
             box-shadow: 0 18px 45px rgba(11, 78, 162, 0.08);
         }
 
+
         .contact-form-box h2 {
             font-family: "Playfair Display", Georgia, serif;
-            color: #111827;
-            font-size: 30px;
+
+            font-size: 34px;
             font-weight: 600;
+
+            color: #111827;
+
             margin: 0 0 10px;
         }
 
+
         .contact-form-box .box-description {
             color: #6b7280;
+
             font-size: 14px;
             line-height: 1.7;
-            margin-bottom: 30px;
+
+            margin: 0 0 35px;
         }
 
 
-        /* =========================
+        /* =====================================================
            FORM
-           ========================= */
+           ===================================================== */
 
         .contact-form {
             width: 100%;
         }
 
+
         .contact-form-group {
-            margin-bottom: 22px;
+            margin-bottom: 25px;
         }
+
 
         .contact-form-group label {
             display: block;
+
             color: #374151;
+
             font-size: 13px;
             font-weight: 600;
+
             margin-bottom: 7px;
         }
 
+
         .contact-form-group input,
         .contact-form-group textarea {
+
             width: 100%;
+
+            box-sizing: border-box;
+
             border: 0;
+
             border-bottom: 1px solid #cbd5e1;
+
             outline: none;
+
             background: transparent;
-            padding: 11px 2px;
+
+            padding: 12px 2px;
+
             font-family: "Inter", sans-serif;
+
             font-size: 14px;
+
             color: #111827;
+
             transition: border-color 0.3s ease;
         }
 
+
         .contact-form-group input:focus,
         .contact-form-group textarea:focus {
+
             border-bottom-color: #0b4ea2;
         }
 
+
         .contact-form-group input::placeholder,
         .contact-form-group textarea::placeholder {
+
             color: #9ca3af;
         }
 
+
         .contact-form-group textarea {
-            height: 95px;
+
+            height: 120px;
+
             resize: vertical;
         }
 
 
-        /* =========================
+        /* =====================================================
            SEND BUTTON
-           ========================= */
+           ===================================================== */
 
         .contact-submit {
+
             display: inline-block;
+
             margin-top: 5px;
-            padding: 14px 30px;
+
+            padding: 14px 32px;
+
             border: none;
+
             background: #0b4ea2;
+
             color: #ffffff;
+
             font-family: "Inter", sans-serif;
+
             font-size: 13px;
             font-weight: 600;
-            letter-spacing: 0.6px;
+
+            letter-spacing: 0.8px;
+
             cursor: pointer;
+
             transition: all 0.3s ease;
         }
 
+
         .contact-submit:hover {
-            background: #083b7d;
+
+            background: #003b5c;
+
             transform: translateY(-2px);
         }
 
 
-        /* =========================
-           RIGHT PHOTO
-           ========================= */
-
-        .contact-photo {
-            width: 100%;
-            min-height: 570px;
-            overflow: hidden;
-            background: #f8fafc;
-        }
-
-        .contact-photo img {
-            width: 100%;
-            height: 100%;
-            min-height: 570px;
-            object-fit: contain;
-            object-position: center;
-            display: block;
-        }
-
-
-        /* =========================
+        /* =====================================================
            CONTACT DETAILS
-           ICON + INFORMATION ONLY
-           ========================= */
+           ===================================================== */
 
         .contact-details {
-            margin-top: 55px;
-            padding: 27px 10px;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            padding: 30px;
+
+            box-sizing: border-box;
 
             border-top: 1px solid #e5e7eb;
+
             border-bottom: 1px solid #e5e7eb;
         }
 
+
         .contact-details-row {
+
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 25px;
+
             align-items: center;
         }
 
+
         .contact-detail {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             gap: 11px;
 
             color: #374151;
+
             text-decoration: none;
 
             font-size: 14px;
+
             line-height: 1.5;
 
             transition: color 0.3s ease;
         }
 
+
         .contact-detail i {
+
             color: #0b4ea2;
+
             font-size: 17px;
+
             min-width: 18px;
+
             text-align: center;
         }
+
 
         .contact-detail:hover {
+
             color: #0b4ea2;
         }
 
 
-        /* =========================
+        /* =====================================================
            PROFESSIONAL AREAS
-           KEEPING YOUR EXISTING CONTENT
-           ========================= */
+           ===================================================== */
 
         .professional-areas {
-            margin-top: 55px;
+
+            padding: 70px 30px 80px;
+
             text-align: center;
         }
 
+
         .professional-areas h2 {
+
             font-family: "Playfair Display", Georgia, serif;
-            font-size: 28px;
+
+            font-size: 30px;
+
             color: #111827;
-            margin-bottom: 25px;
+
+            margin: 0 0 25px;
         }
 
+
         .professional-area-list {
+
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: center;
+
             gap: 10px 12px;
+
             max-width: 850px;
+
             margin: 0 auto;
         }
 
+
         .professional-area-list span {
+
             color: #374151;
+
             font-size: 13px;
+
             padding: 8px 14px;
+
             border: 1px solid #e5e7eb;
+
             background: #ffffff;
         }
 
 
-        /* =========================
-           MOBILE RESPONSIVE
-           ========================= */
+        /* =====================================================
+           TABLET
+           ===================================================== */
 
         @media (max-width: 900px) {
 
-            .contact-wrapper {
-                padding: 60px 25px 45px;
+            .contact-hero {
+
+                height: 620px;
             }
 
-            .contact-main {
-                grid-template-columns: 1fr;
-                gap: 35px;
+
+            .contact-hero-content h1 {
+
+                font-size: 42px;
             }
 
-            .contact-photo {
-                order: -1;
-                min-height: 500px;
-            }
-
-            .contact-photo img {
-                min-height: 500px;
-            }
 
             .contact-details-row {
+
                 grid-template-columns: 1fr;
+
                 gap: 20px;
             }
+
         }
 
 
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
         @media (max-width: 600px) {
 
-            .contact-wrapper {
-                padding: 45px 20px 35px;
+            .contact-hero {
+
+                height: 580px;
             }
 
-            .contact-intro-section {
-                margin-bottom: 35px;
+
+            .contact-hero-image {
+
+                object-position: center top;
             }
 
-            .contact-intro-section h1 {
+
+            .contact-hero-content {
+
+                width: 88%;
+            }
+
+
+            .contact-small-title {
+
+                font-size: 11px;
+
+                letter-spacing: 2px;
+
+                margin-bottom: 14px;
+            }
+
+
+            .contact-hero-content h1 {
+
                 font-size: 32px;
+
+                line-height: 1.25;
+
+                margin-bottom: 16px;
             }
 
-            .contact-intro-section p {
+
+            .contact-hero-content p:last-child {
+
                 font-size: 14px;
+
+                line-height: 1.6;
             }
+
+
+            .contact-form-section {
+
+                padding: 50px 20px;
+            }
+
 
             .contact-form-box {
+
                 padding: 30px 25px;
             }
 
+
             .contact-form-box h2 {
-                font-size: 26px;
+
+                font-size: 28px;
             }
 
-            .contact-photo,
-            .contact-photo img {
-                min-height: 400px;
+
+            .contact-details {
+
+                padding: 25px 20px;
             }
+
 
             .contact-detail {
+
                 justify-content: flex-start;
-                padding-left: 10px;
             }
 
+
             .professional-areas {
-                margin-top: 40px;
+
+                padding: 50px 20px 60px;
             }
 
         }
@@ -377,26 +562,47 @@
     </style>
 
 </head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
 <header class="site-header">
 
     <div class="header-inner">
 
+
         <!-- BRAND -->
+
         <a href="index.html" class="brand">
 
-            <span class="brand-mark">AP</span>
+            <span class="brand-mark">
+                AP
+            </span>
 
             <span class="brand-text">
-                <strong>Adv. Achut Poudel</strong>
+
+                <strong>
+                    Adv. Achut Poudel
+                </strong>
+
                 <small>
                     Leadership • People • Business • Governance
                 </small>
+
             </span>
 
         </a>
 
 
-        <!-- MAIN NAVIGATION -->
+        <!-- =================================================
+             MAIN NAVIGATION
+             ================================================= -->
+
         <nav class="main-navigation" id="mainNavigation">
 
             <a href="index.html" class="nav-link">
@@ -418,71 +624,107 @@
         </nav>
 
 
-        <!-- RIGHT SIDE -->
+        <!-- =================================================
+             RIGHT SIDE
+             ================================================= -->
+
         <div class="header-right">
 
-            <!-- SOCIAL ICONS ONLY -->
+
+            <!-- SOCIAL LINKS -->
+
             <div class="social-links">
 
-                <a href="https://www.linkedin.com/in/achutpdl/"
-                   aria-label="LinkedIn"
-                   target="_blank"
-                   rel="noopener noreferrer">
+
+                <!-- LinkedIn -->
+
+                <a
+                    href="https://www.linkedin.com/in/achutpdl/"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     in
+
                 </a>
 
-                
 
-                <a href="https://www.facebook.com/acyuta.paaidela/"
-                   aria-label="Facebook"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <!-- Facebook -->
+
+                <a
+                    href="https://www.facebook.com/acyuta.paaidela/"
+                    aria-label="Facebook"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     f
+
                 </a>
 
 
-                <a href="https://www.youtube.com/@achutpoudel9020"
-                   aria-label="YouTube"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <!-- YouTube -->
+
+                <a
+                    href="https://www.youtube.com/@achutpoudel9020"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     ▶
+
                 </a>
+
 
                 <!-- TikTok -->
-    <a href="https://www.tiktok.com/@achutpoudel_"
-       aria-label="TikTok"
-       target="_blank"
-       rel="noopener noreferrer">
-        <i class="fab fa-tiktok"></i>
-    </a>
 
-                 <!-- Instagram -->
-    <a href="https://www.instagram.com/achutlove/"
-       aria-label="Instagram"
-       target="_blank"
-       rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-    </a>
+                <a
+                    href="https://www.tiktok.com/@achutpoudel_"
+                    aria-label="TikTok"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fab fa-tiktok"></i>
+
+                </a>
 
 
+                <!-- Instagram -->
+
+                <a
+                    href="https://www.instagram.com/achutlove/"
+                    aria-label="Instagram"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
 
             </div>
 
 
-            <!-- CONTACT -->
-            <a href="contact.html"
-               class="contact-button active">
+            <!-- CONTACT BUTTON -->
+
+            <a
+                href="contact.html"
+                class="contact-button active">
+
                 Contact Me
+
             </a>
 
         </div>
 
 
-        <!-- MOBILE MENU -->
-        <button class="mobile-menu-button"
-                id="menuButton"
-                aria-label="Open navigation"
-                aria-expanded="false">
+        <!-- =================================================
+             MOBILE MENU
+             ================================================= -->
+
+        <button
+            class="mobile-menu-button"
+            id="menuButton"
+            aria-label="Open navigation"
+            aria-expanded="false">
 
             <span></span>
             <span></span>
@@ -494,230 +736,148 @@
 
 </header>
 
-<body>
 
 
-  
+<!-- =====================================================
+     CONTACT PAGE
+     ===================================================== -->
+
+<main class="contact-page">
 
 
+    <!-- =================================================
+         FULL PHOTO HERO
+         ================================================= -->
 
-    <!-- =====================================================
-         CONTACT PAGE
-         ===================================================== -->
-
-    <main class="contact-page">
-
-        <div class="contact-wrapper">
+    <section class="contact-hero">
 
 
-            <!-- =========================
-                 INTRO
-                 ========================= -->
+        <!-- YOUR CONTACT PHOTO -->
 
-            <section class="contact-intro-section">
-
-                </section>
-
-            <!-- =========================
-                 LEFT FORM / RIGHT PHOTO
-                 ========================= -->
-            <section class="contact-main">
-
-                <!-- LEFT SIDE -->
-
-                <div class="contact-form-box">
-
-                    <h2>
-                        Contact
-                    </h2>
-
-                    <p class="box-description">
-                        Let’s connect, collaborate,& create meaningful impact.
- 
-                    </p>
+        <img
+            src="image/contact_1.jpg"
+            alt="Professional photograph of Adv. Achut Poudel"
+            class="contact-hero-image">
 
 
-                    <form class="contact-form"
-                          action="mailto:poudel.achut@gmail.com"
-                          method="post"
-                          enctype="text/plain">
+        <!-- BLUE OVERLAY -->
+
+        <div class="contact-hero-overlay"></div>
 
 
-                        <div class="contact-form-group">
+        <!-- TEXT ON TOP OF PHOTO -->
 
-                            <label for="name">
-                                Full Name
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="Name"
-                                placeholder="Your name"
-                                required>
-
-                        </div>
+        <div class="contact-hero-content">
 
 
-                        <div class="contact-form-group">
-
-                            <label for="email">
-                                Email Address
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="Email"
-                                placeholder="Your email address"
-                                required>
-
-                        </div>
-
-
-                        <div class="contact-form-group">
-
-                            <label for="subject">
-                                Subject
-                            </label>
-
-                            <input
-                                type="text"
-                                id="subject"
-                                name="Subject"
-                                placeholder="Subject">
-
-                        </div>
-
-
-                        <div class="contact-form-group">
-
-                            <label for="message">
-                                Message
-                            </label>
-
-                            <textarea
-                                id="message"
-                                name="Message"
-                                placeholder="Your message"
-                                required></textarea>
-
-                        </div>
-
-
-                        <button
-                            type="submit"
-                            class="contact-submit">
-
-                            SEND MESSAGE
-
-                        </button>
-
-                    </form>
-
-                </div>
-
-
-
-                <!-- RIGHT SIDE PHOTO -->
-
-                <div class="contact-photo">
-
-                    <!--
-                    IMPORTANT:
-                    Replace the image path below with the EXACT
-                    image path currently used on your website.
-                    -->
-
-                    <img
-                        src="image/contact_1.jpg"
-                        alt="Professional photograph of Adv. Achut Poudel">
-                </div>
-            </section>
-        </div>
- </main><!=====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="footer">
-
-    <div class="content-container footer-grid">
-
-        <div>
-            <h3>
-                Adv. Achut Poudel
-            </h3>
-            <p class="footer-position">
-                Leadership • People • Business • Governance
+            <p class="contact-small-title">
+                GET IN TOUCH
             </p>
-           
+
+
+            <h1>
+                Let’s connect, collaborate,<br>
+                and create meaningful impact.
+            </h1>
+
+
+            <p>
+                Professional collaboration, consultation,
+                leadership, HR, legal and business opportunities.
+            </p>
+
         </div>
 
-        <div>
+    </section>
 
-            <h4>
-                Navigation
-            </h4>
 
-            <a href="index.html">
-                Home
-            </a>
 
-            <a href="about.html">
-                About Me
-            </a>
+    <!-- =================================================
+         CONTACT FORM
+         ================================================= -->
 
-            <a href="achievement.html">
-                My Achievement
-            </a>
+    <section class="contact-form-section">
 
-            <a href="resources.html">
-                Training &amp; Workshops
-            </a>
 
-            <a href="contact.html">
+        <div class="contact-form-box">
+
+
+            <h2>
                 Contact Me
-            </a>
-
-        </div>
+            </h2>
 
 
-        <div>
+            <p class="box-description">
 
-            <h4>
-                Professional Areas
-            </h4>
+                Please feel free to reach out for professional
+                discussions, collaboration or consultation.
 
-            <span>
-                Business Leadership
-            </span>
+            </p>
 
-            <span>
-                Human Resources
-            </span>
 
-            <span>
-                Governance
-            </span>
+            <form
+                class="contact-form"
+                action="mailto:poudel.achut@gmail.com"
+                method="post"
+                enctype="text/plain">
 
-            <span>
-                Law &amp; Compliance
-            </span>
 
-            <span>
-                Organizational Development
-            </span>
+                <!-- FULL NAME -->
 
-        </div>
+                <div class="contact-form-group">
 
-    </div>
+                    <label for="name">
+                        Full Name
+                    </label>
 
-    <div class="footer-bottom">
-        <div class="content-container">
-                             © 2026 Adv. Achut Poudel. All rights reserved.
-        </div>
-    </div>
-</footer>
-<script src="script.js"></script>
-</body>
-</html>
+                    <input
+                        type="text"
+                        id="name"
+                        name="Name"
+                        placeholder="Your name"
+                        required>
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="Email"
+                        placeholder="Your email address"
+                        required>
+
+                </div>
+
+
+                <!-- SUBJECT -->
+
+                <div class="contact-form-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="Subject"
+                        placeholder="Subject">
+
+                </div>
+
+
+                <!-- MESSAGE -->
+
+                <div class="contact-form-group">
+
+                    <label for="message">
+```
