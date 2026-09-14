@@ -34,7 +34,9 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
     <header class="site-header">
 
@@ -63,153 +65,175 @@
     </header>
 
 
-    <!-- ================= MAIN ================= -->
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
 
     <main class="contact-page">
 
 
-        <!-- ================= CONTACT HERO ================= -->
+        <!-- =================================================
+             FULL CONTACT PHOTO SECTION
+        ================================================== -->
 
-        <section class="contact-hero">
+        <section class="contact-photo-section">
 
-            <!-- Full Background Image -->
-            <img src="image/contact_2.jpg"
+            <!-- Full Background Photograph -->
+
+            <img
+                src="image/contact_2.jpg"
                 alt="Adv. Achut Poudel"
-                class="contact-hero-image">
-
-            <!-- Blue Overlay -->
-            <div class="contact-hero-overlay"></div>
+                class="contact-background-image">
 
 
-            <!-- Content -->
-            <div class="contact-hero-content">
+            <!-- Subtle Blue Overlay -->
+
+            <div class="contact-blue-overlay"></div>
 
 
-                <!-- INTRODUCTION -->
+            <!-- Left Side Content -->
 
-                <div class="contact-intro">
+            <div class="contact-content-wrapper">
 
-                    <div class="contact-label">
-                        GET IN TOUCH
+                <div class="contact-left-content">
+
+
+                    <!-- INTRO -->
+
+                    <div class="contact-introduction">
+
+                        <span class="contact-eyebrow">
+                            GET IN TOUCH
+                        </span>
+
+
+                        <h1>
+                            Let’s connect, collaborate,
+                            <br>
+                            and create meaningful impact.
+                        </h1>
+
+
+                        <p class="contact-intro-text">
+                            Professional collaboration, consultation,
+                            leadership, HR, legal and business opportunities.
+                        </p>
+
                     </div>
 
-                    <h1>
-                        Let’s connect, collaborate,<br>
-                        and create meaningful impact.
-                    </h1>
-
-                    <p>
-                        Professional collaboration, consultation, leadership,
-                        HR, legal and business opportunities.
-                    </p>
-
-                </div>
 
 
-                <!-- CONTACT FORM -->
+                    <!-- CONTACT FORM -->
 
-                <div class="contact-form-box">
+                    <div class="contact-form-box">
 
-                    <h2>Contact Me</h2>
-
-                    <p class="form-description">
-                        Please feel free to get in touch for professional
-                        discussions, collaboration or business opportunities.
-                    </p>
+                        <h2>
+                            Contact Me
+                        </h2>
 
 
-                    <form action="mailto:poudel.achut@gmail.com"
-                        method="post"
-                        enctype="text/plain">
+                        <p class="contact-form-description">
+                            Please feel free to get in touch for professional
+                            discussions, collaboration or business opportunities.
+                        </p>
 
 
-                        <!-- Full Name -->
-
-                        <div class="form-group">
-
-                            <label for="name">
-                                Full Name
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="Full Name"
-                                placeholder="Your full name"
-                                required>
-
-                        </div>
+                        <form
+                            action="mailto:poudel.achut@gmail.com"
+                            method="post"
+                            enctype="text/plain">
 
 
-                        <!-- Email -->
+                            <!-- Full Name -->
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <label for="email">
-                                Email Address
-                            </label>
+                                <label for="name">
+                                    Full Name
+                                </label>
 
-                            <input
-                                type="email"
-                                id="email"
-                                name="Email"
-                                placeholder="Your email address"
-                                required>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="Full Name"
+                                    placeholder="Your full name"
+                                    required>
 
-                        </div>
-
-
-                        <!-- Subject -->
-
-                        <div class="form-group">
-
-                            <label for="subject">
-                                Subject
-                            </label>
-
-                            <input
-                                type="text"
-                                id="subject"
-                                name="Subject"
-                                placeholder="Subject"
-                                required>
-
-                        </div>
+                            </div>
 
 
-                        <!-- Message -->
+                            <!-- Email -->
 
-                        <div class="form-group">
+                            <div class="form-group">
 
-                            <label for="message">
-                                Message
-                            </label>
+                                <label for="email">
+                                    Email Address
+                                </label>
 
-                            <textarea
-                                id="message"
-                                name="Message"
-                                rows="5"
-                                placeholder="Write your message..."
-                                required></textarea>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="Email"
+                                    placeholder="Your email address"
+                                    required>
 
-                        </div>
-
-
-                        <!-- Button -->
-
-                        <button type="submit" class="contact-submit">
-
-                            SEND MESSAGE
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </button>
+                            </div>
 
 
-                    </form>
+                            <!-- Subject -->
+
+                            <div class="form-group">
+
+                                <label for="subject">
+                                    Subject
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="Subject"
+                                    placeholder="Subject"
+                                    required>
+
+                            </div>
+
+
+                            <!-- Message -->
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="Message"
+                                    rows="4"
+                                    placeholder="Write your message..."
+                                    required></textarea>
+
+                            </div>
+
+
+                            <!-- Submit -->
+
+                            <button
+                                type="submit"
+                                class="contact-submit">
+
+                                SEND MESSAGE
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+                        </form>
+
+                    </div>
 
                 </div>
-
 
             </div>
 
@@ -217,26 +241,30 @@
 
 
 
-        <!-- ================= CONTACT DETAILS ================= -->
+        <!-- =================================================
+             CONTACT INFORMATION
+        ================================================== -->
 
-        <section class="contact-details-section">
+        <section class="contact-information">
 
             <div class="container">
 
-                <div class="contact-details-grid">
+                <div class="contact-information-grid">
 
 
                     <!-- Email -->
 
-                    <div class="contact-detail">
+                    <div class="contact-information-item">
 
-                        <div class="detail-icon">
+                        <div class="contact-information-icon">
                             <i class="fa-solid fa-envelope"></i>
                         </div>
 
                         <div>
 
-                            <h3>Email</h3>
+                            <h3>
+                                Email
+                            </h3>
 
                             <a href="mailto:poudel.achut@gmail.com">
                                 poudel.achut@gmail.com
@@ -249,15 +277,17 @@
 
                     <!-- Phone -->
 
-                    <div class="contact-detail">
+                    <div class="contact-information-item">
 
-                        <div class="detail-icon">
+                        <div class="contact-information-icon">
                             <i class="fa-solid fa-phone"></i>
                         </div>
 
                         <div>
 
-                            <h3>Phone</h3>
+                            <h3>
+                                Phone
+                            </h3>
 
                             <a href="tel:+9779841151881">
                                 +977 9841151881
@@ -270,15 +300,17 @@
 
                     <!-- Location -->
 
-                    <div class="contact-detail">
+                    <div class="contact-information-item">
 
-                        <div class="detail-icon">
+                        <div class="contact-information-icon">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
 
                         <div>
 
-                            <h3>Location</h3>
+                            <h3>
+                                Location
+                            </h3>
 
                             <p>
                                 Kathmandu, Nepal
@@ -297,13 +329,16 @@
 
 
 
-        <!-- ================= PROFESSIONAL AREAS ================= -->
+        <!-- =================================================
+             PROFESSIONAL AREAS
+        ================================================== -->
 
-        <section class="professional-areas-section">
+        <section class="professional-section">
 
             <div class="container">
 
-                <div class="professional-heading">
+
+                <div class="professional-section-heading">
 
                     <span>
                         PROFESSIONAL FOCUS
@@ -316,10 +351,12 @@
                 </div>
 
 
-                <div class="professional-areas-grid">
+                <div class="professional-grid">
 
 
-                    <div class="professional-area">
+                    <!-- HR -->
+
+                    <div class="professional-card">
 
                         <i class="fa-solid fa-users"></i>
 
@@ -335,7 +372,9 @@
                     </div>
 
 
-                    <div class="professional-area">
+                    <!-- Law -->
+
+                    <div class="professional-card">
 
                         <i class="fa-solid fa-scale-balanced"></i>
 
@@ -351,7 +390,9 @@
                     </div>
 
 
-                    <div class="professional-area">
+                    <!-- Business -->
+
+                    <div class="professional-card">
 
                         <i class="fa-solid fa-chart-line"></i>
 
@@ -367,7 +408,9 @@
                     </div>
 
 
-                    <div class="professional-area">
+                    <!-- Leadership -->
+
+                    <div class="professional-card">
 
                         <i class="fa-solid fa-lightbulb"></i>
 
@@ -389,12 +432,13 @@
 
         </section>
 
-
     </main>
 
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
 
     <footer class="site-footer">
 
@@ -415,9 +459,11 @@
                         Leadership • People • Business • Governance
                     </p>
 
+
                     <div class="footer-social">
 
-                        <a href="https://www.linkedin.com/in/achutpdl/"
+                        <a
+                            href="https://www.linkedin.com/in/achutpdl/"
                             target="_blank"
                             aria-label="LinkedIn">
 
@@ -426,7 +472,8 @@
                         </a>
 
 
-                        <a href="https://www.facebook.com/acyuta.paaidela/"
+                        <a
+                            href="https://www.facebook.com/acyuta.paaidela/"
                             target="_blank"
                             aria-label="Facebook">
 
@@ -435,7 +482,8 @@
                         </a>
 
 
-                        <a href="https://www.instagram.com/achutlove/"
+                        <a
+                            href="https://www.instagram.com/achutlove/"
                             target="_blank"
                             aria-label="Instagram">
 
@@ -444,7 +492,8 @@
                         </a>
 
 
-                        <a href="https://www.youtube.com/@achutpoudel9020"
+                        <a
+                            href="https://www.youtube.com/@achutpoudel9020"
                             target="_blank"
                             aria-label="YouTube">
 
@@ -453,5 +502,126 @@
                         </a>
 
 
-                        <a href="https://www.tiktok.com/@achutpoudel_"
+                        <a
+                            href="https://www.tiktok.com/@achutpoudel_"
+                            target="_blank"
+                            aria-label="TikTok">
+
+                            <i class="fab fa-tiktok"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Navigation -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Navigation
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About Me
+                    </a>
+
+                    <a href="achievement.html">
+                        My Achievement
+                    </a>
+
+                    <a href="training.html">
+                        Training & Workshops
+                    </a>
+
+                    <a href="contact.html">
+                        Contact Me
+                    </a>
+
+                </div>
+
+
+
+                <!-- Professional Areas -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Professional Areas
+                    </h4>
+
+                    <a href="#">
+                        Human Resources
+                    </a>
+
+                    <a href="#">
+                        Law & Compliance
+                    </a>
+
+                    <a href="#">
+                        Business & Strategy
+                    </a>
+
+                    <a href="#">
+                        Leadership & Consulting
+                    </a>
+
+                </div>
+
+
+
+                <!-- Contact -->
+
+                <div class="footer-column">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <a href="mailto:poudel.achut@gmail.com">
+                        poudel.achut@gmail.com
+                    </a>
+
+                    <a href="tel:+9779841151881">
+                        +977 9841151881
+                    </a>
+
+                    <p>
+                        Kathmandu, Nepal
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Adv. Achut Poudel. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
 ```
