@@ -7,24 +7,486 @@
 
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
+
     <meta name="description"
-          content="Professional achievements, experience, education, certifications, projects, publications and career milestones of Adv. Achut Poudel.">
+          content="Contact Adv. Achut Poudel for professional collaboration, consultation, leadership, HR, legal and business opportunities.">
 
     <meta name="author"
           content="Adv. Achut Poudel">
 
     <title>
-        My Achievement | Adv. Achut Poudel
+        Contact Me | Adv. Achut Poudel
     </title>
 
- <link rel="icon" type="image/png" href="image/favicon1.png">
+    <link rel="icon" type="image/png" href="image/favicon1.png">
+
     <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CONTACT PAGE CSS ONLY
+         HEADER & FOOTER ARE NOT CHANGED
+         ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           CONTACT PAGE - FULL BACKGROUND
+           ===================================================== */
+
+        .contact-page {
+
+            position: relative;
+
+            width: 100%;
+
+            min-height: calc(100vh - 80px);
+
+            overflow: hidden;
+
+            background-image: url("image/contact_2.jpg");
+
+            background-size: cover;
+
+            /* Adjust this value if you want to move the
+               photograph horizontally */
+            background-position: 65% center;
+
+            background-repeat: no-repeat;
+        }
+
+
+        /* =====================================================
+           BLUE OVERLAY
+           Stronger on LEFT for text readability
+           Fades toward RIGHT so photograph remains visible
+           ===================================================== */
+
+        .contact-page::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0, 59, 92, 0.90) 0%,
+                    rgba(0, 59, 92, 0.78) 25%,
+                    rgba(0, 59, 92, 0.50) 45%,
+                    rgba(0, 59, 92, 0.18) 65%,
+                    rgba(0, 59, 92, 0.03) 82%,
+                    rgba(0, 59, 92, 0) 100%
+                );
+
+            z-index: 0;
+        }
+
+
+        /* =====================================================
+           CONTENT CONTAINER
+           ===================================================== */
+
+        .contact-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            width: 92%;
+
+            max-width: 1250px;
+
+            margin: 0 auto;
+
+            padding: 85px 0 100px;
+        }
+
+
+        /* =====================================================
+           LEFT SIDE ONLY
+           ===================================================== */
+
+        .contact-left {
+
+            width: 47%;
+
+            max-width: 570px;
+
+            text-align: left;
+        }
+
+
+        /* =====================================================
+           GET IN TOUCH
+           ===================================================== */
+
+        .contact-small-title {
+
+            margin: 0 0 15px;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           MAIN MESSAGE
+           ===================================================== */
+
+        .contact-left h1 {
+
+            margin: 0 0 28px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 36px;
+
+            line-height: 1.22;
+
+            font-weight: 600;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           CONTACT ME
+           ===================================================== */
+
+        .contact-left h2 {
+
+            margin: 0 0 14px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: 26px;
+
+            line-height: 1.3;
+
+            font-weight: 600;
+
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           FORM BOX
+           ===================================================== */
+
+        .contact-form-box {
+
+            width: 100%;
+
+            max-width: 550px;
+
+            padding: 25px 27px 27px;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            border-left: 4px solid #006994;
+
+            border-radius: 2px;
+
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.22);
+
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================================
+           FORM
+           ===================================================== */
+
+        .contact-form {
+
+            width: 100%;
+        }
+
+
+        .contact-form-group {
+
+            margin-bottom: 13px;
+        }
+
+
+        .contact-form-group label {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            color: #003B5C;
+        }
+
+
+        .contact-form-group input,
+        .contact-form-group textarea {
+
+            width: 100%;
+
+            padding: 10px 11px;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 12px;
+
+            color: #003B5C;
+
+            background: #ffffff;
+
+            border: 1px solid #c8dce5;
+
+            border-radius: 2px;
+
+            outline: none;
+
+            box-sizing: border-box;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .contact-form-group input {
+
+            height: 38px;
+        }
+
+
+        .contact-form-group textarea {
+
+            min-height: 85px;
+
+            resize: vertical;
+        }
+
+
+        .contact-form-group input:focus,
+        .contact-form-group textarea:focus {
+
+            border-color: #006994;
+
+            box-shadow:
+                0 0 0 2px rgba(0, 105, 148, 0.10);
+        }
+
+
+        /* =====================================================
+           SEND BUTTON
+           ===================================================== */
+
+        .contact-submit {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            margin-top: 3px;
+
+            padding: 11px 20px;
+
+            font-family: "Inter", sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 0.7px;
+
+            color: #ffffff;
+
+            background: #006994;
+
+            border: none;
+
+            border-radius: 2px;
+
+            cursor: pointer;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .contact-submit:hover {
+
+            background: #003B5C;
+
+            transform: translateY(-1px);
+        }
+
+
+        .contact-submit i {
+
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           TABLET
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .contact-content {
+
+                padding: 70px 0 80px;
+            }
+
+
+            .contact-left {
+
+                width: 58%;
+            }
+
+
+            .contact-left h1 {
+
+                font-size: 32px;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+           ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .contact-page {
+
+                min-height: 100vh;
+
+                background-position: 65% center;
+            }
+
+
+            .contact-page::before {
+
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(0, 59, 92, 0.93) 0%,
+                        rgba(0, 59, 92, 0.82) 50%,
+                        rgba(0, 59, 92, 0.40) 100%
+                    );
+            }
+
+
+            .contact-content {
+
+                width: 88%;
+
+                padding: 60px 0 70px;
+            }
+
+
+            .contact-left {
+
+                width: 100%;
+
+                max-width: 520px;
+            }
+
+
+            .contact-small-title {
+
+                font-size: 10px;
+
+                letter-spacing: 2.5px;
+            }
+
+
+            .contact-left h1 {
+
+                font-size: 28px;
+
+                line-height: 1.25;
+
+                margin-bottom: 24px;
+            }
+
+
+            .contact-left h2 {
+
+                font-size: 24px;
+            }
+
+
+            .contact-form-box {
+
+                padding: 21px 20px 23px;
+            }
+        }
+
+
+        /* =====================================================
+           SMALL MOBILE
+           ===================================================== */
+
+        @media (max-width: 450px) {
+
+            .contact-content {
+
+                width: 90%;
+
+                padding-top: 50px;
+            }
+
+
+            .contact-left h1 {
+
+                font-size: 26px;
+            }
+
+
+            .contact-form-box {
+
+                padding: 18px 16px 20px;
+            }
+
+
+            .contact-submit {
+
+                width: 100%;
+            }
+        }
+
+    </style>
+
 </head>
 
+
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -84,8 +546,6 @@
                     in
                 </a>
 
-                
-
                 <a href="https://www.facebook.com/acyuta.paaidela/"
                    aria-label="Facebook"
                    target="_blank"
@@ -102,22 +562,20 @@
                 </a>
 
                 <!-- TikTok -->
-    <a href="https://www.tiktok.com/@achutpoudel_"
-       aria-label="TikTok"
-       target="_blank"
-       rel="noopener noreferrer">
-        <i class="fab fa-tiktok"></i>
-    </a>
+                <a href="https://www.tiktok.com/@achutpoudel_"
+                   aria-label="TikTok"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fab fa-tiktok"></i>
+                </a>
 
-                 <!-- Instagram -->
-    <a href="https://www.instagram.com/achutlove/"
-       aria-label="Instagram"
-       target="_blank"
-       rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i>
-    </a>
-
-
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/achutlove/"
+                   aria-label="Instagram"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
 
             </div>
 
@@ -146,153 +604,134 @@
 
 </header>
 
-        
 
-    <!-- =====================================================
-         CONTACT PAGE
-    ===================================================== -->
+<!-- =====================================================
+     CONTACT PAGE
+     ===================================================== -->
 
-    <main class="contact-page">
+<main class="contact-page">
 
+    <div class="contact-content">
 
-        <div class="contact-content">
+        <div class="contact-left">
 
-            <div class="contact-left">
-
-
-                <!-- Small heading -->
-
-                <p class="contact-small-title">
-                    GET IN TOUCH
-                </p>
+            <!-- SMALL HEADING -->
+            <p class="contact-small-title">
+                GET IN TOUCH
+            </p>
 
 
-                <!-- Main message -->
-
-                <h1>
-                    Let’s connect, collaborate,
-                    <br>
-                    and create meaningful impact.
-                </h1>
-
-
-                <!-- Short introduction -->
-
-                <p class="contact-intro">
-                    Professional collaboration, consultation,
-                    leadership, HR, legal and business opportunities.
-                </p>
+            <!-- MAIN MESSAGE -->
+            <h1>
+                Let’s connect, collaborate,
+                <br>
+                and create meaningful impact.
+            </h1>
 
 
-                <!-- Contact heading -->
-
-                <h2>
-                    Contact Me
-                </h2>
-
-
-                <!-- Form -->
-
-                <div class="contact-form-box">
-
-                    <form
-                        class="contact-form"
-                        action="mailto:poudel.achut@gmail.com"
-                        method="post"
-                        enctype="text/plain">
+            <!-- CONTACT HEADING -->
+            <h2>
+                Contact Me
+            </h2>
 
 
-                        <!-- Full Name -->
+            <!-- CONTACT FORM -->
+            <div class="contact-form-box">
 
-                        <div class="contact-form-group">
-
-                            <label for="name">
-                                Full Name
-                            </label>
-
-                            <input
-                                type="text"
-                                id="name"
-                                name="Full Name"
-                                placeholder="Your full name"
-                                required>
-
-                        </div>
+                <form
+                    class="contact-form"
+                    action="mailto:poudel.achut@gmail.com"
+                    method="post"
+                    enctype="text/plain">
 
 
-                        <!-- Email -->
+                    <!-- FULL NAME -->
+                    <div class="contact-form-group">
 
-                        <div class="contact-form-group">
+                        <label for="name">
+                            Full Name
+                        </label>
 
-                            <label for="email">
-                                Email
-                            </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="Full Name"
+                            placeholder="Your full name"
+                            required>
 
-                            <input
-                                type="email"
-                                id="email"
-                                name="Email"
-                                placeholder="Your email address"
-                                required>
-
-                        </div>
-
-
-                        <!-- Subject -->
-
-                        <div class="contact-form-group">
-
-                            <label for="subject">
-                                Subject
-                            </label>
-
-                            <input
-                                type="text"
-                                id="subject"
-                                name="Subject"
-                                placeholder="Subject">
-
-                        </div>
+                    </div>
 
 
-                        <!-- Message -->
+                    <!-- EMAIL -->
+                    <div class="contact-form-group">
 
-                        <div class="contact-form-group">
+                        <label for="email">
+                            Email
+                        </label>
 
-                            <label for="message">
-                                Message
-                            </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="Email"
+                            placeholder="Your email address"
+                            required>
 
-                            <textarea
-                                id="message"
-                                name="Message"
-                                placeholder="Write your message..."
-                                required></textarea>
-
-                        </div>
+                    </div>
 
 
-                        <!-- Submit -->
+                    <!-- SUBJECT -->
+                    <div class="contact-form-group">
 
-                        <button
-                            type="submit"
-                            class="contact-submit">
+                        <label for="subject">
+                            Subject
+                        </label>
 
-                            SEND MESSAGE
+                        <input
+                            type="text"
+                            id="subject"
+                            name="Subject"
+                            placeholder="Subject">
 
-                            <i class="fa-solid fa-arrow-right"></i>
+                    </div>
 
-                        </button>
 
-                    </form>
+                    <!-- MESSAGE -->
+                    <div class="contact-form-group">
 
-                </div>
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="Message"
+                            placeholder="Write your message..."
+                            required></textarea>
+
+                    </div>
+
+
+                    <!-- SEND -->
+                    <button
+                        type="submit"
+                        class="contact-submit">
+
+                        SEND MESSAGE
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </form>
 
             </div>
 
         </div>
 
-    </main>
+    </div>
+
+</main>
+
 
 <!-- =====================================================
      FOOTER
@@ -306,11 +745,13 @@
             <h3>
                 Adv. Achut Poudel
             </h3>
+
             <p class="footer-position">
                 Leadership • People • Business • Governance
             </p>
-           
+
         </div>
+
 
         <div>
 
@@ -371,12 +812,22 @@
 
     </div>
 
+
     <div class="footer-bottom">
+
         <div class="content-container">
-                             © 2026 Adv. Achut Poudel. All rights reserved.
+
+            © 2026 Adv. Achut Poudel. All rights reserved.
+
         </div>
+
     </div>
+
 </footer>
+
+
 <script src="script.js"></script>
+
 </body>
+
 </html>
