@@ -5484,7 +5484,13 @@ a {
     overflow: hidden;
 
     background-image: url("image/contact_2.jpg");
-    background-size: cover;
+    
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #003B5C;
+
+overflow: hidden;
 
     /* Adjust this value to control which part of photo is visible */
     background-position: 75% center;
