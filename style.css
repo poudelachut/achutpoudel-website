@@ -10950,24 +10950,30 @@ a {
    CONTACT PAGE
 ========================================================= */
 
-.contact-section {
+.contact-hero {
     position: relative;
-    min-height: calc(100vh - 114px);
+    width: 100%;
+    min-height: calc(100vh - 80px);
 
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(0, 59, 92, 0.95) 0%,
-            rgba(0, 59, 92, 0.82) 35%,
-            rgba(0, 59, 92, 0.25) 58%,
-            rgba(0, 59, 92, 0.05) 100%
-        ),
-        url("./images/contact_2.jpg");
+    padding: 0;
 
+    overflow: hidden;
+
+    background-image: url("image/contact_2.jpg");
+    
     background-size: cover;
-    background-position: center center;
+    background-position: 70% center;
+    background-repeat: no-repeat;
+    background-color: #003B5C;
+
+overflow: hidden;
+
+    /* Adjust this value to control which part of photo is visible */
+    background-position: 70% center;
+
     background-repeat: no-repeat;
 }
+
 
 /* =========================================================
    BLUE OVERLAY
