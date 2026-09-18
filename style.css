@@ -10950,28 +10950,17 @@ a {
    CONTACT PAGE
 ========================================================= */
 
-.contact-hero {
+.contact-page {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 80px);
-
-    padding: 0;
-
+    min-height: calc(100vh - 78px);
     overflow: hidden;
 
     background-image: url("image/contact_2.jpg");
-    
-    background-size: cover;
-    background-position: 70% center;
+    background-size: 100% 100%;
+    background-position: center center;
     background-repeat: no-repeat;
     background-color: #003B5C;
-
-overflow: hidden;
-
-    /* Adjust this value to control which part of photo is visible */
-    background-position: 70% center;
-
-    background-repeat: no-repeat;
 }
 
 
