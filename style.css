@@ -10953,14 +10953,16 @@ a {
 .contact-page {
     position: relative;
     width: 100%;
-    min-height: calc(100vh - 78px);
-    overflow: hidden;
+    min-height: calc(100vh - 95px);
+    
 
     background-image: url("image/contact_2.jpg");
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #003B5C;
+    
+    overflow: hidden;
 }
 
 
